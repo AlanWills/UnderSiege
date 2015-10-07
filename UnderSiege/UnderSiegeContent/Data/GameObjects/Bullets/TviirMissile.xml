@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.MissileData">
+    <DisplayName>Tviir Missile</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Bullets\TviirMissile</TextureAsset>
+    <MaxSpeed>1000</MaxSpeed>
+    <LinearAcceleration>200</LinearAcceleration>
+    <BulletLifeTime>3</BulletLifeTime>
+  </Asset>
+</XnaContent>

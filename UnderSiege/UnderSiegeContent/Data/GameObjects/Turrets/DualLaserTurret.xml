@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.ShipKineticTurretData">
+    <DisplayName>Dual Laser Turret</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Turrets\dual_laser_medium</TextureAsset>
+    <AddOnType>ShipTurret</AddOnType>
+    <Price>400</Price>
+    <HardPointDimensions>1 1</HardPointDimensions>
+    <Orientable>true</Orientable>
+    <Health>40</Health>
+    <TurretType>Kinetic</TurretType>
+    <BulletAsset>Data\GameObjects\Bullets\LaserBullet</BulletAsset>
+    <Range>500</Range>
+    <ArcWidth>2</ArcWidth>
+    <Damage>1</Damage>
+    <Spread>0.08</Spread>
+    <FireTimer>0.25</FireTimer>
+  </Asset>
+</XnaContent>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.ShipShieldData">
+    <DisplayName>Energy Shield</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Shields\Shield</TextureAsset>
+    <AddOnType>ShipShield</AddOnType>
+    <Price>250</Price>
+    <HardPointDimensions>1 1</HardPointDimensions>
+    <Orientable>false</Orientable>
+    <Health>20</Health>
+    <ShieldRange>170</ShieldRange>
+    <ShieldStrength>100</ShieldStrength>
+    <ShieldDepletedRechargeDelay>0</ShieldDepletedRechargeDelay>
+    <ShieldDamagedRechargeDelay>4</ShieldDamagedRechargeDelay>
+    <ShieldRechargePerSecond>5</ShieldRechargePerSecond>
+    <Colour>0 0.7 1 1</Colour>
+  </Asset>
+</XnaContent>

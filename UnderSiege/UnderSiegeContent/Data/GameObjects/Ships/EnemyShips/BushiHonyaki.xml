@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.EnemyShipData">
+    <DisplayName>Bushi Honyaki</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Ships\EnemyShips\bushi_honyaki</TextureAsset>
+    <HullHealth>20</HullHealth>
+    <OtherHardPoints>
+      0 0
+    </OtherHardPoints>
+    <EngineHardPoints>
+      0 20
+    </EngineHardPoints>
+    <Price>300</Price>
+    <ShipAddOns>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Engines\LightThruster</Item>
+    </ShipAddOns>
+  </Asset>
+</XnaContent>

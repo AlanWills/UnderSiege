@@ -1,0 +1,135 @@
+﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Managers;
+using _2DGameEngine.Physics_Components;
+using _2DGameEngine.Physics_Components.Colliders;
+using _2DGameEngine.UI_Objects;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using UnderSiegeData.Gameplay_Objects;
+
+namespace UnderSiege.Gameplay_Objects
+{
+    public class ShipShield : ShipAddOn
+    {
+        #region Properties and Fields
+
+        private ShipShieldData ShipShieldData { get; set; }
+        public float CurrentShieldHealth { get; set; }
+        private Bar ShieldHealthBar { get; set; }
+
+        private const float defaultOpacity = 0.4f;
+        private const float onHitOpacity = 1f;
+
+        private float timeSinceDamaged = 0;
+        private float rechargeTimer = 0;
+
+        #endregion
+
+        public ShipShield(Vector2 hardPointOffset, string dataAsset, Ship parent, bool addRigidBody = true)
+            : base(hardPointOffset, dataAsset, parent, addRigidBody)
+        {
+
+        }
+
+        #region Methods
+
+        private void RegenerateShields(GameTime gameTime)
+        {
+            timeSinceDamaged += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
+            if (timeSinceDamaged >= ShipShieldData.ShieldDamagedRechargeDelay)
+            {
+                rechargeTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
+                if (rechargeTimer >= 1)
+                {
+                    CurrentShieldHealth = MathHelper.Clamp(CurrentShieldHealth + ShipShieldData.ShieldRechargePerSecond, 0, ShipShieldData.ShieldStrength);
+
+                    HealthBar.LocalPosition = new Vector2(0, -Size.Y * 0.5f - 3);
+                    rechargeTimer = 0;
+                }
+            }
+        }
+
+        #endregion
+
+        #region Virtual Methods
+
+        public override void LoadContent()
+        {
+            base.LoadContent();
+
+            ShipShieldData = AssetManager.GetData<ShipShieldData>(DataAsset);
+            CurrentShieldHealth = ShipShieldData.ShieldStrength;
+            Size = new Vector2(ShipShieldData.ShieldRange, ShipShieldData.ShieldRange);
+            Colour = new Color(ShipShieldData.Colour);
+            Opacity = defaultOpacity;
+        }
+
+        public override void Initialize()
+        {
+            base.Initialize();
+
+            // Add it here so that if we are altering the size of the sprite, we will add the bar at an appropriate place
+            ShieldHealthBar = new Bar(Vector2.Zero, new Vector2(35, 5), "Sprites\\UI\\Bars\\ShieldBar", ShipShieldData.ShieldStrength, "", this);
+            ShieldHealthBar.LoadContent();
+            ShieldHealthBar.Initialize();
+        }
+
+        public override void AddCollider()
+        {
+            // Radius of the collider is half the total range of the shield
+            Collider = new CircleCollider(this, ShipShieldData.ShieldRange * 0.5f);
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+
+            RegenerateShields(gameTime);
+
+            ShieldHealthBar.UpdateValue(CurrentShieldHealth);
+            Opacity = MathHelper.Lerp(Opacity, defaultOpacity, (float)gameTime.ElapsedGameTime.Milliseconds / 250f);
+        }
+
+        public override void Damage(float damage)
+        {
+            if (CurrentShieldHealth > damage)
+            {
+                CurrentShieldHealth -= damage;
+            }
+            else
+            {
+                // If shield health is less than the damage, we apply the difference to the shield itself and then set the shield health to zero
+                base.Damage(damage - CurrentShieldHealth);
+
+                CurrentShieldHealth = 0;
+
+                HealthBar.LocalPosition = Vector2.Zero;
+            }
+
+            Opacity = onHitOpacity;
+            timeSinceDamaged = 0;
+            rechargeTimer = 0;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            if (CurrentShieldHealth > 0)
+            {
+                base.Draw(spriteBatch);
+            }
+        }
+
+        public override void DrawInGameUI(SpriteBatch spriteBatch)
+        {
+            base.DrawInGameUI(spriteBatch);
+
+            ShieldHealthBar.Draw(spriteBatch);
+        }
+
+        #endregion
+    }
+}

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.PlayerShipData">
+    <DisplayName>Vanaar</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Ships\PlayerShips\hii_vanaar</TextureAsset>
+    <HullHealth>500</HullHealth>
+    <OtherHardPoints>
+      -25 -75
+      25 -75
+      -50 -70
+      -50 -40
+      -50 -10
+      -50 20
+      50 -70
+      50 -40
+      50 -10
+      50 20
+      0 67
+    </OtherHardPoints>
+    <EngineHardPoints>
+      -15 120
+      15 120
+    </EngineHardPoints>
+    <Price>3100</Price>
+  </Asset>
+</XnaContent>

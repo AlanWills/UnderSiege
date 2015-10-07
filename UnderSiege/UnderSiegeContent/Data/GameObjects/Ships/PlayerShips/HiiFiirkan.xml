@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.PlayerShipData">
+    <DisplayName>Fiirkan</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Ships\PlayerShips\hii_fiirkan</TextureAsset>
+    <HullHealth>250</HullHealth>
+    <OtherHardPoints>
+      0 -5
+    </OtherHardPoints>
+    <EngineHardPoints>0 30</EngineHardPoints>
+    <Price>1000</Price>
+  </Asset>
+</XnaContent>

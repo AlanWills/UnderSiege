@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.BeamData">
+    <DisplayName>Small Single Beam</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Bullets\BeamCoreB</TextureAsset>
+    <BeamColour>1 0 0 1</BeamColour>
+  </Asset>
+</XnaContent>

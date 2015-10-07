@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.ShipMissileTurretData">
+    <DisplayName>Missile Pod</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Turrets\hii_cor_missile_pod_base</TextureAsset>
+    <AddOnType>ShipTurret</AddOnType>
+    <Price>650</Price>
+    <HardPointDimensions>1 1</HardPointDimensions>
+    <Orientable>true</Orientable>
+    <Health>60</Health>
+    <TurretType>Missile</TurretType>
+    <BulletAsset>Data\GameObjects\Bullets\TviirMissile</BulletAsset>
+    <Range>850</Range>
+    <ArcWidth>2</ArcWidth>
+    <Damage>8</Damage>
+    <FireTimer>2</FireTimer>
+  </Asset>
+</XnaContent>

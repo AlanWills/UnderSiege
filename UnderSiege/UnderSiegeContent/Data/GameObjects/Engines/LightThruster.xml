@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.ShipEngineData">
+    <DisplayName>Light Thruster</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Engines\light_thruster</TextureAsset>
+    <AddOnType>ShipEngine</AddOnType>
+    <Price>200</Price>
+    <HardPointDimensions>1 1</HardPointDimensions>
+    <Orientable>false</Orientable>
+    <Health>15</Health>
+    <Thrust>200</Thrust>
+  </Asset>
+</XnaContent>

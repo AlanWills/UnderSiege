@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DTowerDefenceLibraryData.Waves_Data.WaveData">
+    <DisplayName>Wave 1</DisplayName>
+    <TextureAsset></TextureAsset>
+    <EnemyNames>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+    </EnemyNames>
+    <SpawnPoints>
+      0 -1000
+    </SpawnPoints>
+    <TimeUntilWave>10</TimeUntilWave>
+  </Asset>
+</XnaContent>

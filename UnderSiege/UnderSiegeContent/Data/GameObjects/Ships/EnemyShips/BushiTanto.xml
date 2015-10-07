@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.EnemyShipData">
+    <DisplayName>Bushi Tanto</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Ships\EnemyShips\bushi_tanto</TextureAsset>
+    <HullHealth>150</HullHealth>
+    <OtherHardPoints>
+      -37 -8
+      37 -8
+      0 5
+      0 62
+      0 105
+    </OtherHardPoints>
+    <EngineHardPoints>
+      0 147
+    </EngineHardPoints>
+    <Price>650</Price>
+    <ShipAddOns>
+    </ShipAddOns>
+  </Asset>
+</XnaContent>

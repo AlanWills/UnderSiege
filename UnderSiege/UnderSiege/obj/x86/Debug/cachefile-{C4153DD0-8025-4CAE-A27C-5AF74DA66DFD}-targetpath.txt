@@ -53,3 +53,5 @@ Content\Data\GameObjects\Turrets\SmallSingleLaser.xnb
 Content\Data\GameObjects\Bullets\SmallSingleBeam.xnb
 Content\Data\GameObjects\Ships\EnemyShips\BushiTanto.xnb
 Content\Data\GameObjects\Ships\PlayerShips\HiiVanaar.xnb
+Content\Sprites\GameObjects\FX\Contrail.xnb
+Content\Sprites\GameObjects\FX\EngineBlaze.xnb

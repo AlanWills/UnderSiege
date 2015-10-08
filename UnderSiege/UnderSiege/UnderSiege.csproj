@@ -97,11 +97,12 @@
     <Compile Include="UI\BuyShipEngineUIMenu.cs" />
     <Compile Include="UI\BuyShipObjectUIMenu.cs" />
     <Compile Include="UI\HardPointUIManager.cs" />
-    <Compile Include="UI\HardPointUI.cs" />
+    <Compile Include="UI\In Game UI\EngineBlaze.cs" />
+    <Compile Include="UI\In Game UI\HardPointUI.cs" />
     <Compile Include="UI\HUD.cs" />
     <Compile Include="UI\IconAndLabel.cs" />
     <Compile Include="UI\InGameShipInfo.cs" />
-    <Compile Include="UI\PurchaseItemUI.cs" />
+    <Compile Include="UI\In Game UI\PurchaseItemUI.cs" />
     <Compile Include="UI\PurchaseShipInfoUI.cs" />
     <Compile Include="Waves\WaveManager.cs" />
   </ItemGroup>

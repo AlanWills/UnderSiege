@@ -496,6 +496,24 @@
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiVanaar.xnb</Output>
       <Time>2015-10-06T20:21:09.107803+01:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\GameObjects\FX\Contrail.png</Source>
+      <Name>Sprites\GameObjects\FX\Contrail</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\FX\Contrail.xnb</Output>
+      <Time>2015-10-08T19:32:32.4550778+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\FX\EngineBlaze.png</Source>
+      <Name>Sprites\GameObjects\FX\EngineBlaze</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\FX\EngineBlaze.xnb</Output>
+      <Time>2015-10-08T19:40:15.6272181+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>

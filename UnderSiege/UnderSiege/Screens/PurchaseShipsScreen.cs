@@ -89,6 +89,7 @@ namespace UnderSiege.Screens
                 ScreenManager.RemoveScreen(this);
                 GameplayScreen.Visible = true;
                 GameplayScreen.Active = true;
+                ScreenManager.Camera.CameraMode = CameraMode.Free;
             }
         }
 

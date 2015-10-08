@@ -43,9 +43,14 @@ namespace _2DGameEngine.Managers
 
         #region Methods
 
+        public void DeactivateAll()
+        {
+
+        }
+
         #endregion
 
-        #region Methods
+        #region Virtual Methods
 
         public virtual void LoadContent()
         {
@@ -114,10 +119,6 @@ namespace _2DGameEngine.Managers
             foreach (T baseObject in this.Values)
                 baseObject.HandleInput();
         }
-
-        #endregion
-
-        #region Virtual Methods
 
         public virtual void AddObject(T objectToAdd, string tag, bool load = false, bool linkWithObject = true)
         {

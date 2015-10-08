@@ -1,0 +1,8 @@
+c:\users\alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\obj\x86\Debug\2DGameEngine.csprojResolveAssemblyReference.cache
+c:\users\alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngine.dll
+c:\users\alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngine.pdb
+c:\users\alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\obj\x86\Debug\2DGameEngine.dll
+c:\users\alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\obj\x86\Debug\2DGameEngine.pdb
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngineData.dll
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngineData.pdb

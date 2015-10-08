@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DTowerDefenceLibraryData.Turret_Data.TurretData">
+    <Name>Test Turret</Name>
+    <TextureAsset>Sprites\GameObjects\testturret</TextureAsset>
+    <BulletAsset>Data\GameObjects\Bullets\TestBullet</BulletAsset>
+    <Range>700</Range>
+    <ArcWidth>1</ArcWidth>
+    <FireTimer>1</FireTimer>
+    <Damage>1</Damage>
+  </Asset>
+</XnaContent>

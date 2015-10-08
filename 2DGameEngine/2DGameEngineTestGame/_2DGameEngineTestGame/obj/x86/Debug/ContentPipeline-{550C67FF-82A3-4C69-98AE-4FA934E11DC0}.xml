@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>SpriteFonts\UISpriteFont.spritefont</Source>
+      <Name>SpriteFonts\UISpriteFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\SpriteFonts\UISpriteFont.xnb</Output>
+      <Time>2015-08-20T15:37:04.4487806+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\test.png</Source>
+      <Name>Sprites\GameObjects\test</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\GameObjects\test.xnb</Output>
+      <Time>2015-08-20T21:36:59.3457835+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Backgrounds\test.jpg</Source>
+      <Name>Sprites\Backgrounds\test</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\Backgrounds\test.xnb</Output>
+      <Time>2015-08-21T16:20:28.4566464+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Mouse\default.png</Source>
+      <Name>Sprites\UI\Mouse\default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\UI\Mouse\default.xnb</Output>
+      <Time>2015-08-21T13:52:38.6133724+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Mouse\cursor_green.png</Source>
+      <Name>Sprites\UI\Mouse\cursor_green</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\UI\Mouse\cursor_green.xnb</Output>
+      <Time>2015-08-21T13:52:38.6173755+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Mouse\cursor_red.png</Source>
+      <Name>Sprites\UI\Mouse\cursor_red</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\UI\Mouse\cursor_red.xnb</Output>
+      <Time>2015-08-21T13:52:38.6093698+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Buttons\highlighted.png</Source>
+      <Name>Sprites\UI\Buttons\highlighted</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\UI\Buttons\highlighted.xnb</Output>
+      <Time>2015-08-23T20:34:38.2235275+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Buttons\default.png</Source>
+      <Name>Sprites\UI\Buttons\default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\UI\Buttons\default.xnb</Output>
+      <Time>2015-08-23T20:34:38.2275293+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Buttons\pressed.png</Source>
+      <Name>Sprites\UI\Buttons\pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\UI\Buttons\pressed.xnb</Output>
+      <Time>2015-08-23T20:34:38.218525+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Panels\default.png</Source>
+      <Name>Sprites\UI\Panels\default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\UI\Panels\default.xnb</Output>
+      <Time>2015-08-24T19:34:16.1750661+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Pictures\test.png</Source>
+      <Name>Sprites\UI\Pictures\test</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\UI\Pictures\test.xnb</Output>
+      <Time>2015-08-25T20:21:46.0822834+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\animationtest.png</Source>
+      <Name>Sprites\GameObjects\animationtest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\GameObjects\animationtest.xnb</Output>
+      <Time>2015-09-06T16:04:13.9852344+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\testbullet.png</Source>
+      <Name>Sprites\GameObjects\testbullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\GameObjects\testbullet.xnb</Output>
+      <Time>2015-09-08T21:43:25.9287015+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\testturret.png</Source>
+      <Name>Sprites\GameObjects\testturret</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Sprites\GameObjects\testturret.xnb</Output>
+      <Time>2015-09-07T22:38:50.4071083+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\GameObjects\Turrets\TestTurret.xml</Source>
+      <Name>Data\GameObjects\Turrets\TestTurret</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Data\GameObjects\Turrets\TestTurret.xnb</Output>
+      <Time>2015-09-12T12:27:44.6254111+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\GameObjects\Bullets\TestBullet.xml</Source>
+      <Name>Data\GameObjects\Bullets\TestBullet</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Data\GameObjects\Bullets\TestBullet.xnb</Output>
+      <Time>2015-09-08T22:32:13.2062473+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\MainMenuScreen.xml</Source>
+      <Name>Data\Screens\MainMenuScreen</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\Data\Screens\MainMenuScreen.xnb</Output>
+      <Time>2015-09-12T13:23:55.4534314+01:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{550C67FF-82A3-4C69-98AE-4FA934E11DC0}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineTestGame\_2DGameEngineTestGame\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DTowerDefenceLibraryData\bin\x86\Debug\2DTowerDefenceLibraryData.dll</Key>
+        <Value>2015-09-12T13:22:57.0450985+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\2DGameEngine\2DGameEngineData\bin\x86\Debug\2DGameEngineData.dll</Key>
+        <Value>2015-09-12T13:22:56.0613255+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-08-03T16:50:45.1394543+01:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

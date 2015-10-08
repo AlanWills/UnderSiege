@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DGameEngineData.Screen_Data.BaseScreenData">
+    <Name>Test Screen</Name>
+    <TextureAsset>Sprites\Backgrounds\test</TextureAsset>
+  </Asset>
+</XnaContent>

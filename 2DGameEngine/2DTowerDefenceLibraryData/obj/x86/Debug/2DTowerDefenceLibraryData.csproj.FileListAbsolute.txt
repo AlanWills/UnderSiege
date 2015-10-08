@@ -1,0 +1,8 @@
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceLibraryData\bin\x86\Debug\2DTowerDefenceLibraryData.dll
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceLibraryData\bin\x86\Debug\2DTowerDefenceLibraryData.pdb
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceLibraryData\bin\x86\Debug\2DGameEngineData.dll
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceLibraryData\bin\x86\Debug\2DGameEngineData.pdb
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceLibraryData\obj\x86\Debug\2DTowerDefenceLibraryData.csprojResolveAssemblyReference.cache
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceLibraryData\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceLibraryData\obj\x86\Debug\2DTowerDefenceLibraryData.dll
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceLibraryData\obj\x86\Debug\2DTowerDefenceLibraryData.pdb

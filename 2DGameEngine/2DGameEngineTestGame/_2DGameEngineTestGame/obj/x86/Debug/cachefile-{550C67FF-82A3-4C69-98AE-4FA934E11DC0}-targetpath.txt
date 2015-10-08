@@ -1,0 +1,17 @@
+Content\SpriteFonts\UISpriteFont.xnb
+Content\Sprites\GameObjects\test.xnb
+Content\Sprites\Backgrounds\test.xnb
+Content\Sprites\UI\Mouse\default.xnb
+Content\Sprites\UI\Mouse\cursor_green.xnb
+Content\Sprites\UI\Mouse\cursor_red.xnb
+Content\Sprites\UI\Buttons\highlighted.xnb
+Content\Sprites\UI\Buttons\default.xnb
+Content\Sprites\UI\Buttons\pressed.xnb
+Content\Sprites\UI\Panels\default.xnb
+Content\Sprites\UI\Pictures\test.xnb
+Content\Sprites\GameObjects\animationtest.xnb
+Content\Sprites\GameObjects\testbullet.xnb
+Content\Sprites\GameObjects\testturret.xnb
+Content\Data\GameObjects\Turrets\TestTurret.xnb
+Content\Data\GameObjects\Bullets\TestBullet.xnb
+Content\Data\Screens\MainMenuScreen.xnb

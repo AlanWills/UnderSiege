@@ -1,0 +1,12 @@
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\obj\x86\Debug\2DTowerDefenceLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DTowerDefenceEngine.dll
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DTowerDefenceEngine.pdb
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DGameEngine.dll
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DGameEngineData.dll
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DTowerDefenceLibraryData.dll
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DGameEngineData.pdb
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DGameEngine.pdb
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DTowerDefenceLibraryData.pdb
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\obj\x86\Debug\2DTowerDefenceEngine.dll
+C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DTowerDefenceEngine\obj\x86\Debug\2DTowerDefenceEngine.pdb

@@ -113,19 +113,19 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\2DGameEngine\2DGameEngineData\2DGameEngineData.csproj">
+    <ProjectReference Include="..\..\2DGameEngine\2DGameEngineData\2DGameEngineData.csproj">
       <Project>{b618534e-7638-409f-b515-6e128c0b62ca}</Project>
       <Name>2DGameEngineData</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\2DGameEngine\2DGameEngine\2DGameEngine.csproj">
+    <ProjectReference Include="..\..\2DGameEngine\2DGameEngine\2DGameEngine.csproj">
       <Project>{2f9176a3-9b66-432b-88d3-a15efccaff0c}</Project>
       <Name>2DGameEngine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\2DGameEngine\2DTowerDefenceEngine\2DTowerDefenceLibrary.csproj">
+    <ProjectReference Include="..\..\2DGameEngine\2DTowerDefenceEngine\2DTowerDefenceLibrary.csproj">
       <Project>{8b3ecc75-a09b-40e2-bb4e-14444750cf8c}</Project>
       <Name>2DTowerDefenceLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\2DGameEngine\2DTowerDefenceLibraryData\2DTowerDefenceLibraryData.csproj">
+    <ProjectReference Include="..\..\2DGameEngine\2DTowerDefenceLibraryData\2DTowerDefenceLibraryData.csproj">
       <Project>{a831387d-4c57-4127-aee0-fdb390bf2276}</Project>
       <Name>2DTowerDefenceLibraryData</Name>
     </ProjectReference>

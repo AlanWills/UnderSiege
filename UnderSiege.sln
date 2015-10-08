@@ -9,19 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderSiegeContent", "UnderS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderSiegeData", "UnderSiegeData\UnderSiegeData.csproj", "{74695C8B-033B-4D96-B375-A56CDA74BAA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DGameEngine", "..\2DGameEngine\2DGameEngine\2DGameEngine.csproj", "{2F9176A3-9B66-432B-88D3-A15EFCCAFF0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DGameEngine", "2DGameEngine\2DGameEngine\2DGameEngine.csproj", "{2F9176A3-9B66-432B-88D3-A15EFCCAFF0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTowerDefenceLibraryData", "..\2DGameEngine\2DTowerDefenceLibraryData\2DTowerDefenceLibraryData.csproj", "{A831387D-4C57-4127-AEE0-FDB390BF2276}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DGameEngineData", "2DGameEngine\2DGameEngineData\2DGameEngineData.csproj", "{B618534E-7638-409F-B515-6E128C0B62CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DGameEngineData", "..\2DGameEngine\2DGameEngineData\2DGameEngineData.csproj", "{B618534E-7638-409F-B515-6E128C0B62CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTowerDefenceLibrary", "2DGameEngine\2DTowerDefenceEngine\2DTowerDefenceLibrary.csproj", "{8B3ECC75-A09B-40E2-BB4E-14444750CF8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTowerDefenceLibrary", "..\2DGameEngine\2DTowerDefenceEngine\2DTowerDefenceLibrary.csproj", "{8B3ECC75-A09B-40E2-BB4E-14444750CF8C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{759EF83E-94C5-4CEA-B3F7-BC50FEDAEE49}"
-	ProjectSection(SolutionItems) = preProject
-		Performance1.psess = Performance1.psess
-		Performance2.psess = Performance2.psess
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTowerDefenceLibraryData", "2DGameEngine\2DTowerDefenceLibraryData\2DTowerDefenceLibraryData.csproj", "{A831387D-4C57-4127-AEE0-FDB390BF2276}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +37,6 @@ Global
 		{2F9176A3-9B66-432B-88D3-A15EFCCAFF0C}.Debug|x86.Build.0 = Debug|x86
 		{2F9176A3-9B66-432B-88D3-A15EFCCAFF0C}.Release|x86.ActiveCfg = Release|x86
 		{2F9176A3-9B66-432B-88D3-A15EFCCAFF0C}.Release|x86.Build.0 = Release|x86
-		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Debug|x86.ActiveCfg = Debug|x86
-		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Debug|x86.Build.0 = Debug|x86
-		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Release|x86.ActiveCfg = Release|x86
-		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Release|x86.Build.0 = Release|x86
 		{B618534E-7638-409F-B515-6E128C0B62CA}.Debug|x86.ActiveCfg = Debug|x86
 		{B618534E-7638-409F-B515-6E128C0B62CA}.Debug|x86.Build.0 = Debug|x86
 		{B618534E-7638-409F-B515-6E128C0B62CA}.Release|x86.ActiveCfg = Release|x86
@@ -55,6 +45,10 @@ Global
 		{8B3ECC75-A09B-40E2-BB4E-14444750CF8C}.Debug|x86.Build.0 = Debug|x86
 		{8B3ECC75-A09B-40E2-BB4E-14444750CF8C}.Release|x86.ActiveCfg = Release|x86
 		{8B3ECC75-A09B-40E2-BB4E-14444750CF8C}.Release|x86.Build.0 = Release|x86
+		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Debug|x86.ActiveCfg = Debug|x86
+		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Debug|x86.Build.0 = Debug|x86
+		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Release|x86.ActiveCfg = Release|x86
+		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

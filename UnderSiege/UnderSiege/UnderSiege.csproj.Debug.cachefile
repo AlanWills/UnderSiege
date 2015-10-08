@@ -6,9 +6,6 @@ Content\Sprites\Backgrounds\MainMenuScreen.xnb
 Content\Sprites\GameObjects\Ships\PlayerShips\hii_vanaar.xnb
 Content\Sprites\GameObjects\Turrets\dual_laser_medium.xnb
 Content\Sprites\Backgrounds\GameplayScreen.xnb
-Content\Sprites\UI\Buttons\default.xnb
-Content\Sprites\UI\Buttons\highlighted.xnb
-Content\Sprites\UI\Buttons\pressed.xnb
 Content\Sprites\GameObjects\SpaceStations\station_small.xnb
 Content\Sprites\GameObjects\Bullets\RedLaserBullet.xnb
 Content\Sprites\GameObjects\Bullets\GreenLaserRay.xnb
@@ -34,6 +31,11 @@ Content\Sprites\GameObjects\Bullets\TviirMissile.xnb
 Content\Sprites\GameObjects\Turrets\hii_cor_missile_pod_base.xnb
 Content\Sprites\GameObjects\Turrets\hii_single_laser_small_hp.xnb
 Content\Sprites\GameObjects\Bullets\BeamCoreB.xnb
+Content\Sprites\UI\Buttons\default.xnb
+Content\Sprites\UI\Buttons\highlighted.xnb
+Content\Sprites\UI\Buttons\pressed.xnb
+Content\Sprites\GameObjects\FX\Contrail.xnb
+Content\Sprites\GameObjects\FX\EngineBlaze.xnb
 Content\Data\Screens\MainMenuScreen.xnb
 Content\Data\GameObjects\SpaceStations\SmallStation.xnb
 Content\Data\Screens\GameplayScreen.xnb
@@ -53,5 +55,3 @@ Content\Data\GameObjects\Turrets\SmallSingleLaser.xnb
 Content\Data\GameObjects\Bullets\SmallSingleBeam.xnb
 Content\Data\GameObjects\Ships\EnemyShips\BushiTanto.xnb
 Content\Data\GameObjects\Ships\PlayerShips\HiiVanaar.xnb
-Content\Sprites\GameObjects\FX\Contrail.xnb
-Content\Sprites\GameObjects\FX\EngineBlaze.xnb

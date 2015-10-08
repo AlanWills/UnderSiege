@@ -22,6 +22,8 @@ namespace _2DGameEngine.Game_Objects
 
         public T Object { get; private set; }
 
+        private Vector2 FrameSize { get; set; }
+
         #endregion
 
         public AnimatedObject(string dataAsset, int framesInX, int framesInY, float timePerFrame, bool isPlaying = false, bool continual = true, BaseObject parent = null)
@@ -57,7 +59,6 @@ namespace _2DGameEngine.Game_Objects
         public override void LoadContent()
         {
             Object.LoadContent();
-            Object.Size *= new Vector2(Animation.Frames.X, Animation.Frames.Y);
         }
 
         public override void Initialize()
@@ -66,7 +67,7 @@ namespace _2DGameEngine.Game_Objects
             Animation.SetFrameDimensions(Object.Texture);
             SetSourceRectangleBasedOnFrame(Animation.CurrentFrame);
 
-            Object.LocalPosition += new Vector2(Object.Texture.Width * 0.5f, 0);
+            Object.LocalPosition += new Vector2(Object.Size.X * (1 - 1.0f / (float)Animation.Frames.X) * 0.5f, Object.Size.Y * (1 - 1.0f / (float)Animation.Frames.Y) * 0.5f);
         }
 
         // frame is 0 indexed
@@ -95,8 +96,7 @@ namespace _2DGameEngine.Game_Objects
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (Animation.IsPlaying)
-                Object.Draw(spriteBatch);
+            Object.Draw(spriteBatch);
         }
 
         public override void DrawInGameUI(SpriteBatch spriteBatch)

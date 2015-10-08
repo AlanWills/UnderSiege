@@ -122,17 +122,31 @@ namespace UnderSiege.Gameplay_Objects
             }
         }
 
+        public override void DealWithHardPoint(Vector2 hardPoint, bool isEngine)
+        {
+            base.DealWithHardPoint(hardPoint, isEngine);
+
+            if (isEngine)
+            {
+                HardPointUI.Disable(hardPoint, HardPointType.Engine);
+            }
+            else
+            {
+                HardPointUI.Disable(hardPoint, HardPointType.Other);
+            }
+        }
+
         public override void RemoveAddOn(ShipAddOn addOn)
         {
             base.RemoveAddOn(addOn);
 
             if (addOn.ShipAddOnData.AddOnType == "ShipEngine")
             {
-                HardPointUI.Disable(addOn.HardPointOffset, HardPointType.Engine);
+                HardPointUI.Enable(addOn.HardPointOffset, HardPointType.Engine);
             }
             else
             {
-                HardPointUI.Disable(addOn.HardPointOffset, HardPointType.Other);
+                HardPointUI.Enable(addOn.HardPointOffset, HardPointType.Other);
             }
         }
 

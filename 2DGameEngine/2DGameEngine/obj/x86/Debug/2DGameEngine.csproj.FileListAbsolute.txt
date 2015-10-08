@@ -6,3 +6,11 @@ c:\users\alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\ob
 c:\users\alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\obj\x86\Debug\2DGameEngine.pdb
 C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngineData.dll
 C:\Users\Alan\documents\visual studio 2013\Projects\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngineData.pdb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngine.dll
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngine.pdb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngineData.dll
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\bin\x86\Debug\2DGameEngineData.pdb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\obj\x86\Debug\2DGameEngine.csprojResolveAssemblyReference.cache
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\obj\x86\Debug\2DGameEngine.dll
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\obj\x86\Debug\2DGameEngine.pdb

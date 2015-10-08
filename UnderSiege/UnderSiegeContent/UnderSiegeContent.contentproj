@@ -22,12 +22,6 @@
     <RootNamespace>UnderSiegeContent</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="2DGameEngineData">
-      <HintPath>..\..\..\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DGameEngineData.dll</HintPath>
-    </Reference>
-    <Reference Include="2DTowerDefenceLibraryData">
-      <HintPath>..\..\..\2DGameEngine\2DTowerDefenceEngine\bin\x86\Debug\2DTowerDefenceLibraryData.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
@@ -36,6 +30,14 @@
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\2DGameEngine\2DGameEngineData\2DGameEngineData.csproj">
+      <Project>{b618534e-7638-409f-b515-6e128c0b62ca}</Project>
+      <Name>2DGameEngineData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\2DGameEngine\2DTowerDefenceLibraryData\2DTowerDefenceLibraryData.csproj">
+      <Project>{a831387d-4c57-4127-aee0-fdb390bf2276}</Project>
+      <Name>2DTowerDefenceLibraryData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\UnderSiegeData\UnderSiegeData.csproj">
       <Project>{74695c8b-033b-4d96-b375-a56cda74baa3}</Project>
       <Name>UnderSiegeData</Name>

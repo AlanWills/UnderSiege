@@ -124,29 +124,15 @@ namespace UnderSiege.Gameplay_Objects
             DealWithHardPoint(hardPoint, true);
         }
 
-        private void DealWithHardPoint(Vector2 hardPoint, bool isEngine)
+        public virtual void DealWithHardPoint(Vector2 hardPoint, bool isEngine)
         {
-            PlayerShip playerShip = this as PlayerShip;
             if (isEngine)
             {
                 EngineHardPoints.Remove(hardPoint);
-
-                // Remove the UI here
-                if (playerShip != null)
-                {
-                    // Just deactivate and hide the UI instead?  Saves remaking it
-                    playerShip.HardPointUI.Disable(hardPoint, HardPointType.Engine);
-                }
             }
             else
             {
                 OtherHardPoints.Remove(hardPoint);
-
-                // Remove the UI here
-                if (playerShip != null)
-                {
-                    playerShip.HardPointUI.Disable(hardPoint, HardPointType.Other);
-                }
             }
         }
 
@@ -319,6 +305,7 @@ namespace UnderSiege.Gameplay_Objects
             {
                 EngineHardPoints.Add(addOn.HardPointOffset);
             }
+            else
             {
                 OtherHardPoints.Add(addOn.HardPointOffset);
             }

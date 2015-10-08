@@ -19,11 +19,11 @@ namespace UnderSiege.UI.In_Game_UI
         #endregion
 
         public EngineBlaze(Ship parentShip, Vector2 localPosition, Vector2 size, string dataAsset, int framesInX, int framesInY, float timePerFrame, bool isPlaying = false, bool continual = true, BaseObject parent = null)
-            : base(localPosition, size, dataAsset, framesInX, framesInY, timePerFrame, isPlaying, continual, parent)
+            : base(localPosition, size * new Vector2(framesInX, framesInY), dataAsset, framesInX, framesInY, timePerFrame, isPlaying, continual, parent)
         {
             ParentShip = parentShip;
+            Object.Opacity = 0;
 
-            Visible = false;
             Active = false;
         }
 
@@ -39,9 +39,15 @@ namespace UnderSiege.UI.In_Game_UI
 
             bool valid = ParentShip.RigidBody.LinearVelocity.LengthSquared() > 1f;
             Active = valid;
-            Visible = valid;
 
-            // Do opacity editing here
+            if (Active)
+            {
+                Object.Opacity = (float)MathHelper.Lerp(Object.Opacity, 1, (float)gameTime.ElapsedGameTime.Milliseconds / 1000f);
+            }
+            else
+            {
+                Object.Opacity = (float)MathHelper.Lerp(Object.Opacity, 0, (float)gameTime.ElapsedGameTime.Milliseconds / 1000f);
+            }
         }
 
         #endregion

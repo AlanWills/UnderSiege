@@ -47,7 +47,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         {
             base.Initialize();
 
-            EngineBlaze = new EngineBlaze(ParentShip, new Vector2(0, Size.Y * 0.5f), new Vector2(10, 50), "Sprites\\GameObjects\\FX\\EngineBlaze", 8, 1, 0.1f, false, true, this);
+            EngineBlaze = new EngineBlaze(ParentShip, new Vector2(0, 35), new Vector2(25, 70), "Sprites\\GameObjects\\FX\\EngineBlaze", 8, 1, 0.1f, false, true, this);
             EngineBlaze.LoadContent();
             EngineBlaze.Initialize();
         }

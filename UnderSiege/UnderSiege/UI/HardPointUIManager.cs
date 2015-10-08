@@ -42,6 +42,7 @@ namespace UnderSiege.UI
             foreach (Vector2 otherHardPoint in shipData.OtherHardPoints)
             {
                 HardPointUI hardPointUI = new HardPointUI(Parent, otherHardPoint);
+                hardPointUI.LoadContent();
                 hardPointUI.Initialize();
                 OtherHardPointUI.Add(hardPointUI);
             }
@@ -49,6 +50,7 @@ namespace UnderSiege.UI
             foreach (Vector2 engineHardPoint in shipData.EngineHardPoints)
             {
                 HardPointUI hardPointUI = new HardPointUI(Parent, engineHardPoint, "Sprites\\UI\\InGameUI\\EngineHardPointUI");
+                hardPointUI.LoadContent();
                 hardPointUI.Initialize();
                 EngineHardPointUI.Add(hardPointUI);
             }

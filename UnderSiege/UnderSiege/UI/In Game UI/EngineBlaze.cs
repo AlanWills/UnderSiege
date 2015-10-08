@@ -19,7 +19,7 @@ namespace UnderSiege.UI.In_Game_UI
         #endregion
 
         public EngineBlaze(Ship parentShip, Vector2 localPosition, Vector2 size, string dataAsset, int framesInX, int framesInY, float timePerFrame, bool isPlaying = false, bool continual = true, BaseObject parent = null)
-            : base(localPosition, dataAsset, framesInX, framesInY, timePerFrame, isPlaying, continual, parent)
+            : base(localPosition, size, dataAsset, framesInX, framesInY, timePerFrame, isPlaying, continual, parent)
         {
             ParentShip = parentShip;
 
@@ -37,7 +37,7 @@ namespace UnderSiege.UI.In_Game_UI
         {
             base.Update(gameTime);
 
-            bool valid = ParentShip.RigidBody.LinearVelocity.LengthSquared() > 0.1f;
+            bool valid = ParentShip.RigidBody.LinearVelocity.LengthSquared() > 1f;
             Active = valid;
             Visible = valid;
 

@@ -15,14 +15,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
     {
         #region Properties and Fields
 
-        private Label Label { get; set; }
+        private DialogBox DialogBox { get; set; }
 
         #endregion
 
         public AddDialogBoxScript(ScriptManager scriptManager, string text, Vector2 localPosition, BaseObject parent = null, float lifeTime = float.MaxValue)
             : base(scriptManager)
         {
-            Label = new Label(text, localPosition, Color.White, parent, lifeTime);
+            DialogBox = new DialogBox(text, localPosition, new Vector2(300, 50), "Sprites\\UI\\Menus\\default", parent, lifeTime);
         }
 
         #region Methods
@@ -33,8 +33,8 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void LoadAndInit(ContentManager content)
         {
-            Label.LoadContent();
-            Label.Initialize();
+            DialogBox.LoadContent();
+            DialogBox.Initialize();
         }
 
         public override void CheckCanRun()
@@ -46,7 +46,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void Update(GameTime gameTime)
         {
-            Label.Update(gameTime);
+            DialogBox.Update(gameTime);
         }
 
         public override bool ShouldUpdateGame()
@@ -61,7 +61,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void DrawUI(SpriteBatch spriteBatch)
         {
-            Label.Draw(spriteBatch);
+            DialogBox.Draw(spriteBatch);
         }
 
         public override void HandleInput()
@@ -71,7 +71,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void CheckDone()
         {
-            Done = Label.Alive == false;
+            Done = DialogBox.Alive == false;
         }
 
         #endregion

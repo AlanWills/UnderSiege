@@ -89,14 +89,16 @@ namespace _2DGameEngine.UI_Objects
         {
             base.Show();
 
-            Label.Visible = true;
+            if (Label != null)
+                Label.Visible = true;
         }
 
         public override void Activate()
         {
             base.Activate();
 
-            Label.Active = false;
+            if (Label != null)
+                Label.Active = true;
         }
 
         public override void Deactivate()

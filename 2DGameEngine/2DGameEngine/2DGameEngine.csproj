@@ -106,6 +106,7 @@
     <Compile Include="Screens\MenuScreen.cs" />
     <Compile Include="UI Objects\Bar.cs" />
     <Compile Include="UI Objects\Button.cs" />
+    <Compile Include="UI Objects\DialogBox.cs" />
     <Compile Include="UI Objects\FlashingInGameImage.cs" />
     <Compile Include="UI Objects\FlashingLabel.cs" />
     <Compile Include="UI Objects\Image.cs" />

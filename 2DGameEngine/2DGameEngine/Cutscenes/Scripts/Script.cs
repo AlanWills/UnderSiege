@@ -12,10 +12,30 @@ namespace _2DGameEngine.Cutscenes.Scripts
     {
         #region Properties and Fields
 
-        public bool CanRun { get; private set; }
-        public bool Done { get; private set; }
+        protected ScriptManager ScriptManager { get; private set; }
+
+        public bool CanRun { get; set; }
+
+        private bool done = false;
+        public bool Done 
+        {
+            get { return done; }
+            set
+            {
+                done = value;
+                if (done)
+                    IfDone();
+            }
+        }
+
+        public event EventHandler CanRunEvent;
 
         #endregion
+
+        public Script(ScriptManager scriptManager)
+        {
+            ScriptManager = scriptManager;
+        }
 
         #region Methods
 
@@ -23,11 +43,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         #region Virtual Methods
 
-        public virtual void LoadAndInit(ContentManager content);
+        public abstract void LoadAndInit(ContentManager content);
 
         public virtual void CheckCanRun()
         {
-            CanRun = true;
+            if (CanRunEvent != null)
+            {
+                CanRunEvent(this, EventArgs.Empty);
+            }
         }
 
         public abstract void Update(GameTime gameTime);
@@ -44,6 +67,11 @@ namespace _2DGameEngine.Cutscenes.Scripts
         public virtual void CheckDone()
         {
             Done = true;
+        }
+
+        public virtual void IfDone()
+        {
+
         }
 
         #endregion

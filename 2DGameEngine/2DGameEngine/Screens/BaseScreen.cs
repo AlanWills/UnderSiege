@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Cutscenes;
 using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using _2DGameEngineData.Screen_Data;
@@ -64,6 +65,11 @@ namespace _2DGameEngine.Screens
             set;
         }
 
+        public ScriptManager ScriptManager
+        {
+            get { return ScreenManager.ScriptManager; }
+        }
+
         public ContentManager Content
         {
             get { return ScreenManager.Content; }
@@ -109,6 +115,7 @@ namespace _2DGameEngine.Screens
         }
 
         protected bool Transitioning;
+        private bool Begun = false;
         protected ChangeType ChangeType;
 
         protected TimeSpan transitionTimer;
@@ -287,8 +294,18 @@ namespace _2DGameEngine.Screens
             InGameUIManager.Initialize();
         }
 
+        public virtual void Begin(GameTime gameTime)
+        {
+            Begun = true;
+        }
+
         public virtual void Update(GameTime gameTime)
         {
+            if (!Begun)
+            {
+                Begin(gameTime);
+            }
+
             GameObjectManager.Update(gameTime);
             UIManager.Update(gameTime);
             InGameUIManager.Update(gameTime);

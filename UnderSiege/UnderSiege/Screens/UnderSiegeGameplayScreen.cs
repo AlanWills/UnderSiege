@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Cutscenes.Scripts;
 using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
 using _2DGameEngine.Maths;
@@ -164,6 +165,13 @@ namespace UnderSiege.Screens
             base.Initialize();
 
             WaveManager.Initialize();
+        }
+
+        public override void Begin(GameTime gameTime)
+        {
+            base.Begin(gameTime);
+
+            ScriptManager.AddScript(new AddDialogBoxScript(ScriptManager, "Test Script", ScreenCentre, HUD, 3));
         }
 
         public override void Update(GameTime gameTime)

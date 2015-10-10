@@ -34,6 +34,11 @@ namespace _2DGameEngine.Cutscenes
 
         #region Methods
 
+        public void AddScript(Script script)
+        {
+            ScriptsToAdd.Add(script);
+        }
+
         public void LoadAndAddScripts(ContentManager content)
         {
             foreach (Script script in ScriptsToAdd)

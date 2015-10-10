@@ -15,32 +15,32 @@ namespace _2DGameEngine.UI_Objects
 
         #endregion
 
-        public PictureBox(string dataAsset = "", BaseObject parent = null)
-            : base(dataAsset, parent)
+        public PictureBox(string dataAsset = "", BaseObject parent = null, float lifeTime = float.MaxValue)
+            : base(dataAsset, parent, lifeTime)
         {
 
         }
 
-        public PictureBox(Vector2 position, string dataAsset = "", BaseObject parent = null)
-            : base(position, dataAsset, parent)
+        public PictureBox(Vector2 position, string dataAsset = "", BaseObject parent = null, float lifeTime = float.MaxValue)
+            : base(position, dataAsset, parent, lifeTime)
         {
 
         }
 
-        public PictureBox(Vector2 position, Vector2 size, string dataAsset = "", BaseObject parent = null)
-            : base(position, size, dataAsset, parent)
+        public PictureBox(Vector2 position, Vector2 size, string dataAsset = "", BaseObject parent = null, float lifeTime = float.MaxValue)
+            : base(position, size, dataAsset, parent, lifeTime)
         {
 
         }
 
-        public PictureBox(Vector2 position, Rectangle source, string dataAsset = "", BaseObject parent = null)
-            : this(position, dataAsset, parent)
+        public PictureBox(Vector2 position, Rectangle source, string dataAsset = "", BaseObject parent = null, float lifeTime = float.MaxValue)
+            : this(position, dataAsset, parent, lifeTime)
         {
             SourceRectangle = source;
         }
 
-        public PictureBox(Vector2 position, Vector2 size, Rectangle source, string dataAsset = "", BaseObject parent = null)
-            : this(position, size, dataAsset, parent)
+        public PictureBox(Vector2 position, Vector2 size, Rectangle source, string dataAsset = "", BaseObject parent = null, float lifeTime = float.MaxValue)
+            : this(position, size, dataAsset, parent, lifeTime)
         {
             SourceRectangle = source;
         }

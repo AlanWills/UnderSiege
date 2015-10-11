@@ -16,13 +16,13 @@ namespace _2DGameEngine.UI_Objects
 
         #endregion
 
-        public DialogBox(string text, Vector2 position, string dataAsset = "Sprites\\UI\\Menus\\default", BaseObject parent = null, float lifeTime = float.MaxValue)
+        public DialogBox(string text, Vector2 position, string dataAsset = "Sprites\\UI\\Menus\\DialogBox", BaseObject parent = null, float lifeTime = float.MaxValue)
             : base(position, dataAsset, parent, lifeTime)
         {
             Label = new Label(text, Vector2.Zero, Color.White, this, lifeTime);
         }
 
-        public DialogBox(string text, Vector2 position, Vector2 size, string dataAsset = "Sprites\\UI\\Menus\\default", BaseObject parent = null, float lifeTime = float.MaxValue)
+        public DialogBox(string text, Vector2 position, Vector2 size, string dataAsset = "Sprites\\UI\\Menus\\DialogBox", BaseObject parent = null, float lifeTime = float.MaxValue)
             : base(position, size, dataAsset, parent, lifeTime)
         {
             Label = new Label(text, Vector2.Zero, Color.White, this, lifeTime);
@@ -46,6 +46,7 @@ namespace _2DGameEngine.UI_Objects
             base.Initialize();
 
             Label.Initialize();
+            Opacity = 0.25f;
         }
 
         public override void Update(GameTime gameTime)

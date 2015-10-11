@@ -75,7 +75,7 @@ namespace UnderSiege.Screens
             Enemies = new DictionaryManager<EnemyShip>();
             WaveManager = new WaveManager<EnemyShip>(this);
 
-            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, "Data\\GameObjects\\SpaceStations\\SmallStation", SceneRoot), "Ally 1");
+            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, "Data\\GameObjects\\SpaceStations\\SmallStation", SceneRoot), "Space Station");
 
             HUD = new HUD(this);
             AddUIObject(HUD, "HUD");
@@ -158,21 +158,21 @@ namespace UnderSiege.Screens
             base.LoadContent(content);
 
             GameplayScreenData = AssetManager.GetData<UnderSiegeGameplayScreenData>(DataAsset);
-            WaveManager.LoadContent();
+            //WaveManager.LoadContent();
         }
 
         public override void Initialize()
         {
             base.Initialize();
 
-            WaveManager.Initialize();
+            //WaveManager.Initialize();
         }
 
         public override void Begin(GameTime gameTime)
         {
             base.Begin(gameTime);
 
-            ScriptManager.AddScript(new AddCutsceneScript(ScriptManager, new BeginGameCutscene(ScreenManager, this, "")));
+            ScriptManager.AddScript(new AddCutsceneScript(new BeginGameCutscene(ScreenManager, this, ""), this));
         }
 
         public override void Update(GameTime gameTime)

@@ -67,6 +67,7 @@
     <Compile Include="Cutscenes\ScriptManager.cs" />
     <Compile Include="Cutscenes\Scripts\AddCutsceneScript.cs" />
     <Compile Include="Cutscenes\Scripts\AddDialogBoxScript.cs" />
+    <Compile Include="Cutscenes\Scripts\MoveCameraScript.cs" />
     <Compile Include="Cutscenes\Scripts\Script.cs" />
     <Compile Include="Extra Components\Camera.cs" />
     <Compile Include="Extra Components\GameMouse.cs" />

@@ -19,16 +19,16 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         #endregion
 
-        public AddDialogBoxScript(ScriptManager scriptManager, string text, Vector2 localPosition, bool canRun = false, BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(scriptManager, canRun)
+        public AddDialogBoxScript(string text, Vector2 localPosition, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue)
+            : base(canRun)
         {
-            DialogBox = new DialogBox(text, localPosition, Label.SpriteFont.MeasureString(text) +  new Vector2(20, 10), "Sprites\\UI\\Menus\\default", parent, lifeTime);
+            DialogBox = new DialogBox(text, localPosition, Label.SpriteFont.MeasureString(text) +  new Vector2(20, 10), "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
         }
 
-        public AddDialogBoxScript(ScriptManager scriptManager, string text, Vector2 localPosition, Vector2 size, bool canRun = false, BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(scriptManager, canRun)
+        public AddDialogBoxScript(string text, Vector2 localPosition, Vector2 size, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue)
+            : base(canRun)
         {
-            DialogBox = new DialogBox(text, localPosition, size, "Sprites\\UI\\Menus\\default", parent, lifeTime);
+            DialogBox = new DialogBox(text, localPosition, size, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
         }
 
         #region Methods

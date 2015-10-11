@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Managers;
+using _2DGameEngine.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -14,13 +15,15 @@ namespace _2DGameEngine.Cutscenes.Scripts
         #region Properties and Fields
 
         private Cutscene Cutscene { get; set; }
+        private BaseScreen CurrentScreen { get; set; }
 
         #endregion
 
-        public AddCutsceneScript(ScriptManager scriptManager, Cutscene cutscene, bool canRun = false)
-            : base(scriptManager, canRun)
+        public AddCutsceneScript(Cutscene cutscene, BaseScreen currentScreen, bool canRun = true)
+            : base(canRun)
         {
             Cutscene = cutscene;
+            CurrentScreen = currentScreen;
         }
 
         #region Methods
@@ -76,8 +79,8 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             base.IfDone();
 
-            ScriptManager.ParentScreen.Active = true;
-            ScriptManager.ParentScreen.Visible = true;
+            CurrentScreen.Active = true;
+            CurrentScreen.Visible = true;
         }
 
         #endregion

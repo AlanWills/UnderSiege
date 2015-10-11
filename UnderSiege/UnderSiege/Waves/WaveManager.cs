@@ -71,7 +71,7 @@ namespace UnderSiege.Waves
                 Wave<T> wave = Waves.Dequeue();
                 QueuedEnemies = wave.Enemies;
 
-                FlashingLabel warningLabel = new FlashingLabel("New Wave Incoming!", new Vector2(ScreenManager.ScreenCentre.X, ScreenManager.ScreenCentre.Y * 0.25f), Color.Red, null, 4.8f);
+                FlashingLabel warningLabel = new FlashingLabel("Enemies Detected!", new Vector2(ScreenManager.ScreenCentre.X, ScreenManager.ScreenCentre.Y * 0.25f), Color.Red, null, 4.8f);
                 UnderSiegeGameplayScreen.HUD.AddUIObject(warningLabel, "New Wave Label");
 
                 int spawnCounter = 0;

@@ -12,8 +12,6 @@ namespace _2DGameEngine.Cutscenes.Scripts
     {
         #region Properties and Fields
 
-        protected ScriptManager ScriptManager { get; private set; }
-
         public bool CanRun { get; set; }
 
         private bool done = false;
@@ -35,9 +33,8 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         #endregion
 
-        public Script(ScriptManager scriptManager, bool canRun = false)
+        public Script(bool canRun = true)
         {
-            ScriptManager = scriptManager;
             CanRun = canRun;
         }
 
@@ -73,10 +70,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public abstract void HandleInput();
 
-        public virtual void CheckDone()
-        {
-            Done = true;
-        }
+        public abstract void CheckDone();
 
         public virtual void IfDone()
         {

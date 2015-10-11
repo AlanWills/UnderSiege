@@ -1,5 +1,6 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
 using _2DGameEngine.Cutscenes;
+using _2DGameEngine.Cutscenes.Scripts;
 using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using _2DGameEngineData.Screen_Data;
@@ -132,7 +133,7 @@ namespace _2DGameEngine.Screens
             Visible = true;
             Active = true;
 
-            ScriptManager = new ScriptManager();
+            ScriptManager = new ScriptManager(this);
             GameObjectManager = new BaseObjectManager<GameObject>();
             UIManager = new BaseObjectManager<UIObject>();
             InGameUIManager = new BaseObjectManager<InGameUIObject>();
@@ -269,6 +270,11 @@ namespace _2DGameEngine.Screens
             ScreenManager.RemoveScreen(this);
         }
 
+        public void AddScript(Script script, Script previousScript = null)
+        {
+            ScriptManager.AddScript(script, previousScript);
+        }
+
         #endregion
 
         #region Virtual Methods
@@ -277,11 +283,14 @@ namespace _2DGameEngine.Screens
         {
             BaseScreenData = AssetManager.GetData<BaseScreenData>(DataAsset);
 
-            if (!string.IsNullOrEmpty(BaseScreenData.TextureAsset))
-                AddBackground();
+            if (BaseScreenData != null)
+            {
+                if (!string.IsNullOrEmpty(BaseScreenData.TextureAsset))
+                    AddBackground();
 
-            if (Background != null)
-                Background.LoadContent();
+                if (Background != null)
+                    Background.LoadContent();
+            }
 
             GameObjectManager.LoadContent();
             UIManager.LoadContent();
@@ -290,10 +299,16 @@ namespace _2DGameEngine.Screens
 
         public virtual void Initialize()
         {
-            Background.Initialize();
+            if (Background != null)
+            {
+                Background.Initialize();
+            }
+
             GameObjectManager.Initialize();
             UIManager.Initialize();
             InGameUIManager.Initialize();
+
+            ScriptManager.LoadAndAddScripts(Content);
         }
 
         public virtual void Begin(GameTime gameTime)
@@ -357,6 +372,8 @@ namespace _2DGameEngine.Screens
 
         public virtual void HandleInput()
         {
+            ScriptManager.HandleInput();
+
             if (ScriptManager.UpdateGame)
             {
                 GameObjectManager.HandleInput();

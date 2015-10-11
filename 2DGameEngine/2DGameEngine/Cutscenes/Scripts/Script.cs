@@ -28,13 +28,17 @@ namespace _2DGameEngine.Cutscenes.Scripts
             }
         }
 
+        public Script PreviousScript { get; set; }
+
         public event EventHandler CanRunEvent;
+        public event EventHandler OnEndEvent;
 
         #endregion
 
-        public Script(ScriptManager scriptManager)
+        public Script(ScriptManager scriptManager, bool canRun = false)
         {
             ScriptManager = scriptManager;
+            CanRun = canRun;
         }
 
         #region Methods
@@ -47,6 +51,11 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public virtual void CheckCanRun()
         {
+            if (PreviousScript != null)
+            {
+                CanRun = PreviousScript.Done;
+            }
+
             if (CanRunEvent != null)
             {
                 CanRunEvent(this, EventArgs.Empty);
@@ -71,7 +80,10 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public virtual void IfDone()
         {
-
+            if (OnEndEvent != null)
+            {
+                OnEndEvent(this, EventArgs.Empty);
+            }
         }
 
         #endregion

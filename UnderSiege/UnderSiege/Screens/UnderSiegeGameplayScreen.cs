@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnderSiege.Cutscenes;
 using UnderSiege.Gameplay_Objects;
 using UnderSiege.Player_Data;
 using UnderSiege.UI;
@@ -171,14 +172,17 @@ namespace UnderSiege.Screens
         {
             base.Begin(gameTime);
 
-            ScriptManager.AddScript(new AddDialogBoxScript(ScriptManager, "Test Script", ScreenCentre, HUD, 3));
+            ScriptManager.AddScript(new AddCutsceneScript(ScriptManager, new BeginGameCutscene(ScreenManager, this, "")));
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
 
-            WaveManager.Update(gameTime);
+            if (ScriptManager.UpdateGame)
+            {
+                WaveManager.Update(gameTime);
+            }
         }
 
         #endregion

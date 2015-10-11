@@ -19,10 +19,16 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         #endregion
 
-        public AddDialogBoxScript(ScriptManager scriptManager, string text, Vector2 localPosition, BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(scriptManager)
+        public AddDialogBoxScript(ScriptManager scriptManager, string text, Vector2 localPosition, bool canRun = false, BaseObject parent = null, float lifeTime = float.MaxValue)
+            : base(scriptManager, canRun)
         {
-            DialogBox = new DialogBox(text, localPosition, new Vector2(300, 50), "Sprites\\UI\\Menus\\default", parent, lifeTime);
+            DialogBox = new DialogBox(text, localPosition, Label.SpriteFont.MeasureString(text) +  new Vector2(20, 10), "Sprites\\UI\\Menus\\default", parent, lifeTime);
+        }
+
+        public AddDialogBoxScript(ScriptManager scriptManager, string text, Vector2 localPosition, Vector2 size, bool canRun = false, BaseObject parent = null, float lifeTime = float.MaxValue)
+            : base(scriptManager, canRun)
+        {
+            DialogBox = new DialogBox(text, localPosition, size, "Sprites\\UI\\Menus\\default", parent, lifeTime);
         }
 
         #region Methods
@@ -35,13 +41,6 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             DialogBox.LoadContent();
             DialogBox.Initialize();
-        }
-
-        public override void CheckCanRun()
-        {
-            base.CheckCanRun();
-
-            CanRun = true;
         }
 
         public override void Update(GameTime gameTime)
@@ -66,12 +65,12 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void HandleInput()
         {
-            
+            DialogBox.HandleInput();
         }
 
         public override void CheckDone()
         {
-            Done = DialogBox.Alive == false;
+            Done = DialogBox.Alive == false || DialogBox.IsSelected;
         }
 
         #endregion

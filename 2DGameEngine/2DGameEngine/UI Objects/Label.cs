@@ -41,6 +41,18 @@ namespace _2DGameEngine.UI_Objects
 
         #region Virtual Methods
 
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            if (Visible)
+            {
+                if (!string.IsNullOrEmpty(Text))
+                {
+                    // Always have text opacity as 1?
+                    spriteBatch.DrawString(SpriteFont, Text, WorldPosition, (Texture != null ? Color.White : Colour) * Opacity, (float)WorldRotation, SpriteFont.MeasureString(Text) * 0.5f, Scale, SpriteEffects.None, 0);
+                }
+            }
+        }
+
         public override void HandleInput()
         {
             

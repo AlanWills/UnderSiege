@@ -15,16 +15,24 @@ namespace _2DGameEngine.Cutscenes
     {
         #region Properties and Fields
 
+        public BaseScreen ParentScreen { get; private set; }
+
         private List<Script> ScriptsToAdd { get; set; }
         private List<Script> RunningScripts { get; set; }
         private List<Script> ScriptsToRemove { get; set; }
 
-        public bool UpdateGame { get; private set; }
+        public bool UpdateGame { get; protected set; }
+        public bool NoMoreScripts
+        {
+            get { return ScriptsToAdd.Count == 0 && RunningScripts.Count == 0; }
+        }
 
         #endregion
 
-        public ScriptManager()
+        public ScriptManager(BaseScreen parentScreen)
         {
+            ParentScreen = parentScreen;
+
             ScriptsToAdd = new List<Script>();
             RunningScripts = new List<Script>();
             ScriptsToRemove = new List<Script>();
@@ -32,8 +40,9 @@ namespace _2DGameEngine.Cutscenes
 
         #region Methods
 
-        public void AddScript(Script script)
+        public void AddScript(Script script, Script previousScript = null)
         {
+            script.PreviousScript = previousScript;
             ScriptsToAdd.Add(script);
         }
 

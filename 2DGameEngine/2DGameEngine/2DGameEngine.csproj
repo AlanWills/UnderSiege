@@ -63,7 +63,9 @@
     <Compile Include="Abstract Object Classes\GameObject.cs" />
     <Compile Include="Abstract Object Classes\InGameUIObject.cs" />
     <Compile Include="Abstract Object Classes\UIObject.cs" />
+    <Compile Include="Cutscenes\Cutscene.cs" />
     <Compile Include="Cutscenes\ScriptManager.cs" />
+    <Compile Include="Cutscenes\Scripts\AddCutsceneScript.cs" />
     <Compile Include="Cutscenes\Scripts\AddDialogBoxScript.cs" />
     <Compile Include="Cutscenes\Scripts\Script.cs" />
     <Compile Include="Extra Components\Camera.cs" />

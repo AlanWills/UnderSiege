@@ -56,8 +56,10 @@ namespace _2DGameEngine.Managers
         {
             foreach (T baseObject in ObjectsToAdd.Values)
             {
-                baseObject.LoadContent();
+                Add(baseObject.Tag, baseObject);
             }
+
+            ObjectsToAdd.Clear();
 
             foreach (T baseObject in this.Values)
             {
@@ -67,11 +69,6 @@ namespace _2DGameEngine.Managers
 
         public virtual void Initialize()
         {
-            foreach (T baseObject in ObjectsToAdd.Values)
-            {
-                baseObject.Initialize();
-            }
-
             foreach (T baseObject in this.Values)
             {
                 baseObject.Initialize();

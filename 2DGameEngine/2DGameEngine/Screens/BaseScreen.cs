@@ -67,7 +67,8 @@ namespace _2DGameEngine.Screens
 
         public ScriptManager ScriptManager
         {
-            get { return ScreenManager.ScriptManager; }
+            get;
+            private set;
         }
 
         public ContentManager Content
@@ -131,6 +132,7 @@ namespace _2DGameEngine.Screens
             Visible = true;
             Active = true;
 
+            ScriptManager = new ScriptManager();
             GameObjectManager = new BaseObjectManager<GameObject>();
             UIManager = new BaseObjectManager<UIObject>();
             InGameUIManager = new BaseObjectManager<InGameUIObject>();
@@ -306,10 +308,16 @@ namespace _2DGameEngine.Screens
                 Begin(gameTime);
             }
 
-            GameObjectManager.Update(gameTime);
-            UIManager.Update(gameTime);
-            InGameUIManager.Update(gameTime);
-            // HandleTransitioning(gameTime);
+            ScriptManager.LoadAndAddScripts(Content);
+            ScriptManager.UpdateScripts(gameTime);
+
+            if (ScriptManager.UpdateGame)
+            {
+                GameObjectManager.Update(gameTime);
+                UIManager.Update(gameTime);
+                InGameUIManager.Update(gameTime);
+                // HandleTransitioning(gameTime);
+            }
         }
 
         public virtual void Draw()
@@ -325,11 +333,14 @@ namespace _2DGameEngine.Screens
             {
                 inGameUIObject.Draw(SpriteBatch);
             }
+
+            ScriptManager.Draw(SpriteBatch);
         }
 
         public virtual void DrawScreenUI()
         {
             UIManager.Draw(SpriteBatch);
+            ScriptManager.DrawUI(SpriteBatch);
         }
 
         internal protected virtual void StateChange(object sender, EventArgs e)
@@ -346,9 +357,12 @@ namespace _2DGameEngine.Screens
 
         public virtual void HandleInput()
         {
-            GameObjectManager.HandleInput();
-            UIManager.HandleInput();
-            InGameUIManager.HandleInput();
+            if (ScriptManager.UpdateGame)
+            {
+                GameObjectManager.HandleInput();
+                UIManager.HandleInput();
+                InGameUIManager.HandleInput();
+            }
         }
 
         public virtual void Show()

@@ -15,18 +15,16 @@ namespace _2DGameEngine.Cutscenes
     {
         #region Properties and Fields
 
-        private ScreenManager ScreenManager { get; set; }
-
         private List<Script> ScriptsToAdd { get; set; }
         private List<Script> RunningScripts { get; set; }
         private List<Script> ScriptsToRemove { get; set; }
 
+        public bool UpdateGame { get; private set; }
+
         #endregion
 
-        public ScriptManager(ScreenManager screenManager)
+        public ScriptManager()
         {
-            ScreenManager = screenManager;
-
             ScriptsToAdd = new List<Script>();
             RunningScripts = new List<Script>();
             ScriptsToRemove = new List<Script>();
@@ -50,7 +48,7 @@ namespace _2DGameEngine.Cutscenes
             ScriptsToAdd.Clear();
         }
 
-        public bool UpdateScripts(GameTime gameTime)
+        public void UpdateScripts(GameTime gameTime)
         {
             bool updateGame = true;
 
@@ -80,7 +78,7 @@ namespace _2DGameEngine.Cutscenes
 
             ScriptsToRemove.Clear();
 
-            return updateGame;
+            UpdateGame = updateGame;
         }
 
         public void Draw(SpriteBatch spriteBatch)

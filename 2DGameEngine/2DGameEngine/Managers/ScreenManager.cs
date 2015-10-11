@@ -73,12 +73,6 @@ namespace _2DGameEngine.Managers
             private set;
         }
 
-        public static ScriptManager ScriptManager
-        {
-            get;
-            private set;
-        }
-
         public static GraphicsDevice Graphics
         {
             get;
@@ -116,7 +110,6 @@ namespace _2DGameEngine.Managers
 
             Camera = new Camera();
             Input = new InputHandler(game);
-            ScriptManager = new ScriptManager(this);
             GameMouse.SetUpMouse();
 
             Game.Components.Add(this);
@@ -176,8 +169,6 @@ namespace _2DGameEngine.Managers
                 }
             }
 
-            ScriptManager.DrawUI(SpriteBatch);
-
             GameMouse.Draw(SpriteBatch);
         }
 
@@ -196,40 +187,32 @@ namespace _2DGameEngine.Managers
         {
             base.Update(gameTime);
 
-            ScriptManager.LoadAndAddScripts(Content);
-            bool updateGame = ScriptManager.UpdateScripts(gameTime);
-            ScriptManager.HandleInput();
-
             GameMouse.Update(gameTime);
+            Camera.Update(gameTime);
 
-            if (updateGame)
+            foreach (BaseScreen screen in ScreensToAdd)
             {
-                Camera.Update(gameTime);
-
-                foreach (BaseScreen screen in ScreensToAdd)
-                {
-                    Screens.Add(screen);
-                }
-
-                ScreensToAdd.Clear();
-
-                foreach (BaseScreen screen in Screens)
-                {
-                    // Update before handling input - otherwise if we select something the WhileSelected method will be called straightaway, which is usually undesired
-                    if (screen.Active)
-                    {
-                        screen.Update(gameTime);
-                        screen.HandleInput();
-                    }
-                }
-
-                foreach (BaseScreen screen in ScreensToRemove)
-                {
-                    Screens.Remove(screen);
-                }
-
-                ScreensToRemove.Clear();
+                Screens.Add(screen);
             }
+
+            ScreensToAdd.Clear();
+
+            foreach (BaseScreen screen in Screens)
+            {
+                // Update before handling input - otherwise if we select something the WhileSelected method will be called straightaway, which is usually undesired
+                if (screen.Active)
+                {
+                    screen.Update(gameTime);
+                    screen.HandleInput();
+                }
+            }
+
+            foreach (BaseScreen screen in ScreensToRemove)
+            {
+                Screens.Remove(screen);
+            }
+
+            ScreensToRemove.Clear();
         }
 
         public override void Draw(GameTime gameTime)
@@ -253,8 +236,6 @@ namespace _2DGameEngine.Managers
                     screen.Draw();
                 }
             }
-
-            ScriptManager.Draw(SpriteBatch);
         }
 
         #endregion

@@ -172,6 +172,18 @@ namespace _2DGameEngine.Managers
             GameMouse.Draw(SpriteBatch);
         }
 
+        public void HandleInput()
+        {
+            foreach (BaseScreen screen in Screens)
+            {
+                // Update before handling input - otherwise if we select something the WhileSelected method will be called straightaway, which is usually undesired
+                if (screen.Active)
+                {
+                    screen.HandleInput();
+                }
+            }
+        }
+
         #endregion
 
         #region Virtual Methods
@@ -203,7 +215,6 @@ namespace _2DGameEngine.Managers
                 if (screen.Active)
                 {
                     screen.Update(gameTime);
-                    screen.HandleInput();
                 }
             }
 

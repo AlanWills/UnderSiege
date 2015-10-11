@@ -65,6 +65,8 @@ namespace UnderSiege
         protected override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+
+            screenManager.HandleInput();
         }
 
         protected override void Draw(GameTime gameTime)

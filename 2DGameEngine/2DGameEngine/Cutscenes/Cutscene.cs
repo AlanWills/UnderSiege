@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Cutscenes.Scripts;
+using _2DGameEngine.Managers;
 using _2DGameEngine.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
@@ -44,6 +45,16 @@ namespace _2DGameEngine.Cutscenes
         }
 
         protected abstract void CheckIsDone();
+
+        public virtual void Skip()
+        {
+            foreach (Script script in ScriptManager.RunningScripts)
+            {
+                script.PerformImmediately();
+            }
+
+            IsDone = true;
+        }
 
         #endregion
     }

@@ -42,7 +42,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
             
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Run(GameTime gameTime)
         {
             if (MoveStyle == MoveCameraStyle.LERP)
             {
@@ -74,6 +74,11 @@ namespace _2DGameEngine.Cutscenes.Scripts
         public override void CheckDone()
         {
             Done = (Camera.Position - TargetLocation).LengthSquared() <= 1f;
+        }
+
+        public override void PerformImmediately()
+        {
+            Camera.Position = TargetLocation;
         }
 
         #endregion

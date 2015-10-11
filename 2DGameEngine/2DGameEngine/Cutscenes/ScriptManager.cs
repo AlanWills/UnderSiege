@@ -18,10 +18,10 @@ namespace _2DGameEngine.Cutscenes
         public BaseScreen ParentScreen { get; private set; }
 
         private List<Script> ScriptsToAdd { get; set; }
-        private List<Script> RunningScripts { get; set; }
+        public List<Script> RunningScripts { get; private set; }
         private List<Script> ScriptsToRemove { get; set; }
 
-        public bool UpdateGame { get; protected set; }
+        public bool UpdateGame { get; set; }
         public bool NoMoreScripts
         {
             get { return ScriptsToAdd.Count == 0 && RunningScripts.Count == 0; }
@@ -65,10 +65,10 @@ namespace _2DGameEngine.Cutscenes
             {
                 // Update the run status of the script
                 script.CheckCanRun();
-                if (script.CanRun)
+                if (script.CanRun || script.Running)
                 {
                     // If we can run it, we update the script
-                    script.Update(gameTime);
+                    script.Run(gameTime);
                     script.CheckDone();
 
                     if (script.Done)
@@ -76,7 +76,8 @@ namespace _2DGameEngine.Cutscenes
                         ScriptsToRemove.Add(script);
                     }
 
-                    updateGame = updateGame && script.ShouldUpdateGame();
+                    script.CheckShouldUpdateGame();
+                    updateGame = updateGame && script.ShouldUpdateGame;
                 }
             }
 

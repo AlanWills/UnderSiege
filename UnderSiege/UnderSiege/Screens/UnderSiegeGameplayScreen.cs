@@ -158,21 +158,14 @@ namespace UnderSiege.Screens
             base.LoadContent(content);
 
             GameplayScreenData = AssetManager.GetData<UnderSiegeGameplayScreenData>(DataAsset);
-            //WaveManager.LoadContent();
+            WaveManager.LoadContent();
         }
 
         public override void Initialize()
         {
             base.Initialize();
 
-            //WaveManager.Initialize();
-        }
-
-        public override void Begin(GameTime gameTime)
-        {
-            base.Begin(gameTime);
-
-            ScriptManager.AddScript(new AddCutsceneScript(new BeginGameCutscene(ScreenManager, this, ""), this));
+            WaveManager.Initialize();
         }
 
         public override void Update(GameTime gameTime)

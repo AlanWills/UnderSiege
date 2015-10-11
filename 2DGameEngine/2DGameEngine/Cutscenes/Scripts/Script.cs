@@ -13,6 +13,8 @@ namespace _2DGameEngine.Cutscenes.Scripts
         #region Properties and Fields
 
         public bool CanRun { get; set; }
+        public bool ShouldUpdateGame { get; set; }
+        public bool Running { get; private set; }
 
         private bool done = false;
         public bool Done 
@@ -48,6 +50,9 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public virtual void CheckCanRun()
         {
+            if (Running)
+                return;
+
             if (PreviousScript != null)
             {
                 CanRun = PreviousScript.Done;
@@ -59,10 +64,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
             }
         }
 
-        public abstract void Update(GameTime gameTime);
-        public virtual bool ShouldUpdateGame()
+        public virtual void Run(GameTime gameTime)
         {
-            return true;
+            Running = true;
+        }
+
+        public virtual void CheckShouldUpdateGame()
+        {
+            ShouldUpdateGame = true;
         }
 
         public abstract void Draw(SpriteBatch spriteBatch);
@@ -79,6 +88,9 @@ namespace _2DGameEngine.Cutscenes.Scripts
                 OnEndEvent(this, EventArgs.Empty);
             }
         }
+
+        // This function is designed for skipping through tutorials etc. - allows us to perform the action of the script instantaneously
+        public abstract void PerformImmediately();
 
         #endregion
     }

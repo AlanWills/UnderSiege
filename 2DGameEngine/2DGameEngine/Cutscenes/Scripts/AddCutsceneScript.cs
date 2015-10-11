@@ -45,14 +45,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
             CanRun = true;
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Run(GameTime gameTime)
         {
             Cutscene.Update(gameTime);
         }
 
-        public override bool ShouldUpdateGame()
+        public override void CheckShouldUpdateGame()
         {
-            return false;
+            ShouldUpdateGame = Cutscene.ScriptManager.UpdateGame;
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -81,6 +81,13 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
             CurrentScreen.Active = true;
             CurrentScreen.Visible = true;
+        }
+
+        public override void PerformImmediately()
+        {
+            Cutscene.LoadContent(CurrentScreen.Content);
+            Cutscene.Initialize();
+            Cutscene.Skip();
         }
 
         #endregion

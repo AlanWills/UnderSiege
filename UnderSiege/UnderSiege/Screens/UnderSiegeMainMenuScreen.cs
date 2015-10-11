@@ -34,7 +34,7 @@ namespace UnderSiege.Screens
 
         protected override void StartGame(object sender, EventArgs e)
         {
-            Transition(new UnderSiegeGameplayScreen(ScreenManager, "Data\\Screens\\GameplayScreen"));
+            Transition(new UnderSiegeGameplayTutorialScreen(ScreenManager, "Data\\Screens\\GameplayScreen"));
         }
 
         #endregion

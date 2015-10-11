@@ -16,6 +16,8 @@ namespace UnderSiege.Waves
     {
         #region Properties and Fields
 
+        public bool Paused { get; set; }
+
         public Queue<Wave<T>> Waves
         {
             get;
@@ -88,24 +90,26 @@ namespace UnderSiege.Waves
 
         public void Update(GameTime gameTime)
         {
-            currentTimeBetweenWaves += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-
-            if (Waves.Count > 0)
+            if (!Paused)
             {
-                if (currentTimeBetweenWaves >= Waves.Peek().WaveData.TimeUntilWave)
-                    NewWave();
-            }
+                currentTimeBetweenWaves += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
 
-            if (QueuedEnemies.Count > 0)
-            {
-                currentTimeBetweenEnemySpawns += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-                if (currentTimeBetweenEnemySpawns >= timeBetweenEnemySpawns)
+                if (Waves.Count > 0)
                 {
-                    currentEnemyInWave++;
-                    GameplayScreen.AddEnemyShip(QueuedEnemies.Dequeue(), "Wave " + CurrentWaveNumber + " Enemy " + currentEnemyInWave);
-                    currentTimeBetweenEnemySpawns = 0;
+                    if (currentTimeBetweenWaves >= Waves.Peek().WaveData.TimeUntilWave)
+                        NewWave();
                 }
 
+                if (QueuedEnemies.Count > 0)
+                {
+                    currentTimeBetweenEnemySpawns += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
+                    if (currentTimeBetweenEnemySpawns >= timeBetweenEnemySpawns)
+                    {
+                        currentEnemyInWave++;
+                        GameplayScreen.AddEnemyShip(QueuedEnemies.Dequeue(), "Wave " + CurrentWaveNumber + " Enemy " + currentEnemyInWave);
+                        currentTimeBetweenEnemySpawns = 0;
+                    }
+                }
             }
         }
 

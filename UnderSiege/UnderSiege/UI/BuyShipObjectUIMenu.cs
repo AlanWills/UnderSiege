@@ -24,7 +24,7 @@ namespace UnderSiege.UI
 
         protected HUD HUD { get; set; }
         private Button ToggleButton { get; set; }
-        private Menu ItemMenu { get; set; }
+        public Menu ItemMenu { get; private set; }
 
         protected float previousCameraZoom;
 

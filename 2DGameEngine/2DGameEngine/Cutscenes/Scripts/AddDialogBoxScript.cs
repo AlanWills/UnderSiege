@@ -43,14 +43,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
             DialogBox.Initialize();
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Run(GameTime gameTime)
         {
             DialogBox.Update(gameTime);
         }
 
-        public override bool ShouldUpdateGame()
+        public override void CheckShouldUpdateGame()
         {
-            return false;
+            ShouldUpdateGame = false;
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -70,7 +70,12 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void CheckDone()
         {
-            Done = DialogBox.Alive == false || DialogBox.IsSelected;
+            Done = DialogBox.Alive == false || DialogBox.IsSelected || Done;
+        }
+
+        public override void PerformImmediately()
+        {
+            Done = true;
         }
 
         #endregion

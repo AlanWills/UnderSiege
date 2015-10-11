@@ -61,6 +61,48 @@ namespace UnderSiege.UI
             UIManager.AddObject(uiObject, tag, load, linkWithObject);
         }
 
+        public UIObject GetUIObject(string tag)
+        {
+            return UIManager.GetItem(tag);
+        }
+
+        public T GetUIObject<T>(string tag) where T : UIObject
+        {
+            return UIManager.GetItem<T>(tag);
+        }
+
+        public void DisableAndHideUIObject(string tag)
+        {
+            UIObject uiobject = UIManager.GetItem(tag);
+            uiobject.Active = false;
+            uiobject.Visible = false;
+        }
+
+        public void ActivateAndShowUIObject(string tag)
+        {
+            UIObject uiobject = UIManager.GetItem(tag);
+            uiobject.Active = true;
+            uiobject.Visible = true;
+        }
+
+        public void DisableAndHideAll()
+        {
+            foreach (UIObject uiobject in UIManager.Values)
+            {
+                uiobject.Active = false;
+                uiobject.Visible = false;
+            }
+        }
+
+        public void ActivateAndShowAll()
+        {
+            foreach (UIObject uiobject in UIManager.Values)
+            {
+                uiobject.Active = true;
+                uiobject.Visible = true;
+            }
+        }
+
         #endregion
 
         #region Virtual Methods

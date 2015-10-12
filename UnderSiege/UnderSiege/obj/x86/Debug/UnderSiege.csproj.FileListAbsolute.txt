@@ -22,7 +22,6 @@ C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderS
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\UnderSiegeData.pdb
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\SpaceStations\station_small.xnb
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Ships\PlayerShips\hii_vanaar.xnb
-C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\SpaceStations\SmallStation.xnb
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Turrets\dual_laser_medium.xnb
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\GameplayScreen.xnb
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameplayScreen.xnb
@@ -72,3 +71,8 @@ C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderS
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\FX\Contrail.xnb
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\FX\EngineBlaze.xnb
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Menus\DialogBox.xnb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameplayTutorialScreen.xnb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xnb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\GameplayTutorial\TutorialScoutWave.xnb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xnb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\SpaceStations\CommandStation.xnb

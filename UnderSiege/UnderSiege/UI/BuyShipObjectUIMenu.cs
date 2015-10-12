@@ -95,6 +95,7 @@ namespace UnderSiege.UI
         private void ToggleItemsVisibility(object sender, EventArgs e)
         {
             // Toggle the active and visible state of the menu
+            IsSelected = !IsSelected;
             ItemMenu.Visible = !ItemMenu.Visible;
             ItemMenu.Active = !ItemMenu.Active;
         }

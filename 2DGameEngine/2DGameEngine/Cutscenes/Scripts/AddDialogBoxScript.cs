@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;
@@ -19,14 +20,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         #endregion
 
-        public AddDialogBoxScript(string text, Vector2 localPosition, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(canRun)
+        public AddDialogBoxScript(string text, Vector2 localPosition, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)
+            : base(shouldUpdateGame, canRun)
         {
             DialogBox = new DialogBox(text, localPosition, Label.SpriteFont.MeasureString(text) +  new Vector2(20, 10), "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
         }
 
-        public AddDialogBoxScript(string text, Vector2 localPosition, Vector2 size, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(canRun)
+        public AddDialogBoxScript(string text, Vector2 localPosition, Vector2 size, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)
+            : base(shouldUpdateGame, canRun)
         {
             DialogBox = new DialogBox(text, localPosition, size, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
         }
@@ -70,7 +71,15 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void CheckDone()
         {
-            Done = DialogBox.Alive == false || DialogBox.IsSelected || Done;
+            Done = DialogBox.Alive == false || GameMouse.IsLeftClicked;
+        }
+
+        public override void IfDone()
+        {
+            base.IfDone();
+
+            // Want to flush the input handler to avoid skipping over dialog boxes
+            GameMouse.Flush();
         }
 
         public override void PerformImmediately()

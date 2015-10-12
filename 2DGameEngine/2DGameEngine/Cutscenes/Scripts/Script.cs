@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using _2DGameEngine.Extra_Components;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -35,9 +36,10 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         #endregion
 
-        public Script(bool canRun = true)
+        public Script(bool shouldUpdateGame = true, bool canRun = true)
         {
             CanRun = canRun;
+            ShouldUpdateGame = shouldUpdateGame;
         }
 
         #region Methods
@@ -71,7 +73,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public virtual void CheckShouldUpdateGame()
         {
-            ShouldUpdateGame = true;
+            
         }
 
         public abstract void Draw(SpriteBatch spriteBatch);

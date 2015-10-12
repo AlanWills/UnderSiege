@@ -26,5 +26,11 @@ namespace _2DTowerDefenceLibraryData.Waves_Data
             get;
             set;
         }
+
+        public float TimeBetweenEnemySpawns
+        {
+            get;
+            set;
+        }
     }
 }

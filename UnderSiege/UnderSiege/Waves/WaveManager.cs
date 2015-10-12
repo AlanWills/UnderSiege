@@ -24,6 +24,8 @@ namespace UnderSiege.Waves
             private set;
         }
 
+        public Wave<T> CurrentWave { get; private set; }
+
         public UnderSiegeGameplayScreen GameplayScreen { get; private set; }
         public int CurrentWaveNumber { get; set; }
 
@@ -32,8 +34,6 @@ namespace UnderSiege.Waves
         private float currentTimeBetweenWaves = 0;
         private float currentTimeBetweenEnemySpawns = 0;
         private int currentEnemyInWave = 0;
-
-        private const float timeBetweenEnemySpawns = 2;
 
         #endregion
 
@@ -68,23 +68,38 @@ namespace UnderSiege.Waves
         {
             if (Waves.Count > 0)
             {
+                currentEnemyInWave = 0;
                 CurrentWaveNumber++;
 
-                Wave<T> wave = Waves.Dequeue();
-                QueuedEnemies = wave.Enemies;
+                CurrentWave = Waves.Dequeue();
+                QueuedEnemies = CurrentWave.Enemies;
 
                 FlashingLabel warningLabel = new FlashingLabel("Enemies Detected!", new Vector2(ScreenManager.ScreenCentre.X, ScreenManager.ScreenCentre.Y * 0.25f), Color.Red, null, 4.8f);
                 UnderSiegeGameplayScreen.HUD.AddUIObject(warningLabel, "New Wave Label");
 
                 int spawnCounter = 0;
-                foreach (Vector2 spawnPoint in wave.WaveData.SpawnPoints)
+                foreach (Vector2 spawnPoint in CurrentWave.WaveData.SpawnPoints)
                 {
-                    UnderSiegeGameplayScreen.HUD.AddUIObject(new Marker(new Vector2(-wave.WaveData.SpawnPoints.Count * 0.5f * 32 + spawnCounter * 32, 32), Camera.GameToScreenCoords(spawnPoint), "Sprites\\UI\\Markers\\DirectionMarker", warningLabel), spawnPoint.ToString() + "Marker");
+                    UnderSiegeGameplayScreen.HUD.AddUIObject(new Marker(new Vector2(-CurrentWave.WaveData.SpawnPoints.Count * 0.5f * 32 + spawnCounter * 32, 32), Camera.GameToScreenCoords(spawnPoint), "Sprites\\UI\\Markers\\DirectionMarker", warningLabel), spawnPoint.ToString() + "Marker");
                     spawnCounter++;
                 }
 
                 currentTimeBetweenWaves = 0;
-                currentTimeBetweenEnemySpawns = timeBetweenEnemySpawns;
+                currentTimeBetweenEnemySpawns = CurrentWave.WaveData.TimeBetweenEnemySpawns;
+
+                // If our time between enemy spawns is zero, add them all at once
+                if (CurrentWave.WaveData.TimeBetweenEnemySpawns == 0)
+                {
+                    while (QueuedEnemies.Count > 0)
+                    {
+                        currentEnemyInWave++;
+                        GameplayScreen.AddEnemyShip(QueuedEnemies.Dequeue(), "Wave " + CurrentWaveNumber + " Enemy " + currentEnemyInWave);
+                    }
+                }
+            }
+            else
+            {
+                CurrentWave = null;
             }
         }
 
@@ -103,7 +118,7 @@ namespace UnderSiege.Waves
                 if (QueuedEnemies.Count > 0)
                 {
                     currentTimeBetweenEnemySpawns += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-                    if (currentTimeBetweenEnemySpawns >= timeBetweenEnemySpawns)
+                    if (currentTimeBetweenEnemySpawns >= CurrentWave.WaveData.TimeBetweenEnemySpawns)
                     {
                         currentEnemyInWave++;
                         GameplayScreen.AddEnemyShip(QueuedEnemies.Dequeue(), "Wave " + CurrentWaveNumber + " Enemy " + currentEnemyInWave);

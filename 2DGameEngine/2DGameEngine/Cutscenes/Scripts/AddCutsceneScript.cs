@@ -19,8 +19,8 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         #endregion
 
-        public AddCutsceneScript(Cutscene cutscene, BaseScreen currentScreen, bool canRun = true)
-            : base(canRun)
+        public AddCutsceneScript(Cutscene cutscene, BaseScreen currentScreen, bool shouldUpdateGame = false, bool canRun = true)
+            : base(shouldUpdateGame, canRun)
         {
             Cutscene = cutscene;
             CurrentScreen = currentScreen;

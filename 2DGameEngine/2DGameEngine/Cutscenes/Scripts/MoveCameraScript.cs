@@ -22,8 +22,8 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         #endregion
 
-        public MoveCameraScript(Vector2 targetLocation, MoveCameraStyle moveStyle, float speed = 2f, bool canRun = true)
-            : base(canRun)
+        public MoveCameraScript(Vector2 targetLocation, MoveCameraStyle moveStyle, float speed = 2f, bool shouldUpdateGame = false, bool canRun = true)
+            : base(shouldUpdateGame, canRun)
         {
             // Camera zero, zero is top left so need to account for this
             TargetLocation = targetLocation - ScreenManager.ScreenCentre;

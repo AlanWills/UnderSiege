@@ -36,8 +36,9 @@ Content\Sprites\UI\Buttons\highlighted.xnb
 Content\Sprites\UI\Buttons\pressed.xnb
 Content\Sprites\GameObjects\FX\Contrail.xnb
 Content\Sprites\GameObjects\FX\EngineBlaze.xnb
+Content\Sprites\UI\Menus\DialogBox.xnb
 Content\Data\Screens\MainMenuScreen.xnb
-Content\Data\GameObjects\SpaceStations\SmallStation.xnb
+Content\Data\GameObjects\SpaceStations\CommandStation.xnb
 Content\Data\Screens\GameplayScreen.xnb
 Content\Data\GameObjects\Turrets\DualLaserTurret.xnb
 Content\Data\GameObjects\Bullets\LaserBullet.xnb
@@ -55,4 +56,7 @@ Content\Data\GameObjects\Turrets\SmallSingleLaser.xnb
 Content\Data\GameObjects\Bullets\SmallSingleBeam.xnb
 Content\Data\GameObjects\Ships\EnemyShips\BushiTanto.xnb
 Content\Data\GameObjects\Ships\PlayerShips\HiiVanaar.xnb
-Content\Sprites\UI\Menus\DialogBox.xnb
+Content\Data\Screens\GameplayTutorialScreen.xnb
+Content\Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xnb
+Content\Data\Waves\GameplayTutorial\TutorialScoutWave.xnb
+Content\Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xnb

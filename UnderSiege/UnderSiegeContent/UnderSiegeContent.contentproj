@@ -89,8 +89,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\GameObjects\SpaceStations\SmallStation.xml">
-      <Name>SmallStation</Name>
+    <Compile Include="Data\GameObjects\SpaceStations\CommandStation.xml">
+      <Name>CommandStation</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>
@@ -443,6 +443,34 @@
       <Name>DialogBox</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Screens\GameplayTutorialScreen.xml">
+      <Name>GameplayTutorialScreen</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xml">
+      <Name>BushiHonyakiNoWeapons</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Waves\GameplayTutorial\TutorialScoutWave.xml">
+      <Name>TutorialScoutWave</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xml">
+      <Name>TutorialFirstEnemyWave</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

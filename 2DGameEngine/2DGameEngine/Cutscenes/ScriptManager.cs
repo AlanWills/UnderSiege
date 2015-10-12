@@ -27,6 +27,8 @@ namespace _2DGameEngine.Cutscenes
             get { return ScriptsToAdd.Count == 0 && RunningScripts.Count == 0; }
         }
 
+        private Script PreviousScript { get; set; }
+
         #endregion
 
         public ScriptManager(BaseScreen parentScreen)
@@ -36,14 +38,17 @@ namespace _2DGameEngine.Cutscenes
             ScriptsToAdd = new List<Script>();
             RunningScripts = new List<Script>();
             ScriptsToRemove = new List<Script>();
+
+            PreviousScript = null;
         }
 
         #region Methods
 
         public void AddScript(Script script, Script previousScript = null)
         {
-            script.PreviousScript = previousScript;
+            script.PreviousScript = previousScript == null ? PreviousScript : previousScript;
             ScriptsToAdd.Add(script);
+            PreviousScript = script;
         }
 
         public void LoadAndAddScripts(ContentManager content)

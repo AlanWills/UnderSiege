@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <Asset Type="UnderSiegeData.Gameplay_Objects.ShipData">
-    <DisplayName>Small Station</DisplayName>
+    <DisplayName>Command Station</DisplayName>
     <TextureAsset>Sprites\GameObjects\SpaceStations\station_small</TextureAsset>
     <HullHealth>1000</HullHealth>
     <OtherHardPoints>

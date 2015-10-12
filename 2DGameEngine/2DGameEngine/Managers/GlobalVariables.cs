@@ -9,6 +9,6 @@ namespace _2DGameEngine
     {
         public static bool SIMPLEPHYSICS = false;
         public static bool DRAWCOLLIDERS = false;
-        public static bool DEBUG = true;
+        public static bool DEBUG = false;
     }
 }

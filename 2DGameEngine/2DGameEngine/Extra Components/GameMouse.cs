@@ -93,6 +93,8 @@ namespace _2DGameEngine.Extra_Components
             set;
         }
 
+        private static float clickDelayTimer = 0.2f;
+
         #endregion
 
         #region Methods
@@ -126,34 +128,40 @@ namespace _2DGameEngine.Extra_Components
                 PreviousMouseState = CurrentMouseState;
                 CurrentMouseState = Mouse.GetState();
 
-                if (CurrentMouseState.LeftButton == ButtonState.Released && PreviousMouseState.LeftButton == ButtonState.Pressed)
+                if (CurrentMouseState.LeftButton == ButtonState.Released && PreviousMouseState.LeftButton == ButtonState.Pressed && clickDelayTimer >= 0.2f)
                 {
                     IsLeftClicked = true;
                     LastLeftClickedPosition = InGamePosition;
+                    clickDelayTimer = 0;
                 }
                 else
                 {
                     IsLeftClicked = false;
+                    clickDelayTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
                 }
 
-                if (CurrentMouseState.MiddleButton == ButtonState.Released && PreviousMouseState.MiddleButton == ButtonState.Pressed)
+                if (CurrentMouseState.MiddleButton == ButtonState.Released && PreviousMouseState.MiddleButton == ButtonState.Pressed && clickDelayTimer >= 0.2f)
                 {
                     IsMiddleClicked = true;
                     LastMiddleClickedPosition = InGamePosition;
+                    clickDelayTimer = 0;
                 }
                 else
                 {
                     IsMiddleClicked = false;
+                    clickDelayTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
                 }
 
-                if (CurrentMouseState.RightButton == ButtonState.Released && PreviousMouseState.RightButton == ButtonState.Pressed)
+                if (CurrentMouseState.RightButton == ButtonState.Released && PreviousMouseState.RightButton == ButtonState.Pressed && clickDelayTimer >= 0.2f)
                 {
                     IsRightClicked = true;
                     LastRightClickedPosition = InGamePosition;
+                    clickDelayTimer = 0;
                 }
                 else
                 {
                     IsRightClicked = false;
+                    clickDelayTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
                 }
 
                 if (ScreenManager.Camera.CameraMode == CameraMode.Free)

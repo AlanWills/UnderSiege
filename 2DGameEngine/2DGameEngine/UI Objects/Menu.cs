@@ -18,10 +18,10 @@ namespace _2DGameEngine.UI_Objects
     {
         #region Properties and Fields
 
-        protected BaseObjectManager<UIObject> UIManager
+        public BaseObjectManager<UIObject> UIManager
         {
             get;
-            set;
+            protected set;
         }
 
         private Rectangle scissorRectangle;

@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UnderSiege.Cutscenes;
 using UnderSiege.Gameplay_Objects;
 using UnderSiege.Player_Data;
 using UnderSiege.UI;
@@ -75,7 +74,7 @@ namespace UnderSiege.Screens
             Enemies = new DictionaryManager<EnemyShip>();
             WaveManager = new WaveManager<EnemyShip>(this);
 
-            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, "Data\\GameObjects\\SpaceStations\\SmallStation", SceneRoot), "Space Station");
+            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, "Data\\GameObjects\\SpaceStations\\CommandStation", SceneRoot), "Command Station");
 
             HUD = new HUD(this);
             AddUIObject(HUD, "HUD");

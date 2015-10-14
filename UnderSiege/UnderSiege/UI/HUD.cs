@@ -135,6 +135,8 @@ namespace UnderSiege.UI
             base.Draw(spriteBatch);
 
             UIManager.Draw(spriteBatch);
+            // Misleading name - really just HoverInfoUI
+            UIManager.DrawInGameUI(spriteBatch);
         }
 
         public override void HandleInput()

@@ -338,10 +338,9 @@ namespace _2DGameEngine.Screens
         public virtual void Draw()
         {
             GameObjectManager.Draw(SpriteBatch);
-            InGameUIManager.Draw(SpriteBatch);
             GameObjectManager.DrawInGameUI(SpriteBatch);
-            InGameUIManager.DrawInGameUI(SpriteBatch);
-            UIManager.DrawInGameUI(SpriteBatch);
+            InGameUIManager.Draw(SpriteBatch);
+            InGameUIManager.DrawInGameUI(SpriteBatch);            
 
             ScriptManager.Draw(SpriteBatch);
         }
@@ -349,6 +348,8 @@ namespace _2DGameEngine.Screens
         public virtual void DrawScreenUI()
         {
             UIManager.Draw(SpriteBatch);
+            // This name is misleading - ingameui really refers to HoverInfoUI
+            UIManager.DrawInGameUI(SpriteBatch);
             ScriptManager.DrawUI(SpriteBatch);
         }
 

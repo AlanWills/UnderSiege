@@ -62,6 +62,7 @@
     <Compile Include="Abstract Object Classes\BaseObject.cs" />
     <Compile Include="Abstract Object Classes\GameObject.cs" />
     <Compile Include="Abstract Object Classes\InGameUIObject.cs" />
+    <Compile Include="Abstract Object Classes\ScreenUIObject.cs" />
     <Compile Include="Abstract Object Classes\UIObject.cs" />
     <Compile Include="Cutscenes\Cutscene.cs" />
     <Compile Include="Cutscenes\ScriptManager.cs" />

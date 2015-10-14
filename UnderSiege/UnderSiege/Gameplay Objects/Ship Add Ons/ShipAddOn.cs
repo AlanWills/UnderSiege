@@ -107,6 +107,8 @@ namespace UnderSiege.Gameplay_Objects
 
                 AbilityUI = new ShipAddOnAbilityUI(new Vector2(100, ScreenManager.ScreenCentre.Y), this);
                 AbilityUI.LoadContent();
+                AbilityUI.Initialize();
+                UnderSiegeGameplayScreen.HUD.AddUIObject(AbilityUI, ShipAddOnData.DisplayName + " Ability UI", false);
             }
         }
 
@@ -120,9 +122,6 @@ namespace UnderSiege.Gameplay_Objects
             HealthBar.Visible = false;
             HealthBar.LoadContent();
             HealthBar.Initialize();
-
-            if (AbilityUI != null)
-                AbilityUI.Initialize();
         }
 
         public virtual void Orient()
@@ -149,9 +148,6 @@ namespace UnderSiege.Gameplay_Objects
                 HealthBar.Update(gameTime);
                 HealthBar.UpdateValue(CurrentHealth);
                 HealthBar.Visible = MouseOver || IsSelected;
-
-                if (AbilityUI != null)
-                    AbilityUI.Update(gameTime);
             }
         }
 
@@ -159,9 +155,6 @@ namespace UnderSiege.Gameplay_Objects
         {
             if (Active)
             {
-                if (AbilityUI != null)
-                    AbilityUI.HandleInput();
-
                 // This rectangle is used so that with something like the shield we do not select it if we select the shield collider
                 // Rather we have to select the hardpoint region
                 Rectangle hardPointRectangle = new Rectangle((int)(WorldPosition.X - HardPointUI.HardPointDimension * 0.5f), (int)(WorldPosition.Y - HardPointUI.HardPointDimension * 0.5f), (int)(HardPointUI.HardPointDimension), (int)(HardPointUI.HardPointDimension));
@@ -222,12 +215,6 @@ namespace UnderSiege.Gameplay_Objects
             if (Visible)
             {
                 HealthBar.Draw(spriteBatch);
-
-                if (AbilityUI != null)
-                {
-                    AbilityUI.Draw(spriteBatch);
-                    AbilityUI.DrawInGameUI(spriteBatch);
-                }
             }
         }
 

@@ -100,6 +100,7 @@
     <Compile Include="UI\BuyShipEngineUIMenu.cs" />
     <Compile Include="UI\BuyShipObjectUIMenu.cs" />
     <Compile Include="UI\HardPointUIManager.cs" />
+    <Compile Include="UI\In Game UI\BuyShipAddOnHoverInfo.cs" />
     <Compile Include="UI\In Game UI\ShipAddOnAbilityUI.cs" />
     <Compile Include="UI\In Game UI\EngineBlaze.cs" />
     <Compile Include="UI\In Game UI\HardPointUI.cs" />

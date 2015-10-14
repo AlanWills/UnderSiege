@@ -64,9 +64,6 @@ namespace UnderSiege.UI.In_Game_UI
             AddOnAbility ability = image.StoredObject as AddOnAbility;
 
             ability.Run();
-
-            // Do this so we can keep re-selecting the image rather than having to click off and then click on again
-            image.IsSelected = false;
         }
 
         #endregion

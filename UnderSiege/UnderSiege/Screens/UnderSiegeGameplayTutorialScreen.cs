@@ -94,7 +94,8 @@ namespace UnderSiege.Screens
             AddScript(new RunEventScript(CheckSecondTurretBought));
             AddScript(new RunEventScript(CheckFirstWaveDefeated));
             AddScript(new MoveCameraScript(new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y), MoveCameraStyle.LERP));
-            AddScript(new AddDialogBoxScript("We've sustained minor hull damage.", new Vector2(ScreenCentre.X * 0.55f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("We've sustained minor hull damage\nand some turrets could be damaged.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript(".", new Vector2(ScreenCentre.X * 0.55f, ScreenCentre.Y)));
         }
 
         #endregion

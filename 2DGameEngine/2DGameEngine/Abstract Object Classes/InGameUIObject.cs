@@ -123,24 +123,14 @@ namespace _2DGameEngine.Abstract_Object_Classes
                     // We have clicked on the object
                     if (MouseOver)
                     {
-                        // If something is selected, we might be building UI or something, so for optimisation don't allow whatever we do on selecting to be done if already selected
-                        if (IsSelected)
-                            return;
-
                         // The object wasn't selected, so select it
                         if (clickResetTime >= TimeSpan.FromSeconds(0.2f))
-                            Select();
-
-                        return;
+                            IsSelected = true;
                     }
                     // We have clicked elsewhere so should clear selection
                     else
                     {
-                        // If something is not selected, we might be building UI or something, so for optimisation don't allow whatever we do on de-selecting to be done if already de-selected
-                        if (!IsSelected)
-                            return;
-
-                        DeSelect();
+                        IsSelected = false;
                     }
                 }
             }

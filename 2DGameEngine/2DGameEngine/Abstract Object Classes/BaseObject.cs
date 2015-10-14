@@ -201,12 +201,6 @@ namespace _2DGameEngine.Abstract_Object_Classes
             }
         }
 
-        public bool IsSelected
-        {
-            get;
-            set;
-        }
-
         public bool MouseOver
         {
             get;
@@ -275,6 +269,21 @@ namespace _2DGameEngine.Abstract_Object_Classes
                     Show();
                 else
                     Hide();
+            }
+        }
+
+        private bool isSelected;
+        public bool IsSelected
+        {
+            get { return isSelected; }
+            set
+            {
+                isSelected = value;
+
+                if (isSelected)
+                    Select();
+                else
+                    DeSelect();
             }
         }
 
@@ -514,7 +523,6 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
         protected virtual void Select()
         {
-            IsSelected = true;
             // We have this reset time to stop multiple selects happening in quick 
             clickResetTime = TimeSpan.FromSeconds(0);
 
@@ -526,8 +534,6 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
         protected virtual void DeSelect()
         {
-            IsSelected = false;
-
             if (OnDeselect != null)
             {
                 OnDeselect(this, EventArgs.Empty);

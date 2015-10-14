@@ -119,6 +119,7 @@
     <Compile Include="UI Objects\DialogBox.cs" />
     <Compile Include="UI Objects\FlashingInGameImage.cs" />
     <Compile Include="UI Objects\FlashingLabel.cs" />
+    <Compile Include="UI Objects\ImageAndLabel.cs" />
     <Compile Include="UI Objects\Image.cs" />
     <Compile Include="UI Objects\InGameImage.cs" />
     <Compile Include="UI Objects\Label.cs" />

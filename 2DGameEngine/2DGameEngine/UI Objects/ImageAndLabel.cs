@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace _2DGameEngine.UI_Objects
+namespace UnderSiege.UI
 {
-    public class IconAndLabel : UIObject
+    public class ImageAndLabel : UIObject
     {
         #region Properties and Fields
 
@@ -28,14 +28,14 @@ namespace _2DGameEngine.UI_Objects
 
         #endregion
 
-        public IconAndLabel(string imageDataAsset, string labelText, Vector2 position, BaseObject parent = null)
+        public ImageAndLabel(string imageDataAsset, string labelText, Vector2 position, BaseObject parent = null)
             : base(position, "", parent)
         {
             Image = new Image(imageDataAsset, this);
             Label = new Label(labelText, Color.White, this);
         }
 
-        public IconAndLabel(string imageDataAsset, string labelText, Vector2 position, Color textColour, BaseObject parent = null)
+        public ImageAndLabel(string imageDataAsset, string labelText, Vector2 position, Color textColour, BaseObject parent = null)
             : base(position, "", parent)
         {
             Image = new Image(imageDataAsset, this);

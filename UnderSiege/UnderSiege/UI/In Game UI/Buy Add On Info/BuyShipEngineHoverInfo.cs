@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
         public BuyShipEngineHoverInfo(ShipEngineData shipEngineData, Vector2 localPosition, BaseObject parent, float lifeTime = float.MaxValue)
             : base(shipEngineData, localPosition, parent, lifeTime)
         {
-
+            AddUI(shipEngineData);
         }
 
         #region Methods
@@ -25,6 +26,28 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
         #endregion
 
         #region Virtual Methods
+
+        private void AddUI(ShipEngineData shipEngineData)
+        {
+            Vector2 size = Vector2.Zero;
+
+            // For now don't set the position of this label, because we do not know the size yet
+            // However, with correct parenting we will only need to set this position at the very end when the size is calculated
+            // And everything else will be correctly position
+            Label name = new Label(shipEngineData.DisplayName, Vector2.Zero, Color.White, this);
+            size = SpriteFont.MeasureString(name.Text);
+            AddUIObject(name, "Add On Name");
+
+            Label health = new Label("Health: " + shipEngineData.Health.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, name);
+            size = new Vector2(Math.Max(size.X, health.Size.X), size.Y + SpriteFont.LineSpacing + padding);
+            AddUIObject(health, "Health");
+
+            Size = size + new Vector2(padding, padding) * 2;
+            LocalPosition += new Vector2(0, -Size.Y * 0.5f);
+
+            // Position the first UI element correctly
+            name.LocalPosition = new Vector2(0, -Size.Y * 0.5f + SpriteFont.LineSpacing * 0.5f + padding);
+        }
 
         #endregion
     }

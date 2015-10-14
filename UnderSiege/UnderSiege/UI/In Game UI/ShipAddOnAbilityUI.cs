@@ -49,6 +49,7 @@ namespace UnderSiege.UI.In_Game_UI
 
                 // Weird constants and multiplies are for padding purposes;
                 Image abilityImage = new Image(new Vector2(-Size.X * 0.5f + (column + 0.5f) * (abilityImageSize + padding) + 0.5f * padding, -Size.Y * 0.5f + (row + 0.5f) * (abilityImageSize + padding) + 0.5f * padding), new Vector2(abilityImageSize, abilityImageSize), ability.AddOnAbilityData.TextureAsset, this);
+                abilityImage.HoverUI = new Label(ability.AddOnAbilityData.DisplayName, new Vector2(0, Size.Y * 0.5f + SpriteFont.LineSpacing * 0.5f), Color.White, abilityImage);
                 abilityImage.StoredObject = ability;
                 abilityImage.OnSelect += RunAbility;
 

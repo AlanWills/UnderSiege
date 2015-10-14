@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnderSiege.Gameplay_Objects;
 using UnderSiege.UI;
 
 namespace UnderSiege.Screens
@@ -93,8 +94,9 @@ namespace UnderSiege.Screens
             AddScript(new ShowAndActivateObjectScript(UnderSiegeGameplayScreen.HUD.GetUIObject("Buy Turrets UI"), false));
             AddScript(new RunEventScript(CheckSecondTurretBought));
             AddScript(new RunEventScript(CheckFirstWaveDefeated));
+            AddScript(new RunEventScript(DamageAddOnsForRepair));
             AddScript(new MoveCameraScript(new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y), MoveCameraStyle.LERP));
-            AddScript(new AddDialogBoxScript("We've sustained minor hull damage\nand some turrets could be damaged.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("We've sustained minor system damage\nto our command station's defences.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript(".", new Vector2(ScreenCentre.X * 0.55f, ScreenCentre.Y)));
         }
 
@@ -142,6 +144,18 @@ namespace UnderSiege.Screens
             }
             
             script.Done = Enemies.Values.Count == 0;
+        }
+
+        private void DamageAddOnsForRepair(object sender, EventArgs e)
+        {
+            Script script = sender as Script;
+            PlayerShip commandStation = UnderSiegeGameplayScreen.Allies.GetItem("Command Station");
+            foreach (ShipTurret turret in commandStation.ShipAddOns["ShipTurret"])
+            {
+                turret.CurrentHealth = turret.CurrentHealth == turret.ShipAddOnData.Health ? turret.ShipAddOnData.Health * 0.5f : turret.CurrentHealth;
+            }
+
+            script.Done = true;
         }
 
         #endregion

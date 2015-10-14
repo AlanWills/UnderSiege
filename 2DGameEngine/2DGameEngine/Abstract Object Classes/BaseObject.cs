@@ -432,7 +432,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
         public virtual void DrawInGameUI(SpriteBatch spriteBatch)
         {
-            if (MouseOver)
+            if (MouseOver && Visible)
             {
                 if (HoverUI != null)
                 {

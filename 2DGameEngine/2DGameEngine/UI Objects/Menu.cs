@@ -203,6 +203,13 @@ namespace _2DGameEngine.UI_Objects
             }
         }
 
+        public override void DrawInGameUI(SpriteBatch spriteBatch)
+        {
+            base.DrawInGameUI(spriteBatch);
+
+            UIManager.DrawInGameUI(spriteBatch);
+        }
+
         public override void HandleInput()
         {
             // We want the menu to only be deactivated by another UIObject - like a button or something

@@ -105,7 +105,7 @@ namespace UnderSiege.Gameplay_Objects
             {
                 SetUpAbilities();
 
-                AbilityUI = new ShipAddOnAbilityUI(new Vector2(1000, 500), this);
+                AbilityUI = new ShipAddOnAbilityUI(new Vector2(100, ScreenManager.ScreenCentre.Y), this);
                 AbilityUI.LoadContent();
             }
         }
@@ -224,7 +224,10 @@ namespace UnderSiege.Gameplay_Objects
                 HealthBar.Draw(spriteBatch);
 
                 if (AbilityUI != null)
+                {
                     AbilityUI.Draw(spriteBatch);
+                    AbilityUI.DrawInGameUI(spriteBatch);
+                }
             }
         }
 

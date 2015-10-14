@@ -338,16 +338,10 @@ namespace _2DGameEngine.Screens
         public virtual void Draw()
         {
             GameObjectManager.Draw(SpriteBatch);
-
-            foreach (GameObject gameObject in GameObjectManager.Values)
-            {
-                gameObject.DrawInGameUI(SpriteBatch);
-            }
-
-            foreach (InGameUIObject inGameUIObject in InGameUIManager.Values)
-            {
-                inGameUIObject.Draw(SpriteBatch);
-            }
+            InGameUIManager.Draw(SpriteBatch);
+            GameObjectManager.DrawInGameUI(SpriteBatch);
+            InGameUIManager.DrawInGameUI(SpriteBatch);
+            UIManager.DrawInGameUI(SpriteBatch);
 
             ScriptManager.Draw(SpriteBatch);
         }

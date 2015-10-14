@@ -34,7 +34,7 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
             // For now don't set the position of this label, because we do not know the size yet
             // However, with correct parenting we will only need to set this position at the very end when the size is calculated
             // And everything else will be correctly position
-            Label name = new Label(shipTurretData.DisplayName, Vector2.Zero, Color.White, this);
+            Label name = new Label(shipTurretData.DisplayName, Vector2.Zero, Color.Red, this);
             size = name.TextDimensions;
             AddUIObject(name, "Turret Name");
 

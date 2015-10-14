@@ -29,8 +29,8 @@ namespace UnderSiege
 
             if (GlobalVariables.DEBUG)
             {
-                graphics.PreferredBackBufferWidth = 1280;
-                graphics.PreferredBackBufferHeight = 720;
+                graphics.PreferredBackBufferWidth = 1600;
+                graphics.PreferredBackBufferHeight = 1024;
                 graphics.IsFullScreen = false;
             }
             else

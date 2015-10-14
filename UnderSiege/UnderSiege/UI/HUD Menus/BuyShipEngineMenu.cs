@@ -10,21 +10,23 @@ using UnderSiege.Gameplay_Objects;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
 using UnderSiege.Player_Data;
 using UnderSiege.Screens;
+using UnderSiege.UI.HUD_Menus;
+using UnderSiege.UI.In_Game_UI.Buy_Add_On_Info;
 using UnderSiegeData.Gameplay_Objects;
 
-namespace UnderSiege.UI
+namespace UnderSiege.UI.HUD_Menus
 {
-    public class BuyShipEngineUIMenu : BuyShipObjectUIMenu<ShipEngine, ShipEngineData>
+    public class BuyShipEngineMenu : BuyShipAddOnMenu
     {
         #region Properties and Fields
 
-        public BuyShipEngineUIMenu(Vector2 position, HUD hud, string dataAsset = "")
+        #endregion
+
+        public BuyShipEngineMenu(Vector2 position, HUD hud, string dataAsset = "")
             : base(position, hud, dataAsset)
         {
-            
-        }
 
-        #endregion
+        }
 
         #region Methods
 
@@ -32,15 +34,48 @@ namespace UnderSiege.UI
 
         #region Virtual Methods
 
-        protected override void ResetPurchaseObjectUI()
+        protected override void AddUI()
         {
-            foreach (PlayerShip ship in UnderSiegeGameplayScreen.Allies.Values)
+            // Add Buy Button
+            // Populate with all elements with data type T
+            // Add events from UnderSiegeGameplay Screen to here - like show hardpoint and reset UI
+            // We can handle on the turning on and off here rather than in the gameplay screen
+            ToggleButton = new Button(new Vector2(0, Button.defaultTexture.Height * 0.5f), "Engines", this);
+            ToggleButton.OnSelect += ToggleItemsVisibility;
+
+            // Set the size of the menu based on the number of objects which have to fill it
+            List<ShipEngineData> allData = AssetManager.GetAllData<ShipEngineData>();
+            int totalObjects = allData.Count;
+            int totalRows = (int)Math.Ceiling((float)totalObjects / (float)columns);
+            Vector2 itemMenuSize = new Vector2(columns * (HardPointUI.HardPointDimension + padding) + padding, totalRows * (HardPointUI.HardPointDimension + padding) + padding);
+
+            ItemMenu = new Menu(new Vector2(0, -itemMenuSize.Y * 0.5f), itemMenuSize, 0, 0, 0, 0, "", this);
+            ItemMenu.Opacity = 1;
+
+            int counter = 0;
+            foreach (ShipEngineData data in allData)
             {
-                ship.DrawEngineHardPoints = false;
+                int row = (counter / columns);
+                int column = counter % columns;
+                // The 0.5f in the X is to pad the object correctly along the x axis
+                Image objectImage = new Image(new Vector2(-ItemMenu.Size.X * 0.5f + (column + 0.5f) * (HardPointUI.HardPointDimension + padding) + 0.5f * padding, -ItemMenu.Size.Y * 0.5f + (row + 0.5f) * (HardPointUI.HardPointDimension + padding) + 0.5f * padding), new Vector2(HardPointUI.HardPointDimension, HardPointUI.HardPointDimension), data.TextureAsset, ItemMenu);
+                BuyShipEngineHoverInfo hoverUI = new BuyShipEngineHoverInfo(data, new Vector2(0, -objectImage.Size.Y * 0.5f - 2 * padding), objectImage);
+
+                hoverUI.LoadContent();
+                hoverUI.Initialize();
+
+                objectImage.HoverUI = hoverUI;
+                objectImage.StoredObject = data;
+                objectImage.OnSelect += ShowHardPointsEvent;
+                objectImage.WhileSelected += CheckForPlaceObjectEvent;
+
+                ItemMenu.AddUIObject(objectImage, "Buy " + data.DisplayName + " Image");
+
+                counter++;
             }
 
-            HUD.GameplayScreen.RemoveInGameUIObject("Purchase Object UI");
-            Camera.Zoom = previousCameraZoom;
+            ItemMenu.Visible = false;
+            ItemMenu.Active = false;
         }
 
         protected override void ShowHardPointsEvent(object sender, EventArgs e)
@@ -56,16 +91,8 @@ namespace UnderSiege.UI
                 {
                     // This is going to need to be generalised - how are we going to store/get the ShipAddOn type name?
                     PurchaseItemUI purchaseShipObjectUI = new PurchaseItemUI(objectImage.Texture, dataOfObject, dataOfObject.AddOnType);
-                    if (dataOfObject.AddOnType == "ShipShield")
-                    {
-                        ShipShieldData shieldData = dataOfObject as ShipShieldData;
-                        purchaseShipObjectUI.Colour = new Color(shieldData.Colour);
-                        purchaseShipObjectUI.Size = new Vector2(shieldData.ShieldRange, shieldData.ShieldRange);
-                    }
-
                     HUD.GameplayScreen.AddInGameUIObject(purchaseShipObjectUI, "Purchase Object UI");
                     purchaseShipObjectUI.Initialize();
-
 
                     previousCameraZoom = Camera.Zoom;
                     Camera.Zoom = 1;
@@ -122,6 +149,16 @@ namespace UnderSiege.UI
             {
                 // Ideally don't want to reset the UI if we click on a ship, but not on a hardpoint.  However, this is proving tricky as when we click on the ship it stops calling this function.  Maybe not being selected or something...?
                 ResetPurchaseObjectUI();
+            }
+        }
+
+        protected override void ResetPurchaseObjectUI()
+        {
+            base.ResetPurchaseObjectUI();
+
+            foreach (PlayerShip ship in UnderSiegeGameplayScreen.Allies.Values)
+            {
+                ship.DrawEngineHardPoints = false;
             }
         }
 

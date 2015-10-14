@@ -40,5 +40,11 @@ namespace UnderSiegeData.Gameplay_Objects
             get;
             set;
         }
+
+        public List<string> Abilities
+        {
+            get;
+            set;
+        }
     }
 }

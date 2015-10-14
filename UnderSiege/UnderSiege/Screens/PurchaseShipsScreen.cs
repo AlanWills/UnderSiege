@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnderSiege.Player_Data;
 using UnderSiege.UI;
 using UnderSiegeData.Gameplay_Objects;
 
@@ -38,7 +39,7 @@ namespace UnderSiege.Screens
             foreach (PlayerShipData shipData in AssetManager.GetAllData<PlayerShipData>())
             {
                 // If we do not have enough money, do not show the UI
-                if (UnderSiegeGameplayScreen.Session.Money < shipData.Price)
+                if (Session.Money < shipData.Price)
                 {
                     continue;
                 }

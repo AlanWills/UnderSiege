@@ -67,6 +67,7 @@
     <Compile Include="Cutscenes\ScriptManager.cs" />
     <Compile Include="Cutscenes\Scripts\AddCutsceneScript.cs" />
     <Compile Include="Cutscenes\Scripts\AddDialogBoxScript.cs" />
+    <Compile Include="Cutscenes\Scripts\AddOptionsDialogBoxScript.cs" />
     <Compile Include="Cutscenes\Scripts\DisableAndHideObjectScript.cs" />
     <Compile Include="Cutscenes\Scripts\MoveCameraScript.cs" />
     <Compile Include="Cutscenes\Scripts\Script.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="UI Objects\Label.cs" />
     <Compile Include="UI Objects\Marker.cs" />
     <Compile Include="UI Objects\Menu.cs" />
+    <Compile Include="UI Objects\OptionsDialogBox.cs" />
     <Compile Include="UI Objects\PictureBox.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
+using UnderSiege.Player_Data;
 using UnderSiege.Screens;
 using UnderSiegeData.Gameplay_Objects;
 
@@ -17,8 +18,8 @@ namespace UnderSiege.UI
     {
         #region Properties and Fields
 
-        public BuyShipEngineUIMenu(Vector2 position, Vector2 size, HUD hud, string dataAsset = "")
-            : base(position, size, hud, dataAsset)
+        public BuyShipEngineUIMenu(Vector2 position, HUD hud, string dataAsset = "")
+            : base(position, hud, dataAsset)
         {
             
         }
@@ -92,7 +93,7 @@ namespace UnderSiege.UI
                                 if (GameMouse.IsLeftClicked)
                                 {
                                     ShipAddOnData addOnData = shipObjectToPurchase.DataAssetOfObject as ShipAddOnData;
-                                    UnderSiegeGameplayScreen.Session.Money -= addOnData.Price;
+                                    Session.Money -= addOnData.Price;
                                     ally.AddEngine(hardPoint.HardPoint, addOnData);
 
                                     ResetPurchaseObjectUI();

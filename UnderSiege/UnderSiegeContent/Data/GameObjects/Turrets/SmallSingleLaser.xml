@@ -8,6 +8,9 @@
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>true</Orientable>
     <Health>30</Health>
+    <Abilities>
+      <Item>Repair</Item>
+    </Abilities>
     <TurretType>Beam</TurretType>
     <BulletAsset>Data\GameObjects\Bullets\SmallSingleBeam</BulletAsset>
     <Range>850</Range>

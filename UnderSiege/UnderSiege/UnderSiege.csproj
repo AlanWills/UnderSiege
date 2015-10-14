@@ -72,6 +72,8 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\Object Abilities\AddOnAbility.cs" />
+    <Compile Include="Abilities\Object Abilities\RepairAbility.cs" />
     <Compile Include="Gameplay Objects\Ship Add Ons\ShipBeamTurret.cs" />
     <Compile Include="Gameplay Objects\Turret Bullets\Beam.cs" />
     <Compile Include="Gameplay Objects\Turret Bullets\Bullet.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="UI\BuyShipEngineUIMenu.cs" />
     <Compile Include="UI\BuyShipObjectUIMenu.cs" />
     <Compile Include="UI\HardPointUIManager.cs" />
+    <Compile Include="UI\In Game UI\ShipAddOnAbilityUI.cs" />
     <Compile Include="UI\In Game UI\EngineBlaze.cs" />
     <Compile Include="UI\In Game UI\HardPointUI.cs" />
     <Compile Include="UI\HUD.cs" />

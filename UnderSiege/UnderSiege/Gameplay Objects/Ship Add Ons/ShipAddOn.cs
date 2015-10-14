@@ -10,8 +10,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnderSiege.Abilities.Object_Abilities;
 using UnderSiege.Screens;
 using UnderSiege.UI;
+using UnderSiege.UI.In_Game_UI;
 using UnderSiegeData.Gameplay_Objects;
 
 namespace UnderSiege.Gameplay_Objects
@@ -36,6 +38,13 @@ namespace UnderSiege.Gameplay_Objects
         }
 
         protected Bar HealthBar { get; set; }
+        public List<AddOnAbility> Abilities
+        {
+            get;
+            private set;
+        }
+
+        private ShipAddOnAbilityUI AbilityUI { get; set; }
 
         #endregion
 
@@ -44,13 +53,32 @@ namespace UnderSiege.Gameplay_Objects
         {
             ParentShip = parent;
             HardPointOffset = hardPointOffset;
+            Abilities = new List<AddOnAbility>();
         }
 
         #region Methods
 
+        private void SetUpAbilities()
+        {
+            foreach (string abilityString in ShipAddOnData.Abilities)
+            {
+                AddOnAbility ability = null;
+
+                switch (abilityString)
+                {
+                    case "Repair":
+                        ability = new RepairAbility("Data\\Abilities\\ShipAddOnAbilities\\Repair", this);
+                        break;
+                }
+
+                ability.LoadContent();
+                Abilities.Add(ability);
+            }
+        }
+
         #endregion
 
-        #region
+        #region Events
 
         protected override void IfSelected()
         {
@@ -64,10 +92,6 @@ namespace UnderSiege.Gameplay_Objects
 
         #endregion
 
-        #region Events
-
-        #endregion
-
         #region Virtual Methods
 
         public override void LoadContent()
@@ -76,6 +100,14 @@ namespace UnderSiege.Gameplay_Objects
 
             ShipAddOnData = AssetManager.GetData<ShipAddOnData>(DataAsset);
             CurrentHealth = ShipAddOnData.Health;
+
+            if (ParentShip.ShipType == ShipType.AlliedShip)
+            {
+                SetUpAbilities();
+
+                AbilityUI = new ShipAddOnAbilityUI(new Vector2(1000, 500), this);
+                AbilityUI.LoadContent();
+            }
         }
 
         public override void Initialize()
@@ -88,6 +120,9 @@ namespace UnderSiege.Gameplay_Objects
             HealthBar.Visible = false;
             HealthBar.LoadContent();
             HealthBar.Initialize();
+
+            if (AbilityUI != null)
+                AbilityUI.Initialize();
         }
 
         public virtual void Orient()
@@ -114,6 +149,9 @@ namespace UnderSiege.Gameplay_Objects
                 HealthBar.Update(gameTime);
                 HealthBar.UpdateValue(CurrentHealth);
                 HealthBar.Visible = MouseOver || IsSelected;
+
+                if (AbilityUI != null)
+                    AbilityUI.Update(gameTime);
             }
         }
 
@@ -121,14 +159,16 @@ namespace UnderSiege.Gameplay_Objects
         {
             if (Active)
             {
+                if (AbilityUI != null)
+                    AbilityUI.HandleInput();
+
                 // This rectangle is used so that with something like the shield we do not select it if we select the shield collider
                 // Rather we have to select the hardpoint region
                 Rectangle hardPointRectangle = new Rectangle((int)(WorldPosition.X - HardPointUI.HardPointDimension * 0.5f), (int)(WorldPosition.Y - HardPointUI.HardPointDimension * 0.5f), (int)(HardPointUI.HardPointDimension), (int)(HardPointUI.HardPointDimension));
-                bool mouseClicked = GameMouse.IsLeftClicked;
                 MouseOver = _2DGeometry.RectangleContainsPoint(hardPointRectangle, GameMouse.InGamePosition);
 
                 // If mouse isn't clicked we don't need to change the selection state, as we haven't selected anything!
-                if (mouseClicked)
+                if (GameMouse.IsLeftClicked)
                 {
                     // We have clicked on the object
                     if (MouseOver)
@@ -153,6 +193,25 @@ namespace UnderSiege.Gameplay_Objects
                         DeSelect();
                     }
                 }
+                else if (GameMouse.IsRightClicked)
+                {
+                    if (MouseOver)
+                    {
+                        if (AbilityUI != null)
+                        {
+                            AbilityUI.Active = true;
+                            AbilityUI.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        if (AbilityUI != null)
+                        {
+                            AbilityUI.Active = false;
+                            AbilityUI.Visible = false;
+                        }
+                    }
+                }
             }
         }
 
@@ -160,7 +219,13 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.DrawInGameUI(spriteBatch);
 
-            HealthBar.Draw(spriteBatch);
+            if (Visible)
+            {
+                HealthBar.Draw(spriteBatch);
+
+                if (AbilityUI != null)
+                    AbilityUI.Draw(spriteBatch);
+            }
         }
 
         public override void Die()

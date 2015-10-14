@@ -171,7 +171,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
                 if (!string.IsNullOrEmpty(Text))
                 {
                     // Always have text opacity as 1?
-                    spriteBatch.DrawString(SpriteFont, Text, WorldPosition, (Texture != null ? Color.White : Colour), (float)WorldRotation, SpriteFont.MeasureString(Text) * 0.5f, Scale, SpriteEffects.None, 0);
+                    spriteBatch.DrawString(SpriteFont, Text, WorldPosition, (Texture != null ? Color.White : Colour), (float)WorldRotation, SpriteFont.MeasureString(Text) * 0.5f, new Vector2(1, 1), SpriteEffects.None, 0);
                 }
             }
         }

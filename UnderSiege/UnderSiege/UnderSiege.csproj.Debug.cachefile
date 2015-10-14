@@ -60,3 +60,5 @@ Content\Data\Screens\GameplayTutorialScreen.xnb
 Content\Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xnb
 Content\Data\Waves\GameplayTutorial\TutorialScoutWave.xnb
 Content\Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xnb
+Content\Sprites\Abilities\ShipAddOnAbilities\field_repairs.xnb
+Content\Data\Abilities\ShipAddOnAbilities\Repair.xnb

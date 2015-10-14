@@ -8,6 +8,9 @@
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>true</Orientable>
     <Health>40</Health>
+    <Abilities>
+      <Item>Repair</Item>
+    </Abilities>
     <TurretType>Kinetic</TurretType>
     <BulletAsset>Data\GameObjects\Bullets\LaserBullet</BulletAsset>
     <Range>500</Range>

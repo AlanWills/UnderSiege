@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects;
+using UnderSiege.Player_Data;
 using UnderSiege.Screens;
 using UnderSiegeData.Gameplay_Objects;
 
@@ -98,7 +99,7 @@ namespace UnderSiege.UI
                 if (GameMouse.IsLeftClicked)
                 {
                     PurchaseShipsScreen.GameplayScreen.AddAlliedShip(new PlayerShip(GameMouse.LastLeftClickedPosition, AssetManager.GetKeyFromData(purchaseShipUI.DataAssetOfObject), UnderSiegeGameplayScreen.SceneRoot), "Ally " + UnderSiegeGameplayScreen.Allies.Values.Count + 1, true);
-                    UnderSiegeGameplayScreen.Session.Money -= (purchaseShipUI.DataAssetOfObject as PlayerShipData).Price;
+                    Session.Money -= (purchaseShipUI.DataAssetOfObject as PlayerShipData).Price;
                     ResetPurchaseObjectUI();
                 }
                 else if (InputHandler.KeyPressed(Keys.Escape))

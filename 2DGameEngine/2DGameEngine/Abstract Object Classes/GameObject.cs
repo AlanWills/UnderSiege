@@ -29,6 +29,8 @@ namespace _2DGameEngine.Abstract_Object_Classes
             private set;
         }
 
+        public event EventHandler AbilityEventQueue;
+
         #endregion
 
         public GameObject(string dataAsset = "", BaseObject parent = null, bool addRigidBody = true)
@@ -85,6 +87,11 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
                 if (Collider != null)
                     Collider.UpdateCollider();
+
+                if (AbilityEventQueue != null)
+                {
+                    AbilityEventQueue(this, EventArgs.Empty);
+                }
             }
         }
 

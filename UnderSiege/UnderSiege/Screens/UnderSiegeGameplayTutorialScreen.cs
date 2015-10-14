@@ -93,6 +93,8 @@ namespace UnderSiege.Screens
             AddScript(new ShowAndActivateObjectScript(UnderSiegeGameplayScreen.HUD.GetUIObject("Buy Turrets UI"), false));
             AddScript(new RunEventScript(CheckSecondTurretBought));
             AddScript(new RunEventScript(CheckFirstWaveDefeated));
+            AddScript(new MoveCameraScript(new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y), MoveCameraStyle.LERP));
+            AddScript(new AddDialogBoxScript("We've sustained minor hull damage.", new Vector2(ScreenCentre.X * 0.55f, ScreenCentre.Y)));
         }
 
         #endregion

@@ -59,6 +59,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\Object Abilities\AddOnAbilityData.cs" />
     <Compile Include="Gameplay Objects\Turret Bullet Data\BeamData.cs" />
     <Compile Include="Gameplay Objects\Ship Data\EnemyShipData.cs" />
     <Compile Include="Gameplay Objects\Turret Bullet Data\MissileData.cs" />
@@ -84,6 +85,7 @@
       <Name>2DTowerDefenceLibraryData</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--

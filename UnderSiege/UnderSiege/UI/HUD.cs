@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
+using UnderSiege.Player_Data;
 using UnderSiege.Screens;
 using UnderSiegeData.Gameplay_Objects;
 
@@ -37,10 +38,10 @@ namespace UnderSiege.UI
 
         private void SetUpUI()
         {
-            UIManager.AddObject(new BuyShipObjectUIMenu<ShipTurret, ShipTurretData>(new Vector2(150, ScreenManager.Viewport.Height - 100), new Vector2(200, 200), this, "Turrets"), "Buy Turrets UI", false);
-            UIManager.AddObject(new BuyShipObjectUIMenu<ShipShield, ShipShieldData>(new Vector2(400, ScreenManager.Viewport.Height - 100), new Vector2(200, 200), this, "Shields"), "Buy Shields UI", false);
-            UIManager.AddObject(new BuyShipEngineUIMenu(new Vector2(650, ScreenManager.Viewport.Height - 100), new Vector2(200, 200), this, "Engines"), "Buy Engines UI", false);
-            UIManager.AddObject(new Label("Money: " + UnderSiegeGameplayScreen.Session.Money, new Vector2(ScreenManager.Viewport.Width - 100, ScreenManager.Viewport.Height - SpriteFont.LineSpacing), Color.White, this), "Money UI", false);
+            UIManager.AddObject(new BuyShipObjectUIMenu<ShipTurret, ShipTurretData>(new Vector2(150, ScreenManager.Viewport.Height - Button.defaultTexture.Height), this, "Turrets"), "Buy Turrets UI", false);
+            UIManager.AddObject(new BuyShipObjectUIMenu<ShipShield, ShipShieldData>(new Vector2(400, ScreenManager.Viewport.Height - Button.defaultTexture.Height), this, "Shields"), "Buy Shields UI", false);
+            UIManager.AddObject(new BuyShipEngineUIMenu(new Vector2(650, ScreenManager.Viewport.Height - Button.defaultTexture.Height), this, "Engines"), "Buy Engines UI", false);
+            UIManager.AddObject(new Label("Money: " + Session.Money, new Vector2(ScreenManager.Viewport.Width - 100, ScreenManager.Viewport.Height - SpriteFont.LineSpacing), Color.White, this), "Money UI", false);
 
             Button buyShipsButton = new Button(new Vector2(900, ScreenManager.Viewport.Height - Button.defaultTexture.Height * 0.5f), "Ships", this);
             buyShipsButton.OnSelect += buyShipsButton_OnSelect;
@@ -126,7 +127,7 @@ namespace UnderSiege.UI
             base.Update(gameTime);
 
             UIManager.Update(gameTime);
-            UIManager.GetItem<Label>("Money UI").Text = "Money: " + UnderSiegeGameplayScreen.Session.Money;
+            UIManager.GetItem<Label>("Money UI").Text = "Money: " + Session.Money;
         }
 
         public override void Draw(SpriteBatch spriteBatch)

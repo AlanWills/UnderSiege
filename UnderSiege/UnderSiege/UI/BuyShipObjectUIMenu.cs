@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
+using UnderSiege.Player_Data;
 using UnderSiege.Screens;
 using UnderSiegeData.Gameplay_Objects;
 
@@ -27,11 +28,13 @@ namespace UnderSiege.UI
         public Menu ItemMenu { get; private set; }
 
         protected float previousCameraZoom;
+        private const int padding = 10;
+        private const int columns = 3;
 
         #endregion
 
-        public BuyShipObjectUIMenu(Vector2 position, Vector2 size, HUD hud, string itemType, string dataAsset = "")
-            : base(position, size, dataAsset, hud)
+        public BuyShipObjectUIMenu(Vector2 position, HUD hud, string itemType, string dataAsset = "")
+            : base(position, dataAsset, hud)
         {
             HUD = hud;
             AddUI(itemType);
@@ -45,19 +48,25 @@ namespace UnderSiege.UI
             // Populate with all elements with data type T
             // Add events from UnderSiegeGameplay Screen to here - like show hardpoint and reset UI
             // We can handle on the turning on and off here rather than in the gameplay screen
-            ToggleButton = new Button(new Vector2(0, Size.Y * 0.5f - Button.defaultTexture.Height * 0.5f), itemType, this);
+            ToggleButton = new Button(new Vector2(0, Button.defaultTexture.Height * 0.5f), itemType, this);
             ToggleButton.OnSelect += ToggleItemsVisibility;
 
-            ItemMenu = new Menu(new Vector2(0, -Button.defaultTexture.Height), new Vector2(Size.X, Size.Y - Button.defaultTexture.Height), 0, 0, 0, 0, "", this);
-            ItemMenu.Opacity = 0.35f;
+            // Set the size of the menu based on the number of objects which have to fill it
+            List<K> allData = AssetManager.GetAllData<K>();
+            int totalObjects = allData.Count;
+            int totalRows = (totalObjects / columns);
+            Vector2 itemMenuSize = new Vector2(columns * (HardPointUI.HardPointDimension + padding) + padding, totalRows * (HardPointUI.HardPointDimension + padding) + padding);
+
+            ItemMenu = new Menu(new Vector2(0, -itemMenuSize.Y * 0.5f), itemMenuSize, 0, 0, 0, 0, "", this);
+            ItemMenu.Opacity = 1;
 
             int counter = 0;
-            int padding = 10;
-            foreach (K data in AssetManager.GetAllData<K>())
+            foreach (K data in allData)
             {
-                int row = 1 + (counter / 5);
-                int column = 1 + counter % 5;
-                Image objectImage = new Image(new Vector2(-Size.X * 0.5f + column * (HardPointUI.HardPointDimension + padding), ItemMenu.Size.Y * 0.5f - row * (HardPointUI.HardPointDimension + padding)), new Vector2(HardPointUI.HardPointDimension, HardPointUI.HardPointDimension), data.TextureAsset, ItemMenu);
+                int row = 1 + (counter / columns);
+                int column = counter % columns;
+                // The 0.5f in the X is to pad the object correctly along the x axis
+                Image objectImage = new Image(new Vector2(-ItemMenu.Size.X * 0.5f + (column + 0.5f) * (HardPointUI.HardPointDimension + padding) + 0.5f * padding, ItemMenu.Size.Y * 0.5f - row * (HardPointUI.HardPointDimension + padding) + padding), new Vector2(HardPointUI.HardPointDimension, HardPointUI.HardPointDimension), data.TextureAsset, ItemMenu);
                 objectImage.StoredObject = data;
                 objectImage.OnSelect += ShowHardPointsEvent;
                 objectImage.WhileSelected += CheckForPlaceObjectEvent;
@@ -149,7 +158,7 @@ namespace UnderSiege.UI
                                 if (GameMouse.IsLeftClicked)
                                 {
                                     ShipAddOnData addOnData = shipObjectToPurchase.DataAssetOfObject as ShipAddOnData;
-                                    UnderSiegeGameplayScreen.Session.Money -= addOnData.Price;
+                                    Session.Money -= addOnData.Price;
                                     switch (shipObjectToPurchase.StoredObjectTypeName)
                                     {
                                         // We have clicked on a hardpoint - add the object

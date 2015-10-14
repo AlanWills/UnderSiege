@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Cutscenes.Scripts;
+using _2DGameEngine.Managers;
 using _2DGameEngine.Screens;
 using Microsoft.Xna.Framework;
 using System;
@@ -28,11 +29,21 @@ namespace UnderSiege.Screens
 
         protected override void AddStartGameButton()
         {
-            AddButton(NextButtonPosition, "Start Game Button", StartGame, false, "Start Game");
+            AddButton(NextButtonPosition, "Start Game Button", AddPlayTutorialDialogBox, false, "Start Game");
             NextButtonPosition += new Vector2(0, Viewport.Height / 6);
         }
 
-        protected override void StartGame(object sender, EventArgs e)
+        private void AddPlayTutorialDialogBox(object sender, EventArgs e)
+        {
+            ScriptManager.AddScript(new AddOptionsDialogBoxScript("Play Tutorial?", ScreenCentre, PlayGame, PlayTutorial, "No", "Yes"));
+        }
+
+        private void PlayGame(object sender, EventArgs e)
+        {
+            Transition(new UnderSiegeGameplayScreen(ScreenManager, "Data\\Screens\\GameplayScreen"));
+        }
+
+        private void PlayTutorial(object sender, EventArgs e)
         {
             Transition(new UnderSiegeGameplayTutorialScreen(ScreenManager, "Data\\Screens\\GameplayTutorialScreen"));
         }

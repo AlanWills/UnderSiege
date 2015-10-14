@@ -17,7 +17,7 @@ namespace _2DGameEngine.UI_Objects
         #endregion
 
         public DialogBox(string text, Vector2 position, string dataAsset = "Sprites\\UI\\Menus\\DialogBox", BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(position, dataAsset, parent, lifeTime)
+            : base(position, SpriteFont.MeasureString(text) + new Vector2(20, 10), dataAsset, parent, lifeTime)
         {
             Label = new Label(text, Vector2.Zero, Color.White, this, lifeTime);
         }

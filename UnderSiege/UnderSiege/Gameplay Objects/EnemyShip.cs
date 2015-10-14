@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
+using UnderSiege.Player_Data;
 using UnderSiege.Screens;
 using UnderSiegeData.Gameplay_Objects;
 
@@ -129,7 +130,7 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.RemoveAddOn(addOn);
 
-            UnderSiegeGameplayScreen.Session.Money += (int)(addOn.ShipAddOnData.Price * 0.1f);
+            Session.Money += (int)(addOn.ShipAddOnData.Price * 0.1f);
         }
 
         public override void Die()
@@ -137,7 +138,7 @@ namespace UnderSiege.Gameplay_Objects
             base.Die();
 
             UnderSiegeGameplayScreen.Enemies.Remove(this.Tag);
-            UnderSiegeGameplayScreen.Session.Money += ShipData.Price;
+            Session.Money += ShipData.Price;
         }
 
         #endregion

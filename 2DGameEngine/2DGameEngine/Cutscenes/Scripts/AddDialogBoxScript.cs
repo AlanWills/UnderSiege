@@ -16,14 +16,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
     {
         #region Properties and Fields
 
-        private DialogBox DialogBox { get; set; }
+        protected DialogBox DialogBox { get; set; }
 
         #endregion
 
         public AddDialogBoxScript(string text, Vector2 localPosition, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)
             : base(shouldUpdateGame, canRun)
         {
-            DialogBox = new DialogBox(text, localPosition, Label.SpriteFont.MeasureString(text) +  new Vector2(20, 10), "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
+            DialogBox = new DialogBox(text, localPosition, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
         }
 
         public AddDialogBoxScript(string text, Vector2 localPosition, Vector2 size, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)

@@ -8,6 +8,9 @@
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>false</Orientable>
     <Health>20</Health>
+    <Abilities>
+      <Item>Repair</Item>
+    </Abilities>
     <ShieldRange>170</ShieldRange>
     <ShieldStrength>100</ShieldStrength>
     <ShieldDepletedRechargeDelay>0</ShieldDepletedRechargeDelay>

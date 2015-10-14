@@ -10,7 +10,7 @@ namespace UnderSiege.Player_Data
     {
         #region Properties and Fields
 
-        public int Money
+        public static int Money
         {
             get;
             set;

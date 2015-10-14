@@ -8,7 +8,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SpriteFonts\UISpriteFont.xnb</Output>
-      <Time>2015-10-14T23:20:35.8999064+01:00</Time>
+      <Time>2015-10-15T00:25:51.1235213+01:00</Time>
     </Item>
     <Item>
       <Source>Sprites\UI\Mouse\default.png</Source>
@@ -350,7 +350,16 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Menus\DialogBox.xnb</Output>
-      <Time>2015-10-11T22:16:11.0082345+01:00</Time>
+      <Time>2015-10-15T00:25:51.1305319+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Abilities\ShipAddOnAbilities\field_repairs.png</Source>
+      <Name>Sprites\Abilities\ShipAddOnAbilities\field_repairs</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\field_repairs.xnb</Output>
+      <Time>2015-10-15T00:25:51.1285298+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\MainMenuScreen.xml</Source>
@@ -368,7 +377,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\SpaceStations\CommandStation.xnb</Output>
-      <Time>2015-10-13T00:10:17.5884848+01:00</Time>
+      <Time>2015-10-15T00:25:51.0444723+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\GameplayScreen.xml</Source>
@@ -386,7 +395,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\DualLaserTurret.xnb</Output>
-      <Time>2015-10-14T00:32:32.1270411+01:00</Time>
+      <Time>2015-10-15T00:25:51.0544785+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\LaserBullet.xml</Source>
@@ -404,7 +413,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Shields\EnergyShield.xnb</Output>
-      <Time>2015-10-14T00:32:37.9405585+01:00</Time>
+      <Time>2015-10-15T00:25:51.0164563+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\EnemyShips\BushiHonyaki.xml</Source>
@@ -413,7 +422,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiHonyaki.xnb</Output>
-      <Time>2015-10-13T00:28:55.6935788+01:00</Time>
+      <Time>2015-10-15T00:25:51.0274606+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Wave1.xml</Source>
@@ -422,7 +431,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Wave1.xnb</Output>
-      <Time>2015-10-13T00:21:17.8109336+01:00</Time>
+      <Time>2015-10-15T00:25:51.1075163+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Wave2.xml</Source>
@@ -431,7 +440,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Wave2.xnb</Output>
-      <Time>2015-10-13T00:21:13.4452731+01:00</Time>
+      <Time>2015-10-15T00:25:51.1115142+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Wave3.xml</Source>
@@ -440,7 +449,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Wave3.xnb</Output>
-      <Time>2015-10-13T00:21:09.5312387+01:00</Time>
+      <Time>2015-10-15T00:25:51.1145209+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\PurchaseShipsScreen.xml</Source>
@@ -467,7 +476,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Engines\LightThruster.xnb</Output>
-      <Time>2015-10-14T00:32:34.6239788+01:00</Time>
+      <Time>2015-10-15T00:25:51.007446+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Turrets\MissilePod.xml</Source>
@@ -476,7 +485,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\MissilePod.xnb</Output>
-      <Time>2015-10-14T00:32:29.0543014+01:00</Time>
+      <Time>2015-10-15T00:25:51.0634845+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\TviirMissile.xml</Source>
@@ -494,7 +503,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\SmallSingleLaser.xnb</Output>
-      <Time>2015-10-14T00:32:25.8631567+01:00</Time>
+      <Time>2015-10-15T00:25:51.0674871+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\SmallSingleBeam.xml</Source>
@@ -530,7 +539,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameplayTutorialScreen.xnb</Output>
-      <Time>2015-10-12T23:58:47.0088037+01:00</Time>
+      <Time>2015-10-15T00:25:51.0784923+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xml</Source>
@@ -539,7 +548,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xnb</Output>
-      <Time>2015-10-12T22:22:24.6265251+01:00</Time>
+      <Time>2015-10-15T00:25:51.0354672+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\GameplayTutorial\TutorialScoutWave.xml</Source>
@@ -548,7 +557,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\GameplayTutorial\TutorialScoutWave.xnb</Output>
-      <Time>2015-10-13T00:26:41.1463659+01:00</Time>
+      <Time>2015-10-15T00:25:51.0985103+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xml</Source>
@@ -557,16 +566,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xnb</Output>
-      <Time>2015-10-13T00:34:01.3988983+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Abilities\ShipAddOnAbilities\field_repairs.png</Source>
-      <Name>Sprites\Abilities\ShipAddOnAbilities\field_repairs</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\field_repairs.xnb</Output>
-      <Time>2015-10-13T23:26:04.8825025+01:00</Time>
+      <Time>2015-10-15T00:25:51.0884989+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Abilities\ShipAddOnAbilities\Repair.xml</Source>
@@ -575,7 +575,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Repair.xnb</Output>
-      <Time>2015-10-14T00:46:41.4935996+01:00</Time>
+      <Time>2015-10-15T00:25:50.9984439+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -592,7 +592,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiegeData\bin\x86\Debug\UnderSiegeData.dll</Key>
-        <Value>2015-10-13T22:34:35.9129275+01:00</Value>
+        <Value>2015-10-15T00:26:22.6262855+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
@@ -620,7 +620,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DTowerDefenceLibraryData\bin\x86\Debug\2DTowerDefenceLibraryData.dll</Key>
-        <Value>2015-10-13T00:21:55.2051989+01:00</Value>
+        <Value>2015-10-15T00:26:21.4745195+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngineData\bin\x86\Debug\2DGameEngineData.dll</Key>

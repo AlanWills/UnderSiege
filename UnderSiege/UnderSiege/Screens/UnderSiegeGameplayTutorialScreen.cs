@@ -57,7 +57,7 @@ namespace UnderSiege.Screens
             AddScript(new AddDialogBoxScript("Overlay fully operational.\nInitialising basic interface.", new Vector2(Viewport.Width * 0.25f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript("Click the 'Turrets' button when ready.", new Vector2(Viewport.Width * 0.25f, ScreenCentre.Y)));
 
-            AddScript(new ShowAndActivateObjectScript(UnderSiegeGameplayScreen.HUD.GetUIObject("Buy Turrets UI"), false));
+            AddScript(new ShowAndActivateObjectScript(UnderSiegeGameplayScreen.HUD.GetUIObject("Buy Turrets UI")));
             AddScript(new WaitForObjectSelectionScript(UnderSiegeGameplayScreen.HUD.GetUIObject("Buy Turrets UI")));
             AddScript(new AddDialogBoxScript("Here, you can issue turret construction orders.\nTurrets will help fend off attackers.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript("Turrets come in three types:\nKINETIC, MISSILE and BEAM.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
@@ -68,7 +68,7 @@ namespace UnderSiege.Screens
             AddScript(new AddDialogBoxScript("The missiles also track their target.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript("Beam turrets focus concentrated\nenergy on an enemy.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript("They take a short time to charge,\nbut can tear through most ships.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
-            AddScript(new WaitScript(2f, false));
+            AddScript(new WaitScript(1.5f, false));
 
             AddScript(new AddDialogBoxScript("Commander, a message.\nOur sensors are reporting enemy movement.", new Vector2(ScreenCentre.X * 0.7f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript("We must be ready for them.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
@@ -91,7 +91,7 @@ namespace UnderSiege.Screens
             AddScript(new AddDialogBoxScript("I have more to brief you on sir,\nbut this is an emergency situation,\nso the rest will have to wait.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript("We should have just enough time\nto build one more turret.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
 
-            AddScript(new ShowAndActivateObjectScript(UnderSiegeGameplayScreen.HUD.GetUIObject("Buy Turrets UI"), false));
+            AddScript(new ShowAndActivateObjectScript(UnderSiegeGameplayScreen.HUD.GetUIObject("Buy Turrets UI")));
             AddScript(new RunEventScript(CheckSecondTurretBought));
             AddScript(new RunEventScript(CheckFirstWaveDefeated));
             AddScript(new RunEventScript(DamageAddOnsForRepair));
@@ -101,7 +101,31 @@ namespace UnderSiege.Screens
             AddScript(new AddDialogBoxScript("This will bring up the commands that\ncan be performed on the add on.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript("Use the Repair command on all your turrets.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
             AddScript(new RunEventScript(CheckTurretsRepaired));
-            AddScript(new AddDialogBoxScript("Turret crews reporting all repairs completed.", new Vector2(ScreenCentre.X * 0.7f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("Turret crews reporting all repairs completed.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
+            AddScript(new WaitScript(1.5f, false));
+
+            AddScript(new AddDialogBoxScript("Sir, I have news from deck 13.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("Several weeks ago we began testing\na prototype shield generator.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("Apparently, the researchers have managed\nto finish the final integration tests\nand it is ready for construction on our station.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("I have been told that construction orders can now be issued.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("Updating your overlay now.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new WaitScript(1.0f, false));
+            AddScript(new ShowAndActivateObjectScript(UnderSiegeGameplayScreen.HUD.GetUIObject("Buy Shields UI")));
+            AddScript(new WaitScript(1.0f, false));
+            AddScript(new AddDialogBoxScript("Construct a shield generator - it will help protect the station by absorbing damage.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
+            AddScript(new RunEventScript(CheckShieldConstructed));
+            AddScript(new WaitScript(1.0f, false));
+            AddScript(new AddDialogBoxScript("Sir, you need to see this.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("I am getting readings on long range sensors.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("Well... ONE reading.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("It appears to be a cruiser class strike vessel.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("You orders sir?", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new RunEventScript(CheckForFinalWaveSpawn));
+            AddScript(new RunEventScript(CheckFinalWaveDefeated));
+            AddScript(new WaitScript(1.0f, false));
+            AddScript(new AddDialogBoxScript("Enemy cruiser destroyed.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("Well done sir, I'm seeing no more enemy activity on long range sensors.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
+            AddScript(new RunEventScript(BackToMainMenu));
         }
 
         #endregion
@@ -174,6 +198,39 @@ namespace UnderSiege.Screens
             }
 
             script.Done = turretRepaired;
+        }
+
+        private void CheckShieldConstructed(object sender, EventArgs e)
+        {
+            Script script = sender as Script;
+            PlayerShip commandStation = UnderSiegeGameplayScreen.Allies.GetItem("Command Station");
+
+            script.Done = commandStation.ShipAddOns["ShipShield"].Count == 1;
+        }
+
+        private void CheckForFinalWaveSpawn(object sender, EventArgs e)
+        {
+            Script script = sender as Script;
+            PlayerShip commandStation = UnderSiegeGameplayScreen.Allies.GetItem("Command Station");
+
+            script.Done = commandStation.ShipAddOns["ShipTurret"].Count == 3 || commandStation.ShipAddOns["ShipShield"].Count == 2 || script.TimeRunFor >= 20f;
+        }
+
+        private void CheckFinalWaveDefeated(object sender, EventArgs e)
+        {
+            Script script = sender as Script;
+
+            if (WaveManager.Waves.Count == GameplayScreenData.WaveNames.Count - 2)
+            {
+                WaveManager.NewWave();
+            }
+
+            script.Done = Enemies.Values.Count == 0;
+        }
+
+        private void BackToMainMenu(object sender, EventArgs e)
+        {
+            Transition(new UnderSiegeMainMenuScreen(ScreenManager, true));
         }
 
         #endregion

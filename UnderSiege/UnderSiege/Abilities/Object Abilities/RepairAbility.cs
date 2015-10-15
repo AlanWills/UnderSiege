@@ -35,10 +35,9 @@ namespace UnderSiege.Abilities.Object_Abilities
 
         protected override void CheckIsDone()
         {
-            bool done = ParentAddOn.CurrentHealth >= ParentAddOn.ShipAddOnData.Health;
+            bool done = ParentAddOn.CurrentHealth == ParentAddOn.ShipAddOnData.Health;
             if (done)
             {
-                ParentAddOn.CurrentHealth = ParentAddOn.ShipAddOnData.Health;
                 ParentAddOn.AbilityEventQueue -= AbilityEvent;
             }
         }
@@ -48,6 +47,7 @@ namespace UnderSiege.Abilities.Object_Abilities
             base.AbilityEvent(sender, e);
 
             ParentAddOn.CurrentHealth += 0.05f;
+            ParentAddOn.CurrentHealth = MathHelper.Clamp(ParentAddOn.CurrentHealth, 0, ParentAddOn.ShipAddOnData.Health);
         }
 
         #endregion

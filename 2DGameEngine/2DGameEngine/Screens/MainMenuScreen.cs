@@ -19,7 +19,7 @@ namespace _2DGameEngine.Screens
             set;
         }
 
-        public static Vector2 NextButtonPosition = new Vector2(ScreenManager.ScreenCentre.X, ScreenManager.ScreenCentre.Y * 0.5f);
+        public static Vector2 NextButtonPosition;
         public static Vector2 TitlePosition = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.1f);
 
         #endregion
@@ -27,6 +27,8 @@ namespace _2DGameEngine.Screens
         public MainMenuScreen(ScreenManager screenManager, bool addDefaultUI)
             : base(screenManager, "Data\\Screens\\MainMenuScreen")
         {
+            NextButtonPosition = new Vector2(ScreenManager.ScreenCentre.X, ScreenManager.ScreenCentre.Y) * 0.5f;
+
             if (addDefaultUI)
             {
                 AddMainMenu(new Vector2(Viewport.Width * 0.2f, Viewport.Height * 0.5f));

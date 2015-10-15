@@ -6,6 +6,7 @@
     <WaveNames>
       <Item>Data\Waves\GameplayTutorial\TutorialScoutWave</Item>
       <Item>Data\Waves\GameplayTutorial\TutorialFirstEnemyWave</Item>
+      <Item>Data\Waves\GameplayTutorial\TutorialFinalWave</Item>
     </WaveNames>
   </Asset>
 </XnaContent>

@@ -30,6 +30,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         }
 
         public Script PreviousScript { get; set; }
+        public float TimeRunFor { get; private set; }
 
         public event EventHandler CanRunEvent;
         public event EventHandler OnEndEvent;
@@ -69,6 +70,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         public virtual void Run(GameTime gameTime)
         {
             Running = true;
+            TimeRunFor += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
         }
 
         public virtual void CheckShouldUpdateGame()

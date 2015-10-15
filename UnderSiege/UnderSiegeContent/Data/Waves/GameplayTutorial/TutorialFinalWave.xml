@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <Asset Type="_2DTowerDefenceLibraryData.Waves_Data.WaveData">
-    <DisplayName>Enemy Scout</DisplayName>
+    <DisplayName>Final Offensive Enemy Wave</DisplayName>
     <TextureAsset></TextureAsset>
     <EnemyNames>
-      <Item>Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
     </EnemyNames>
     <SpawnPoints>
-      -1000 0
+      -500 500
     </SpawnPoints>
     <TimeUntilWave>0</TimeUntilWave>
     <TimeBetweenEnemySpawns>0</TimeBetweenEnemySpawns>

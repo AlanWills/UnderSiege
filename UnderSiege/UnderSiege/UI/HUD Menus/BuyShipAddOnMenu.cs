@@ -28,7 +28,7 @@ namespace UnderSiege.UI.HUD_Menus
         protected Button ToggleButton { get; set; }
         public Menu ItemMenu { get; protected set; }
 
-        protected float previousCameraZoom;
+        protected float previousCameraZoom = 1;
         protected const int padding = 10;
         protected const int columns = 3;
 
@@ -45,7 +45,7 @@ namespace UnderSiege.UI.HUD_Menus
 
         protected abstract void AddUI();
 
-        protected virtual void ResetPurchaseObjectUI()
+        protected virtual void CheckForPlaceObjectEvent(object sender, EventArgs e)
         {
             HUD.GameplayScreen.RemoveInGameUIObject("Purchase Object UI");
             Camera.Zoom = previousCameraZoom;
@@ -64,7 +64,6 @@ namespace UnderSiege.UI.HUD_Menus
         }
 
         protected abstract void ShowHardPointsEvent(object sender, EventArgs e);
-        protected abstract void CheckForPlaceObjectEvent(object sender, EventArgs e);
 
         #endregion
 

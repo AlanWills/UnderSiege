@@ -1,5 +1,6 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
 using _2DGameEngine.Extra_Components;
+using _2DGameEngine.Managers;
 using _2DGameEngine.Screens;
 using _2DGameEngine.UI_Objects;
 using _2DGameEngineData;
@@ -38,8 +39,8 @@ namespace UnderSiege.UI
         #endregion
 
         // Make this in game
-        public PurchaseItemUI(Texture2D texture, BaseData dataAssetOfObject, string storedObjectTypeName)
-            : base(GameMouse.InGamePosition, "", GameplayScreen.SceneRoot)
+        public PurchaseItemUI(Texture2D texture, BaseData dataAssetOfObject, string storedObjectTypeName, BaseObject parent = null)
+            : base(Vector2.Zero, "", parent)
         {
             Texture = texture;
             DataAssetOfObject = dataAssetOfObject;
@@ -52,14 +53,9 @@ namespace UnderSiege.UI
 
         #region Virtual Methods
 
-        public override void Update(GameTime gameTime)
+        public override void Draw(SpriteBatch spriteBatch)
         {
-            base.Update(gameTime);
-
-            if (!LockedToPosition)
-            {
-                LocalPosition = GameMouse.InGamePosition;
-            }
+            base.Draw(spriteBatch);
         }
 
         #endregion

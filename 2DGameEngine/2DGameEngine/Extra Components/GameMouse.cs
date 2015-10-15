@@ -10,110 +10,88 @@ using System.Text;
 
 namespace _2DGameEngine.Extra_Components
 {
-    public static class GameMouse
+    public class GameMouse : UIObject
     {
         #region Properties and Fields
 
-        public static Vector2 ScreenPosition
+        public Vector2 InGamePosition
         {
-            get { return new Vector2(CurrentMouseState.X, CurrentMouseState.Y); }
+            get { return InGameMouse.LocalPosition; }
         }
 
-        public static Vector2 InGamePosition
-        {
-            get { return Camera.ScreenToGameCoords(ScreenPosition); }
-        }
-
-        public static Vector2 LastLeftClickedPosition
+        public Vector2 LastLeftClickedPosition
         {
             get;
             private set;
         }
 
-        public static Vector2 LastMiddleClickedPosition
+        public Vector2 LastMiddleClickedPosition
         {
             get;
             private set;
         }
 
-        public static Vector2 LastRightClickedPosition
+        public Vector2 LastRightClickedPosition
         {
             get;
             private set;
         }
 
-        public static bool IsLeftClicked
+        public bool IsLeftClicked
         {
             get;
             private set;
         }
 
-        public static bool IsMiddleClicked
+        public bool IsMiddleClicked
         {
             get;
             private set;
         }
 
-        public static bool IsRightClicked
+        public bool IsRightClicked
         {
             get;
             private set;
         }
 
-        private static MouseState PreviousMouseState
+        private MouseState PreviousMouseState
         {
             get;
             set;
         }
 
-        private static MouseState CurrentMouseState
+        private MouseState CurrentMouseState
         {
             get;
             set;
         }
 
-        public static bool Enabled
-        {
-            get;
-            set;
-        }
+        // This is just to hold the in game transform of the mouse and so we can parent objects to it
+        public InGameUIObject InGameMouse { get; private set; }
 
-        private static bool visible;
-        public static bool Visible
-        {
-            get { return Texture != null && visible; }
-            set { visible = value; }
-        }
-
-        public static bool MouseAffectsCamera { get; set; }
+        public bool MouseAffectsCamera { get; set; }
         
-        private static Texture2D Texture
-        {
-            get;
-            set;
-        }
-
-        private static float clickDelayTimer = 0.2f;
+        private float clickDelayTimer = 0.2f;
 
         #endregion
-
-        #region Methods
-
-        public static void SetUpMouse(string mouseTextureAsset = "Sprites\\UI\\Mouse\\default")
+        
+        public GameMouse(string dataAsset = "Sprites\\UI\\Mouse\\default", BaseObject parent = null, float lifeTime = float.MaxValue)
+            : base(dataAsset, parent, lifeTime)
         {
             CurrentMouseState = Mouse.GetState();
-            Texture = ScreenManager.Content.Load<Texture2D>(mouseTextureAsset);
 
             IsLeftClicked = false;
             IsMiddleClicked = false;
             IsRightClicked = false;
-            Enabled = true;
-            Visible = true;
 
+            InGameMouse = new InGameUIObject("", parent, lifeTime);
             Flush();
         }
 
-        public static void Flush()
+        #region Methods
+
+        public void Flush()
         {
             CurrentMouseState = PreviousMouseState;
             IsLeftClicked = false;
@@ -121,48 +99,54 @@ namespace _2DGameEngine.Extra_Components
             IsRightClicked = false;
         }
 
-        public static void Update(GameTime gameTime)
+        // A function to change the position of the MANUAL camera if the mouse is towards the edge of the screen.
+        private void UpdateCamera(GameTime gameTime)
         {
-            if (Enabled)
+            if (Texture != null)
+            {
+                int threshold = 5;
+                Vector2 deltaPos = Vector2.Zero;
+
+                // Mouse is within thresold of the right hand side of the screen so we need to move the camera left
+                if (ScreenManager.Viewport.Width - LocalPosition.X < threshold)
+                {
+                    deltaPos.X += ScreenManager.Camera.Speed;
+                }
+
+                // Mouse is within threshold of the left hand side of the screen so we need to move the camera right
+                if (LocalPosition.X - ScreenManager.Viewport.X < threshold)
+                {
+                    deltaPos.X -= ScreenManager.Camera.Speed;
+                }
+
+                // Mouse is within threshold of the top of the screen so we need to move the camera down
+                if (LocalPosition.Y - ScreenManager.Viewport.Y < threshold)
+                {
+                    deltaPos.Y -= ScreenManager.Camera.Speed;
+                }
+
+                // Mouse is within threshold of the bottom of the screen so we need to move the camera up
+                if (ScreenManager.Viewport.Height - LocalPosition.Y < threshold + Texture.Height / 2)
+                {
+                    deltaPos.Y += ScreenManager.Camera.Speed;
+                }
+
+                Camera.Position += (deltaPos * (float)gameTime.ElapsedGameTime.Milliseconds / 1000f);
+            }
+        }
+
+        #endregion
+
+        #region Virtual Methods
+
+        public override void Update(GameTime gameTime)
+        {
+            if (Active)
             {
                 PreviousMouseState = CurrentMouseState;
                 CurrentMouseState = Mouse.GetState();
-
-                if (CurrentMouseState.LeftButton == ButtonState.Released && PreviousMouseState.LeftButton == ButtonState.Pressed && clickDelayTimer >= 0.2f)
-                {
-                    IsLeftClicked = true;
-                    LastLeftClickedPosition = InGamePosition;
-                    clickDelayTimer = 0;
-                }
-                else
-                {
-                    IsLeftClicked = false;
-                    clickDelayTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-                }
-
-                if (CurrentMouseState.MiddleButton == ButtonState.Released && PreviousMouseState.MiddleButton == ButtonState.Pressed && clickDelayTimer >= 0.2f)
-                {
-                    IsMiddleClicked = true;
-                    LastMiddleClickedPosition = InGamePosition;
-                    clickDelayTimer = 0;
-                }
-                else
-                {
-                    IsMiddleClicked = false;
-                    clickDelayTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-                }
-
-                if (CurrentMouseState.RightButton == ButtonState.Released && PreviousMouseState.RightButton == ButtonState.Pressed && clickDelayTimer >= 0.2f)
-                {
-                    IsRightClicked = true;
-                    LastRightClickedPosition = InGamePosition;
-                    clickDelayTimer = 0;
-                }
-                else
-                {
-                    IsRightClicked = false;
-                    clickDelayTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-                }
+                LocalPosition = new Vector2(CurrentMouseState.X, CurrentMouseState.Y);
+                InGameMouse.LocalPosition = Camera.ScreenToGameCoords(LocalPosition);
 
                 if (ScreenManager.Camera.CameraMode == CameraMode.Free)
                 {
@@ -172,53 +156,60 @@ namespace _2DGameEngine.Extra_Components
             }
         }
 
-        // A function to change the position of the MANUAL camera if the mouse is towards the edge of the screen.
-        private static void UpdateCamera(GameTime gameTime)
+        public override void HandleInput()
         {
-            if (Texture != null)
+            base.HandleInput();
+
+            if (CurrentMouseState.LeftButton == ButtonState.Released && PreviousMouseState.LeftButton == ButtonState.Pressed && clickDelayTimer >= 0.2f)
             {
-                int threshold = 5;
-                Vector2 deltaPos = Vector2.Zero;
+                IsLeftClicked = true;
+                LastLeftClickedPosition = InGamePosition;
+                clickDelayTimer = 0;
+            }
+            else
+            {
+                IsLeftClicked = false;
+                clickDelayTimer += 0.03f;
+            }
 
-                // Mouse is within thresold of the right hand side of the screen so we need to move the camera left
-                if (ScreenManager.Viewport.Width - ScreenPosition.X < threshold)
-                {
-                    deltaPos.X += ScreenManager.Camera.Speed;
-                }
+            if (CurrentMouseState.MiddleButton == ButtonState.Released && PreviousMouseState.MiddleButton == ButtonState.Pressed && clickDelayTimer >= 0.2f)
+            {
+                IsMiddleClicked = true;
+                LastMiddleClickedPosition = InGamePosition;
+                clickDelayTimer = 0;
+            }
+            else
+            {
+                IsMiddleClicked = false;
+                clickDelayTimer += 0.03f;
+            }
 
-                // Mouse is within threshold of the left hand side of the screen so we need to move the camera right
-                if (ScreenPosition.X - ScreenManager.Viewport.X < threshold)
-                {
-                    deltaPos.X -= ScreenManager.Camera.Speed;
-                }
-
-                // Mouse is within threshold of the top of the screen so we need to move the camera down
-                if (ScreenPosition.Y - ScreenManager.Viewport.Y < threshold)
-                {
-                    deltaPos.Y -= ScreenManager.Camera.Speed;
-                }
-
-                // Mouse is within threshold of the bottom of the screen so we need to move the camera up
-                if (ScreenManager.Viewport.Height - ScreenPosition.Y < threshold + Texture.Height / 2)
-                {
-                    deltaPos.Y += ScreenManager.Camera.Speed;
-                }
-
-                Camera.Position += (deltaPos * (float)gameTime.ElapsedGameTime.Milliseconds / 1000f);
+            if (CurrentMouseState.RightButton == ButtonState.Released && PreviousMouseState.RightButton == ButtonState.Pressed && clickDelayTimer >= 0.2f)
+            {
+                IsRightClicked = true;
+                LastRightClickedPosition = InGamePosition;
+                clickDelayTimer = 0;
+            }
+            else
+            {
+                IsRightClicked = false;
+                clickDelayTimer += 0.03f;
             }
         }
 
-        public static void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
+            // Changed the origin so the mouse is drawn so it's position is at the top left
             if (Visible)
             {
-                spriteBatch.Draw(Texture, ScreenPosition, Color.White);
+                if (Texture != null)
+                {
+                    spriteBatch.Draw(Texture, DestinationRectangle, SourceRectangle, Colour * Opacity, (float)WorldRotation, Vector2.Zero, SpriteEffects.None, 0);
+                }
+
+                IfVisible();
             }
         }
-
-        #endregion
-
-        #region Virtual Methods
 
         #endregion
     }

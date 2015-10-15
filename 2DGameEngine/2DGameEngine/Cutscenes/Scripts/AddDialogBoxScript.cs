@@ -71,7 +71,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void CheckDone()
         {
-            Done = DialogBox.Alive == false || GameMouse.IsLeftClicked;
+            Done = DialogBox.Alive == false || ScreenManager.GameMouse.IsLeftClicked;
         }
 
         public override void IfDone()
@@ -79,7 +79,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
             base.IfDone();
 
             // Want to flush the input handler to avoid skipping over dialog boxes
-            GameMouse.Flush();
+            ScreenManager.GameMouse.Flush();
         }
 
         public override void PerformImmediately()

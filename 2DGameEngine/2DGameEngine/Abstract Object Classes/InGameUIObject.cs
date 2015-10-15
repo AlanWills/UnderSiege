@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Extra_Components;
+using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -114,8 +115,8 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             if (Active)
             {
-                bool mouseClicked = GameMouse.IsLeftClicked;
-                MouseOver = Collider.CheckCollisionWith(GameMouse.InGamePosition);
+                bool mouseClicked = ScreenManager.GameMouse.IsLeftClicked;
+                MouseOver = Collider.CheckCollisionWith(ScreenManager.GameMouse.InGamePosition);
 
                 // If mouse isn't clicked we don't need to change the selection state, as we haven't selected anything!
                 if (mouseClicked)

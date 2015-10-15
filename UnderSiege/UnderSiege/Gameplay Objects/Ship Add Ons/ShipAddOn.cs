@@ -129,7 +129,7 @@ namespace UnderSiege.Gameplay_Objects
         public virtual void Orient()
         {
             // Here we are changing the orientation of the turret, so it should not fire
-            LocalOrientation = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, GameMouse.InGamePosition) - Parent.WorldRotation;
+            LocalOrientation = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, ScreenManager.GameMouse.InGamePosition) - Parent.WorldRotation;
             LocalRotation = LocalOrientation;
         }
 
@@ -160,10 +160,10 @@ namespace UnderSiege.Gameplay_Objects
                 // This rectangle is used so that with something like the shield we do not select it if we select the shield collider
                 // Rather we have to select the hardpoint region
                 Rectangle hardPointRectangle = new Rectangle((int)(WorldPosition.X - HardPointUI.HardPointDimension * 0.5f), (int)(WorldPosition.Y - HardPointUI.HardPointDimension * 0.5f), (int)(HardPointUI.HardPointDimension), (int)(HardPointUI.HardPointDimension));
-                MouseOver = _2DGeometry.RectangleContainsPoint(hardPointRectangle, GameMouse.InGamePosition);
+                MouseOver = _2DGeometry.RectangleContainsPoint(hardPointRectangle, ScreenManager.GameMouse.InGamePosition);
 
                 // If mouse isn't clicked we don't need to change the selection state, as we haven't selected anything!
-                if (GameMouse.IsLeftClicked)
+                if (ScreenManager.GameMouse.IsLeftClicked)
                 {
                     // We have clicked on the object
                     if (MouseOver)
@@ -188,7 +188,7 @@ namespace UnderSiege.Gameplay_Objects
                         DeSelect();
                     }
                 }
-                else if (GameMouse.IsRightClicked)
+                else if (ScreenManager.GameMouse.IsRightClicked)
                 {
                     if (MouseOver)
                     {

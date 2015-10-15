@@ -61,6 +61,12 @@ namespace _2DGameEngine.Managers
             private set;
         }
 
+        public static GameMouse GameMouse
+        {
+            get;
+            private set;
+        }
+
         public static InputHandler Input
         {
             get;
@@ -110,7 +116,7 @@ namespace _2DGameEngine.Managers
 
             Camera = new Camera();
             Input = new InputHandler(game);
-            GameMouse.SetUpMouse();
+            GameMouse = new GameMouse();
 
             Game.Components.Add(this);
             Game.Components.Add(Input);
@@ -174,6 +180,8 @@ namespace _2DGameEngine.Managers
 
         public void HandleInput()
         {
+            GameMouse.HandleInput();
+
             foreach (BaseScreen screen in Screens)
             {
                 // Update before handling input - otherwise if we select something the WhileSelected method will be called straightaway, which is usually undesired
@@ -193,6 +201,8 @@ namespace _2DGameEngine.Managers
             base.LoadContent();
 
             AssetManager.LoadAssets(Content);
+            GameMouse.LoadContent();
+            GameMouse.Initialize();
         }
 
         public override void Update(GameTime gameTime)

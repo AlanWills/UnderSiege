@@ -100,7 +100,7 @@ namespace _2DTowerDefenceEngine.Turrets
             base.IfSelected();
 
             // Here we are changing the orientation of the turret, so it should not fire
-            Orientation = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, GameMouse.InGamePosition);
+            Orientation = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, ScreenManager.GameMouse.InGamePosition);
             LocalRotation = Orientation;
             currentFireTimer = 0;
         }

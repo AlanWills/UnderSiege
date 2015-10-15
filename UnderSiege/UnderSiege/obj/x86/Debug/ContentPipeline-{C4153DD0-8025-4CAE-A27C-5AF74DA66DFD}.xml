@@ -521,7 +521,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiTanto.xnb</Output>
-      <Time>2015-10-15T21:43:44.3780403+01:00</Time>
+      <Time>2015-10-15T22:17:11.3686879+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\PlayerShips\HiiVanaar.xml</Source>
@@ -539,7 +539,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameplayTutorialScreen.xnb</Output>
-      <Time>2015-10-15T21:57:54.5288694+01:00</Time>
+      <Time>2015-10-15T22:17:11.3796948+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xml</Source>
@@ -557,7 +557,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\GameplayTutorial\TutorialScoutWave.xnb</Output>
-      <Time>2015-10-15T00:25:51.0985103+01:00</Time>
+      <Time>2015-10-15T22:17:11.3856996+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xml</Source>
@@ -584,7 +584,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\GameplayTutorial\TutorialFinalWave.xnb</Output>
-      <Time>2015-10-15T21:42:23.1465929+01:00</Time>
+      <Time>2015-10-15T22:17:11.3826968+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

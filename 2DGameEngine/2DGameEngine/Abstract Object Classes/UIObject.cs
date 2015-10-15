@@ -112,7 +112,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             if (Active)
             {
-                MouseOver = Collider.CheckCollisionWith(GameMouse.ScreenPosition);
+                MouseOver = Collider.CheckCollisionWith(ScreenManager.GameMouse.WorldPosition);
 
                 // Check hotkey click
                 /*if (HotKey != Keys.None)
@@ -132,7 +132,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
                 }*/
 
                 // Check mouse click
-                bool mouseClicked = GameMouse.IsLeftClicked;
+                bool mouseClicked = ScreenManager.GameMouse.IsLeftClicked;
                 // If mouse isn't clicked we don't need to change the selection state, as we haven't selected anything!
                 if (mouseClicked)
                 {

@@ -96,9 +96,9 @@ namespace UnderSiege.UI
             PurchaseItemUI purchaseShipUI = sender as PurchaseItemUI;
             if (purchaseShipUI != null)
             {
-                if (GameMouse.IsLeftClicked)
+                if (ScreenManager.GameMouse.IsLeftClicked)
                 {
-                    PurchaseShipsScreen.GameplayScreen.AddAlliedShip(new PlayerShip(GameMouse.LastLeftClickedPosition, AssetManager.GetKeyFromData(purchaseShipUI.DataAssetOfObject), UnderSiegeGameplayScreen.SceneRoot), "Ally " + UnderSiegeGameplayScreen.Allies.Values.Count + 1, true);
+                    PurchaseShipsScreen.GameplayScreen.AddAlliedShip(new PlayerShip(ScreenManager.GameMouse.LastLeftClickedPosition, AssetManager.GetKeyFromData(purchaseShipUI.DataAssetOfObject), UnderSiegeGameplayScreen.SceneRoot), "Ally " + UnderSiegeGameplayScreen.Allies.Values.Count + 1, true);
                     Session.Money -= (purchaseShipUI.DataAssetOfObject as PlayerShipData).Price;
                     ResetPurchaseObjectUI();
                 }

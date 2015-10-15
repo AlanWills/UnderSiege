@@ -97,7 +97,11 @@ namespace UnderSiege.Screens
             AddScript(new RunEventScript(DamageAddOnsForRepair));
             AddScript(new MoveCameraScript(new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y), MoveCameraStyle.LERP));
             AddScript(new AddDialogBoxScript("We've sustained minor system damage\nto our command station's defences.", new Vector2(ScreenCentre.X * 0.5f, ScreenCentre.Y)));
-            AddScript(new AddDialogBoxScript(".", new Vector2(ScreenCentre.X * 0.55f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("On the tactical overlay, right click on an a turret.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("This will bring up the commands that\ncan be performed on the add on.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
+            AddScript(new AddDialogBoxScript("Use the Repair command on all your turrets.", new Vector2(ScreenCentre.X * 0.75f, ScreenCentre.Y)));
+            AddScript(new RunEventScript(CheckTurretsRepaired));
+            AddScript(new AddDialogBoxScript("Turret crews reporting all repairs completed.", new Vector2(ScreenCentre.X * 0.7f, ScreenCentre.Y)));
         }
 
         #endregion
@@ -156,6 +160,20 @@ namespace UnderSiege.Screens
             }
 
             script.Done = true;
+        }
+
+        private void CheckTurretsRepaired(object sender, EventArgs e)
+        {
+            Script script = sender as Script;
+            PlayerShip commandStation = UnderSiegeGameplayScreen.Allies.GetItem("Command Station");
+
+            bool turretRepaired = true;
+            foreach (ShipTurret turret in commandStation.ShipAddOns["ShipTurret"])
+            {
+                turretRepaired = turret.CurrentHealth == turret.ShipAddOnData.Health && turretRepaired;
+            }
+
+            script.Done = turretRepaired;
         }
 
         #endregion

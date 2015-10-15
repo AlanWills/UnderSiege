@@ -45,6 +45,7 @@ namespace UnderSiege.Gameplay_Objects
         }
 
         private ShipAddOnAbilityUI AbilityUI { get; set; }
+        private static int abilityUITagID = 0;
 
         #endregion
 
@@ -108,7 +109,8 @@ namespace UnderSiege.Gameplay_Objects
                 AbilityUI = new ShipAddOnAbilityUI(new Vector2(100, ScreenManager.ScreenCentre.Y), this);
                 AbilityUI.LoadContent();
                 AbilityUI.Initialize();
-                UnderSiegeGameplayScreen.HUD.AddUIObject(AbilityUI, ShipAddOnData.DisplayName + " Ability UI", false);
+                UnderSiegeGameplayScreen.HUD.AddUIObject(AbilityUI, ShipAddOnData.DisplayName + " Ability UI " + abilityUITagID, false);
+                abilityUITagID++;
             }
         }
 

@@ -69,6 +69,11 @@ namespace UnderSiege.Gameplay_Objects
                 RigidBody.LinearVelocity = new Vector2(RigidBody.LinearVelocity.X, MissileData.MaxSpeed);
         }
 
+        public override void AddCollider()
+        {
+            
+        }
+
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
@@ -99,6 +104,11 @@ namespace UnderSiege.Gameplay_Objects
                     RigidBody.FullAngularStop();
                 }
             }
+        }
+
+        public override void HandleInput()
+        {
+            
         }
 
         #endregion

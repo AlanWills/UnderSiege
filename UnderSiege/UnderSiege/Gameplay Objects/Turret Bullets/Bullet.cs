@@ -72,6 +72,11 @@ namespace UnderSiege.Gameplay_Objects
                 RigidBody.LinearVelocity = new Vector2(RigidBody.LinearVelocity.X, BulletData.MaxSpeed);
         }
 
+        public override void AddCollider()
+        {
+            
+        }
+
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
@@ -79,6 +84,11 @@ namespace UnderSiege.Gameplay_Objects
             currentLifeTimer += gameTime.ElapsedGameTime;
             if (currentLifeTimer >= TimeSpan.FromSeconds(BulletData.BulletLifeTime))
                 Die();
+        }
+
+        public override void HandleInput()
+        {
+            
         }
 
         #endregion

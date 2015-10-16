@@ -106,7 +106,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                     {
                         foreach (ShipAddOn addOn in addOnList)
                         {
-                            if (addOn.Collider.CheckCollisionWith(bullet.Collider))
+                            if (addOn.Collider.CheckCollisionWith(bullet.WorldPosition))
                             {
                                 addOn.Damage(bullet.ParentTurret.ShipTurretData.Damage);
                                 bullet.Alive = false;
@@ -124,7 +124,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                 {
                     // If we get here, the bullet hasn't hit a shipAddOn - so check to see if it has hit the ship
                     // MAYBE DO THIS FIRST - BE BETTER FOR OPTMISATION
-                    if (ship.Collider.CheckCollisionWith(bullet.Collider))
+                    if (ship.Collider.CheckCollisionWith(bullet.WorldPosition))
                     {
                         ship.Damage(bullet.ParentTurret.ShipTurretData.Damage);
                         bullet.Alive = false;

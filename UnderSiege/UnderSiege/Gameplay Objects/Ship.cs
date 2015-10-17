@@ -165,20 +165,6 @@ namespace UnderSiege.Gameplay_Objects
             TargetShip = target;
         }
 
-        // Optimise this using threading?
-        private void CheckBulletInteractionsFromShip()
-        {
-            List<Ship> ships = ShipType == ShipType.AlliedShip ? UnderSiegeGameplayScreen.Enemies.Values.ToList<Ship>() : UnderSiegeGameplayScreen.Allies.Values.ToList<Ship>();
-
-            foreach (Ship ship in ships)
-            {
-                foreach (ShipTurret turret in ShipAddOns["ShipTurret"])
-                {
-                    turret.CheckIfDamagedShip(ship);
-                }
-            }
-        }
-
         public bool AddOnExists(ShipAddOn addOn)
         {
             if (addOn != null)
@@ -240,8 +226,6 @@ namespace UnderSiege.Gameplay_Objects
                     foreach (ShipAddOn shipAddOn in shipAddOnPair.Value)
                         shipAddOn.Update(gameTime);
                 }
-
-                CheckBulletInteractionsFromShip();
 
                 if (CurrentHullHealth <= 0)
                 {

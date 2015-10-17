@@ -17,6 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTowerDefenceLibrary", "2D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTowerDefenceLibraryData", "2DGameEngine\2DTowerDefenceLibraryData\2DTowerDefenceLibraryData.csproj", "{A831387D-4C57-4127-AEE0-FDB390BF2276}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E64C4A2F-925D-4E47-ABF7-46FF760308EF}"
+	ProjectSection(SolutionItems) = preProject
+		Performance1.psess = Performance1.psess
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86

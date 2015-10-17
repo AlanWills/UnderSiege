@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnderSiege.Screens;
 using UnderSiegeData.Gameplay_Objects;
 
 namespace UnderSiege.Gameplay_Objects
@@ -100,13 +101,11 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.Update(gameTime);
 
-            if (ParentShip.TargetShip != null)
+            FindTarget();
+
+            if (Target != null)
             {
-                FindTarget();
-            }
-            else
-            {
-                Target = null;
+                CheckIfDamagedTarget();
             }
 
             LocalRotation = MathHelper.Lerp(LocalRotation, TargetRotation, (float)gameTime.ElapsedGameTime.Milliseconds / 300f);
@@ -128,76 +127,51 @@ namespace UnderSiege.Gameplay_Objects
         }
 
         public abstract void Fire();
-        public abstract void CheckIfDamagedShip(Ship ship);
+        public abstract void CheckIfDamagedTarget();
 
         private void FindTarget()
         {
-            // If we have a valid ship add on, then do no continue with finding a target
-            if (Target != null && ParentShip.TargetShip.AddOnExists(Target as ShipAddOn))
-                return;
-
-            // If the target ship has no addons check the ship to see if it is in range
-            if (ParentShip.TargetShip.TotalAddOns == 0)
-            {
-                float distanceToTargetSquared = (WorldPosition - ParentShip.TargetShip.WorldPosition).LengthSquared();
-                if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range)
-                {
-                    // We have a new target
-                    Target = ParentShip.TargetShip;
-                }
-                else
-                {
-                    Target = null;
-                }
-
-                return;
-            }
-
-            GameObject target = null;
+            Ship target = null;
             float currentRangeToTargetSquared = float.MaxValue;
 
-            foreach (List<ShipAddOn> addOnList in ParentShip.TargetShip.ShipAddOns.Values)
+            bool useEnemies = ParentShip.ShipType == ShipType.AlliedShip;
+            foreach (Ship ship in useEnemies ? UnderSiegeGameplayScreen.Enemies.Values.AsEnumerable<Ship>() : UnderSiegeGameplayScreen.Allies.Values.AsEnumerable<Ship>())
             {
-                foreach (ShipAddOn shipAddOn in addOnList)
-                {
-                    // This current maths is horrendously inefficient - I can't think of a better way at the moment
-                    /*if (!gameObject.Collider.CheckCollisionWith(FiringArc.RangeArc))
-                    {
-                        continue;
-                    }*/
-
-                    // If the firing arc does not contain the gameObject position then continue
-                    if (!FiringArc.ContainsPoint(shipAddOn.WorldPosition))
-                        continue;
-
-                    // Target is in firing arc, so we now need to check if it is in range
-                    float distanceToTargetSquared = (WorldPosition - shipAddOn.WorldPosition).LengthSquared();
-                    if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared <= currentRangeToTargetSquared)
-                    {
-                        // We have a new target
-                        target = shipAddOn;
-                        currentRangeToTargetSquared = distanceToTargetSquared;
-                    }
-                }
-            }
-
-            // If we don't have a ship add on in range, check the target to be the ship
-            if (target == null)
-            {
-                float distanceToTargetSquared = (WorldPosition - ParentShip.TargetShip.WorldPosition).LengthSquared();
-                if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range)
+                float distanceToTargetSquared = (WorldPosition - ship.WorldPosition).LengthSquared();
+                if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared <= currentRangeToTargetSquared)
                 {
                     // We have a new target
-                    Target = ParentShip.TargetShip;
-                }
-                else
-                {
-                    Target = null;
+                    target = ship;
+                    currentRangeToTargetSquared = distanceToTargetSquared;
                 }
             }
-            else
+
+            Target = target;
+
+            // Target the closest add ons now
+            if (target != null)
             {
-                Target = target;
+                ShipAddOn targetAddOn = null;
+                currentRangeToTargetSquared = float.MaxValue;
+
+                foreach (List<ShipAddOn> addOnList in target.ShipAddOns.Values)
+                {
+                    foreach (ShipAddOn shipAddOn in addOnList)
+                    {
+                        float distanceToTargetSquared = (WorldPosition - shipAddOn.WorldPosition).LengthSquared();
+                        if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared <= currentRangeToTargetSquared)
+                        {
+                            // We have a new target
+                            targetAddOn = shipAddOn;
+                            currentRangeToTargetSquared = distanceToTargetSquared;
+                        }
+                    }
+                }
+
+                if (targetAddOn != null)
+                {
+                    Target = target;
+                }
             }
         }
 

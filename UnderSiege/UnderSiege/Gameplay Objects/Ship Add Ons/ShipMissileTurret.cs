@@ -94,43 +94,22 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             MissileManager.AddObject(clone, "Missile" + nameCounter);
         }
 
-        public override void CheckIfDamagedShip(Ship ship)
+        public override void CheckIfDamagedTarget()
         {
             foreach (Missile missile in MissileManager.Values)
             {
-                // Need this bool so that we can break out of both for loops of the ship addons if we've hit one
-                bool bulletCollided = false;
-                if (Target as ShipAddOn != null)
+                if (Target.Collider.CheckCollisionWith(missile.WorldPosition))
                 {
-                    foreach (List<ShipAddOn> addOnList in ship.ShipAddOns.Values)
+                    try
                     {
-                        foreach (ShipAddOn addOn in addOnList)
-                        {
-                            if (addOn.Collider.CheckCollisionWith(missile.WorldPosition))
-                            {
-                                addOn.Damage(missile.ParentTurret.ShipTurretData.Damage);
-                                missile.Alive = false;
-                                bulletCollided = true;
-
-                                break;
-                            }
-                        }
-
-                        if (bulletCollided)
-                            break;
+                        (Target as Ship).Damage(missile.ParentTurret.ShipTurretData.Damage);
                     }
-                }
-                else if (Target as Ship != null)
-                {
-                    // If we get here, the bullet hasn't hit a shipAddOn - so check to see if it has hit the ship
-                    // MAYBE DO THIS FIRST - BE BETTER FOR OPTMISATION
-                    if (ship.Collider.CheckCollisionWith(missile.WorldPosition))
+                    catch
                     {
-                        ship.Damage(missile.ParentTurret.ShipTurretData.Damage);
-                        missile.Alive = false;
-
-                        continue;
+                        (Target as ShipAddOn).Damage(missile.ParentTurret.ShipTurretData.Damage);
                     }
+
+                    missile.Alive = false;
                 }
             }
         }

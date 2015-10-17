@@ -120,6 +120,17 @@ namespace UnderSiege.UI.HUD_Menus
             }
         }
 
+        public override void DrawScreenUI(SpriteBatch spriteBatch)
+        {
+            base.DrawScreenUI(spriteBatch);
+
+            if (Visible)
+            {
+                ToggleButton.DrawScreenUI(spriteBatch);
+                ItemMenu.DrawScreenUI(spriteBatch);
+            }
+        }
+
         public override void HandleInput()
         {
             if (Active)

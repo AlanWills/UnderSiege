@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract Object Classes\BaseObject.cs" />
+    <Compile Include="Abstract Object Classes\DamageableGameObject.cs" />
     <Compile Include="Abstract Object Classes\GameObject.cs" />
     <Compile Include="Abstract Object Classes\InGameUIObject.cs" />
     <Compile Include="Abstract Object Classes\ScreenUIObject.cs" />

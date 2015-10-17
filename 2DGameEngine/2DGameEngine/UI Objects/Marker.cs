@@ -10,7 +10,7 @@ using System.Text;
 
 namespace _2DGameEngine.UI_Objects
 {
-    public class Marker : UIObject
+    public class Marker : ScreenUIObject
     {
         #region Properties and Fields
 

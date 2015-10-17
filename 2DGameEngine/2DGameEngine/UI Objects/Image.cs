@@ -7,7 +7,7 @@ using System.Text;
 
 namespace _2DGameEngine.UI_Objects
 {
-    public class Image : UIObject
+    public class Image : ScreenUIObject
     {
         #region Properties and Fields
 
@@ -36,6 +36,11 @@ namespace _2DGameEngine.UI_Objects
         #endregion
 
         #region Virtual Methods
+
+        public override void DrawScreenUI(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
+        {
+            base.DrawScreenUI(spriteBatch);
+        }
 
         #endregion
     }

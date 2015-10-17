@@ -9,14 +9,14 @@ using System.Text;
 
 namespace UnderSiege.UI
 {
-    public class ImageAndLabel : UIObject
+    public class ImageAndLabel : ScreenUIObject
     {
         #region Properties and Fields
 
         private Image Image { get; set; }
         private Label Label { get; set; }
 
-        private Vector2 Dimensions
+        public Vector2 Dimensions
         {
             get
             {

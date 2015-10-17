@@ -207,7 +207,13 @@ namespace _2DGameEngine.Abstract_Object_Classes
             set;
         }
 
-        public UIObject HoverUI
+        public InGameUIObject InGameHoverUI
+        {
+            get;
+            set;
+        }
+
+        public ScreenUIObject ScreenHoverUI
         {
             get;
             set;
@@ -434,9 +440,20 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             if (MouseOver && Visible)
             {
-                if (HoverUI != null)
+                if (InGameHoverUI != null)
                 {
-                    HoverUI.Draw(spriteBatch);
+                    InGameHoverUI.Draw(spriteBatch);
+                }
+            }
+        }
+
+        public virtual void DrawScreenUI(SpriteBatch spriteBatch)
+        {
+            if (MouseOver && Visible)
+            {
+                if (ScreenHoverUI != null)
+                {
+                    ScreenHoverUI.Draw(spriteBatch);
                 }
             }
         }

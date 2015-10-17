@@ -42,7 +42,7 @@ namespace _2DGameEngine.Screens
             private set;
         }
 
-        public BaseObjectManager<UIObject> UIManager
+        public BaseObjectManager<ScreenUIObject> UIManager
         {
             get;
             protected set;
@@ -135,7 +135,7 @@ namespace _2DGameEngine.Screens
 
             ScriptManager = new ScriptManager(this);
             GameObjectManager = new BaseObjectManager<GameObject>();
-            UIManager = new BaseObjectManager<UIObject>();
+            UIManager = new BaseObjectManager<ScreenUIObject>();
             InGameUIManager = new BaseObjectManager<InGameUIObject>();
         }
 
@@ -170,7 +170,7 @@ namespace _2DGameEngine.Screens
 
         #region UI Addition Methods
 
-        public void AddUIObject(UIObject uiobject, string tag, bool load = false, bool linkWithUIManager = true)
+        public void AddScreenUIObject(ScreenUIObject uiobject, string tag, bool load = false, bool linkWithUIManager = true)
         {
             UIManager.AddObject(uiobject, tag, load, linkWithUIManager);
         }
@@ -180,7 +180,7 @@ namespace _2DGameEngine.Screens
             Button button = new Button(position, text);
             button.OnSelect += pressedFunction;
 
-            AddUIObject(button, tag, load);
+            AddScreenUIObject(button, tag, load);
         }
 
         // Short hand method for creating a quick picture box - for picture boxes with more custom attributes, use AddUIObject
@@ -188,7 +188,7 @@ namespace _2DGameEngine.Screens
         {
             PictureBox pictureBox = new PictureBox(position, size, dataAsset);
 
-            AddUIObject(pictureBox, tag, load);
+            AddScreenUIObject(pictureBox, tag, load);
         }
 
         // Short hand method for creating a quick image - for images with more custom attributes, use AddUIObject
@@ -196,22 +196,22 @@ namespace _2DGameEngine.Screens
         {
             Image image = new Image(position, dataAsset);
 
-            AddUIObject(image, tag, load);
+            AddScreenUIObject(image, tag, load);
         }
 
         protected void AddLabel(string text, string tag, Vector2 position)
         {
             Label label = new Label(text, position, Color.White);
 
-            AddUIObject(label, tag, false);
+            AddScreenUIObject(label, tag, false);
         }
 
-        public void RemoveUIObject(UIObject uiObject)
+        public void RemoveScreenUIObject(UIObject uiObject)
         {
             UIManager.RemoveObject(uiObject.Tag);
         }
 
-        public void RemoveUIObject(string uiObjectName)
+        public void RemoveScreenUIObject(string uiObjectName)
         {
             UIManager.RemoveObject(uiObjectName);
         }
@@ -340,7 +340,8 @@ namespace _2DGameEngine.Screens
             GameObjectManager.Draw(SpriteBatch);
             GameObjectManager.DrawInGameUI(SpriteBatch);
             InGameUIManager.Draw(SpriteBatch);
-            InGameUIManager.DrawInGameUI(SpriteBatch);            
+            InGameUIManager.DrawInGameUI(SpriteBatch);
+            UIManager.DrawInGameUI(SpriteBatch);
 
             ScriptManager.Draw(SpriteBatch);
         }
@@ -348,8 +349,10 @@ namespace _2DGameEngine.Screens
         public virtual void DrawScreenUI()
         {
             UIManager.Draw(SpriteBatch);
+            GameObjectManager.DrawScreenUI(SpriteBatch);
+            InGameUIManager.DrawScreenUI(SpriteBatch);
+            UIManager.DrawScreenUI(SpriteBatch);
             // This name is misleading - ingameui really refers to HoverInfoUI
-            UIManager.DrawInGameUI(SpriteBatch);
             ScriptManager.DrawUI(SpriteBatch);
         }
 

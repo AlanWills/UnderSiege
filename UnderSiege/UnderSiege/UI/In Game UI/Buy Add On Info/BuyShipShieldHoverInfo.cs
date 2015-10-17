@@ -40,7 +40,7 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
 
             ImageAndLabel health = new ImageAndLabel("Sprites\\UI\\Icons\\Health", "Health: " + shipShieldData.Health.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, name);
             AddUIObject(health, "Shield Health", true);
-            size = new Vector2(Math.Max(size.X, health.Size.X), size.Y + SpriteFont.LineSpacing + padding);
+            size = new Vector2(Math.Max(size.X, health.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
 
             Label range = new Label("Range: " + shipShieldData.ShieldRange.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, health);
             size = new Vector2(Math.Max(size.X, range.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);
@@ -48,7 +48,7 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
 
             ImageAndLabel strength = new ImageAndLabel("Sprites\\UI\\Icons\\ShieldStrength", "Strength: " + shipShieldData.ShieldStrength.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, range);
             AddUIObject(strength, "Shield Strength", true);
-            size = new Vector2(Math.Max(size.X, strength.Size.X), size.Y + SpriteFont.LineSpacing + padding);
+            size = new Vector2(Math.Max(size.X, strength.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
 
             Label depletedRechargeDelay = new Label("Depleted Recharge Delay: " + shipShieldData.ShieldDepletedRechargeDelay.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, strength);
             size = new Vector2(Math.Max(size.X, depletedRechargeDelay.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);
@@ -60,7 +60,7 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
 
             ImageAndLabel rechargePerSecond = new ImageAndLabel("Sprites\\UI\\Icons\\RepairRate", "Recharge Per Second: " + shipShieldData.ShieldRechargePerSecond.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, damagedRechargeDelay);
             AddUIObject(rechargePerSecond, "Recharge Per Second", true);
-            size = new Vector2(Math.Max(size.X, rechargePerSecond.Size.X), size.Y + SpriteFont.LineSpacing + padding);
+            size = new Vector2(Math.Max(size.X, rechargePerSecond.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
 
             Size = size + new Vector2(padding, padding) * 2;
             LocalPosition += new Vector2(0, -Size.Y * 0.5f);

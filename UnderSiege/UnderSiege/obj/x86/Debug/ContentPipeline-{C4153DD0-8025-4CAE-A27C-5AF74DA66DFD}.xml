@@ -593,7 +593,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\BeamType.xnb</Output>
-      <Time>2015-10-17T21:52:52.5413796+01:00</Time>
+      <Time>2015-10-17T22:37:13.8690985+01:00</Time>
     </Item>
     <Item>
       <Source>Sprites\UI\Icons\MissileType.png</Source>
@@ -602,7 +602,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\MissileType.xnb</Output>
-      <Time>2015-10-17T21:52:52.5884112+01:00</Time>
+      <Time>2015-10-17T22:37:13.8721+01:00</Time>
     </Item>
     <Item>
       <Source>Sprites\UI\Icons\KineticType.png</Source>
@@ -611,7 +611,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\KineticType.xnb</Output>
-      <Time>2015-10-17T21:52:52.7705328+01:00</Time>
+      <Time>2015-10-17T22:37:13.8711002+01:00</Time>
     </Item>
     <Item>
       <Source>Sprites\UI\Icons\Health.png</Source>
@@ -620,7 +620,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\Health.xnb</Output>
-      <Time>2015-10-17T21:57:24.8411154+01:00</Time>
+      <Time>2015-10-17T22:37:13.8701+01:00</Time>
     </Item>
     <Item>
       <Source>Sprites\UI\Icons\RepairRate.png</Source>
@@ -629,7 +629,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\RepairRate.xnb</Output>
-      <Time>2015-10-17T21:57:36.0265285+01:00</Time>
+      <Time>2015-10-17T22:37:13.873102+01:00</Time>
     </Item>
     <Item>
       <Source>Sprites\UI\Icons\Damage.png</Source>
@@ -638,7 +638,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\Damage.xnb</Output>
-      <Time>2015-10-17T22:20:12.3132561+01:00</Time>
+      <Time>2015-10-17T22:37:13.8701+01:00</Time>
     </Item>
     <Item>
       <Source>Sprites\UI\Icons\ShieldStrength.png</Source>
@@ -647,7 +647,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\ShieldStrength.xnb</Output>
-      <Time>2015-10-17T22:20:53.664663+01:00</Time>
+      <Time>2015-10-17T22:37:13.8741022+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

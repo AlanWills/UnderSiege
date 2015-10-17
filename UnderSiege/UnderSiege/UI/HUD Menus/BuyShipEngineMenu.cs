@@ -64,7 +64,7 @@ namespace UnderSiege.UI.HUD_Menus
                 hoverUI.LoadContent();
                 hoverUI.Initialize();
 
-                objectImage.HoverUI = hoverUI;
+                objectImage.ScreenHoverUI = hoverUI;
                 objectImage.StoredObject = data;
                 objectImage.OnSelect += ShowHardPointsEvent;
 

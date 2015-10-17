@@ -12,7 +12,7 @@ namespace _2DGameEngine.UI_Objects
 {
     public enum ButtonState { Idle, Highlighted, Pressed, Disabled }
 
-    public class Button : UIObject
+    public class Button : ScreenUIObject
     {
         #region Properties and Fields
 

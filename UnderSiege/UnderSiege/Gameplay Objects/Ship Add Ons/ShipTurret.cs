@@ -80,7 +80,7 @@ namespace UnderSiege.Gameplay_Objects
                 ShipTurretData = AssetManager.GetData<ShipTurretData>(DataAsset);
             }
 
-            TargetingLine = new UIObject(new Vector2(0, -ShipTurretData.Range * 0.5f), "Sprites\\UI\\InGameUI\\FiringLineUI", this);
+            TargetingLine = new InGameUIObject(new Vector2(0, -ShipTurretData.Range * 0.5f), "Sprites\\UI\\InGameUI\\FiringLineUI", this);
             TargetingLine.LoadContent();
         }
 

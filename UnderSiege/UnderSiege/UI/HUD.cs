@@ -16,7 +16,7 @@ using UnderSiegeData.Gameplay_Objects;
 
 namespace UnderSiege.UI
 {
-    public class HUD : UIObject
+    public class HUD : ScreenUIObject
     {
         #region Properties and Fields
 
@@ -136,8 +136,20 @@ namespace UnderSiege.UI
             base.Draw(spriteBatch);
 
             UIManager.Draw(spriteBatch);
-            // Misleading name - really just HoverInfoUI
+        }
+
+        public override void DrawInGameUI(SpriteBatch spriteBatch)
+        {
+            base.DrawInGameUI(spriteBatch);
+
             UIManager.DrawInGameUI(spriteBatch);
+        }
+
+        public override void DrawScreenUI(SpriteBatch spriteBatch)
+        {
+            base.DrawScreenUI(spriteBatch);
+
+            UIManager.DrawScreenUI(spriteBatch);
         }
 
         public override void HandleInput()

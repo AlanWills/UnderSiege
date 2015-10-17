@@ -114,6 +114,12 @@ namespace _2DGameEngine.Managers
                 baseObject.DrawInGameUI(spriteBatch);
         }
 
+        public virtual void DrawScreenUI(SpriteBatch spriteBatch)
+        {
+            foreach (T baseObject in this.Values)
+                baseObject.DrawScreenUI(spriteBatch);
+        }
+
         public virtual void HandleInput()
         {
             if (!AcceptInput)

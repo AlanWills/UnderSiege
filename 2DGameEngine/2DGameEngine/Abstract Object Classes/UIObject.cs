@@ -11,7 +11,7 @@ using System.Text;
 
 namespace _2DGameEngine.Abstract_Object_Classes
 {
-    public class UIObject : BaseObject
+    public abstract class UIObject : BaseObject
     {
         #region Properties and Fields
 
@@ -106,50 +106,6 @@ namespace _2DGameEngine.Abstract_Object_Classes
             currentLifeTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
             if (currentLifeTimer > LifeTime)
                 Alive = false;
-        }
-
-        public override void HandleInput()
-        {
-            if (Active)
-            {
-                MouseOver = Collider.CheckCollisionWith(ScreenManager.GameMouse.WorldPosition);
-
-                // Check hotkey click
-                /*if (HotKey != Keys.None)
-                {
-                    if (InputHandler.KeyPressed(HotKey))
-                    {
-                        // If something is selected, we might be building UI or something, so for optimisation don't allow whatever we do on selecting to be done if already selected
-                        if (IsSelected)
-                            return;
-
-                        // The object wasn't selected, so select it
-                        if (clickResetTime >= TimeSpan.FromSeconds(0.2f))
-                            Select();
-
-                        return;
-                    }
-                }*/
-
-                // Check mouse click
-                bool mouseClicked = ScreenManager.GameMouse.IsLeftClicked;
-                // If mouse isn't clicked we don't need to change the selection state, as we haven't selected anything!
-                if (mouseClicked)
-                {
-                    // We have clicked on the object
-                    if (MouseOver)
-                    {
-                        // The object wasn't selected, so select it
-                        if (clickResetTime >= TimeSpan.FromSeconds(0.2f))
-                            IsSelected = true;
-                    }
-                    // We have clicked elsewhere so should clear selection
-                    else
-                    {
-                        IsSelected = false;
-                    }
-                }
-            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)

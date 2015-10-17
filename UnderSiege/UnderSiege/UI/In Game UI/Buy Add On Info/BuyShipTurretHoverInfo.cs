@@ -41,7 +41,7 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
 
             ImageAndLabel health = new ImageAndLabel("Sprites\\UI\\Icons\\Health", "Health: " + shipTurretData.Health.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, name);
             AddUIObject(health, "Turret Health", true);
-            size = new Vector2(Math.Max(size.X, health.Size.X), size.Y + SpriteFont.LineSpacing + padding);
+            size = new Vector2(Math.Max(size.X, health.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
 
             string turretTypeIconAsset = "";
             switch (shipTurretData.TurretType)
@@ -59,7 +59,7 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
 
             ImageAndLabel type = new ImageAndLabel(turretTypeIconAsset, "Type: " + shipTurretData.TurretType, new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, health);
             AddUIObject(type, "Turret Type", true);
-            size = new Vector2(Math.Max(size.X, type.Size.X), size.Y + SpriteFont.LineSpacing + padding);
+            size = new Vector2(Math.Max(size.X, type.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
 
             Label range = new Label("Range: " + shipTurretData.Range.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, type);
             size = new Vector2(Math.Max(size.X, range.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);
@@ -67,10 +67,10 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
 
             ImageAndLabel damage = new ImageAndLabel("Sprites\\UI\\Icons\\Damage", "Damage: " + shipTurretData.Damage.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, range);
             AddUIObject(damage, "Turret Damage", true);
-            size = new Vector2(Math.Max(size.X, damage.Size.X), size.Y + SpriteFont.LineSpacing + padding);
+            size = new Vector2(Math.Max(size.X, damage.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
 
             ImageAndLabel price = new ImageAndLabel("Sprites\\UI\\Icons\\MoneyIcon", shipTurretData.Price.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), damage);
-            size = new Vector2(Math.Max(size.X, price.Size.X), size.Y + SpriteFont.LineSpacing + padding);
+            size = new Vector2(Math.Max(size.X, price.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
             AddUIObject(price, "Turret Price");
 
             Size = size + new Vector2(padding, padding) * 2;

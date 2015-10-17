@@ -51,7 +51,7 @@ namespace UnderSiege.Screens
                 objectImage.StoredObject = shipData;
                 objectImage.OnSelect += ShowShipInfo;
 
-                AddUIObject(objectImage, "Buy " + shipData.DisplayName + " Image", false);
+                AddScreenUIObject(objectImage, "Buy " + shipData.DisplayName + " Image", false);
 
                 counter++;
             }
@@ -69,7 +69,7 @@ namespace UnderSiege.Screens
             PurchaseShipInfoUI currentShipInfo = UIManager.GetItem<PurchaseShipInfoUI>("Selected Ship Info");
             if (currentShipInfo == null)
             {
-                AddUIObject(new PurchaseShipInfoUI(this, playerShipData, new Vector2(Viewport.Width - 150, ScreenCentre.Y), new Vector2(300, Viewport.Height)), "Selected Ship Info", true);
+                AddScreenUIObject(new PurchaseShipInfoUI(this, playerShipData, new Vector2(Viewport.Width - 150, ScreenCentre.Y), new Vector2(300, Viewport.Height)), "Selected Ship Info", true);
             }
             else
             {

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace _2DGameEngine.UI_Objects
 {
-    public class Label : UIObject
+    public class Label : ScreenUIObject
     {
         #region Properties and Fields
 

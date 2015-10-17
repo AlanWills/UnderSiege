@@ -77,7 +77,7 @@ namespace UnderSiege.Screens
             AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, "Data\\GameObjects\\SpaceStations\\CommandStation", SceneRoot), "Command Station");
 
             HUD = new HUD(this);
-            AddUIObject(HUD, "HUD");
+            AddScreenUIObject(HUD, "HUD");
         }
 
         #region Methods

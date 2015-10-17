@@ -14,7 +14,7 @@ using System.Text;
 
 namespace _2DGameEngine.UI_Objects
 {
-    public class Menu : UIObject
+    public class Menu : ScreenUIObject
     {
         #region Properties and Fields
 
@@ -208,6 +208,13 @@ namespace _2DGameEngine.UI_Objects
             base.DrawInGameUI(spriteBatch);
 
             UIManager.DrawInGameUI(spriteBatch);
+        }
+
+        public override void DrawScreenUI(SpriteBatch spriteBatch)
+        {
+            base.DrawScreenUI(spriteBatch);
+
+            UIManager.DrawScreenUI(spriteBatch);
         }
 
         public override void HandleInput()

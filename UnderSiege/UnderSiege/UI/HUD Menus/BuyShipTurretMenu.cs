@@ -2,6 +2,7 @@
 using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,7 +63,7 @@ namespace UnderSiege.UI.HUD_Menus
                 hoverUI.LoadContent();
                 hoverUI.Initialize();
 
-                objectImage.HoverUI = hoverUI;
+                objectImage.ScreenHoverUI = hoverUI;
                 objectImage.StoredObject = data;
                 objectImage.OnSelect += ShowHardPointsEvent;
 

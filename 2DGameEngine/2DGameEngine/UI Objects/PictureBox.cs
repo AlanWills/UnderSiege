@@ -9,7 +9,7 @@ using System.Text;
 
 namespace _2DGameEngine.UI_Objects
 {
-    public class PictureBox : UIObject
+    public class PictureBox : ScreenUIObject
     {
         #region Properties and Fields
 

@@ -9,75 +9,28 @@ using System.Text;
 
 namespace _2DGameEngine.Abstract_Object_Classes
 {
-    public class InGameUIObject : BaseObject
+    public class InGameUIObject : UIObject
     {
         #region Properties and Fields
-
-        public static SpriteFont SpriteFont
-        {
-            get;
-            set;
-        }
-
-        public string Text
-        {
-            get;
-            set;
-        }
-
-        public override Vector2 Centre
-        {
-            get
-            {
-                if (Texture != null)
-                    return base.Centre;
-                else if (!string.IsNullOrEmpty(Text))
-                    return SpriteFont.MeasureString(Text) * 0.5f;
-                else
-                    return Vector2.Zero;
-            }
-        }
-
-        public override Vector2 Scale
-        {
-            get
-            {
-                if (Texture != null)
-                    return base.Scale;
-                else
-                    return new Vector2(Size.X / Centre.X, Size.Y / Centre.Y) * 0.5f;
-            }
-        }
-
-        public object StoredObject
-        {
-            get;
-            set;
-        }
-
-        private float LifeTime { get; set; }
-
-        private float currentLifeTimer = 0;
-        public static string defaultSpriteAsset = "SpriteFonts\\UISpriteFont";
 
         #endregion
 
         public InGameUIObject(string dataAsset = "", BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(dataAsset, parent)
+            : base(dataAsset, parent, lifeTime)
         {
-            LifeTime = lifeTime;
+            
         }
 
         public InGameUIObject(Vector2 position, string dataAsset = "", BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(position, dataAsset, parent)
+            : base(position, dataAsset, parent, lifeTime)
         {
-            LifeTime = lifeTime;
+            
         }
 
         public InGameUIObject(Vector2 position, Vector2 size, string dataAsset = "", BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(position, size, dataAsset, parent)
+            : base(position, size, dataAsset, parent, lifeTime)
         {
-            LifeTime = lifeTime;
+            
         }
 
         #region Methods
@@ -90,25 +43,8 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             base.Update(gameTime);
 
-            currentLifeTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-            if (currentLifeTimer > LifeTime)
-                Alive = false;
-
             if (Collider != null)
                 Collider.UpdateCollider();
-        }
-
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            if (Visible)
-            {
-                if (Texture != null)
-                {
-                    spriteBatch.Draw(Texture, WorldPosition, SourceRectangle, Colour * Opacity, (float)WorldRotation, Centre, Scale, SpriteEffects.None, 0);
-                }
-
-                IfVisible();
-            }
         }
 
         public override void HandleInput()

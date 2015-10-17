@@ -71,9 +71,9 @@ namespace _2DGameEngine.Maths.Primitives
 
         public override void Render()
         {
-            basicEffect.CurrentTechnique.Passes[0].Apply();
+            //basicEffect.CurrentTechnique.Passes[0].Apply();
 
-            ScreenManager.Graphics.DrawUserPrimitives<VertexPositionColor>(PrimitiveType.TriangleList, GetVertices(), 0, triangles);
+            //ScreenManager.Graphics.DrawUserPrimitives<VertexPositionColor>(PrimitiveType.TriangleList, GetVertices(), 0, triangles);
         }
 
         #endregion

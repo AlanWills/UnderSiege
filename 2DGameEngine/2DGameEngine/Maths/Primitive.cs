@@ -20,11 +20,11 @@ namespace _2DGameEngine.Maths
             set
             {
                 opacity = value;
-                basicEffect.Alpha = opacity;
+                //basicEffect.Alpha = opacity;
             }
         }
 
-        protected BasicEffect basicEffect;
+        //protected BasicEffect basicEffect;
 
         #endregion
 
@@ -32,28 +32,28 @@ namespace _2DGameEngine.Maths
         {
             Colour = Color.White;
 
-            basicEffect = new BasicEffect(ScreenManager.Graphics);
+            /*basicEffect = new BasicEffect(ScreenManager.Graphics);
             basicEffect.VertexColorEnabled = true;
             basicEffect.Projection = Matrix.CreateOrthographicOffCenter
                (0, ScreenManager.Viewport.Width,
                 ScreenManager.Viewport.Height, 0,
                 0, 1);
 
-            Opacity = 0;
+            Opacity = 0;*/
         }
 
         public Primitive(Color colour, float opacity)
         {
             Colour = colour;
 
-            basicEffect = new BasicEffect(ScreenManager.Graphics);
+            /*basicEffect = new BasicEffect(ScreenManager.Graphics);
             basicEffect.VertexColorEnabled = true;
             basicEffect.Projection = Matrix.CreateOrthographicOffCenter
                (0, ScreenManager.Viewport.Width,
                 ScreenManager.Viewport.Height, 0,
                 0, 1);
 
-            Opacity = opacity;
+            Opacity = opacity;*/
         }
 
         #region Methods

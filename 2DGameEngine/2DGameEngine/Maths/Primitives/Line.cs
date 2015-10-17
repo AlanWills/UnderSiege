@@ -66,9 +66,9 @@ namespace _2DGameEngine.Maths.Primitives
 
         public override void Render()
         {
-            basicEffect.CurrentTechnique.Passes[0].Apply();
+            //basicEffect.CurrentTechnique.Passes[0].Apply();
 
-            ScreenManager.Graphics.DrawUserPrimitives<VertexPositionColor>(PrimitiveType.LineList, GetVertices(), 0, 1);
+            //ScreenManager.Graphics.DrawUserPrimitives<VertexPositionColor>(PrimitiveType.LineList, GetVertices(), 0, 1);
         }
 
         #endregion

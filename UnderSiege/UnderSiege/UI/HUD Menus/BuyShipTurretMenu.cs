@@ -105,15 +105,6 @@ namespace UnderSiege.UI.HUD_Menus
         protected override void CheckForPlaceObjectEvent(object sender, EventArgs e)
         {
             PurchaseItemUI shipObjectToPurchase = sender as PurchaseItemUI;
-
-            // Removes the purchase item UI from the HUD
-            base.CheckForPlaceObjectEvent(sender, e);
-
-            foreach (PlayerShip ship in UnderSiegeGameplayScreen.Allies.Values)
-            {
-                ship.DrawOtherHardPoints = false;
-            }
-
             if (shipObjectToPurchase != null)
             {
                 // This is going to need optimising
@@ -137,10 +128,26 @@ namespace UnderSiege.UI.HUD_Menus
                             }
                         }
 
+                        // Removes the purchase item UI from the HUD
+                        ResetPlaceObjectUI();
+
                         // We have found out which ship the mouse is over, so we can exit the loop
                         return;
                     }
                 }
+            }
+
+            // Removes the purchase item UI from the HUD
+            ResetPlaceObjectUI();
+        }
+
+        protected override void ResetPlaceObjectUI()
+        {
+            base.ResetPlaceObjectUI();
+
+            foreach (PlayerShip ship in UnderSiegeGameplayScreen.Allies.Values)
+            {
+                ship.DrawOtherHardPoints = false;
             }
         }
 

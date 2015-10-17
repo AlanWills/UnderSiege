@@ -45,7 +45,9 @@ namespace UnderSiege.UI.HUD_Menus
 
         protected abstract void AddUI();
 
-        protected virtual void CheckForPlaceObjectEvent(object sender, EventArgs e)
+        protected abstract void CheckForPlaceObjectEvent(object sender, EventArgs e);
+
+        protected virtual void ResetPlaceObjectUI()
         {
             HUD.GameplayScreen.RemoveInGameUIObject("Purchase Object UI");
             Camera.Zoom = previousCameraZoom;

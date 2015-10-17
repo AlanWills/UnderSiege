@@ -38,9 +38,9 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
             size = name.TextDimensions;
             AddUIObject(name, "Engine Name");
 
-            Label health = new Label("Health: " + shipEngineData.Health.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, name);
-            size = new Vector2(Math.Max(size.X, health.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);
-            AddUIObject(health, "Engine Health");
+            ImageAndLabel health = new ImageAndLabel("Sprites\\UI\\Icons\\Health", "Health: " + shipEngineData.Health.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, name);
+            AddUIObject(health, "Engine Health", true);
+            size = new Vector2(Math.Max(size.X, health.Size.X), size.Y + SpriteFont.LineSpacing + padding);
 
             Label thrust = new Label("Thrust: " + shipEngineData.Thrust.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, health);
             size = new Vector2(Math.Max(size.X, thrust.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);

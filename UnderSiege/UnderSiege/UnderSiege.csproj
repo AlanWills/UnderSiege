@@ -110,7 +110,6 @@
     <Compile Include="UI\In Game UI\EngineBlaze.cs" />
     <Compile Include="UI\In Game UI\HardPointUI.cs" />
     <Compile Include="UI\HUD.cs" />
-    <Compile Include="UI\IconAndLabel.cs" />
     <Compile Include="UI\InGameShipInfo.cs" />
     <Compile Include="UI\In Game UI\PurchaseItemUI.cs" />
     <Compile Include="UI\PurchaseShipInfoUI.cs" />

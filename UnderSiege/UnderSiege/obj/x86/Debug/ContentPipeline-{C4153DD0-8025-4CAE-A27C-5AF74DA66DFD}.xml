@@ -586,6 +586,69 @@
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\GameplayTutorial\TutorialFinalWave.xnb</Output>
       <Time>2015-10-15T22:17:11.3826968+01:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\UI\Icons\BeamType.png</Source>
+      <Name>Sprites\UI\Icons\BeamType</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\BeamType.xnb</Output>
+      <Time>2015-10-17T21:52:52.5413796+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Icons\MissileType.png</Source>
+      <Name>Sprites\UI\Icons\MissileType</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\MissileType.xnb</Output>
+      <Time>2015-10-17T21:52:52.5884112+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Icons\KineticType.png</Source>
+      <Name>Sprites\UI\Icons\KineticType</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\KineticType.xnb</Output>
+      <Time>2015-10-17T21:52:52.7705328+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Icons\Health.png</Source>
+      <Name>Sprites\UI\Icons\Health</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\Health.xnb</Output>
+      <Time>2015-10-17T21:57:24.8411154+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Icons\RepairRate.png</Source>
+      <Name>Sprites\UI\Icons\RepairRate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\RepairRate.xnb</Output>
+      <Time>2015-10-17T21:57:36.0265285+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Icons\Damage.png</Source>
+      <Name>Sprites\UI\Icons\Damage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\Damage.xnb</Output>
+      <Time>2015-10-17T22:20:12.3132561+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Icons\ShieldStrength.png</Source>
+      <Name>Sprites\UI\Icons\ShieldStrength</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Icons\ShieldStrength.xnb</Output>
+      <Time>2015-10-17T22:20:53.664663+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>

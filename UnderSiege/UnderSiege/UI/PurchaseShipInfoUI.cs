@@ -56,7 +56,7 @@ namespace UnderSiege.UI
             Label shipHull = new Label("Hull Strength: " + PlayerShipData.HullHealth.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, shipName);
             AddUIObject(shipHull, "Ship Hull Health", true);
 
-            IconAndLabel money = new IconAndLabel("Sprites\\UI\\Icons\\MoneyIcon", PlayerShipData.Price.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), shipHull);
+            ImageAndLabel money = new ImageAndLabel("Sprites\\UI\\Icons\\MoneyIcon", PlayerShipData.Price.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), shipHull);
             AddUIObject(money, "Ship Price", true);
 
             Button buyButton = new Button(new Vector2(0, SpriteFont.LineSpacing + Button.defaultTexture.Height * 0.5f + padding), "Buy", money);

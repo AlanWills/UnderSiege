@@ -63,3 +63,10 @@ Content\Data\Waves\GameplayTutorial\TutorialScoutWave.xnb
 Content\Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xnb
 Content\Data\Abilities\ShipAddOnAbilities\Repair.xnb
 Content\Data\Waves\GameplayTutorial\TutorialFinalWave.xnb
+Content\Sprites\UI\Icons\BeamType.xnb
+Content\Sprites\UI\Icons\MissileType.xnb
+Content\Sprites\UI\Icons\KineticType.xnb
+Content\Sprites\UI\Icons\Health.xnb
+Content\Sprites\UI\Icons\RepairRate.xnb
+Content\Sprites\UI\Icons\Damage.xnb
+Content\Sprites\UI\Icons\ShieldStrength.xnb

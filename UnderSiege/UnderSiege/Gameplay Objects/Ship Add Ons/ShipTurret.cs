@@ -170,7 +170,7 @@ namespace UnderSiege.Gameplay_Objects
 
                 if (targetAddOn != null)
                 {
-                    Target = target;
+                    Target = targetAddOn;
                 }
             }
         }

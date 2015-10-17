@@ -34,25 +34,40 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
             // For now don't set the position of this label, because we do not know the size yet
             // However, with correct parenting we will only need to set this position at the very end when the size is calculated
             // And everything else will be correctly position
+            
             Label name = new Label(shipTurretData.DisplayName, Vector2.Zero, Color.Red, this);
             size = name.TextDimensions;
             AddUIObject(name, "Turret Name");
 
-            Label health = new Label("Health: " + shipTurretData.Health.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, name);
-            size = new Vector2(Math.Max(size.X, health.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);
-            AddUIObject(health, "Turret Health");
+            ImageAndLabel health = new ImageAndLabel("Sprites\\UI\\Icons\\Health", "Health: " + shipTurretData.Health.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, name);
+            AddUIObject(health, "Turret Health", true);
+            size = new Vector2(Math.Max(size.X, health.Size.X), size.Y + SpriteFont.LineSpacing + padding);
 
-            Label type = new Label("Type: " + shipTurretData.TurretType, new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, health);
-            size = new Vector2(Math.Max(size.X, type.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);
-            AddUIObject(type, "Turret Type");
+            string turretTypeIconAsset = "";
+            switch (shipTurretData.TurretType)
+            {
+                case "Kinetic":
+                    turretTypeIconAsset = "Sprites\\UI\\Icons\\KineticType";
+                    break;
+                case "Missile":
+                    turretTypeIconAsset = "Sprites\\UI\\Icons\\MissileType";
+                    break;
+                case "Beam":
+                    turretTypeIconAsset = "Sprites\\UI\\Icons\\BeamType";
+                    break;
+            }
+
+            ImageAndLabel type = new ImageAndLabel(turretTypeIconAsset, "Type: " + shipTurretData.TurretType, new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, health);
+            AddUIObject(type, "Turret Type", true);
+            size = new Vector2(Math.Max(size.X, type.Size.X), size.Y + SpriteFont.LineSpacing + padding);
 
             Label range = new Label("Range: " + shipTurretData.Range.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, type);
             size = new Vector2(Math.Max(size.X, range.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);
             AddUIObject(range, "Turret Range");
 
-            Label damage = new Label("Damage: " + shipTurretData.Damage.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, range);
-            size = new Vector2(Math.Max(size.X, damage.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);
-            AddUIObject(damage, "Turret Damage");
+            ImageAndLabel damage = new ImageAndLabel("Sprites\\UI\\Icons\\Damage", "Damage: " + shipTurretData.Damage.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, range);
+            AddUIObject(damage, "Turret Damage", true);
+            size = new Vector2(Math.Max(size.X, damage.Size.X), size.Y + SpriteFont.LineSpacing + padding);
 
             ImageAndLabel price = new ImageAndLabel("Sprites\\UI\\Icons\\MoneyIcon", shipTurretData.Price.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), damage);
             size = new Vector2(Math.Max(size.X, price.Size.X), size.Y + SpriteFont.LineSpacing + padding);

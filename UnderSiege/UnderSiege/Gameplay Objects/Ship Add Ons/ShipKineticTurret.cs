@@ -92,6 +92,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             // We don't care what our bullets are called as we will never refer to them by name
             nameCounter++;
             BulletManager.AddObject(Bullet.Clone(), "Bullet" + nameCounter);
+            FiringSoundEffect.Play();
         }
 
         public override void CheckIfDamagedTarget()

@@ -13,6 +13,7 @@
     </Abilities>
     <TurretType>Missile</TurretType>
     <BulletAsset>Data\GameObjects\Bullets\TviirMissile</BulletAsset>
+    <TurretFiringAsset></TurretFiringAsset>
     <Range>850</Range>
     <ArcWidth>2</ArcWidth>
     <Damage>8</Damage>

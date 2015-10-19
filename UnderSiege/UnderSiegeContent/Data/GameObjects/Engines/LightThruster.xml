@@ -11,6 +11,7 @@
     <Abilities>
       <Item>Repair</Item>
     </Abilities>
+    <EngineSoundAsset>LaserFire</EngineSoundAsset>
     <Thrust>200</Thrust>
   </Asset>
 </XnaContent>

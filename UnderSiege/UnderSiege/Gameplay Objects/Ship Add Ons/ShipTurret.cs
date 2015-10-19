@@ -6,6 +6,7 @@ using _2DGameEngine.Maths.Primitives;
 using _2DGameEngine.Physics_Components.Movement_Behaviours;
 using _2DTowerDefenceLibraryData.Turret_Data;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,7 @@ namespace UnderSiege.Gameplay_Objects
         }
 
         public UIObject TargetingLine { get; private set; }
+        protected SoundEffect FiringSoundEffect { get; private set; }
 
         #endregion
 
@@ -78,6 +80,11 @@ namespace UnderSiege.Gameplay_Objects
             if (BaseData != null)
             {
                 ShipTurretData = AssetManager.GetData<ShipTurretData>(DataAsset);
+            }
+
+            if (ShipTurretData.TurretFiringAsset != "")
+            {
+                FiringSoundEffect = ScreenManager.SFX.SoundEffects[ShipTurretData.TurretFiringAsset];
             }
 
             TargetingLine = new InGameUIObject(new Vector2(0, -ShipTurretData.Range * 0.5f), "Sprites\\UI\\InGameUI\\FiringLineUI", this);

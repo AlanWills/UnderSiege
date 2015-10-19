@@ -21,6 +21,12 @@ namespace UnderSiegeData.Gameplay_Objects
             set;
         }
 
+        public string TurretFiringAsset
+        {
+            get;
+            set;
+        }
+
         public float Range
         {
             get;

@@ -458,7 +458,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\DualLaserTurret.xnb</Output>
-      <Time>2015-10-19T20:19:42.6923283+01:00</Time>
+      <Time>2015-10-19T23:34:08.8148859+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\LaserBullet.xml</Source>
@@ -539,7 +539,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Engines\LightThruster.xnb</Output>
-      <Time>2015-10-19T20:19:42.6763182+01:00</Time>
+      <Time>2015-10-19T23:34:50.5286013+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Turrets\MissilePod.xml</Source>
@@ -548,7 +548,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\MissilePod.xnb</Output>
-      <Time>2015-10-19T20:19:42.6943305+01:00</Time>
+      <Time>2015-10-19T23:35:04.2276575+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\TviirMissile.xml</Source>
@@ -566,7 +566,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\SmallSingleLaser.xnb</Output>
-      <Time>2015-10-19T20:19:42.6963314+01:00</Time>
+      <Time>2015-10-19T23:35:12.0978623+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\SmallSingleBeam.xml</Source>
@@ -757,6 +757,24 @@
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\ButtonPressedSound.xnb</Output>
       <Time>2015-10-19T23:15:59.0006258+01:00</Time>
     </Item>
+    <Item>
+      <Source>SFX\LightThruster.wav</Source>
+      <Name>SFX\LightThruster</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\LightThruster.xnb</Output>
+      <Time>2015-10-19T23:23:00.0607831+01:00</Time>
+    </Item>
+    <Item>
+      <Source>SFX\LaserFire.wav</Source>
+      <Name>SFX\LaserFire</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\LaserFire.xnb</Output>
+      <Time>2015-10-19T23:24:01.9136743+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>
@@ -772,7 +790,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiegeData\bin\x86\Debug\UnderSiegeData.dll</Key>
-        <Value>2015-10-19T22:14:55.4281599+01:00</Value>
+        <Value>2015-10-19T23:33:51.8730252+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

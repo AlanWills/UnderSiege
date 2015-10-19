@@ -2,6 +2,7 @@
 using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
         public ShipEngineData ShipEngineData { get; set; }
         private EngineBlaze EngineBlaze { get; set; }
+        private SoundEffect EngineSoundEffect { get; set; }
 
         #endregion
 
@@ -40,7 +42,11 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             ShipEngineData = AssetManager.GetData<ShipEngineData>(DataAsset);
             Ship parent = Parent as Ship;
             parent.TotalThrust += ShipEngineData.Thrust;
-            // Parent = parent; ?? Do we need this??
+
+            if (ShipEngineData.EngineSoundAsset != "")
+            {
+                EngineSoundEffect = ScreenManager.SFX.SoundEffects[ShipEngineData.EngineSoundAsset];
+            }
         }
 
         public override void Initialize()
@@ -55,6 +61,11 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+
+            if (ParentShip.RigidBody.LinearVelocity.LengthSquared() > 1)
+            {
+                EngineSoundEffect.Play();
+            }
 
             EngineBlaze.Update(gameTime);
         }

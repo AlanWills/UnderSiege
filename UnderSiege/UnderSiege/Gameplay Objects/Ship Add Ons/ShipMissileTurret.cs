@@ -92,6 +92,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             Missile clone = Missile.Clone();
             clone.RigidBody.LinearVelocity = new Vector2(-30, clone.RigidBody.LinearVelocity.Y);
             MissileManager.AddObject(clone, "Missile" + nameCounter);
+            FiringSoundEffect.Play();
         }
 
         public override void CheckIfDamagedTarget()

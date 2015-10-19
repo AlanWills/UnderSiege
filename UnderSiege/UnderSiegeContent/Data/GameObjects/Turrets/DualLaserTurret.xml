@@ -13,6 +13,7 @@
     </Abilities>
     <TurretType>Kinetic</TurretType>
     <BulletAsset>Data\GameObjects\Bullets\LaserBullet</BulletAsset>
+    <TurretFiringAsset>LaserFire</TurretFiringAsset>
     <Range>500</Range>
     <ArcWidth>2</ArcWidth>
     <Damage>1</Damage>

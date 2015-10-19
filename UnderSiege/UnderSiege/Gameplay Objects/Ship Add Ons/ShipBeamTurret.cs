@@ -56,7 +56,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         {
             // Change the opacity
             firing = true;
-
+            FiringSoundEffect.Play();
             Beam.Size = new Vector2(Size.X, (WorldPosition - Target.WorldPosition).Length());
         }
 

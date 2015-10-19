@@ -23,7 +23,7 @@ namespace UnderSiege.Gameplay_Objects
 
         public ShipTurretData ShipTurretData { get; private set; }
         private FiringArc FiringArc { get; set; }
-        public GameObject Target { get; set; }
+        public DamageableGameObject Target { get; set; }
 
         public override float LocalRotation
         {

@@ -42,6 +42,11 @@ namespace UnderSiege.Gameplay_Objects
             Colour = new Color(BeamData.BeamColour);
         }
 
+        public override void AddCollider()
+        {
+            
+        }
+
         public override void Initialize()
         {
             base.Initialize();
@@ -59,12 +64,18 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.Update(gameTime);
 
+            // Size changes in beam turret so we need to move the beam so that it starts and ends at the correct place
             LocalPosition = new Vector2(0, -Size.Y * 0.5f);
 
             float sinRot = (float)Math.Sin(WorldRotation);
             float cosRot = (float)Math.Cos(WorldRotation);
             float range = ParentTurret.ShipTurretData.Range;
             BeamLine.EndPoint = ParentTurret.WorldPosition + new Vector2(sinRot * range, -cosRot * range);
+        }
+
+        public override void HandleInput()
+        {
+            
         }
 
         #endregion

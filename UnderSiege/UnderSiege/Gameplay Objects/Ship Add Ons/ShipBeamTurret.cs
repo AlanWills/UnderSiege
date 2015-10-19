@@ -64,14 +64,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         {
             if (Target.Collider.CheckCollisionWith(Beam.BeamLine))
             {
-                try
-                {
-                    (Target as Ship).Damage(Beam.ParentTurret.ShipTurretData.Damage);
-                }
-                catch
-                {
-                    (Target as ShipAddOn).Damage(Beam.ParentTurret.ShipTurretData.Damage);
-                }
+                Target.Damage(ShipTurretData.Damage);
             }
         }
 

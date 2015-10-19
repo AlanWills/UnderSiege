@@ -100,14 +100,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             {
                 if (Target.Collider.CheckCollisionWith(missile.WorldPosition))
                 {
-                    try
-                    {
-                        (Target as Ship).Damage(missile.ParentTurret.ShipTurretData.Damage);
-                    }
-                    catch
-                    {
-                        (Target as ShipAddOn).Damage(missile.ParentTurret.ShipTurretData.Damage);
-                    }
+                    Target.Damage(ShipTurretData.Damage);
 
                     missile.Alive = false;
                 }

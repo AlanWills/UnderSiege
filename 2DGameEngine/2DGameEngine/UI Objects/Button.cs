@@ -1,6 +1,7 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
 using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -64,6 +65,12 @@ namespace _2DGameEngine.UI_Objects
             set;
         }
 
+        private SoundEffect ButtonHoverSound
+        {
+            get;
+            set;
+        }
+
         private ButtonState ButtonState
         {
             get;
@@ -71,12 +78,15 @@ namespace _2DGameEngine.UI_Objects
         }
 
         public static string defaultTextureAsset = "Sprites\\UI\\Buttons\\default", pressedTextureAsset = "Sprites\\UI\\Buttons\\pressed", highlightedTextureAsset = "Sprites\\UI\\Buttons\\highlighted", disabledTextureAsset = "Sprites\\UI\\Buttons\\disabled";
+        public static string defaultHoverSound = "ButtonHover";
         public static Texture2D defaultTexture, pressedTexture, highlightedTexture, disabledTexture;
         private const float resetTime = 0.02f;
         private TimeSpan pressedTime = TimeSpan.FromSeconds(resetTime);
 
         public static Color defaultColour = Color.Blue;
         public static Color highlightedColour = Color.Cyan;
+
+        private bool canPlayHoverSound = false;
 
         #endregion
 
@@ -188,6 +198,7 @@ namespace _2DGameEngine.UI_Objects
                 DisabledTexture = AssetManager.GetTexture(DisabledTextureAsset);
             }
 
+            ButtonHoverSound = ScreenManager.SFX.SoundEffects[defaultHoverSound];
             Colour = defaultColour;
 
             base.LoadContent();
@@ -204,6 +215,19 @@ namespace _2DGameEngine.UI_Objects
         {
             // In the base update we call the IfMouseOver function which deals with setting the ButtonState to ButtonState.Highlighted
             base.Update(gameTime);
+
+            if (!MouseOver)
+            {
+                canPlayHoverSound = true;
+            }
+            else
+            {
+                if (canPlayHoverSound)
+                {
+                    ButtonHoverSound.Play();
+                    canPlayHoverSound = false;
+                }
+            }
 
             // Button has reently been pressed and we update accordingly
             if (pressedTime < TimeSpan.FromSeconds(resetTime))

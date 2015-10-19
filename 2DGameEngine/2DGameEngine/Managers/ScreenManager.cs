@@ -79,6 +79,12 @@ namespace _2DGameEngine.Managers
             private set;
         }
 
+        public static SFXManager SFX
+        {
+            get;
+            private set;
+        }
+
         public static GraphicsDevice Graphics
         {
             get;
@@ -117,6 +123,7 @@ namespace _2DGameEngine.Managers
             Camera = new Camera();
             Input = new InputHandler(game);
             GameMouse = new GameMouse();
+            SFX = new SFXManager();
 
             Game.Components.Add(this);
             Game.Components.Add(Input);
@@ -202,6 +209,7 @@ namespace _2DGameEngine.Managers
 
             AssetManager.LoadAssets(Content);
             MusicManager.LoadAssets(Content);
+            SFX.LoadContent(Content);
             GameMouse.LoadContent();
             GameMouse.Initialize();
         }

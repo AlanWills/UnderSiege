@@ -88,6 +88,7 @@
     <Compile Include="Managers\GlobalVariables.cs" />
     <Compile Include="Managers\MusicManager.cs" />
     <Compile Include="Managers\ScreenManager.cs" />
+    <Compile Include="Managers\SFXManager.cs" />
     <Compile Include="Maths\2DGeometry.cs" />
     <Compile Include="Maths\Primitives\Arc.cs" />
     <Compile Include="Maths\Primitives\Circle.cs" />

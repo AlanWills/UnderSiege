@@ -44,12 +44,13 @@ namespace _2DGameEngine.Managers
             string[] musicFiles = Directory.GetFiles(content.RootDirectory + "\\Music", ".", SearchOption.AllDirectories);
             for (int i = 0; i < musicFiles.Length; i++)
             {
-                // Remove the Content\\Music\\ from the start
+                // Remove the Content\\ from the start
                 musicFiles[i] = musicFiles[i].Remove(0, 8);
 
                 // Remove the .xnb at the end
                 musicFiles[i] = musicFiles[i].Split('.')[0];
 
+                // Remove the Music\\ from the start
                 string key = musicFiles[i].Remove(0, 6);
 
                 if (!Songs.ContainsKey(key))

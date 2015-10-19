@@ -3,11 +3,11 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.ShipMissileTurretData">
     <DisplayName>Missile Pod</DisplayName>
     <TextureAsset>Sprites\GameObjects\Turrets\hii_cor_missile_pod_base</TextureAsset>
+    <Health>60</Health>
     <AddOnType>ShipTurret</AddOnType>
     <Price>650</Price>
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>true</Orientable>
-    <Health>60</Health>
     <Abilities>
       <Item>Repair</Item>
     </Abilities>

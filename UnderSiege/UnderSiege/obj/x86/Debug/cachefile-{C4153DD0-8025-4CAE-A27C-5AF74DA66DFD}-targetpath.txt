@@ -38,6 +38,13 @@ Content\Sprites\GameObjects\FX\Contrail.xnb
 Content\Sprites\GameObjects\FX\EngineBlaze.xnb
 Content\Sprites\UI\Menus\DialogBox.xnb
 Content\Sprites\Abilities\ShipAddOnAbilities\field_repairs.xnb
+Content\Sprites\UI\Icons\BeamType.xnb
+Content\Sprites\UI\Icons\MissileType.xnb
+Content\Sprites\UI\Icons\KineticType.xnb
+Content\Sprites\UI\Icons\Health.xnb
+Content\Sprites\UI\Icons\RepairRate.xnb
+Content\Sprites\UI\Icons\Damage.xnb
+Content\Sprites\UI\Icons\ShieldStrength.xnb
 Content\Data\Screens\MainMenuScreen.xnb
 Content\Data\GameObjects\SpaceStations\CommandStation.xnb
 Content\Data\Screens\GameplayScreen.xnb
@@ -63,10 +70,3 @@ Content\Data\Waves\GameplayTutorial\TutorialScoutWave.xnb
 Content\Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xnb
 Content\Data\Abilities\ShipAddOnAbilities\Repair.xnb
 Content\Data\Waves\GameplayTutorial\TutorialFinalWave.xnb
-Content\Sprites\UI\Icons\BeamType.xnb
-Content\Sprites\UI\Icons\MissileType.xnb
-Content\Sprites\UI\Icons\KineticType.xnb
-Content\Sprites\UI\Icons\Health.xnb
-Content\Sprites\UI\Icons\RepairRate.xnb
-Content\Sprites\UI\Icons\Damage.xnb
-Content\Sprites\UI\Icons\ShieldStrength.xnb

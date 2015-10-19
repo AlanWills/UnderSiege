@@ -67,7 +67,9 @@ namespace _2DGameEngine.Game_Objects
             Animation.SetFrameDimensions(Object.Texture);
             SetSourceRectangleBasedOnFrame(Animation.CurrentFrame);
 
-            Object.LocalPosition += new Vector2(Object.Size.X * (1 - 1.0f / (float)Animation.Frames.X) * 0.5f, Object.Size.Y * (1 - 1.0f / (float)Animation.Frames.Y) * 0.5f);
+            // need to move by the TEXTURE'S dimensions?
+            // Or maybe by the size but take into account the number of frames ni each dimension
+            Object.LocalPosition += new Vector2(Object.Size.X * ((float)Animation.Frames.X - 1) * 0.5f, Object.Size.Y * ((float)Animation.Frames.Y - 1) * 0.5f);
         }
 
         // frame is 0 indexed

@@ -3,7 +3,7 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.ShipData">
     <DisplayName>Command Station</DisplayName>
     <TextureAsset>Sprites\GameObjects\SpaceStations\station_small</TextureAsset>
-    <HullHealth>1000</HullHealth>
+    <Health>1000</Health>
     <OtherHardPoints>
       -48 -110
       48 -110

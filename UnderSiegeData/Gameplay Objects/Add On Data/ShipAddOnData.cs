@@ -1,4 +1,5 @@
 ﻿using _2DGameEngineData;
+using _2DGameEngineData.GameObject_Data;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace UnderSiegeData.Gameplay_Objects
 {
-    public class ShipAddOnData : BaseData
+    public class ShipAddOnData : DamageableGameObjectData
     {
         public string AddOnType
         {
@@ -30,12 +31,6 @@ namespace UnderSiegeData.Gameplay_Objects
 
         // Determines whether we have an object that can be oriented
         public bool Orientable
-        {
-            get;
-            set;
-        }
-
-        public float Health
         {
             get;
             set;

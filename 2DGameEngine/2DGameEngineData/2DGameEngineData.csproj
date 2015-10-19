@@ -60,11 +60,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseData.cs" />
+    <Compile Include="GameObject Data\DamageableGameObjectData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screen Data\BaseScreenData.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GameObject Data\" />
     <Folder Include="UI Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

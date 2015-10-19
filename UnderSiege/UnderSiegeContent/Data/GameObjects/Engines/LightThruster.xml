@@ -3,11 +3,11 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.ShipEngineData">
     <DisplayName>Light Thruster</DisplayName>
     <TextureAsset>Sprites\GameObjects\Engines\light_thruster</TextureAsset>
+    <Health>9</Health>
     <AddOnType>ShipEngine</AddOnType>
     <Price>200</Price>
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>false</Orientable>
-    <Health>9</Health>
     <Abilities>
       <Item>Repair</Item>
     </Abilities>

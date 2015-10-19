@@ -3,11 +3,11 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.ShipBeamTurretData">
     <DisplayName>Small Single Laser</DisplayName>
     <TextureAsset>Sprites\GameObjects\Turrets\hii_single_laser_small_hp</TextureAsset>
+    <Health>30</Health>
     <AddOnType>ShipTurret</AddOnType>
     <Price>750</Price>
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>true</Orientable>
-    <Health>30</Health>
     <Abilities>
       <Item>Repair</Item>
     </Abilities>

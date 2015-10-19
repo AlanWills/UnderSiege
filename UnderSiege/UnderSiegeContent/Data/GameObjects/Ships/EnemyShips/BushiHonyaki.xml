@@ -3,7 +3,7 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.EnemyShipData">
     <DisplayName>Bushi Honyaki</DisplayName>
     <TextureAsset>Sprites\GameObjects\Ships\EnemyShips\bushi_honyaki</TextureAsset>
-    <HullHealth>10</HullHealth>
+    <Health>10</Health>
     <OtherHardPoints>
       0 0
     </OtherHardPoints>

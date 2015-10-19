@@ -3,11 +3,11 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.ShipShieldData">
     <DisplayName>Energy Shield</DisplayName>
     <TextureAsset>Sprites\GameObjects\Shields\Shield</TextureAsset>
+    <Health>20</Health>
     <AddOnType>ShipShield</AddOnType>
     <Price>250</Price>
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>false</Orientable>
-    <Health>20</Health>
     <Abilities>
       <Item>Repair</Item>
     </Abilities>

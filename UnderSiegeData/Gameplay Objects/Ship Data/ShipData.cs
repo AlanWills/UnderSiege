@@ -1,4 +1,5 @@
 ﻿using _2DGameEngineData;
+using _2DGameEngineData.GameObject_Data;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -7,14 +8,8 @@ using System.Text;
 
 namespace UnderSiegeData.Gameplay_Objects
 {
-    public class ShipData : BaseData
+    public class ShipData : DamageableGameObjectData
     {
-        public float HullHealth
-        {
-            get;
-            set;
-        }
-
         public List<Vector2> OtherHardPoints
         {
             get;

@@ -18,7 +18,7 @@ namespace UnderSiege.Gameplay_Objects
 {
     public enum ShipType { AlliedShip, EnemyShip }
 
-    public class Ship : GameObject
+    public class Ship : DamageableGameObject
     {
         #region Properties and Fields
 
@@ -59,7 +59,6 @@ namespace UnderSiege.Gameplay_Objects
         public List<Vector2> OtherHardPoints { get; set; }
         public List<Vector2> EngineHardPoints { get; set; }
 
-        public float CurrentHullHealth { get; set; }
         public ShipType ShipType { get; set; }
 
         private Bar HullHealthBar { get; set; }
@@ -196,9 +195,7 @@ namespace UnderSiege.Gameplay_Objects
                 EngineHardPoints.Add(new Vector2(hardPoint.X, hardPoint.Y));
             }
 
-            CurrentHullHealth = ShipData.HullHealth;
-
-            HullHealthBar = new Bar(new Vector2(0, Size.Y * 0.5f + 5), new Vector2(Size.X, 5), "Sprites\\UI\\Bars\\ArmourBar", ShipData.HullHealth, "", this);
+            HullHealthBar = new Bar(new Vector2(0, Size.Y * 0.5f + 5), new Vector2(Size.X, 5), "Sprites\\UI\\Bars\\ArmourBar", ShipData.Health, "", this);
             HullHealthBar.Colour = Color.LightGreen;
             HullHealthBar.LoadContent();
             HullHealthBar.Initialize();
@@ -227,12 +224,7 @@ namespace UnderSiege.Gameplay_Objects
                         shipAddOn.Update(gameTime);
                 }
 
-                if (CurrentHullHealth <= 0)
-                {
-                    Alive = false;
-                }
-
-                HullHealthBar.UpdateValue(CurrentHullHealth);
+                HullHealthBar.UpdateValue(CurrentHealth);
             }
         }
 
@@ -272,13 +264,6 @@ namespace UnderSiege.Gameplay_Objects
                 foreach (ShipAddOn shipAddOn in shipAddOnPair.Value)
                     shipAddOn.HandleInput();
             }
-        }
-
-        public virtual void Damage(float damage)
-        {
-            CurrentHullHealth -= damage;
-            if (CurrentHullHealth <= 0)
-                Alive = false;
         }
 
         public virtual void RemoveAddOn(ShipAddOn addOn)

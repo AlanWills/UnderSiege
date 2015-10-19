@@ -3,11 +3,11 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.ShipKineticTurretData">
     <DisplayName>Dual Laser Turret</DisplayName>
     <TextureAsset>Sprites\GameObjects\Turrets\dual_laser_medium</TextureAsset>
+    <Health>40</Health>
     <AddOnType>ShipTurret</AddOnType>
     <Price>400</Price>
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>true</Orientable>
-    <Health>40</Health>
     <Abilities>
       <Item>Repair</Item>
     </Abilities>

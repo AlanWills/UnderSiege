@@ -18,12 +18,11 @@ using UnderSiegeData.Gameplay_Objects;
 
 namespace UnderSiege.Gameplay_Objects
 {
-    public class ShipAddOn : GameObject
+    public class ShipAddOn : DamageableGameObject
     {
         #region Properties and Fields
 
         public ShipAddOnData ShipAddOnData { get; set; }
-        public float CurrentHealth { get; set; }
 
         public Ship ParentShip { get; set; }
         public Vector2 HardPointOffset { get; private set; }
@@ -131,14 +130,6 @@ namespace UnderSiege.Gameplay_Objects
             // Here we are changing the orientation of the turret, so it should not fire
             LocalOrientation = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, ScreenManager.GameMouse.InGamePosition) - Parent.WorldRotation;
             LocalRotation = LocalOrientation;
-        }
-
-        public virtual void Damage(float damage)
-        {
-            CurrentHealth -= damage;
-
-            if (CurrentHealth <= 0)
-                Alive = false;
         }
 
         public override void Update(GameTime gameTime)

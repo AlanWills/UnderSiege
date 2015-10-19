@@ -3,7 +3,7 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.PlayerShipData">
     <DisplayName>Vanaar</DisplayName>
     <TextureAsset>Sprites\GameObjects\Ships\PlayerShips\hii_vanaar</TextureAsset>
-    <HullHealth>500</HullHealth>
+    <Health>500</Health>
     <OtherHardPoints>
       -25 -75
       25 -75

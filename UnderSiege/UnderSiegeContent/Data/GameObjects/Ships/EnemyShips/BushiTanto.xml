@@ -3,7 +3,7 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.EnemyShipData">
     <DisplayName>Bushi Tanto</DisplayName>
     <TextureAsset>Sprites\GameObjects\Ships\EnemyShips\bushi_tanto</TextureAsset>
-    <HullHealth>150</HullHealth>
+    <Health>150</Health>
     <OtherHardPoints>
       -37 -8
       37 -8

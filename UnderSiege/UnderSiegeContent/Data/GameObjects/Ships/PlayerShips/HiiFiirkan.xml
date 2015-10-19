@@ -3,7 +3,7 @@
   <Asset Type="UnderSiegeData.Gameplay_Objects.PlayerShipData">
     <DisplayName>Fiirkan</DisplayName>
     <TextureAsset>Sprites\GameObjects\Ships\PlayerShips\hii_fiirkan</TextureAsset>
-    <HullHealth>250</HullHealth>
+    <Health>250</Health>
     <OtherHardPoints>
       0 -5
     </OtherHardPoints>

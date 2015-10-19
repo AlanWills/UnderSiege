@@ -63,7 +63,7 @@ namespace UnderSiege.UI
             Label label = new Label("Name: " + shipData.DisplayName, new Vector2(0, (image.Size.Y + SpriteFont.LineSpacing) * 0.5f + padding), Color.White, image);
             AddUIObject(label, "Ship Name", true);
 
-            Label hullHealth = new Label("Hull Strength: " + shipData.HullHealth.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, label);
+            Label hullHealth = new Label("Hull Strength: " + shipData.Health.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), Color.White, label);
             AddUIObject(hullHealth, "Ship Hull Health", true);
         }
 

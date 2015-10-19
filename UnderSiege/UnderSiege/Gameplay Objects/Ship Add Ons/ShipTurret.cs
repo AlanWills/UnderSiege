@@ -49,6 +49,7 @@ namespace UnderSiege.Gameplay_Objects
 
         public UIObject TargetingLine { get; private set; }
         protected SoundEffect FiringSoundEffect { get; private set; }
+        protected SoundEffectInstance firingSoundEffectInstance;
 
         #endregion
 

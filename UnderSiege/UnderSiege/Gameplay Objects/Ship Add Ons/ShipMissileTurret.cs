@@ -1,5 +1,6 @@
 ﻿using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -92,7 +93,9 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             Missile clone = Missile.Clone();
             clone.RigidBody.LinearVelocity = new Vector2(-30, clone.RigidBody.LinearVelocity.Y);
             MissileManager.AddObject(clone, "Missile" + nameCounter);
-            FiringSoundEffect.Play();
+
+            firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+            firingSoundEffectInstance.Play();
         }
 
         public override void CheckIfDamagedTarget()

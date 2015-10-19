@@ -1,6 +1,7 @@
 ﻿using _2DGameEngine.Managers;
 using _2DGameEngine.Maths;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -56,8 +57,12 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         {
             // Change the opacity
             firing = true;
-            FiringSoundEffect.Play();
             Beam.Size = new Vector2(Size.X, (WorldPosition - Target.WorldPosition).Length());
+
+            if (firingSoundEffectInstance == null || firingSoundEffectInstance.State == SoundState.Stopped)
+            {
+                firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+            }
         }
 
         public override void CheckIfDamagedTarget()
@@ -84,6 +89,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                 else
                 {
                     firing = false;
+                    firingSoundEffectInstance.Stop();
+                    firingSoundEffectInstance = null;
                 }
             }
             else

@@ -21,6 +21,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         private EngineBlaze EngineBlaze { get; set; }
         private SoundEffect EngineSoundEffect { get; set; }
 
+        private SoundEffectInstance soundEffectInstance;
+
         #endregion
 
         public ShipEngine(Vector2 hardPointOffset, string dataAsset, Ship parent, bool addRigidBody = true)
@@ -64,7 +66,24 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
             if (ParentShip.RigidBody.LinearVelocity.LengthSquared() > 1)
             {
-                EngineSoundEffect.Play();
+                if (soundEffectInstance == null || soundEffectInstance.State == SoundState.Stopped)
+                {
+                    soundEffectInstance = EngineSoundEffect.CreateInstance();
+                }
+            }
+            else
+            {
+                if (soundEffectInstance != null)
+                {
+                    soundEffectInstance.Stop();
+                }
+
+                soundEffectInstance = null;
+            }
+
+            if (soundEffectInstance != null)
+            {
+                soundEffectInstance.Play();
             }
 
             EngineBlaze.Update(gameTime);

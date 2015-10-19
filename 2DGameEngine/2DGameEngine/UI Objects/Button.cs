@@ -71,6 +71,12 @@ namespace _2DGameEngine.UI_Objects
             set;
         }
 
+        private SoundEffect ButtonPressedSound
+        {
+            get;
+            set;
+        }
+
         private ButtonState ButtonState
         {
             get;
@@ -78,7 +84,7 @@ namespace _2DGameEngine.UI_Objects
         }
 
         public static string defaultTextureAsset = "Sprites\\UI\\Buttons\\default", pressedTextureAsset = "Sprites\\UI\\Buttons\\pressed", highlightedTextureAsset = "Sprites\\UI\\Buttons\\highlighted", disabledTextureAsset = "Sprites\\UI\\Buttons\\disabled";
-        public static string defaultHoverSound = "ButtonHover";
+        public static string defaultHoverSoundAsset = "ButtonHover", defaultClickedSoundAsset = "ButtonPressedSound";
         public static Texture2D defaultTexture, pressedTexture, highlightedTexture, disabledTexture;
         private const float resetTime = 0.02f;
         private TimeSpan pressedTime = TimeSpan.FromSeconds(resetTime);
@@ -198,7 +204,8 @@ namespace _2DGameEngine.UI_Objects
                 DisabledTexture = AssetManager.GetTexture(DisabledTextureAsset);
             }
 
-            ButtonHoverSound = ScreenManager.SFX.SoundEffects[defaultHoverSound];
+            ButtonHoverSound = ScreenManager.SFX.SoundEffects[defaultHoverSoundAsset];
+            ButtonPressedSound = ScreenManager.SFX.SoundEffects[defaultClickedSoundAsset];
             Colour = defaultColour;
 
             base.LoadContent();
@@ -257,6 +264,8 @@ namespace _2DGameEngine.UI_Objects
         {
             if (ButtonState != ButtonState.Disabled && ButtonState != ButtonState.Pressed)
             {
+                ButtonPressedSound.Play();
+
                 base.Select();
 
                 ButtonState = ButtonState.Pressed;

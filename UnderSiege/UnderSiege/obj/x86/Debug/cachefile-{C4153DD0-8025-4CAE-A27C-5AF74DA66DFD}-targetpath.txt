@@ -89,3 +89,4 @@ Content\Music\Assimilator.wma
 Content\Music\Orbital Colossus.xnb
 Content\Music\Orbital Colossus.wma
 Content\SFX\ButtonHover.xnb
+Content\SFX\ButtonPressedSound.xnb

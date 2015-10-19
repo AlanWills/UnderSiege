@@ -8,6 +8,8 @@ using System.Text;
 
 namespace _2DGameEngine.Managers
 {
+    public enum QueueType { PlayImmediately, WaitForCurrent }
+
     public static class MusicManager
     {
         #region Properties and Fields
@@ -57,15 +59,41 @@ namespace _2DGameEngine.Managers
             }
         }
 
-        public static void AddSong(string songName)
+        public static void QueueSong(string songName, QueueType queueType = QueueType.WaitForCurrent)
         {
             QueueSongNames.Enqueue(songName);
+
+            if (queueType == QueueType.PlayImmediately)
+            {
+                PlayNextSong();
+            }
+        }
+
+        public static void QueueSongs(List<string> songs, QueueType queueType = QueueType.WaitForCurrent)
+        {
+            foreach (string song in songs)
+            {
+                QueueSongNames.Enqueue(song);
+            }
+
+            if (queueType == QueueType.PlayImmediately)
+            {
+                PlayNextSong();
+            }
         }
 
         public static void PlaySongImmediately(string songName)
         {
             CurrentSong = Songs[songName];
             MediaPlayer.Play(CurrentSong);
+        }
+
+        public static void PlayNextSong()
+        {
+            if (QueueSongNames.Count > 0)
+            {
+                PlaySongImmediately(QueueSongNames.Dequeue());
+            }
         }
 
         public static void Update()

@@ -3,5 +3,6 @@
   <Asset Type="_2DGameEngineData.Screen_Data.BaseScreenData">
     <DisplayName>Purchase Ships Screen</DisplayName>
     <TextureAsset>Sprites\Backgrounds\PurchaseShipsScreen</TextureAsset>
+    <BackgroundMusicNames></BackgroundMusicNames>
   </Asset>
 </XnaContent>

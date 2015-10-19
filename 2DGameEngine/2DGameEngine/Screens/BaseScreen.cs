@@ -311,8 +311,15 @@ namespace _2DGameEngine.Screens
             ScriptManager.LoadAndAddScripts(Content);
         }
 
+        public virtual void AddMusic(QueueType queueType = QueueType.PlayImmediately)
+        {
+            MusicManager.QueueSongs(BaseScreenData.BackgroundMusicNames, queueType);
+        }
+
         public virtual void Begin(GameTime gameTime)
         {
+            AddMusic();
+
             Begun = true;
         }
 

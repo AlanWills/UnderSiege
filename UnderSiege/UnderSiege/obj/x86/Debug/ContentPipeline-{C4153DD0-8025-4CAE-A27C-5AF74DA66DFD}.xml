@@ -431,7 +431,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\MainMenuScreen.xnb</Output>
-      <Time>2015-09-13T12:55:24.3365753+01:00</Time>
+      <Time>2015-10-19T22:13:31.9768837+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\SpaceStations\CommandStation.xml</Source>
@@ -449,7 +449,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameplayScreen.xnb</Output>
-      <Time>2015-09-27T21:23:21.1252085+01:00</Time>
+      <Time>2015-10-19T22:10:02.5481999+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Turrets\DualLaserTurret.xml</Source>
@@ -521,7 +521,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\PurchaseShipsScreen.xnb</Output>
-      <Time>2015-09-27T21:50:59.3865869+01:00</Time>
+      <Time>2015-10-19T22:09:30.1407754+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\PlayerShips\HiiFiirkan.xml</Source>
@@ -602,7 +602,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameplayTutorialScreen.xnb</Output>
-      <Time>2015-10-15T22:17:11.3796948+01:00</Time>
+      <Time>2015-10-19T22:15:53.9108593+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xml</Source>
@@ -659,6 +659,86 @@
       <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Dream Raid.wma</Extra>
       <Time>2015-10-19T21:13:40.7991813+01:00</Time>
     </Item>
+    <Item>
+      <Source>Music\The Fall of Arcana.mp3</Source>
+      <Name>Music\The Fall of Arcana</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\The Fall of Arcana.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\The Fall of Arcana.wma</Extra>
+      <Time>2015-10-19T21:43:32.7504508+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Imminent Threat.mp3</Source>
+      <Name>Music\Imminent Threat</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Imminent Threat.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Imminent Threat.wma</Extra>
+      <Time>2015-10-19T21:47:09.4206554+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Wasteland Overdrive.mp3</Source>
+      <Name>Music\Wasteland Overdrive</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Wasteland Overdrive.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Wasteland Overdrive.wma</Extra>
+      <Time>2015-10-19T21:49:57.4413798+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Hope.mp3</Source>
+      <Name>Music\Hope</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Hope.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Hope.wma</Extra>
+      <Time>2015-10-19T21:52:34.286072+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\doodle_0.mp3</Source>
+      <Name>Music\doodle_0</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\doodle_0.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\doodle_0.wma</Extra>
+      <Time>2015-10-19T21:53:21.2850191+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Space and Sorrow.mp3</Source>
+      <Name>Music\Space and Sorrow</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Space and Sorrow.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Space and Sorrow.wma</Extra>
+      <Time>2015-10-19T21:54:12.1914098+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Assimilator.mp3</Source>
+      <Name>Music\Assimilator</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Assimilator.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Assimilator.wma</Extra>
+      <Time>2015-10-19T22:00:49.6265885+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Orbital Colossus.mp3</Source>
+      <Name>Music\Orbital Colossus</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Orbital Colossus.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Orbital Colossus.wma</Extra>
+      <Time>2015-10-19T22:01:13.2111814+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>
@@ -674,7 +754,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiegeData\bin\x86\Debug\UnderSiegeData.dll</Key>
-        <Value>2015-10-19T20:26:25.8200936+01:00</Value>
+        <Value>2015-10-19T22:14:55.4281599+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
@@ -702,11 +782,11 @@
       </Assembly>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DTowerDefenceLibraryData\bin\x86\Debug\2DTowerDefenceLibraryData.dll</Key>
-        <Value>2015-10-19T20:26:25.597945+01:00</Value>
+        <Value>2015-10-19T22:14:54.6896708+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngineData\bin\x86\Debug\2DGameEngineData.dll</Key>
-        <Value>2015-10-19T20:26:25.3587886+01:00</Value>
+        <Value>2015-10-19T22:14:54.4505135+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>

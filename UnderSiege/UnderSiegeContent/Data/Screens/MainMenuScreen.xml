@@ -3,5 +3,8 @@
   <Asset Type="_2DGameEngineData.Screen_Data.BaseScreenData">
     <DisplayName>Main Menu Screen</DisplayName>
     <TextureAsset>Sprites\Backgrounds\MainMenuScreen</TextureAsset>
+    <BackgroundMusicNames>
+      <Item>Hope</Item>
+    </BackgroundMusicNames>
   </Asset>
 </XnaContent>

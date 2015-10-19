@@ -7,5 +7,10 @@ namespace _2DGameEngineData.Screen_Data
 {
     public class BaseScreenData : BaseData
     {
+        public List<string> BackgroundMusicNames
+        {
+            get;
+            set;
+        }
     }
 }

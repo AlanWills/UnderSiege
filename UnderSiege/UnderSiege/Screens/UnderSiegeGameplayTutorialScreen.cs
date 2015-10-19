@@ -141,13 +141,13 @@ namespace UnderSiege.Screens
         private void CheckFirstTurretBought(object sender, EventArgs e)
         {
             Script script = sender as Script;
-            script.Done = UnderSiegeGameplayScreen.Allies.GetItem("Command Station").ShipAddOns["ShipTurret"].Count == 1;
+            script.Done = UnderSiegeGameplayScreen.Allies.GetItem("Command Station").ShipAddOns["ShipTurret"].Count >= 1;
         }
 
         private void CheckSecondTurretBought(object sender, EventArgs e)
         {
             Script script = sender as Script;
-            script.Done = UnderSiegeGameplayScreen.Allies.GetItem("Command Station").ShipAddOns["ShipTurret"].Count == 2;
+            script.Done = UnderSiegeGameplayScreen.Allies.GetItem("Command Station").ShipAddOns["ShipTurret"].Count >= 2;
         }
 
         private void CheckEnemyScoutWaveDefeated(object sender, EventArgs e)

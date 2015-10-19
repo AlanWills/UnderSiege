@@ -201,6 +201,7 @@ namespace _2DGameEngine.Managers
             base.LoadContent();
 
             AssetManager.LoadAssets(Content);
+            MusicManager.LoadAssets(Content);
             GameMouse.LoadContent();
             GameMouse.Initialize();
         }
@@ -208,6 +209,8 @@ namespace _2DGameEngine.Managers
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+
+            MusicManager.Update();
 
             GameMouse.Update(gameTime);
             Camera.Update(gameTime);

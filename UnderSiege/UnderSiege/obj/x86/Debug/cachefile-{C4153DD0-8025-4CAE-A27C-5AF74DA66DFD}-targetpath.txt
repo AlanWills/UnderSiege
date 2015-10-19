@@ -70,3 +70,5 @@ Content\Data\Waves\GameplayTutorial\TutorialScoutWave.xnb
 Content\Data\Waves\GameplayTutorial\TutorialFirstEnemyWave.xnb
 Content\Data\Abilities\ShipAddOnAbilities\Repair.xnb
 Content\Data\Waves\GameplayTutorial\TutorialFinalWave.xnb
+Content\Music\Dream Raid.xnb
+Content\Music\Dream Raid.wma

@@ -48,6 +48,13 @@ namespace UnderSiege.Screens
             Transition(new UnderSiegeGameplayTutorialScreen(ScreenManager, "Data\\Screens\\GameplayTutorialScreen"));
         }
 
+        public override void Begin(GameTime gameTime)
+        {
+            base.Begin(gameTime);
+
+            MusicManager.AddSong("Dream Raid");
+        }
+
         #endregion
     }
 }

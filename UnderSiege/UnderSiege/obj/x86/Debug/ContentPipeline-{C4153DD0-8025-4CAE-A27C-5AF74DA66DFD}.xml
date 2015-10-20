@@ -155,22 +155,13 @@
       <Time>2015-09-25T19:13:08.6530051+01:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\UI\Bars\ArmourBar.png</Source>
-      <Name>Sprites\UI\Bars\ArmourBar</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\ArmourBar.xnb</Output>
-      <Time>2015-09-26T23:06:19.2502225+01:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\UI\Bars\ShieldBar.png</Source>
       <Name>Sprites\UI\Bars\ShieldBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\ShieldBar.xnb</Output>
-      <Time>2015-09-26T23:06:19.2472201+01:00</Time>
+      <Time>2015-10-20T18:57:20.1219188+01:00</Time>
     </Item>
     <Item>
       <Source>Sprites\UI\Bars\StructureBar.png</Source>
@@ -458,7 +449,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\DualLaserTurret.xnb</Output>
-      <Time>2015-10-19T23:34:08.8148859+01:00</Time>
+      <Time>2015-10-20T00:22:56.0981115+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\LaserBullet.xml</Source>
@@ -539,7 +530,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Engines\LightThruster.xnb</Output>
-      <Time>2015-10-20T00:08:34.3440673+01:00</Time>
+      <Time>2015-10-20T00:22:56.0971108+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Turrets\MissilePod.xml</Source>
@@ -548,7 +539,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\MissilePod.xnb</Output>
-      <Time>2015-10-19T23:35:04.2276575+01:00</Time>
+      <Time>2015-10-20T00:22:56.1021163+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\TviirMissile.xml</Source>
@@ -566,7 +557,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\SmallSingleLaser.xnb</Output>
-      <Time>2015-10-19T23:35:12.0978623+01:00</Time>
+      <Time>2015-10-20T00:22:56.1081232+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\SmallSingleBeam.xml</Source>
@@ -746,7 +737,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\ButtonHover.xnb</Output>
-      <Time>2015-10-19T23:02:36.9682408+01:00</Time>
+      <Time>2015-10-20T00:22:56.1471443+01:00</Time>
     </Item>
     <Item>
       <Source>SFX\ButtonPressedSound.wav</Source>
@@ -755,7 +746,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\ButtonPressedSound.xnb</Output>
-      <Time>2015-10-19T23:15:59.0006258+01:00</Time>
+      <Time>2015-10-20T00:22:56.1981832+01:00</Time>
     </Item>
     <Item>
       <Source>SFX\LightThruster.wav</Source>
@@ -764,7 +755,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\LightThruster.xnb</Output>
-      <Time>2015-10-19T23:23:00.0607831+01:00</Time>
+      <Time>2015-10-20T00:22:56.2322023+01:00</Time>
     </Item>
     <Item>
       <Source>SFX\LaserFire.wav</Source>
@@ -773,7 +764,16 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\LaserFire.xnb</Output>
-      <Time>2015-10-19T23:24:01.9136743+01:00</Time>
+      <Time>2015-10-20T00:22:56.2021807+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Bars\HullBar.png</Source>
+      <Name>Sprites\UI\Bars\HullBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\HullBar.xnb</Output>
+      <Time>2015-10-20T18:57:20.1229208+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -790,7 +790,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiegeData\bin\x86\Debug\UnderSiegeData.dll</Key>
-        <Value>2015-10-19T23:33:51.8730252+01:00</Value>
+        <Value>2015-10-20T00:24:22.0969663+01:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

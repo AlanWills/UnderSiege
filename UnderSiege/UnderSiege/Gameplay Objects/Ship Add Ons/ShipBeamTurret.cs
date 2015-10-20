@@ -89,8 +89,12 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                 else
                 {
                     firing = false;
-                    firingSoundEffectInstance.Stop();
-                    firingSoundEffectInstance = null;
+
+                    if (firingSoundEffectInstance != null)
+                    {
+                        firingSoundEffectInstance.Stop();
+                        firingSoundEffectInstance = null;
+                    }
                 }
             }
             else

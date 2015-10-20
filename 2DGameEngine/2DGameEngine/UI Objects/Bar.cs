@@ -33,7 +33,7 @@ namespace _2DGameEngine.UI_Objects
         #endregion
 
         public Bar(Vector2 position, Vector2 size, string barAsset, float maxValue, string barBackgroundAsset = "", BaseObject parent = null)
-            : base(position, size, barAsset, parent)
+            : base(position - size * 0.5f, size, barAsset, parent)
         {
             BarBackgroundAsset = barBackgroundAsset;
             MaxValue = maxValue;
@@ -53,6 +53,25 @@ namespace _2DGameEngine.UI_Objects
         #endregion
 
         #region Virtual Methods
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            if (Visible)
+            {
+                if (Texture != null)
+                {
+                    spriteBatch.Draw(Texture, DestinationRectangle, SourceRectangle, Colour * Opacity, (float)WorldRotation, Vector2.Zero, SpriteEffects.None, 0);
+                }
+
+                IfVisible();
+
+                if (!string.IsNullOrEmpty(Text))
+                {
+                    // Always have text opacity as 1?
+                    spriteBatch.DrawString(SpriteFont, Text, WorldPosition, (Texture != null ? Color.White : Colour), (float)WorldRotation, SpriteFont.MeasureString(Text) * 0.5f, new Vector2(1, 1), SpriteEffects.None, 0);
+                }
+            }
+        }
 
         #endregion
     }

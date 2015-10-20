@@ -15,7 +15,6 @@ Content\Sprites\GameObjects\Ships\EnemyShips\bushi_honyaki.xnb
 Content\Sprites\UI\InGameUI\FiringArc.xnb
 Content\Sprites\UI\InGameUI\HardPointUI.xnb
 Content\Sprites\UI\InGameUI\FiringLineUI.xnb
-Content\Sprites\UI\Bars\ArmourBar.xnb
 Content\Sprites\UI\Bars\ShieldBar.xnb
 Content\Sprites\UI\Bars\StructureBar.xnb
 Content\Sprites\UI\Markers\DirectionMarker.xnb
@@ -92,3 +91,4 @@ Content\SFX\ButtonHover.xnb
 Content\SFX\ButtonPressedSound.xnb
 Content\SFX\LightThruster.xnb
 Content\SFX\LaserFire.xnb
+Content\Sprites\UI\Bars\HullBar.xnb

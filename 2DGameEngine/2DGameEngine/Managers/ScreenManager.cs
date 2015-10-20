@@ -199,6 +199,24 @@ namespace _2DGameEngine.Managers
             }
         }
 
+        public void Begin()
+        {
+            foreach (BaseScreen baseScreen in ScreensToAdd)
+            {
+                Screens.Add(baseScreen);
+            }
+
+            ScreensToAdd.Clear();
+
+            foreach (BaseScreen screen in Screens)
+            {
+                if (screen.Active)
+                {
+                    screen.Begin();
+                }
+            }
+        }
+
         #endregion
 
         #region Virtual Methods
@@ -207,6 +225,7 @@ namespace _2DGameEngine.Managers
         {
             base.LoadContent();
 
+            Options.Load(Content);
             AssetManager.LoadAssets(Content);
             MusicManager.LoadAssets(Content);
             SFX.LoadContent(Content);

@@ -31,13 +31,11 @@ namespace UnderSiege
             {
                 graphics.PreferredBackBufferWidth = 1600;
                 graphics.PreferredBackBufferHeight = 1024;
-                graphics.IsFullScreen = false;
             }
             else
             {
                 graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
                 graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-                graphics.IsFullScreen = true;
             }
         }
 
@@ -60,6 +58,13 @@ namespace UnderSiege
         protected override void UnloadContent()
         {
             
+        }
+
+        protected override void BeginRun()
+        {
+            base.BeginRun();
+
+            screenManager.Begin();
         }
 
         protected override void Update(GameTime gameTime)
@@ -87,6 +92,13 @@ namespace UnderSiege
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, Matrix.Identity);
             screenManager.DrawScreenUI();
             spriteBatch.End();
+        }
+
+        protected override void OnExiting(object sender, EventArgs args)
+        {
+            base.OnExiting(sender, args);
+
+            // Save options here
         }
     }
 }

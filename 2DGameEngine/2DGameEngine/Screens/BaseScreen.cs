@@ -117,7 +117,6 @@ namespace _2DGameEngine.Screens
         }
 
         protected bool Transitioning;
-        private bool Begun = false;
         protected ChangeType ChangeType;
 
         protected TimeSpan transitionTimer;
@@ -316,20 +315,13 @@ namespace _2DGameEngine.Screens
             MusicManager.QueueSongs(BaseScreenData.BackgroundMusicNames, queueType);
         }
 
-        public virtual void Begin(GameTime gameTime)
+        public virtual void Begin()
         {
             AddMusic();
-
-            Begun = true;
         }
 
         public virtual void Update(GameTime gameTime)
         {
-            if (!Begun)
-            {
-                Begin(gameTime);
-            }
-
             ScriptManager.LoadAndAddScripts(Content);
             ScriptManager.UpdateScripts(gameTime);
 

@@ -13,6 +13,7 @@ using _2DGameEngine.Managers;
 using _2DGameEngine.Screens;
 using UnderSiege.Screens;
 using _2DGameEngine;
+using _2DGameEngine.Extra_Components;
 
 namespace UnderSiege
 {
@@ -98,7 +99,7 @@ namespace UnderSiege
         {
             base.OnExiting(sender, args);
 
-            // Save options here
+            Options.Save();
         }
     }
 }

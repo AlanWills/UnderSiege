@@ -225,7 +225,7 @@ namespace _2DGameEngine.Managers
         {
             base.LoadContent();
 
-            Options.Load(Content);
+            Options.Load();
             AssetManager.LoadAssets(Content);
             MusicManager.LoadAssets(Content);
             SFX.LoadContent(Content);

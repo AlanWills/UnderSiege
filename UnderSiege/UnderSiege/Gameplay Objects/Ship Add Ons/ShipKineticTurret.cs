@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Extra_Components;
+using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
@@ -95,6 +96,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             BulletManager.AddObject(Bullet.Clone(), "Bullet" + nameCounter);
 
             firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+            firingSoundEffectInstance.Volume = Options.SFXVolume;
             firingSoundEffectInstance.Play();
         }
 

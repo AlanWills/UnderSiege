@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Content;
+﻿using _2DGameEngine.Extra_Components;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,7 @@ namespace _2DGameEngine.Managers
 
         public static void LoadAssets(ContentManager content)
         {
+            MediaPlayer.Volume = Options.MusicVolume;
             QueueSongNames = new Queue<string>();
             Songs = new Dictionary<string, Song>();
 

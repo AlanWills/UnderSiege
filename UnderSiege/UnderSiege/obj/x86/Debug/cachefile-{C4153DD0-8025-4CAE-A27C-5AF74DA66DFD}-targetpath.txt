@@ -16,7 +16,6 @@ Content\Sprites\UI\InGameUI\FiringArc.xnb
 Content\Sprites\UI\InGameUI\HardPointUI.xnb
 Content\Sprites\UI\InGameUI\FiringLineUI.xnb
 Content\Sprites\UI\Bars\ShieldBar.xnb
-Content\Sprites\UI\Bars\StructureBar.xnb
 Content\Sprites\UI\Markers\DirectionMarker.xnb
 Content\Sprites\GameObjects\Ships\EnemyShips\bushi_tanto.xnb
 Content\Sprites\GameObjects\Ships\PlayerShips\hii_fiirkan.xnb
@@ -91,4 +90,6 @@ Content\SFX\ButtonHover.xnb
 Content\SFX\ButtonPressedSound.xnb
 Content\SFX\LightThruster.xnb
 Content\SFX\LaserFire.xnb
-Content\Sprites\UI\Bars\HullBar.xnb
+Content\Data\Screens\OptionsScreen.xnb
+Content\Sprites\UI\Bars\ShipHullBar.xnb
+Content\Sprites\UI\Bars\AddOnHullBar.xnb

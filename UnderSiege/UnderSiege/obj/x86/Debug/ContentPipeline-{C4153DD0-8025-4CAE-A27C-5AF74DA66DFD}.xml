@@ -164,15 +164,6 @@
       <Time>2015-10-20T18:57:20.1219188+01:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\UI\Bars\StructureBar.png</Source>
-      <Name>Sprites\UI\Bars\StructureBar</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\StructureBar.xnb</Output>
-      <Time>2015-09-26T23:06:19.2492219+01:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\UI\Markers\DirectionMarker.png</Source>
       <Name>Sprites\UI\Markers\DirectionMarker</Name>
       <Importer>TextureImporter</Importer>
@@ -767,13 +758,31 @@
       <Time>2015-10-20T00:22:56.2021807+01:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\UI\Bars\HullBar.png</Source>
-      <Name>Sprites\UI\Bars\HullBar</Name>
+      <Source>Data\Screens\OptionsScreen.xml</Source>
+      <Name>Data\Screens\OptionsScreen</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\OptionsScreen.xnb</Output>
+      <Time>2015-10-20T20:19:03.1299278+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Bars\ShipHullBar.png</Source>
+      <Name>Sprites\UI\Bars\ShipHullBar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\HullBar.xnb</Output>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\ShipHullBar.xnb</Output>
       <Time>2015-10-20T18:57:20.1229208+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Bars\AddOnHullBar.png</Source>
+      <Name>Sprites\UI\Bars\AddOnHullBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\AddOnHullBar.xnb</Output>
+      <Time>2015-10-20T21:59:40.1407437+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

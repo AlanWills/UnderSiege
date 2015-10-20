@@ -20,7 +20,6 @@ namespace _2DGameEngine.Screens
         }
 
         public static Vector2 NextButtonPosition;
-        public static Vector2 TitlePosition = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.1f);
 
         #endregion
 
@@ -46,11 +45,6 @@ namespace _2DGameEngine.Screens
         #region Virtual Methods
 
         #region Main Menu UI
-
-        public virtual void AddTitle(string titleAsset)
-        {
-            AddImage(TitlePosition, "Title", titleAsset);
-        }
 
         protected virtual void AddMainMenu(Vector2 size, string panelAsset = "")
         {
@@ -95,8 +89,9 @@ namespace _2DGameEngine.Screens
 
         protected virtual void GoToSettingsScreen(object sender, EventArgs e)
         {
-            // TO DO
-            // Add in changing to Options Screen here which we will create in this Engine
+            ScreenManager.AddScreen(new OptionsScreen(ScreenManager, this));
+            Active = false;
+            Visible = false;
         }
 
         protected virtual void ExitGame(object sender, EventArgs e)

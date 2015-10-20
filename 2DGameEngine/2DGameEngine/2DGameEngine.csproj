@@ -82,6 +82,7 @@
     <Compile Include="Extra Components\InputHandler.cs" />
     <Compile Include="Animated Abstract Object Classes\AnimatedObject.cs" />
     <Compile Include="Animated Abstract Object Classes\Animation.cs" />
+    <Compile Include="Extra Components\Options.cs" />
     <Compile Include="Managers\AssetManager.cs" />
     <Compile Include="Managers\BaseObjectManager.cs" />
     <Compile Include="Managers\DictionaryManager.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Screens\GameplayScreen.cs" />
     <Compile Include="Screens\MainMenuScreen.cs" />
     <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\OptionsScreen.cs" />
     <Compile Include="UI Objects\Bar.cs" />
     <Compile Include="UI Objects\Button.cs" />
     <Compile Include="UI Objects\DialogBox.cs" />
@@ -130,6 +132,7 @@
     <Compile Include="UI Objects\Menu.cs" />
     <Compile Include="UI Objects\OptionsDialogBox.cs" />
     <Compile Include="UI Objects\PictureBox.cs" />
+    <Compile Include="UI Objects\ScrollBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\2DGameEngineData\2DGameEngineData.csproj">

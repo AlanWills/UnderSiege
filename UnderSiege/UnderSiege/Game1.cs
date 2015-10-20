@@ -43,7 +43,7 @@ namespace UnderSiege
 
         protected override void Initialize()
         {
-            screenManager = new ScreenManager(this);
+            screenManager = new ScreenManager(this, graphics);
             MainMenuScreen.NextButtonPosition = new Vector2(ScreenManager.Viewport.Width * 0.25f, ScreenManager.Viewport.Height * 0.25f);
 
             base.Initialize();

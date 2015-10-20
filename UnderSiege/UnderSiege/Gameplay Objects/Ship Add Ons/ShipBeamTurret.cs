@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Extra_Components;
+using _2DGameEngine.Managers;
 using _2DGameEngine.Maths;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -62,6 +63,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             if (firingSoundEffectInstance == null || firingSoundEffectInstance.State == SoundState.Stopped)
             {
                 firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+                firingSoundEffectInstance.Volume = Options.SFXVolume;
             }
         }
 

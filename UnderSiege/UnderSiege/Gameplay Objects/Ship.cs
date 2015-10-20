@@ -195,7 +195,7 @@ namespace UnderSiege.Gameplay_Objects
                 EngineHardPoints.Add(new Vector2(hardPoint.X, hardPoint.Y));
             }
 
-            HullHealthBar = new Bar(new Vector2(0, Size.Y * 0.5f + 5), new Vector2(Size.X, 5), "Sprites\\UI\\Bars\\HullBar", ShipData.Health, "", this);
+            HullHealthBar = new Bar(new Vector2(0, Size.Y * 0.5f + 5), new Vector2(Size.X, 5), "Sprites\\UI\\Bars\\ShipHullBar", ShipData.Health, "", this);
             HullHealthBar.Colour = Color.LightGreen;
             HullHealthBar.LoadContent();
             HullHealthBar.Initialize();

@@ -13,33 +13,46 @@ namespace _2DGameEngine.UI_Objects
     {
         #region Properties and Fields
 
-        private Texture2D BarTexture
+        protected Texture2D FrontBarTexture
+        {
+            get;
+            private set;
+        }
+
+        private string FrontBarAsset
         {
             get;
             set;
         }
 
-        private string BarBackgroundAsset
+        public override Vector2 Centre
         {
-            get;
-            set;
+            get
+            {
+                return Vector2.Zero;
+            }
         }
 
-        private float MaxValue { get; set; }
+        protected float MaxValue { get; private set; }
         public float CurrentValue { get; set; }
+        public float FrontOpacity { get; set; }
 
-        private Vector2 startingSize;
+        protected Vector2 currentFrontSize;
+        private Vector2 frontBarScale;
 
         #endregion
 
-        public Bar(Vector2 position, Vector2 size, string barAsset, float maxValue, string barBackgroundAsset = "", BaseObject parent = null)
-            : base(position - size * 0.5f, size, barAsset, parent)
+        public Bar(Vector2 position, Vector2 size, string barAsset, float maxValue, string frontBarAsset = "", BaseObject parent = null, float lifeTime = float.MaxValue)
+            : base(position - size * 0.5f, size, barAsset, parent, lifeTime)
         {
-            BarBackgroundAsset = barBackgroundAsset;
+            FrontBarAsset = string.IsNullOrEmpty(frontBarAsset) ? barAsset : frontBarAsset;
             MaxValue = maxValue;
             CurrentValue = MaxValue;
 
-            startingSize = size;
+            currentFrontSize = size;
+
+            Opacity = 0.5f;
+            FrontOpacity = 1f;
         }
 
         #region Methods
@@ -47,28 +60,31 @@ namespace _2DGameEngine.UI_Objects
         public void UpdateValue(float currentValue)
         {
             CurrentValue = currentValue;
-            Size = new Vector2(startingSize.X * CurrentValue / MaxValue, startingSize.Y);
+            currentFrontSize = new Vector2(Size.X * CurrentValue / MaxValue, Size.Y);
+            frontBarScale = new Vector2(currentFrontSize.X / FrontBarTexture.Width, Scale.Y);
         }
 
         #endregion
 
         #region Virtual Methods
 
+        public override void LoadContent()
+        {
+            base.LoadContent();
+
+            FrontBarTexture = AssetManager.GetTexture(FrontBarAsset);
+            frontBarScale = new Vector2(currentFrontSize.X / FrontBarTexture.Width, Scale.Y);
+        }
+
         public override void Draw(SpriteBatch spriteBatch)
         {
+            base.Draw(spriteBatch);
+
             if (Visible)
             {
-                if (Texture != null)
+                if (FrontBarTexture != null)
                 {
-                    spriteBatch.Draw(Texture, DestinationRectangle, SourceRectangle, Colour * Opacity, (float)WorldRotation, Vector2.Zero, SpriteEffects.None, 0);
-                }
-
-                IfVisible();
-
-                if (!string.IsNullOrEmpty(Text))
-                {
-                    // Always have text opacity as 1?
-                    spriteBatch.DrawString(SpriteFont, Text, WorldPosition, (Texture != null ? Color.White : Colour), (float)WorldRotation, SpriteFont.MeasureString(Text) * 0.5f, new Vector2(1, 1), SpriteEffects.None, 0);
+                    spriteBatch.Draw(FrontBarTexture, WorldPosition, null, Colour * FrontOpacity, (float)WorldRotation, Centre, frontBarScale, SpriteEffects.None, 0);
                 }
             }
         }

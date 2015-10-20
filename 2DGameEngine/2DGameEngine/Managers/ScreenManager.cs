@@ -85,7 +85,7 @@ namespace _2DGameEngine.Managers
             private set;
         }
 
-        public static GraphicsDevice Graphics
+        public static GraphicsDeviceManager GraphicsDeviceManager
         {
             get;
             private set;
@@ -109,7 +109,7 @@ namespace _2DGameEngine.Managers
 
         #endregion
 
-        public ScreenManager(Game game)
+        public ScreenManager(Game game, GraphicsDeviceManager graphicsDeviceManager)
             : base(game)
         {
             Screens = new List<BaseScreen>();
@@ -117,7 +117,7 @@ namespace _2DGameEngine.Managers
             ScreensToRemove = new List<BaseScreen>();
 
             Content = Game.Content;
-            Graphics = Game.GraphicsDevice;
+            GraphicsDeviceManager = graphicsDeviceManager;
             Viewport = Game.GraphicsDevice.Viewport;
 
             Camera = new Camera();

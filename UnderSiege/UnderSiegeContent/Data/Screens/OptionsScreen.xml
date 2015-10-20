@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DGameEngineData.Screen_Data.BaseScreenData">
+    <DisplayName>Options Menu Screen</DisplayName>
+    <TextureAsset>Sprites\Backgrounds\MainMenuScreen</TextureAsset>
+    <BackgroundMusicNames>
+      <Item>Hope</Item>
+    </BackgroundMusicNames>
+  </Asset>
+</XnaContent>

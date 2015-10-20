@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Game_Objects;
+﻿using _2DGameEngine.Extra_Components;
+using _2DGameEngine.Game_Objects;
 using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;
@@ -69,6 +70,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                 if (soundEffectInstance == null || soundEffectInstance.State == SoundState.Stopped)
                 {
                     soundEffectInstance = EngineSoundEffect.CreateInstance();
+                    soundEffectInstance.Volume = Options.SFXVolume;
+                    soundEffectInstance.Play();
                 }
             }
             else
@@ -79,11 +82,6 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                 }
 
                 soundEffectInstance = null;
-            }
-
-            if (soundEffectInstance != null)
-            {
-                soundEffectInstance.Play();
             }
 
             EngineBlaze.Update(gameTime);

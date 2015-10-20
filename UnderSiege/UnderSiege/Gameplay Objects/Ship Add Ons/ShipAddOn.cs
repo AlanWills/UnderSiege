@@ -118,8 +118,7 @@ namespace UnderSiege.Gameplay_Objects
             base.Initialize();
 
             // Add it here so that if we are altering the size of the sprite, we will add the bar at an appropriate place
-            HealthBar = new Bar(new Vector2(0, -Size.Y * 0.5f - 3), new Vector2(20, 3), "Sprites\\UI\\Bars\\ArmourBar", ShipAddOnData.Health, "", this);
-            HealthBar.Colour = Color.Red;
+            HealthBar = new Bar(new Vector2(0, -Size.Y * 0.5f - 3), new Vector2(20, 3), "Sprites\\UI\\Bars\\AddOnHullBar", ShipAddOnData.Health, "", this);
             HealthBar.Visible = false;
             HealthBar.LoadContent();
             HealthBar.Initialize();

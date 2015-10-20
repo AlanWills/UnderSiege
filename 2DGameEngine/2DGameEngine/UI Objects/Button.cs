@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -231,7 +232,7 @@ namespace _2DGameEngine.UI_Objects
             {
                 if (canPlayHoverSound)
                 {
-                    ButtonHoverSound.Play();
+                    ButtonHoverSound.Play(Options.SFXVolume, 0, 0);
                     canPlayHoverSound = false;
                 }
             }
@@ -264,7 +265,7 @@ namespace _2DGameEngine.UI_Objects
         {
             if (ButtonState != ButtonState.Disabled && ButtonState != ButtonState.Pressed)
             {
-                ButtonPressedSound.Play();
+                ButtonPressedSound.Play(Options.SFXVolume, 0, 0);
 
                 base.Select();
 

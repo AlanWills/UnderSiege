@@ -440,7 +440,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\DualLaserTurret.xnb</Output>
-      <Time>2015-10-20T00:22:56.0981115+01:00</Time>
+      <Time>2015-10-21T22:30:24.9623133+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\LaserBullet.xml</Source>
@@ -530,7 +530,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\MissilePod.xnb</Output>
-      <Time>2015-10-20T00:22:56.1021163+01:00</Time>
+      <Time>2015-10-21T22:30:31.2544898+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\TviirMissile.xml</Source>
@@ -548,7 +548,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\SmallSingleLaser.xnb</Output>
-      <Time>2015-10-20T00:22:56.1081232+01:00</Time>
+      <Time>2015-10-21T22:30:35.8395343+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\SmallSingleBeam.xml</Source>
@@ -801,6 +801,24 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb</Output>
       <Time>2015-10-21T21:08:23.3199937+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Abilities\ShipAddOnAbilities\sell.png</Source>
+      <Name>Sprites\Abilities\ShipAddOnAbilities\sell</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\sell.xnb</Output>
+      <Time>2015-10-21T22:33:08.0951763+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Abilities\ShipAddOnAbilities\Sell.xml</Source>
+      <Name>Data\Abilities\ShipAddOnAbilities\Sell</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Sell.xnb</Output>
+      <Time>2015-10-21T22:31:55.7274321+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

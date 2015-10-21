@@ -38,7 +38,7 @@ namespace UnderSiege.UI.In_Game_UI
         private void AddUI()
         {
             int totalObjects = ParentShipAddOn.Abilities.Count;
-            int totalRows = 1 + (totalObjects / columns);
+            int totalRows = (int)Math.Ceiling((float)(totalObjects / columns));
             Size = new Vector2(columns * (abilityImageSize + padding) + padding, totalRows * (abilityImageSize + padding) + padding);
 
             int counter = 0;

@@ -10,6 +10,7 @@
     <Orientable>true</Orientable>
     <Abilities>
       <Item>Repair</Item>
+      <Item>Sell</Item>
     </Abilities>
     <TurretType>Beam</TurretType>
     <BulletAsset>Data\GameObjects\Bullets\SmallSingleBeam</BulletAsset>

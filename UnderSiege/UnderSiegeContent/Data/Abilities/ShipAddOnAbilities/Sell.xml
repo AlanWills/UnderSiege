@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Abilities.Object_Abilities.AddOnAbilityData">
+    <DisplayName>Sell</DisplayName>
+    <TextureAsset>Sprites\Abilities\ShipAddOnAbilities\sell</TextureAsset>
+  </Asset>
+</XnaContent>

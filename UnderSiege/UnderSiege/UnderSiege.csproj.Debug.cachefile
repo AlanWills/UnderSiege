@@ -86,6 +86,8 @@ Content\Sprites\UI\Bars\ShipHullBar.xnb
 Content\Sprites\UI\Bars\AddOnHullBar.xnb
 Content\Sprites\GameObjects\Ships\PlayerShips\hii_saari.xnb
 Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb
+Content\Sprites\Abilities\ShipAddOnAbilities\sell.xnb
+Content\Data\Abilities\ShipAddOnAbilities\Sell.xnb
 Content\Music\Dream Raid.wma
 Content\Music\The Fall of Arcana.wma
 Content\Music\Imminent Threat.wma

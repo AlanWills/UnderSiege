@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Abilities\Object Abilities\AddOnAbility.cs" />
     <Compile Include="Abilities\Object Abilities\RepairAbility.cs" />
+    <Compile Include="Abilities\Object Abilities\SellAbility.cs" />
     <Compile Include="Gameplay Objects\Ship Add Ons\ShipBeamTurret.cs" />
     <Compile Include="Gameplay Objects\Turret Bullets\Beam.cs" />
     <Compile Include="Gameplay Objects\Turret Bullets\Bullet.cs" />

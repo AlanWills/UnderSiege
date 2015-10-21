@@ -69,6 +69,10 @@ namespace UnderSiege.Gameplay_Objects
                     case "Repair":
                         ability = new RepairAbility("Data\\Abilities\\ShipAddOnAbilities\\Repair", this);
                         break;
+
+                    case "Sell":
+                        ability = new SellAbility("Data\\Abilities\\ShipAddOnAbilities\\Sell", this);
+                        break;
                 }
 
                 ability.LoadContent();
@@ -208,13 +212,6 @@ namespace UnderSiege.Gameplay_Objects
             {
                 HealthBar.Draw(spriteBatch);
             }
-        }
-
-        public override void Die()
-        {
-            base.Die();
-
-            ParentShip.RemoveAddOn(this);
         }
 
         #endregion

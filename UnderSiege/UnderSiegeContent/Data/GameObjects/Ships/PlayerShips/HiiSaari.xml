@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.PlayerShipData">
+    <DisplayName>Saari</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Ships\PlayerShips\hii_saari</TextureAsset>
+    <Health>800</Health>
+    <OtherHardPoints>
+      0 110
+      -66 74
+      66 74
+      0 -12
+      0 -59
+      0 -86
+    </OtherHardPoints>
+    <EngineHardPoints>
+      -63 128
+      0 128
+      63 128
+    </EngineHardPoints>
+    <Price>3000</Price>
+  </Asset>
+</XnaContent>

@@ -1,5 +1,6 @@
 ﻿using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -84,6 +85,7 @@ namespace _2DGameEngine.Extra_Components
 
             ScreenManager.GraphicsDeviceManager.IsFullScreen = IsFullScreen;
             ScreenManager.GraphicsDeviceManager.ApplyChanges();
+            MediaPlayer.Volume = MusicVolume;
         }
 
         public static void Save()

@@ -89,8 +89,8 @@ namespace _2DGameEngine.Screens
         {
             base.Initialize();
 
-            UIManager.GetItem<ScrollBar>("Music Volume Bar").UpdateValue(Options.MusicVolume);
-            UIManager.GetItem<ScrollBar>("SFX Volume Bar").UpdateValue(Options.SFXVolume);
+            UIManager.GetItem<ScrollBar>("Music Volume Bar").UpdateValue(Options.MusicVolume * 100);
+            UIManager.GetItem<ScrollBar>("SFX Volume Bar").UpdateValue(Options.SFXVolume * 100);
         }
 
         // Need this because we've changed the queue type we're passing in

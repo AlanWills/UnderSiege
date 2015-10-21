@@ -784,6 +784,24 @@
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\AddOnHullBar.xnb</Output>
       <Time>2015-10-20T22:36:45.0378752+01:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\GameObjects\Ships\PlayerShips\hii_saari.png</Source>
+      <Name>Sprites\GameObjects\Ships\PlayerShips\hii_saari</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Ships\PlayerShips\hii_saari.xnb</Output>
+      <Time>2015-10-21T21:05:03.4429839+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\GameObjects\Ships\PlayerShips\HiiSaari.xml</Source>
+      <Name>Data\GameObjects\Ships\PlayerShips\HiiSaari</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb</Output>
+      <Time>2015-10-21T21:08:23.3199937+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>

@@ -2,15 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Sprites\hii_saari.png</Source>
-      <Name>Sprites\hii_saari</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\Content\Sprites\hii_saari.xnb</Output>
-      <Time>2015-10-21T19:28:19.4675987+01:00</Time>
-    </Item>
-    <Item>
       <Source>SpriteFonts\UISpriteFont.spritefont</Source>
       <Name>SpriteFonts\UISpriteFont</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -27,6 +18,15 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\Content\Sprites\UI\Mouse\default.xnb</Output>
       <Time>2015-10-21T21:02:00.2186392+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Ships\hii_saari.png</Source>
+      <Name>Sprites\Ships\hii_saari</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\Content\Sprites\Ships\hii_saari.xnb</Output>
+      <Time>2015-10-21T19:28:19.4675987+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

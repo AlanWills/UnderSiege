@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Cutscenes.Scripts;
+using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -96,10 +97,25 @@ namespace _2DGameEngine.Screens
 
         protected virtual void ExitGame(object sender, EventArgs e)
         {
-            ScreenManager.Game.Exit();
+            AddScript(new AddOptionsDialogBoxScript("Are you sure you wish to quit the game?", ScreenCentre, cancelQuitGame, confirmQuitGame));
         }
 
         #endregion
+
+        #endregion
+
+        #region Events
+
+        private void cancelQuitGame(object sender, EventArgs e)
+        {
+            Script script = sender as Script;
+            script.Done = true;
+        }
+
+        private void confirmQuitGame(object sender, EventArgs e)
+        {
+            ScreenManager.Game.Exit();
+        }
 
         #endregion
     }

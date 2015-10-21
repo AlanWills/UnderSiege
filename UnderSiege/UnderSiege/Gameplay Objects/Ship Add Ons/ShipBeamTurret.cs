@@ -69,9 +69,24 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
         public override void CheckIfDamagedTarget()
         {
-            if (Target.Collider.CheckCollisionWith(Beam.BeamLine))
+            // We have a target a ship addon that isn't a shield - so we need to check for shield interactions
+            if (!(Target is ShipShield) && !(Target is Ship))
             {
-                Target.Damage(ShipTurretData.Damage);
+                foreach (ShipShield shipShield in (Target as ShipAddOn).ParentShip.ShipAddOns["ShipShield"])
+                {
+                    if (shipShield.Collider.CheckCollisionWith(Beam.BeamLine))
+                    {
+                        shipShield.Damage(ShipTurretData.Damage);
+                    }
+                }
+            }
+            // Continue normally
+            else
+            {
+                if (Target.Collider.CheckCollisionWith(Beam.BeamLine))
+                {
+                    Target.Damage(ShipTurretData.Damage);
+                }
             }
         }
 

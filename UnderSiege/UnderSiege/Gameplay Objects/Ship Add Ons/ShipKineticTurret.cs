@@ -104,11 +104,28 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         {
             foreach (Bullet bullet in BulletManager.Values)
             {
-                if (Target.Collider.CheckCollisionWith(bullet.WorldPosition))
+                // We have a target a ship addon that isn't a shield - so we need to check for shield interactions
+                if (!(Target is ShipShield) && !(Target is Ship))
                 {
-                    Target.Damage(ShipTurretData.Damage);
+                    foreach (ShipShield shipShield in (Target as ShipAddOn).ParentShip.ShipAddOns["ShipShield"])
+                    {
+                        if (shipShield.Collider.CheckCollisionWith(bullet.WorldPosition))
+                        {
+                            shipShield.Damage(ShipTurretData.Damage);
 
-                    bullet.Alive = false;
+                            bullet.Alive = false;
+                        }
+                    }
+                }
+                // Continue normally
+                else
+                {
+                    if (Target.Collider.CheckCollisionWith(bullet.WorldPosition))
+                    {
+                        Target.Damage(ShipTurretData.Damage);
+
+                        bullet.Alive = false;
+                    }
                 }
             }
         }

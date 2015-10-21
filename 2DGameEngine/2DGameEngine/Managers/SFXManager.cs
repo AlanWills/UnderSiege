@@ -31,23 +31,27 @@ namespace _2DGameEngine.Managers
         {
             SoundEffects = new Dictionary<string, SoundEffect>();
 
-            string[] sfxFiles = Directory.GetFiles(content.RootDirectory + "\\SFX", ".", SearchOption.AllDirectories);
-            for (int i = 0; i < sfxFiles.Length; i++)
+            try
             {
-                // Remove the Content\\ from the start
-                sfxFiles[i] = sfxFiles[i].Remove(0, 8);
-
-                // Remove the .xnb at the end
-                sfxFiles[i] = sfxFiles[i].Split('.')[0];
-
-                // Remove the SFX\\ from the start
-                string key = sfxFiles[i].Remove(0, 4);
-
-                if (!SoundEffects.ContainsKey(key))
+                string[] sfxFiles = Directory.GetFiles(content.RootDirectory + "\\SFX", ".", SearchOption.AllDirectories);
+                for (int i = 0; i < sfxFiles.Length; i++)
                 {
-                    SoundEffects.Add(key, content.Load<SoundEffect>(sfxFiles[i]));
+                    // Remove the Content\\ from the start
+                    sfxFiles[i] = sfxFiles[i].Remove(0, 8);
+
+                    // Remove the .xnb at the end
+                    sfxFiles[i] = sfxFiles[i].Split('.')[0];
+
+                    // Remove the SFX\\ from the start
+                    string key = sfxFiles[i].Remove(0, 4);
+
+                    if (!SoundEffects.ContainsKey(key))
+                    {
+                        SoundEffects.Add(key, content.Load<SoundEffect>(sfxFiles[i]));
+                    }
                 }
             }
+            catch { }
         }
 
         public SoundEffect GetSoundEffect(string sfxName)

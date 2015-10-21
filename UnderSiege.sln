@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTowerDefenceLibrary", "2D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTowerDefenceLibraryData", "2DGameEngine\2DTowerDefenceLibraryData\2DTowerDefenceLibraryData.csproj", "{A831387D-4C57-4127-AEE0-FDB390BF2276}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardpointCalculator", "HardpointCalculator\HardpointCalculator\HardpointCalculator.csproj", "{BA30ECD5-FA48-4762-A3C7-4677102D6F98}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "HardpointCalculatorContent", "HardpointCalculator\HardpointCalculatorContent\HardpointCalculatorContent.contentproj", "{499CCC79-B501-485D-9401-0158B617FF49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -49,6 +53,12 @@ Global
 		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Debug|x86.Build.0 = Debug|x86
 		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Release|x86.ActiveCfg = Release|x86
 		{A831387D-4C57-4127-AEE0-FDB390BF2276}.Release|x86.Build.0 = Release|x86
+		{BA30ECD5-FA48-4762-A3C7-4677102D6F98}.Debug|x86.ActiveCfg = Debug|x86
+		{BA30ECD5-FA48-4762-A3C7-4677102D6F98}.Debug|x86.Build.0 = Debug|x86
+		{BA30ECD5-FA48-4762-A3C7-4677102D6F98}.Release|x86.ActiveCfg = Release|x86
+		{BA30ECD5-FA48-4762-A3C7-4677102D6F98}.Release|x86.Build.0 = Release|x86
+		{499CCC79-B501-485D-9401-0158B617FF49}.Debug|x86.ActiveCfg = Debug|x86
+		{499CCC79-B501-485D-9401-0158B617FF49}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

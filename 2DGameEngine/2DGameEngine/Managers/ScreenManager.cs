@@ -166,8 +166,11 @@ namespace _2DGameEngine.Managers
             {
                 if (screen.Visible)
                 {
-                    screen.Background.Draw(SpriteBatch);
-                    return;
+                    if (screen.Background != null)
+                    {
+                        screen.Background.Draw(SpriteBatch);
+                        return;
+                    }
                 }
             }
         }

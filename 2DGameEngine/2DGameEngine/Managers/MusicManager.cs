@@ -43,23 +43,27 @@ namespace _2DGameEngine.Managers
             QueueSongNames = new Queue<string>();
             Songs = new Dictionary<string, Song>();
 
-            string[] musicFiles = Directory.GetFiles(content.RootDirectory + "\\Music", ".", SearchOption.AllDirectories);
-            for (int i = 0; i < musicFiles.Length; i++)
+            try
             {
-                // Remove the Content\\ from the start
-                musicFiles[i] = musicFiles[i].Remove(0, 8);
-
-                // Remove the .xnb at the end
-                musicFiles[i] = musicFiles[i].Split('.')[0];
-
-                // Remove the Music\\ from the start
-                string key = musicFiles[i].Remove(0, 6);
-
-                if (!Songs.ContainsKey(key))
+                string[] musicFiles = Directory.GetFiles(content.RootDirectory + "\\Music", ".", SearchOption.AllDirectories);
+                for (int i = 0; i < musicFiles.Length; i++)
                 {
-                    Songs.Add(key, content.Load<Song>(musicFiles[i]));
+                    // Remove the Content\\ from the start
+                    musicFiles[i] = musicFiles[i].Remove(0, 8);
+
+                    // Remove the .xnb at the end
+                    musicFiles[i] = musicFiles[i].Split('.')[0];
+
+                    // Remove the Music\\ from the start
+                    string key = musicFiles[i].Remove(0, 6);
+
+                    if (!Songs.ContainsKey(key))
+                    {
+                        Songs.Add(key, content.Load<Song>(musicFiles[i]));
+                    }
                 }
             }
+            catch { }
         }
 
         public static void QueueSong(string songName, QueueType queueType = QueueType.WaitForCurrent)

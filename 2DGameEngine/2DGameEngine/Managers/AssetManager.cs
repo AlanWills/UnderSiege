@@ -35,46 +35,58 @@ namespace _2DGameEngine.Managers
         {
             SpriteFonts = new Dictionary<string, SpriteFont>();
 
-            string[] spriteFontFiles = Directory.GetFiles(content.RootDirectory + "\\SpriteFonts", "*.*", SearchOption.AllDirectories);
-            for (int i = 0; i < spriteFontFiles.Length; i++)
+            try
             {
-                // Remove the Content\\ from the start
-                spriteFontFiles[i] = spriteFontFiles[i].Remove(0, 8);
+                string[] spriteFontFiles = Directory.GetFiles(content.RootDirectory + "\\SpriteFonts", "*.*", SearchOption.AllDirectories);
+                for (int i = 0; i < spriteFontFiles.Length; i++)
+                {
+                    // Remove the Content\\ from the start
+                    spriteFontFiles[i] = spriteFontFiles[i].Remove(0, 8);
 
-                // Remove the .xnb at the end
-                spriteFontFiles[i] = spriteFontFiles[i].Split('.')[0];
+                    // Remove the .xnb at the end
+                    spriteFontFiles[i] = spriteFontFiles[i].Split('.')[0];
 
-                SpriteFonts.Add(spriteFontFiles[i], content.Load<SpriteFont>(spriteFontFiles[i]));
+                    SpriteFonts.Add(spriteFontFiles[i], content.Load<SpriteFont>(spriteFontFiles[i]));
+                }
             }
+            catch { }
 
             Textures = new Dictionary<string, Texture2D>();
 
-            string[] textureFiles = Directory.GetFiles(content.RootDirectory + "\\Sprites", "*.*", SearchOption.AllDirectories);
-            for (int i = 0; i < textureFiles.Length; i++)
+            try
             {
-                // Remove the Content\\ from the start
-                textureFiles[i] = textureFiles[i].Remove(0, 8);
+                string[] textureFiles = Directory.GetFiles(content.RootDirectory + "\\Sprites", "*.*", SearchOption.AllDirectories);
+                for (int i = 0; i < textureFiles.Length; i++)
+                {
+                    // Remove the Content\\ from the start
+                    textureFiles[i] = textureFiles[i].Remove(0, 8);
 
-                // Remove the .xnb at the end
-                textureFiles[i] = textureFiles[i].Split('.')[0];
+                    // Remove the .xnb at the end
+                    textureFiles[i] = textureFiles[i].Split('.')[0];
 
-                Textures.Add(textureFiles[i], content.Load<Texture2D>(textureFiles[i]));
+                    Textures.Add(textureFiles[i], content.Load<Texture2D>(textureFiles[i]));
+                }
             }
+            catch { }
 
             // Can't tell whether this will load all the data in as BaseData or will be clever and load as it should be
             Data = new Dictionary<string, BaseData>();
 
-            string[] dataFiles = Directory.GetFiles(content.RootDirectory + "\\Data", "*.*", SearchOption.AllDirectories);
-            for (int i = 0; i < dataFiles.Length; i++)
+            try
             {
-                // Remove the Content\\ from the start
-                dataFiles[i] = dataFiles[i].Remove(0, 8);
+                string[] dataFiles = Directory.GetFiles(content.RootDirectory + "\\Data", "*.*", SearchOption.AllDirectories);
+                for (int i = 0; i < dataFiles.Length; i++)
+                {
+                    // Remove the Content\\ from the start
+                    dataFiles[i] = dataFiles[i].Remove(0, 8);
 
-                // Remove the .xnb at the end
-                dataFiles[i] = dataFiles[i].Split('.')[0];
+                    // Remove the .xnb at the end
+                    dataFiles[i] = dataFiles[i].Split('.')[0];
 
-                Data.Add(dataFiles[i], content.Load<BaseData>(dataFiles[i]));
+                    Data.Add(dataFiles[i], content.Load<BaseData>(dataFiles[i]));
+                }
             }
+            catch { }
 
             // These must go here cos we need textures and stuff
             UIObject.LoadPresetContent();

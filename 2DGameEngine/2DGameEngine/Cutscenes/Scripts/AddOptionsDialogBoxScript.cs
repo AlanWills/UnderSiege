@@ -1,4 +1,6 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Extra_Components;
+using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
@@ -22,6 +24,9 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             OptionsDialogBox = new OptionsDialogBox(text, localPosition, leftButtonEvent, rightButtonEvent, leftButtonText, rightButtonText, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
             DialogBox = OptionsDialogBox;
+
+            // Flush the game mouse otherwise we will automatically be done
+            ScreenManager.GameMouse.Flush();
         }
 
         public AddOptionsDialogBoxScript(string text, Vector2 localPosition, Vector2 size, EventHandler leftButtonEvent, EventHandler rightButtonEvent, string leftButtonText = "Cancel", string rightButtonText = "Confirm", bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)
@@ -29,6 +34,9 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             OptionsDialogBox = new OptionsDialogBox(text, localPosition, size, leftButtonEvent, rightButtonEvent, leftButtonText, rightButtonText, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
             DialogBox = OptionsDialogBox;
+
+            // Flush the game mouse otherwise we will automatically be done
+            ScreenManager.GameMouse.Flush();
         }
 
         #region Methods
@@ -39,7 +47,8 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void CheckDone()
         {
-            Done = DialogBox.Alive == false || OptionsDialogBox.LeftButton.IsSelected || OptionsDialogBox.RightButton.IsSelected;
+            bool clickedOutsideOfBox = ScreenManager.GameMouse.IsLeftClicked && !DialogBox.IsSelected && !OptionsDialogBox.LeftButton.IsSelected && !OptionsDialogBox.RightButton.IsSelected;
+            Done = DialogBox.Alive == false || OptionsDialogBox.LeftButton.IsSelected || OptionsDialogBox.RightButton.IsSelected || clickedOutsideOfBox;
         }
 
         public override void PerformImmediately()

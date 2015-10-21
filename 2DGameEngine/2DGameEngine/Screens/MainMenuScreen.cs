@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Cutscenes.Scripts;
+using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;

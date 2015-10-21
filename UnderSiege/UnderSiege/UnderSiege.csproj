@@ -90,6 +90,7 @@
     <Compile Include="Gameplay Objects\Ship Add Ons\ShipShield.cs" />
     <Compile Include="Gameplay Objects\Ship Add Ons\ShipTurret.cs" />
     <Compile Include="Gameplay Objects\Squadron.cs" />
+    <Compile Include="Managers\ShipAddOnManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />

@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
+using UnderSiege.Managers;
 using UnderSiege.Screens;
 using UnderSiege.UI;
 using UnderSiegeData.Gameplay_Objects;
@@ -30,7 +31,7 @@ namespace UnderSiege.Gameplay_Objects
 
         public Ship TargetShip { get; set; }
 
-        public Dictionary<string, List<ShipAddOn>> ShipAddOns
+        public ShipAddOnManager ShipAddOns
         {
             get;
             set;
@@ -40,20 +41,6 @@ namespace UnderSiege.Gameplay_Objects
         {
             get;
             set;
-        }
-
-        public int TotalAddOns
-        {
-            get
-            {
-                int total = 0;
-                foreach (List<ShipAddOn> addOnList in ShipAddOns.Values)
-                {
-                    total += addOnList.Count;
-                }
-
-                return total;
-            }
         }
 
         public List<Vector2> OtherHardPoints { get; set; }
@@ -68,10 +55,7 @@ namespace UnderSiege.Gameplay_Objects
         public Ship(Vector2 position, string dataAsset, BaseObject parent = null)
             : base(position, dataAsset, parent, true)
         {
-            ShipAddOns = new Dictionary<string, List<ShipAddOn>>();
-            ShipAddOns.Add("ShipTurret", new List<ShipAddOn>());
-            ShipAddOns.Add("ShipShield", new List<ShipAddOn>());
-            ShipAddOns.Add("ShipEngine", new List<ShipAddOn>());
+            ShipAddOns = new ShipAddOnManager(this);
         }
 
         #region Methods
@@ -96,9 +80,7 @@ namespace UnderSiege.Gameplay_Objects
                     break;
             }
 
-            turret.LoadContent();
-            turret.Initialize();
-            ShipAddOns["ShipTurret"].Add(turret);
+            ShipAddOns.AddObject(turret);
 
             DealWithHardPoint(hardPoint, false);
         }
@@ -106,9 +88,7 @@ namespace UnderSiege.Gameplay_Objects
         public void AddShield(Vector2 hardPoint, ShipAddOnData addOnData)
         {
             ShipShield shield = new ShipShield(hardPoint, AssetManager.GetKeyFromData(addOnData), this, true);
-            shield.LoadContent();
-            shield.Initialize();
-            ShipAddOns["ShipShield"].Add(shield);
+            ShipAddOns.AddObject(shield);
 
             DealWithHardPoint(hardPoint, false);
         }
@@ -116,9 +96,7 @@ namespace UnderSiege.Gameplay_Objects
         public void AddEngine(Vector2 hardPoint, ShipAddOnData addOnData)
         {
             ShipEngine engine = new ShipEngine(hardPoint, AssetManager.GetKeyFromData(addOnData), this, true);
-            engine.LoadContent();
-            engine.Initialize();
-            ShipAddOns["ShipEngine"].Add(engine);
+            ShipAddOns.AddObject(engine);
 
             DealWithHardPoint(hardPoint, true);
         }
@@ -139,10 +117,9 @@ namespace UnderSiege.Gameplay_Objects
         {
             Opacity = opacity;
 
-            foreach (KeyValuePair<string, List<ShipAddOn>> shipAddOnPair in ShipAddOns)
+            foreach (ShipAddOn shipAddOn in ShipAddOns.Values)
             {
-                foreach (ShipAddOn shipAddOn in shipAddOnPair.Value)
-                    shipAddOn.Opacity = opacity;
+                shipAddOn.Opacity = opacity;
             }
         }
 
@@ -167,7 +144,7 @@ namespace UnderSiege.Gameplay_Objects
         public bool AddOnExists(ShipAddOn addOn)
         {
             if (addOn != null)
-                return ShipAddOns[addOn.ShipAddOnData.AddOnType].Find(x => x == addOn) != null;
+                return ShipAddOns.Values.Find(x => x == addOn) != null;
 
             return false;
         }
@@ -218,11 +195,7 @@ namespace UnderSiege.Gameplay_Objects
                     FindNearestTargetShip();
                 }
 
-                foreach (KeyValuePair<string, List<ShipAddOn>> shipAddOnPair in ShipAddOns)
-                {
-                    foreach (ShipAddOn shipAddOn in shipAddOnPair.Value)
-                        shipAddOn.Update(gameTime);
-                }
+                ShipAddOns.Update(gameTime);
 
                 HullHealthBar.UpdateValue(CurrentHealth);
             }
@@ -234,11 +207,7 @@ namespace UnderSiege.Gameplay_Objects
 
             if (Visible)
             {
-                foreach (KeyValuePair<string, List<ShipAddOn>> shipAddOnPair in ShipAddOns)
-                {
-                    foreach (ShipAddOn shipAddOn in shipAddOnPair.Value)
-                        shipAddOn.Draw(spriteBatch);
-                }
+                ShipAddOns.Draw(spriteBatch);
             }
         }
 
@@ -246,11 +215,7 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.DrawInGameUI(spriteBatch);
 
-            foreach (KeyValuePair<string, List<ShipAddOn>> shipAddOnPair in ShipAddOns)
-            {
-                foreach (ShipAddOn shipAddOn in shipAddOnPair.Value)
-                    shipAddOn.DrawInGameUI(spriteBatch);
-            }
+            ShipAddOns.DrawInGameUI(spriteBatch);
 
             HullHealthBar.Draw(spriteBatch);
         }
@@ -259,25 +224,7 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.HandleInput();
 
-            foreach (KeyValuePair<string, List<ShipAddOn>> shipAddOnPair in ShipAddOns)
-            {
-                foreach (ShipAddOn shipAddOn in shipAddOnPair.Value)
-                    shipAddOn.HandleInput();
-            }
-        }
-
-        public virtual void RemoveAddOn(ShipAddOn addOn)
-        {
-            ShipAddOns[addOn.ShipAddOnData.AddOnType].Remove(addOn);
-
-            if (addOn.ShipAddOnData.AddOnType == "ShipEngine")
-            {
-                EngineHardPoints.Add(addOn.HardPointOffset);
-            }
-            else
-            {
-                OtherHardPoints.Add(addOn.HardPointOffset);
-            }
+            ShipAddOns.HandleInput();
         }
 
         #endregion

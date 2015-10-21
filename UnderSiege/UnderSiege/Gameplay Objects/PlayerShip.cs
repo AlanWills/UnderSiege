@@ -136,20 +136,6 @@ namespace UnderSiege.Gameplay_Objects
             }
         }
 
-        public override void RemoveAddOn(ShipAddOn addOn)
-        {
-            base.RemoveAddOn(addOn);
-
-            if (addOn.ShipAddOnData.AddOnType == "ShipEngine")
-            {
-                HardPointUI.Enable(addOn.HardPointOffset, HardPointType.Engine);
-            }
-            else
-            {
-                HardPointUI.Enable(addOn.HardPointOffset, HardPointType.Other);
-            }
-        }
-
         public override void Die()
         {
             base.Die();

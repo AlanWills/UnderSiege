@@ -141,13 +141,13 @@ namespace UnderSiege.Screens
         private void CheckFirstTurretBought(object sender, EventArgs e)
         {
             Script script = sender as Script;
-            script.Done = UnderSiegeGameplayScreen.Allies.GetItem("Command Station").ShipAddOns["ShipTurret"].Count >= 1;
+            script.Done = UnderSiegeGameplayScreen.Allies.GetItem("Command Station").ShipAddOns.ShipTurrets.Count >= 1;
         }
 
         private void CheckSecondTurretBought(object sender, EventArgs e)
         {
             Script script = sender as Script;
-            script.Done = UnderSiegeGameplayScreen.Allies.GetItem("Command Station").ShipAddOns["ShipTurret"].Count >= 2;
+            script.Done = UnderSiegeGameplayScreen.Allies.GetItem("Command Station").ShipAddOns.ShipTurrets.Count >= 2;
         }
 
         private void CheckEnemyScoutWaveDefeated(object sender, EventArgs e)
@@ -178,7 +178,7 @@ namespace UnderSiege.Screens
         {
             Script script = sender as Script;
             PlayerShip commandStation = UnderSiegeGameplayScreen.Allies.GetItem("Command Station");
-            foreach (ShipTurret turret in commandStation.ShipAddOns["ShipTurret"])
+            foreach (ShipTurret turret in commandStation.ShipAddOns.ShipTurrets)
             {
                 turret.CurrentHealth = turret.CurrentHealth == turret.ShipAddOnData.Health ? turret.ShipAddOnData.Health * 0.5f : turret.CurrentHealth;
             }
@@ -192,7 +192,7 @@ namespace UnderSiege.Screens
             PlayerShip commandStation = UnderSiegeGameplayScreen.Allies.GetItem("Command Station");
 
             bool turretRepaired = true;
-            foreach (ShipTurret turret in commandStation.ShipAddOns["ShipTurret"])
+            foreach (ShipTurret turret in commandStation.ShipAddOns.ShipTurrets)
             {
                 turretRepaired = turret.CurrentHealth == turret.ShipAddOnData.Health && turretRepaired;
             }
@@ -205,7 +205,7 @@ namespace UnderSiege.Screens
             Script script = sender as Script;
             PlayerShip commandStation = UnderSiegeGameplayScreen.Allies.GetItem("Command Station");
 
-            script.Done = commandStation.ShipAddOns["ShipShield"].Count == 1;
+            script.Done = commandStation.ShipAddOns.ShipShields.Count == 1;
         }
 
         private void CheckForFinalWaveSpawn(object sender, EventArgs e)
@@ -213,7 +213,7 @@ namespace UnderSiege.Screens
             Script script = sender as Script;
             PlayerShip commandStation = UnderSiegeGameplayScreen.Allies.GetItem("Command Station");
 
-            script.Done = commandStation.ShipAddOns["ShipTurret"].Count == 3 || commandStation.ShipAddOns["ShipShield"].Count == 2 || script.TimeRunFor >= 20f;
+            script.Done = commandStation.ShipAddOns.ShipTurrets.Count == 3 || commandStation.ShipAddOns.ShipShields.Count == 2 || script.TimeRunFor >= 20f;
         }
 
         private void CheckFinalWaveDefeated(object sender, EventArgs e)

@@ -76,17 +76,14 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.Initialize();
 
-            foreach (List<ShipAddOn> shipAddOnList in ShipAddOns.Values)
+            foreach (ShipAddOn shipAddOn in ShipAddOns.Values)
             {
-                foreach (ShipAddOn shipAddOn in shipAddOnList)
+                if (shipAddOn.ShipAddOnData.Orientable)
                 {
-                    if (shipAddOn.ShipAddOnData.Orientable)
-                    {
-                        // If our add on is orientable, orient it so that it is facing along the line made by the centre of the ship and the addon position - the order of stuff here matters!
-                        // Crude, but I think it will suffice
-                        shipAddOn.LocalOrientation = Trigonometry.GetAngleOfLineBetweenPositionAndTarget(WorldPosition, shipAddOn.WorldPosition);
-                        shipAddOn.LocalRotation = shipAddOn.LocalOrientation;
-                    }
+                    // If our add on is orientable, orient it so that it is facing along the line made by the centre of the ship and the addon position - the order of stuff here matters!
+                    // Crude, but I think it will suffice
+                    shipAddOn.LocalOrientation = Trigonometry.GetAngleOfLineBetweenPositionAndTarget(WorldPosition, shipAddOn.WorldPosition);
+                    shipAddOn.LocalRotation = shipAddOn.LocalOrientation;
                 }
             }
         }
@@ -124,13 +121,6 @@ namespace UnderSiege.Gameplay_Objects
             {
                 FindNearestTargetShip();
             }
-        }
-
-        public override void RemoveAddOn(ShipAddOn addOn)
-        {
-            base.RemoveAddOn(addOn);
-
-            Session.Money += (int)(addOn.ShipAddOnData.Price * 0.1f);
         }
 
         public override void Die()

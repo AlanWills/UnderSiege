@@ -162,17 +162,14 @@ namespace UnderSiege.Gameplay_Objects
                 ShipAddOn targetAddOn = null;
                 currentRangeToTargetSquared = float.MaxValue;
 
-                foreach (List<ShipAddOn> addOnList in target.ShipAddOns.Values)
+                foreach (ShipAddOn shipAddOn in target.ShipAddOns.Values)
                 {
-                    foreach (ShipAddOn shipAddOn in addOnList)
+                    float distanceToTargetSquared = (WorldPosition - shipAddOn.WorldPosition).LengthSquared();
+                    if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared <= currentRangeToTargetSquared)
                     {
-                        float distanceToTargetSquared = (WorldPosition - shipAddOn.WorldPosition).LengthSquared();
-                        if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared <= currentRangeToTargetSquared)
-                        {
-                            // We have a new target
-                            targetAddOn = shipAddOn;
-                            currentRangeToTargetSquared = distanceToTargetSquared;
-                        }
+                        // We have a new target
+                        targetAddOn = shipAddOn;
+                        currentRangeToTargetSquared = distanceToTargetSquared;
                     }
                 }
 

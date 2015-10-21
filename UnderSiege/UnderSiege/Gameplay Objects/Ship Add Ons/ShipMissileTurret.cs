@@ -107,7 +107,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                 // We have a target a ship addon that isn't a shield - so we need to check for shield interactions
                 if (!(Target is ShipShield) && !(Target is Ship))
                 {
-                    foreach (ShipShield shipShield in (Target as ShipAddOn).ParentShip.ShipAddOns["ShipShield"])
+                    foreach (ShipShield shipShield in (Target as ShipAddOn).ParentShip.ShipAddOns.ShipShields)
                     {
                         if (shipShield.Collider.CheckCollisionWith(missile.WorldPosition))
                         {

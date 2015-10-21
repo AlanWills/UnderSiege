@@ -31,6 +31,11 @@ namespace _2DGameEngine.Managers
             set;
         }
 
+        public int Count
+        {
+            get { return Values.Count; }
+        }
+
         #endregion
 
         public BaseObjectManager()

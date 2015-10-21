@@ -71,6 +71,17 @@ namespace UnderSiege.UI.In_Game_UI
 
         #region Virtual Methods
 
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+
+            // Our add on no longer exists so we should destroy this UI
+            if (!ParentShipAddOn.ParentShip.AddOnExists(ParentShipAddOn))
+            {
+                Alive = false;
+            }
+        }
+
         public override void Draw(SpriteBatch spriteBatch)
         {
             base.Draw(spriteBatch);

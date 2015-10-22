@@ -1,7 +1,9 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Cutscenes.Scripts;
 using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +39,21 @@ namespace _2DGameEngine.Screens
             base.Show();
 
             ScreenManager.Camera.CameraMode = CameraMode.Free;
+        }
+
+        public override void HandleInput()
+        {
+            base.HandleInput();
+
+            if (InputHandler.KeyPressed(Keys.Escape))
+            {
+                AddPauseMenu();
+            }
+        }
+
+        public virtual void AddPauseMenu()
+        {
+            AddScript(new AddMenuScript(new GameplayScreenPauseMenu()));
         }
 
         #endregion

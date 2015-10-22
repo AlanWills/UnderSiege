@@ -91,6 +91,12 @@ namespace _2DGameEngine.Managers
             private set;
         }
 
+        public static Game Game
+        {
+            get;
+            private set;
+        }
+
         public static Vector2 ScreenCentre
         {
             get { return new Vector2(Viewport.Width, Viewport.Height) / 2; }
@@ -116,6 +122,7 @@ namespace _2DGameEngine.Managers
             ScreensToAdd = new List<BaseScreen>();
             ScreensToRemove = new List<BaseScreen>();
 
+            Game = game;
             Content = Game.Content;
             GraphicsDeviceManager = graphicsDeviceManager;
             Viewport = Game.GraphicsDevice.Viewport;

@@ -177,6 +177,11 @@ namespace UnderSiege.Screens
             }
         }
 
+        public override void AddPauseMenu()
+        {
+            AddScript(new AddMenuScript(new UnderSiegeGameplayScreenPauseMenu(this)));
+        }
+
         #endregion
     }
 }

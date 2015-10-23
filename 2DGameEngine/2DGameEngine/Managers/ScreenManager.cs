@@ -91,7 +91,7 @@ namespace _2DGameEngine.Managers
             private set;
         }
 
-        public static Game Game
+        public static Game GameRef
         {
             get;
             private set;
@@ -122,18 +122,18 @@ namespace _2DGameEngine.Managers
             ScreensToAdd = new List<BaseScreen>();
             ScreensToRemove = new List<BaseScreen>();
 
-            Game = game;
-            Content = Game.Content;
+            GameRef = game;
+            Content = GameRef.Content;
             GraphicsDeviceManager = graphicsDeviceManager;
-            Viewport = Game.GraphicsDevice.Viewport;
+            Viewport = GameRef.GraphicsDevice.Viewport;
 
             Camera = new Camera();
             Input = new InputHandler(game);
             GameMouse = new GameMouse();
             SFX = new SFXManager();
 
-            Game.Components.Add(this);
-            Game.Components.Add(Input);
+            GameRef.Components.Add(this);
+            GameRef.Components.Add(Input);
         }
 
         #region Methods

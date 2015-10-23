@@ -115,6 +115,7 @@
     <Compile Include="UI\InGameShipInfo.cs" />
     <Compile Include="UI\In Game UI\PurchaseItemUI.cs" />
     <Compile Include="UI\PurchaseShipInfoUI.cs" />
+    <Compile Include="UI\UnderSiegeGameplayScreenPauseMenu.cs" />
     <Compile Include="Waves\WaveManager.cs" />
   </ItemGroup>
   <ItemGroup>

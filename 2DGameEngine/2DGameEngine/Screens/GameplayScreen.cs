@@ -53,7 +53,7 @@ namespace _2DGameEngine.Screens
 
         public virtual void AddPauseMenu()
         {
-            AddScript(new AddMenuScript(new GameplayScreenPauseMenu()));
+            AddScript(new AddMenuScript(new GameplayScreenPauseMenu(this)));
         }
 
         #endregion

@@ -16,11 +16,14 @@ namespace _2DGameEngine.Screens
         private const int padding = 10;
         protected int numberOfButtons = 0;
 
+        protected BaseScreen currentScreen;
+
         #endregion
 
-        public GameplayScreenPauseMenu()
+        public GameplayScreenPauseMenu(BaseScreen currentScreen)
             : base(ScreenManager.ScreenCentre)
         {
+            this.currentScreen = currentScreen;
             AddUI();
         }
 
@@ -34,8 +37,14 @@ namespace _2DGameEngine.Screens
 
             numberOfButtons++;
 
-            Button quitToMainMenu = new Button(new Vector2(0, Button.defaultTexture.Height + padding), "Exit To Main Menu", resumeGameButton);
-            quitToMainMenu.OnSelect += quitToMainMenu_OnSelect;
+            Button options = new Button(new Vector2(0, Button.defaultTexture.Height + padding), "Options", resumeGameButton);
+            options.OnSelect += settingsButton_OnSelect;
+            AddUIObject(options, "Options Button");
+
+            numberOfButtons++;
+
+            Button quitToMainMenu = new Button(new Vector2(0, Button.defaultTexture.Height + padding), "Exit To Main Menu", options);
+            quitToMainMenu.OnSelect += exitToMainMenu_OnSelect;
             AddUIObject(quitToMainMenu, "Quit To Main Menu Button");
 
             numberOfButtons++;
@@ -64,15 +73,22 @@ namespace _2DGameEngine.Screens
             Alive = false;
         }
 
-        void quitToMainMenu_OnSelect(object sender, EventArgs e)
+        protected virtual void settingsButton_OnSelect(object sender, EventArgs e)
         {
             Alive = false;
+            currentScreen.ScreenManager.AddScreen(new OptionsScreen(currentScreen.ScreenManager, currentScreen));
+        }
+
+        protected virtual void exitToMainMenu_OnSelect(object sender, EventArgs e)
+        {
+            Alive = false;
+            currentScreen.Transition(new MainMenuScreen(currentScreen.ScreenManager, true));
         }
 
         void exitGameButton_OnSelect(object sender, EventArgs e)
         {
             Alive = false;
-            ScreenManager.Game.Exit();
+            ScreenManager.GameRef.Exit();
         }
 
         #endregion

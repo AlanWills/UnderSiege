@@ -24,6 +24,9 @@ namespace _2DGameEngine.Screens
         public OptionsScreen(ScreenManager screenManager, BaseScreen previousScreen, string dataAsset = "Data\\Screens\\OptionsScreen")
             : base(screenManager, dataAsset)
         {
+            previousScreen.Active = false;
+            previousScreen.Visible = false;
+
             spacing = Viewport.Height * 0.1f;
             this.previousScreen = previousScreen;
             AddUI();

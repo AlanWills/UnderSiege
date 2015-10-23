@@ -92,8 +92,6 @@ namespace _2DGameEngine.Screens
         protected virtual void GoToSettingsScreen(object sender, EventArgs e)
         {
             ScreenManager.AddScreen(new OptionsScreen(ScreenManager, this));
-            Active = false;
-            Visible = false;
         }
 
         protected virtual void ExitGame(object sender, EventArgs e)
@@ -115,7 +113,7 @@ namespace _2DGameEngine.Screens
 
         private void confirmQuitGame(object sender, EventArgs e)
         {
-            ScreenManager.Game.Exit();
+            ScreenManager.GameRef.Exit();
         }
 
         #endregion

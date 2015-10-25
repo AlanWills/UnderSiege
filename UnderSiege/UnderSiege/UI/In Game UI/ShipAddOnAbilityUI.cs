@@ -38,7 +38,7 @@ namespace UnderSiege.UI.In_Game_UI
         private void AddUI()
         {
             int totalObjects = ParentShipAddOn.Abilities.Count;
-            int totalRows = (int)Math.Ceiling((float)(totalObjects / columns));
+            int totalRows = (int)Math.Ceiling((float)(totalObjects) / (float)(columns));
             Size = new Vector2(columns * (abilityImageSize + padding) + padding, totalRows * (abilityImageSize + padding) + padding);
 
             int counter = 0;
@@ -80,11 +80,6 @@ namespace UnderSiege.UI.In_Game_UI
             {
                 Alive = false;
             }
-        }
-
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            base.Draw(spriteBatch);
         }
 
         #endregion

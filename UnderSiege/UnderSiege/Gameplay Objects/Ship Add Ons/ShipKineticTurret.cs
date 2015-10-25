@@ -95,9 +95,12 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             nameCounter++;
             BulletManager.AddObject(Bullet.Clone(), "Bullet" + nameCounter);
 
-            firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
-            firingSoundEffectInstance.Volume = Options.SFXVolume;
-            firingSoundEffectInstance.Play();
+            if (FiringSoundEffect != null)
+            {
+                firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+                firingSoundEffectInstance.Volume = Options.SFXVolume;
+                firingSoundEffectInstance.Play();
+            }
         }
 
         public override void CheckIfDamagedTarget()

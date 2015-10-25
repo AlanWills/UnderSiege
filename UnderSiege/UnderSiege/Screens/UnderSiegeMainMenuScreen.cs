@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnderSiege.Screens.Level_Screens;
 
 namespace UnderSiege.Screens
 {
@@ -40,7 +41,7 @@ namespace UnderSiege.Screens
 
         private void PlayGame(object sender, EventArgs e)
         {
-            Transition(new UnderSiegeGameplayScreen(ScreenManager, "Data\\Screens\\GameplayScreen"));
+            Transition(new UnderSiegeGameplayScreenLevel1(ScreenManager));
         }
 
         private void PlayTutorial(object sender, EventArgs e)

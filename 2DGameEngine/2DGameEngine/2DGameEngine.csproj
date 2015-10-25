@@ -76,6 +76,7 @@
     <Compile Include="Cutscenes\Scripts\Script.cs" />
     <Compile Include="Cutscenes\Scripts\RunEventScript.cs" />
     <Compile Include="Cutscenes\Scripts\ShowAndActivateObjectScript.cs" />
+    <Compile Include="Cutscenes\Scripts\TransitionToScreenScript.cs" />
     <Compile Include="Cutscenes\Scripts\WaitForObjectSelectionScript.cs" />
     <Compile Include="Cutscenes\Scripts\WaitScript.cs" />
     <Compile Include="Extra Components\Camera.cs" />

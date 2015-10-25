@@ -25,6 +25,11 @@ namespace _2DGameEngine.Managers
             get { return Dictionary.Keys.ToList<string>(); }
         }
 
+        public int Count
+        {
+            get { return Values.Count; }
+        }
+
         #endregion
 
         public DictionaryManager()

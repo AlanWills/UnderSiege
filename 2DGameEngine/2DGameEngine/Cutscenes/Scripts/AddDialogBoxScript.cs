@@ -17,8 +17,18 @@ namespace _2DGameEngine.Cutscenes.Scripts
         #region Properties and Fields
 
         protected DialogBox DialogBox { get; set; }
+        protected Image MouseClickImage { get; private set; }
+        
+        private static Vector2 defaultPosition;
 
         #endregion
+
+        public AddDialogBoxScript(string text, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)
+            : base(shouldUpdateGame, canRun)
+        {
+            defaultPosition = new Vector2(ScreenManager.Viewport.Width * 0.75f, ScreenManager.Viewport.Height * 0.75f);
+            DialogBox = new DialogBox(text, defaultPosition, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
+        }
 
         public AddDialogBoxScript(string text, Vector2 localPosition, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)
             : base(shouldUpdateGame, canRun)
@@ -42,6 +52,11 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             DialogBox.LoadContent();
             DialogBox.Initialize();
+
+            MouseClickImage = new Image("Sprites\\UI\\Mouse\\LeftClickMouseIndicator", DialogBox);
+            MouseClickImage.LoadContent();
+            MouseClickImage.Initialize();
+            MouseClickImage.LocalPosition = new Vector2((DialogBox.Size.X + MouseClickImage.Size.X) * 0.5f + 10, 0);
         }
 
         public override void Run(GameTime gameTime)
@@ -62,6 +77,11 @@ namespace _2DGameEngine.Cutscenes.Scripts
         public override void DrawUI(SpriteBatch spriteBatch)
         {
             DialogBox.Draw(spriteBatch);
+
+            if (MouseClickImage != null)
+            {
+                MouseClickImage.Draw(spriteBatch);
+            }
         }
 
         public override void HandleInput()

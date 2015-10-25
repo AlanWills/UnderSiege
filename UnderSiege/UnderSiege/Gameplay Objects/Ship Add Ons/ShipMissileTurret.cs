@@ -95,9 +95,12 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             clone.RigidBody.LinearVelocity = new Vector2(-30, clone.RigidBody.LinearVelocity.Y);
             MissileManager.AddObject(clone, "Missile" + nameCounter);
 
-            firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
-            firingSoundEffectInstance.Volume = Options.SFXVolume;
-            firingSoundEffectInstance.Play();
+            if (FiringSoundEffect != null)
+            {
+                firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+                firingSoundEffectInstance.Volume = Options.SFXVolume;
+                firingSoundEffectInstance.Play();
+            }
         }
 
         public override void CheckIfDamagedTarget()
@@ -114,7 +117,15 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                             shipShield.Damage(ShipTurretData.Damage);
 
                             missile.Alive = false;
+                            break;
                         }
+                    }
+
+                    if (Target.Collider.CheckCollisionWith(missile.WorldPosition))
+                    {
+                        Target.Damage(ShipTurretData.Damage);
+
+                        missile.Alive = false;
                     }
                 }
                 // Continue normally

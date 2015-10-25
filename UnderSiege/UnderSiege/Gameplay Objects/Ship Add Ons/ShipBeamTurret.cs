@@ -62,8 +62,11 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
             if (firingSoundEffectInstance == null || firingSoundEffectInstance.State == SoundState.Stopped)
             {
-                firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
-                firingSoundEffectInstance.Volume = Options.SFXVolume;
+                if (FiringSoundEffect != null)
+                {
+                    firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+                    firingSoundEffectInstance.Volume = Options.SFXVolume;
+                }
             }
         }
 
@@ -77,7 +80,13 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                     if (shipShield.Collider.CheckCollisionWith(Beam.BeamLine))
                     {
                         shipShield.Damage(ShipTurretData.Damage);
+                        break;
                     }
+                }
+
+                if (Target.Collider.CheckCollisionWith(Beam.BeamLine))
+                {
+                    Target.Damage(ShipTurretData.Damage);
                 }
             }
             // Continue normally

@@ -1,8 +1,10 @@
 ﻿using _2DGameEngine.Cutscenes.Scripts;
+using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
 using _2DGameEngine.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +17,16 @@ namespace _2DGameEngine.Cutscenes
         #region Properties and Fields
 
         public bool IsDone { get; protected set; }
+        protected GameplayScreen GameplayScreen { get; private set; }
 
         #endregion
 
-        public Cutscene(ScreenManager screenManager, string dataAsset)
+        public Cutscene(ScreenManager screenManager, string dataAsset, GameplayScreen gameplayScreen)
             : base(screenManager, dataAsset)
         {
             IsDone = false;
+            GameplayScreen = gameplayScreen;
+            AddScripts();
         }
 
         #region Methods
@@ -29,6 +34,8 @@ namespace _2DGameEngine.Cutscenes
         #endregion
 
         #region Virtual Methods
+
+        protected abstract void AddScripts();
 
         public override void LoadContent(ContentManager content)
         {
@@ -42,6 +49,16 @@ namespace _2DGameEngine.Cutscenes
             base.Update(gameTime);
 
             CheckIsDone();
+        }
+
+        public override void HandleInput()
+        {
+            base.HandleInput();
+
+            if (InputHandler.KeyPressed(Keys.Escape))
+            {
+                Skip();
+            }
         }
 
         protected abstract void CheckIsDone();

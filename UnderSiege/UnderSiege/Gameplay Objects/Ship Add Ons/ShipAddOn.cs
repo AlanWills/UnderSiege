@@ -111,6 +111,8 @@ namespace UnderSiege.Gameplay_Objects
                 SetUpAbilities();
 
                 AbilityUI = new ShipAddOnAbilityUI(new Vector2(100, ScreenManager.ScreenCentre.Y), this);
+                AbilityUI.Active = false;
+                AbilityUI.Visible = false;
                 AbilityUI.LoadContent();
                 AbilityUI.Initialize();
                 UnderSiegeGameplayScreen.HUD.AddUIObject(AbilityUI, ShipAddOnData.DisplayName + " Ability UI " + abilityUITagID, false);

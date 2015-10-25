@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
+    <DisplayName>Level 1</DisplayName>
+    <TextureAsset>Sprites\Backgrounds\GameplayScreen</TextureAsset>
+    <BackgroundMusicNames></BackgroundMusicNames>
+    <WaveNames>
+      <Item>Data\Waves\Level1\Wave1</Item>
+      <Item>Data\Waves\Level1\Wave2</Item>
+      <Item>Data\Waves\Level1\Wave3</Item>
+    </WaveNames>
+  </Asset>
+</XnaContent>

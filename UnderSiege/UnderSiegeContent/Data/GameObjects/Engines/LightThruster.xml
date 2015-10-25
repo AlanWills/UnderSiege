@@ -10,6 +10,7 @@
     <Orientable>false</Orientable>
     <Abilities>
       <Item>Repair</Item>
+      <Item>Sell</Item>
     </Abilities>
     <EngineSoundAsset>LightThruster</EngineSoundAsset>
     <Thrust>200</Thrust>

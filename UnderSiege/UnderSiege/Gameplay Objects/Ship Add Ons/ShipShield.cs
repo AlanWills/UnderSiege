@@ -18,8 +18,8 @@ namespace UnderSiege.Gameplay_Objects
         #region Properties and Fields
 
         private ShipShieldData ShipShieldData { get; set; }
-        public float CurrentShieldHealth { get; set; }
-        private Bar ShieldHealthBar { get; set; }
+        public float CurrentShieldStrength { get; set; }
+        private Bar ShieldStrengthBar { get; set; }
 
         private const float defaultOpacity = 0.4f;
         private const float onHitOpacity = 1f;
@@ -43,11 +43,11 @@ namespace UnderSiege.Gameplay_Objects
             if (timeSinceDamaged >= ShipShieldData.ShieldDamagedRechargeDelay)
             {
                 rechargeTimer += (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-                if (rechargeTimer >= 1)
+                if (rechargeTimer >= 1 && CurrentShieldStrength != ShipShieldData.ShieldStrength)
                 {
-                    CurrentShieldHealth = MathHelper.Clamp(CurrentShieldHealth + ShipShieldData.ShieldRechargePerSecond, 0, ShipShieldData.ShieldStrength);
+                    CurrentShieldStrength = MathHelper.Clamp(CurrentShieldStrength + ShipShieldData.ShieldRechargePerSecond, 0, ShipShieldData.ShieldStrength);
 
-                    HealthBar.LocalPosition = new Vector2(0, -Size.Y * 0.5f - 3);
+                    HealthBar.LocalPosition = new Vector2(-HealthBar.Size.X * 0.5f, -Size.Y * 0.5f - 3);
                     rechargeTimer = 0;
                 }
             }
@@ -62,7 +62,7 @@ namespace UnderSiege.Gameplay_Objects
             base.LoadContent();
 
             ShipShieldData = AssetManager.GetData<ShipShieldData>(DataAsset);
-            CurrentShieldHealth = ShipShieldData.ShieldStrength;
+            CurrentShieldStrength = ShipShieldData.ShieldStrength;
             Size = new Vector2(ShipShieldData.ShieldRange, ShipShieldData.ShieldRange);
             Colour = new Color(ShipShieldData.Colour);
             Opacity = defaultOpacity;
@@ -73,9 +73,9 @@ namespace UnderSiege.Gameplay_Objects
             base.Initialize();
 
             // Add it here so that if we are altering the size of the sprite, we will add the bar at an appropriate place
-            ShieldHealthBar = new Bar(Vector2.Zero, new Vector2(35, 5), "Sprites\\UI\\Bars\\ShieldBar", ShipShieldData.ShieldStrength, "", this);
-            ShieldHealthBar.LoadContent();
-            ShieldHealthBar.Initialize();
+            ShieldStrengthBar = new Bar(Vector2.Zero, new Vector2(35, 5), "Sprites\\UI\\Bars\\ShieldBar", ShipShieldData.ShieldStrength, "", this);
+            ShieldStrengthBar.LoadContent();
+            ShieldStrengthBar.Initialize();
         }
 
         public override void AddCollider()
@@ -90,22 +90,22 @@ namespace UnderSiege.Gameplay_Objects
 
             RegenerateShields(gameTime);
 
-            ShieldHealthBar.UpdateValue(CurrentShieldHealth);
+            ShieldStrengthBar.UpdateValue(CurrentShieldStrength);
             Opacity = MathHelper.Lerp(Opacity, defaultOpacity, (float)gameTime.ElapsedGameTime.Milliseconds / 250f);
         }
 
         public override void Damage(float damage)
         {
-            if (CurrentShieldHealth > damage)
+            if (CurrentShieldStrength > damage)
             {
-                CurrentShieldHealth -= damage;
+                CurrentShieldStrength -= damage;
             }
             else
             {
                 // If shield health is less than the damage, we apply the difference to the shield itself and then set the shield health to zero
-                base.Damage(damage - CurrentShieldHealth);
+                base.Damage(damage - CurrentShieldStrength);
 
-                CurrentShieldHealth = 0;
+                CurrentShieldStrength = 0;
 
                 HealthBar.LocalPosition = Vector2.Zero;
             }
@@ -117,7 +117,7 @@ namespace UnderSiege.Gameplay_Objects
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (CurrentShieldHealth > 0)
+            if (CurrentShieldStrength > 0)
             {
                 base.Draw(spriteBatch);
             }
@@ -127,7 +127,7 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.DrawInGameUI(spriteBatch);
 
-            ShieldHealthBar.Draw(spriteBatch);
+            ShieldStrengthBar.Draw(spriteBatch);
         }
 
         #endregion

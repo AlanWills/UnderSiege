@@ -19,21 +19,16 @@ namespace _2DGameEngine.Managers
             set;
         }
 
-        private DictionaryManager<T> ObjectsToAdd
+        protected DictionaryManager<T> ObjectsToAdd
         {
             get;
-            set;
+            private set;
         }
 
-        private DictionaryManager<T> ObjectsToRemove
+        protected DictionaryManager<T> ObjectsToRemove
         {
             get;
-            set;
-        }
-
-        public int Count
-        {
-            get { return Values.Count; }
+            private set;
         }
 
         #endregion

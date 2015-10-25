@@ -38,13 +38,6 @@ namespace _2DGameEngine.Cutscenes.Scripts
             Cutscene.Initialize();
         }
 
-        public override void CheckCanRun()
-        {
-            base.CheckCanRun();
-
-            CanRun = true;
-        }
-
         public override void Run(GameTime gameTime)
         {
             Cutscene.Update(gameTime);

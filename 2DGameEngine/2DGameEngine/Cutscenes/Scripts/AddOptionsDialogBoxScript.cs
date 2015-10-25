@@ -45,6 +45,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         #region Virtual Methods
 
+        public override void LoadAndInit(ContentManager content)
+        {
+            base.LoadAndInit(content);
+
+            // Options dialog boxes should not have instruction labels
+            MouseClickImage.Alive = false;
+        }
+
         public override void CheckDone()
         {
             bool clickedOutsideOfBox = ScreenManager.GameMouse.IsLeftClicked && !DialogBox.IsSelected && !OptionsDialogBox.LeftButton.IsSelected && !OptionsDialogBox.RightButton.IsSelected;

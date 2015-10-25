@@ -10,6 +10,7 @@
     <Orientable>false</Orientable>
     <Abilities>
       <Item>Repair</Item>
+      <Item>Sell</Item>
     </Abilities>
     <ShieldRange>170</ShieldRange>
     <ShieldStrength>100</ShieldStrength>

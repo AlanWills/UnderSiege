@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Managers;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,9 +57,11 @@ namespace UnderSiege.Managers
             addOnTagID++;
         }
 
-        public override void RemoveObject(ShipAddOn addOn)
+        public override void RemoveObject(KeyValuePair<string, ShipAddOn> shipAddOnPair)
         {
-            base.RemoveObject(addOn);
+            base.RemoveObject(shipAddOnPair);
+
+            ShipAddOn addOn = shipAddOnPair.Value;
 
             if (addOn.ShipAddOnData.AddOnType == "ShipEngine")
             {

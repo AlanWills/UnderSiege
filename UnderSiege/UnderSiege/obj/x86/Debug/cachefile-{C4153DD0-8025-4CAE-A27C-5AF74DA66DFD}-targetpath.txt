@@ -50,9 +50,6 @@ Content\Data\GameObjects\Turrets\DualLaserTurret.xnb
 Content\Data\GameObjects\Bullets\LaserBullet.xnb
 Content\Data\GameObjects\Shields\EnergyShield.xnb
 Content\Data\GameObjects\Ships\EnemyShips\BushiHonyaki.xnb
-Content\Data\Waves\Wave1.xnb
-Content\Data\Waves\Wave2.xnb
-Content\Data\Waves\Wave3.xnb
 Content\Data\Screens\PurchaseShipsScreen.xnb
 Content\Data\GameObjects\Ships\PlayerShips\HiiFiirkan.xnb
 Content\Data\GameObjects\Engines\LightThruster.xnb
@@ -97,3 +94,8 @@ Content\Sprites\GameObjects\Ships\PlayerShips\hii_saari.xnb
 Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb
 Content\Sprites\Abilities\ShipAddOnAbilities\sell.xnb
 Content\Data\Abilities\ShipAddOnAbilities\Sell.xnb
+Content\Data\Waves\Level1\Wave1.xnb
+Content\Data\Waves\Level1\Wave2.xnb
+Content\Data\Waves\Level1\Wave3.xnb
+Content\Data\Screens\LevelScreens\Level1.xnb
+Content\Sprites\UI\Mouse\LeftClickMouseIndicator.xnb

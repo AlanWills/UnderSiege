@@ -8,6 +8,12 @@ namespace UnderSiegeData.Screens
 {
     public class UnderSiegeGameplayScreenData : BaseScreenData
     {
+        public string CommandShipName
+        {
+            get;
+            set;
+        }
+
         public List<string> WaveNames
         {
             get;

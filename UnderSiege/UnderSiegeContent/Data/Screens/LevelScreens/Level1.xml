@@ -2,8 +2,9 @@
 <XnaContent>
   <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
     <DisplayName>Level 1</DisplayName>
-    <TextureAsset>Sprites\Backgrounds\GameplayScreen</TextureAsset>
+    <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level1Background</TextureAsset>
     <BackgroundMusicNames></BackgroundMusicNames>
+    <CommandShipName>Data\GameObjects\SpaceStations\station_small</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\Level1\Wave1</Item>
       <Item>Data\Waves\Level1\Wave2</Item>

@@ -2,11 +2,12 @@
 <XnaContent>
   <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
     <DisplayName>Gameplay Tutorial Screen</DisplayName>
-    <TextureAsset>Sprites\Backgrounds\GameplayScreen</TextureAsset>
+    <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level1Background</TextureAsset>
     <BackgroundMusicNames>
       <Item>Dream Raid</Item>
       <Item>Wasteland Overdrive</Item>
     </BackgroundMusicNames>
+    <CommandShipName>Data\GameObjects\SpaceStations\station_small</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\GameplayTutorial\TutorialScoutWave</Item>
       <Item>Data\Waves\GameplayTutorial\TutorialFirstEnemyWave</Item>

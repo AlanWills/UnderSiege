@@ -65,12 +65,12 @@
       <Time>2015-09-13T12:10:04.6173355+01:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\Backgrounds\GameplayScreen.jpg</Source>
-      <Name>Sprites\Backgrounds\GameplayScreen</Name>
+      <Source>Sprites\Backgrounds\LevelBackgrounds\Level1Background.jpg</Source>
+      <Name>Sprites\Backgrounds\LevelBackgrounds\Level1Background</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\GameplayScreen.xnb</Output>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\LevelBackgrounds\Level1Background.xnb</Output>
       <Time>2015-09-13T16:53:36.3944231+01:00</Time>
     </Item>
     <Item>
@@ -153,15 +153,6 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\InGameUI\FiringLineUI.xnb</Output>
       <Time>2015-09-25T19:13:08.6530051+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\UI\Bars\ShieldBar.png</Source>
-      <Name>Sprites\UI\Bars\ShieldBar</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\ShieldBar.xnb</Output>
-      <Time>2015-10-20T22:36:45.0408759+01:00</Time>
     </Item>
     <Item>
       <Source>Sprites\UI\Markers\DirectionMarker.png</Source>
@@ -407,6 +398,69 @@
       <Time>2015-10-19T20:19:42.7043367+01:00</Time>
     </Item>
     <Item>
+      <Source>Sprites\UI\Bars\ShipHullBar.png</Source>
+      <Name>Sprites\UI\Bars\ShipHullBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\ShipHullBar.xnb</Output>
+      <Time>2015-10-20T22:36:45.0408759+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Bars\ShieldBar.png</Source>
+      <Name>Sprites\UI\Bars\ShieldBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\ShieldBar.xnb</Output>
+      <Time>2015-10-20T22:36:45.0408759+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Bars\AddOnHullBar.png</Source>
+      <Name>Sprites\UI\Bars\AddOnHullBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\AddOnHullBar.xnb</Output>
+      <Time>2015-10-20T22:36:45.0378752+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\Ships\PlayerShips\hii_saari.png</Source>
+      <Name>Sprites\GameObjects\Ships\PlayerShips\hii_saari</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Ships\PlayerShips\hii_saari.xnb</Output>
+      <Time>2015-10-21T21:05:03.4429839+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Abilities\ShipAddOnAbilities\sell.png</Source>
+      <Name>Sprites\Abilities\ShipAddOnAbilities\sell</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\sell.xnb</Output>
+      <Time>2015-10-21T22:33:08.0951763+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\Mouse\LeftClickMouseIndicator.png</Source>
+      <Name>Sprites\UI\Mouse\LeftClickMouseIndicator</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Mouse\LeftClickMouseIndicator.xnb</Output>
+      <Time>2015-10-25T20:06:45.6352467+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Backgrounds\LevelBackgrounds\Level2Background.jpg</Source>
+      <Name>Sprites\Backgrounds\LevelBackgrounds\Level2Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\LevelBackgrounds\Level2Background.xnb</Output>
+      <Time>2015-10-25T21:03:16.813255+00:00</Time>
+    </Item>
+    <Item>
       <Source>Data\Screens\MainMenuScreen.xml</Source>
       <Name>Data\Screens\MainMenuScreen</Name>
       <Importer>XmlImporter</Importer>
@@ -423,15 +477,6 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\SpaceStations\CommandStation.xnb</Output>
       <Time>2015-10-19T20:19:42.6903279+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Screens\GameplayScreen.xml</Source>
-      <Name>Data\Screens\GameplayScreen</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameplayScreen.xnb</Output>
-      <Time>2015-10-19T22:10:02.5481999+01:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Turrets\DualLaserTurret.xml</Source>
@@ -468,6 +513,33 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiHonyaki.xnb</Output>
       <Time>2015-10-19T20:19:42.6813206+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level1\Wave1.xml</Source>
+      <Name>Data\Waves\Level1\Wave1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level1\Wave1.xnb</Output>
+      <Time>2015-10-15T00:25:51.1075163+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level1\Wave2.xml</Source>
+      <Name>Data\Waves\Level1\Wave2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level1\Wave2.xnb</Output>
+      <Time>2015-10-15T00:25:51.1115142+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level1\Wave3.xml</Source>
+      <Name>Data\Waves\Level1\Wave3</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level1\Wave3.xnb</Output>
+      <Time>2015-10-17T11:54:54.2784728+01:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\PurchaseShipsScreen.xml</Source>
@@ -557,7 +629,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameplayTutorialScreen.xnb</Output>
-      <Time>2015-10-19T22:15:53.9108593+01:00</Time>
+      <Time>2015-10-25T21:40:58.2675152+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xml</Source>
@@ -603,6 +675,51 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\GameplayTutorial\TutorialFinalWave.xnb</Output>
       <Time>2015-10-15T22:17:11.3826968+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\OptionsScreen.xml</Source>
+      <Name>Data\Screens\OptionsScreen</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\OptionsScreen.xnb</Output>
+      <Time>2015-10-20T22:36:45.0358726+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\GameObjects\Ships\PlayerShips\HiiSaari.xml</Source>
+      <Name>Data\GameObjects\Ships\PlayerShips\HiiSaari</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb</Output>
+      <Time>2015-10-21T21:08:23.3199937+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Abilities\ShipAddOnAbilities\Sell.xml</Source>
+      <Name>Data\Abilities\ShipAddOnAbilities\Sell</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Sell.xnb</Output>
+      <Time>2015-10-21T22:31:55.7274321+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\LevelScreens\Level1.xml</Source>
+      <Name>Data\Screens\LevelScreens\Level1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level1.xnb</Output>
+      <Time>2015-10-25T21:41:14.6363866+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\LevelScreens\Level2.xml</Source>
+      <Name>Data\Screens\LevelScreens\Level2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level2.xnb</Output>
+      <Time>2015-10-25T21:41:44.7089823+00:00</Time>
     </Item>
     <Item>
       <Source>Music\Dream Raid.mp3</Source>
@@ -730,114 +847,6 @@
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\LaserFire.xnb</Output>
       <Time>2015-10-20T00:22:56.2021807+01:00</Time>
     </Item>
-    <Item>
-      <Source>Data\Screens\OptionsScreen.xml</Source>
-      <Name>Data\Screens\OptionsScreen</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\OptionsScreen.xnb</Output>
-      <Time>2015-10-20T22:36:45.0358726+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\UI\Bars\ShipHullBar.png</Source>
-      <Name>Sprites\UI\Bars\ShipHullBar</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\ShipHullBar.xnb</Output>
-      <Time>2015-10-20T22:36:45.0408759+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\UI\Bars\AddOnHullBar.png</Source>
-      <Name>Sprites\UI\Bars\AddOnHullBar</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Bars\AddOnHullBar.xnb</Output>
-      <Time>2015-10-20T22:36:45.0378752+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\GameObjects\Ships\PlayerShips\hii_saari.png</Source>
-      <Name>Sprites\GameObjects\Ships\PlayerShips\hii_saari</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Ships\PlayerShips\hii_saari.xnb</Output>
-      <Time>2015-10-21T21:05:03.4429839+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\GameObjects\Ships\PlayerShips\HiiSaari.xml</Source>
-      <Name>Data\GameObjects\Ships\PlayerShips\HiiSaari</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb</Output>
-      <Time>2015-10-21T21:08:23.3199937+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Abilities\ShipAddOnAbilities\sell.png</Source>
-      <Name>Sprites\Abilities\ShipAddOnAbilities\sell</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\sell.xnb</Output>
-      <Time>2015-10-21T22:33:08.0951763+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Abilities\ShipAddOnAbilities\Sell.xml</Source>
-      <Name>Data\Abilities\ShipAddOnAbilities\Sell</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Sell.xnb</Output>
-      <Time>2015-10-21T22:31:55.7274321+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level1\Wave1.xml</Source>
-      <Name>Data\Waves\Level1\Wave1</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level1\Wave1.xnb</Output>
-      <Time>2015-10-15T00:25:51.1075163+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level1\Wave2.xml</Source>
-      <Name>Data\Waves\Level1\Wave2</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level1\Wave2.xnb</Output>
-      <Time>2015-10-15T00:25:51.1115142+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level1\Wave3.xml</Source>
-      <Name>Data\Waves\Level1\Wave3</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level1\Wave3.xnb</Output>
-      <Time>2015-10-17T11:54:54.2784728+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Screens\LevelScreens\Level1.xml</Source>
-      <Name>Data\Screens\LevelScreens\Level1</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level1.xnb</Output>
-      <Time>2015-10-24T10:19:51.889468+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\UI\Mouse\LeftClickMouseIndicator.png</Source>
-      <Name>Sprites\UI\Mouse\LeftClickMouseIndicator</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\Mouse\LeftClickMouseIndicator.xnb</Output>
-      <Time>2015-10-25T20:06:45.6352467+00:00</Time>
-    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>
@@ -853,7 +862,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiegeData\bin\x86\Debug\UnderSiegeData.dll</Key>
-        <Value>2015-10-20T00:24:22.0969663+01:00</Value>
+        <Value>2015-10-25T21:10:37.5413201+00:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

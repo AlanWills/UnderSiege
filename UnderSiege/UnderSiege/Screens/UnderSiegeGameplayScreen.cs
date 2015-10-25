@@ -74,8 +74,6 @@ namespace UnderSiege.Screens
             Enemies = new DictionaryManager<EnemyShip>();
             WaveManager = new WaveManager<EnemyShip>(this);
 
-            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, "Data\\GameObjects\\SpaceStations\\CommandStation", SceneRoot), "Command Station");
-
             HUD = new HUD(this);
             AddScreenUIObject(HUD, "HUD");
         }
@@ -158,6 +156,9 @@ namespace UnderSiege.Screens
 
             GameplayScreenData = AssetManager.GetData<UnderSiegeGameplayScreenData>(DataAsset);
             WaveManager.LoadContent();
+
+
+            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, GameplayScreenData.CommandShipName, SceneRoot), "Command Ship", true);
         }
 
         public override void Initialize()

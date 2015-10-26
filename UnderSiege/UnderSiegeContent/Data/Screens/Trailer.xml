@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
+    <DisplayName>Trailer</DisplayName>
+    <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level2Background</TextureAsset>
+    <BackgroundMusicNames></BackgroundMusicNames>
+    <CommandShipName>Data\GameObjects\SpaceStations\CommandStation</CommandShipName>
+    <WaveNames></WaveNames>
+  </Asset>
+</XnaContent>

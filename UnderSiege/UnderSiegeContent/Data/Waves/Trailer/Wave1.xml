@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DTowerDefenceLibraryData.Waves_Data.WaveData">
+    <DisplayName>Trailer</DisplayName>
+    <TextureAsset></TextureAsset>
+    <EnemyNames>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+    </EnemyNames>
+    <SpawnPoints>
+      -50 -50
+      150 -100
+      350 -100
+      600 -70
+      800 -150
+      1000 -125
+      1500 -110
+    </SpawnPoints>
+    <TimeUntilWave>0</TimeUntilWave>
+    <TimeBetweenEnemySpawns>0</TimeBetweenEnemySpawns>
+  </Asset>
+</XnaContent>

@@ -100,6 +100,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel1.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel2.cs" />
+    <Compile Include="Screens\UnderSiegeTrailer.cs" />
     <Compile Include="Screens\PurchaseShipsScreen.cs" />
     <Compile Include="Screens\UnderSiegeGameplayScreen.cs" />
     <Compile Include="Screens\UnderSiegeGameplayTutorialScreen.cs" />

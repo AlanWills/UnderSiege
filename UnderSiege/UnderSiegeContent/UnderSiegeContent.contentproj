@@ -689,7 +689,13 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Music\Mechanolith.mp3">
+      <Name>Mechanolith</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Sprites\UI\InGameUI\AttackMarker.png">
       <Name>AttackMarker</Name>
@@ -721,6 +727,20 @@
   <ItemGroup>
     <Compile Include="Data\Waves\Level2\Wave3.xml">
       <Name>Wave3</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Screens\Trailer.xml">
+      <Name>Trailer</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Waves\Trailer\Wave1.xml">
+      <Name>Wave1</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>

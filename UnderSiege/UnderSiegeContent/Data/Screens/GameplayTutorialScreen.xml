@@ -7,7 +7,7 @@
       <Item>Dream Raid</Item>
       <Item>Wasteland Overdrive</Item>
     </BackgroundMusicNames>
-    <CommandShipName>Data\GameObjects\SpaceStations\station_small</CommandShipName>
+    <CommandShipName>Data\GameObjects\SpaceStations\CommandStation</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\GameplayTutorial\TutorialScoutWave</Item>
       <Item>Data\Waves\GameplayTutorial\TutorialFirstEnemyWave</Item>

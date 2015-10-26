@@ -4,7 +4,7 @@
     <DisplayName>Level 1</DisplayName>
     <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level1Background</TextureAsset>
     <BackgroundMusicNames></BackgroundMusicNames>
-    <CommandShipName>Data\GameObjects\SpaceStations\station_small</CommandShipName>
+    <CommandShipName>Data\GameObjects\SpaceStations\CommandStation</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\Level1\Wave1</Item>
       <Item>Data\Waves\Level1\Wave2</Item>

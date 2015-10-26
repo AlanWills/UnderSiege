@@ -629,7 +629,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiTanto.xnb</Output>
-      <Time>2015-10-26T21:44:05.1355936+00:00</Time>
+      <Time>2015-10-26T21:46:54.2765939+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\PlayerShips\HiiVanaar.xml</Source>
@@ -638,7 +638,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiVanaar.xnb</Output>
-      <Time>2015-10-26T21:44:32.2418871+00:00</Time>
+      <Time>2015-10-26T21:46:36.7092531+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\GameplayTutorialScreen.xml</Source>
@@ -647,7 +647,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameplayTutorialScreen.xnb</Output>
-      <Time>2015-10-25T21:40:58.2675152+00:00</Time>
+      <Time>2015-10-26T23:07:59.8590695+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\TutorialShips\BushiHonyakiNoWeapons.xml</Source>
@@ -710,7 +710,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb</Output>
-      <Time>2015-10-26T21:44:24.4599147+00:00</Time>
+      <Time>2015-10-26T21:46:33.197293+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Abilities\ShipAddOnAbilities\Sell.xml</Source>
@@ -728,7 +728,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level1.xnb</Output>
-      <Time>2015-10-25T21:41:14.6363866+00:00</Time>
+      <Time>2015-10-26T23:08:08.4197469+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\LevelScreens\Level2.xml</Source>
@@ -746,7 +746,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level2\Wave1.xnb</Output>
-      <Time>2015-10-26T20:56:04.6307875+00:00</Time>
+      <Time>2015-10-26T21:47:40.5527818+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level2\Wave2.xml</Source>
@@ -891,6 +891,34 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\LaserFire.xnb</Output>
       <Time>2015-10-20T00:22:56.2021807+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Mechanolith.mp3</Source>
+      <Name>Music\Mechanolith</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Mechanolith.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Mechanolith.wma</Extra>
+      <Time>2015-10-26T22:18:02.260721+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\Trailer.xml</Source>
+      <Name>Data\Screens\Trailer</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\Trailer.xnb</Output>
+      <Time>2015-10-26T23:22:51.4165217+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Trailer\Wave1.xml</Source>
+      <Name>Data\Waves\Trailer\Wave1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Trailer\Wave1.xnb</Output>
+      <Time>2015-10-26T23:33:43.6861509+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

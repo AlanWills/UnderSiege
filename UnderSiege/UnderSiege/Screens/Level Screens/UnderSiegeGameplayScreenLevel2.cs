@@ -94,7 +94,7 @@ namespace UnderSiege.Screens.Level_Screens
 
         private void endOfLevelCutscene(object sender, EventArgs e)
         {
-            (sender as Script).CanRun = (UnderSiegeGameplayScreen.Allies.GetItem<PlayerShip>("Command Ship").WorldPosition - destPosition).LengthSquared() <= 100;
+            (sender as Script).CanRun = (UnderSiegeGameplayScreen.Allies.GetItem<PlayerShip>("Command Ship").WorldPosition - destPosition).LengthSquared() <= 100 * 100;
         }
 
         #endregion

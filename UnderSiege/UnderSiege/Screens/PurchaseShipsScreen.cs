@@ -71,7 +71,7 @@ namespace UnderSiege.Screens
             Image shipImage = sender as Image;
             PlayerShipData playerShipData = shipImage.StoredObject as PlayerShipData;
 
-            PurchaseShipInfoUI currentShipInfo = UIManager.GetItem<PurchaseShipInfoUI>("Selected Ship Info");
+            PurchaseShipInfoUI currentShipInfo = UIManager.GetObject<PurchaseShipInfoUI>("Selected Ship Info");
             if (currentShipInfo == null)
             {
                 AddScreenUIObject(new PurchaseShipInfoUI(this, playerShipData, new Vector2(Viewport.Width - 150, ScreenCentre.Y), new Vector2(300, Viewport.Height)), "Selected Ship Info", true);

@@ -45,6 +45,16 @@ namespace _2DTowerDefenceEngine.Waves
             }
         }
 
+        public Wave<T> Clone()
+        {
+            Wave<T> wave = new Wave<T>(DataAsset);
+            wave.DataAsset = DataAsset;
+            wave.WaveData = WaveData;
+            wave.Enemies = Enemies;
+
+            return wave;
+        }
+
         #endregion
 
         #region Virtual Methods
@@ -56,7 +66,7 @@ namespace _2DTowerDefenceEngine.Waves
 
             foreach (string enemyDataAsset in WaveData.EnemyNames)
             {
-                if (enemyCounter >= WaveData.EnemyNames.Count / WaveData.SpawnPoints.Count)
+                if (enemyCounter >= Math.Ceiling((float)WaveData.EnemyNames.Count / (float)WaveData.SpawnPoints.Count))
                 {
                     enemyCounter = 0;
                     spawnPointCounter++;

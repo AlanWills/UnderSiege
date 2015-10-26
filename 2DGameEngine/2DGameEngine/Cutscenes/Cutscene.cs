@@ -55,7 +55,7 @@ namespace _2DGameEngine.Cutscenes
         {
             base.HandleInput();
 
-            if (InputHandler.KeyPressed(Keys.Escape))
+            if (InputHandler.KeyPressed(Keys.M))
             {
                 Skip();
             }

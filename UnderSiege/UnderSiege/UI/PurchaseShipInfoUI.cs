@@ -80,7 +80,7 @@ namespace UnderSiege.UI
 
         private void BuyShipEvent(object sender, EventArgs e)
         {
-            Texture2D shipTexture = UIManager.GetItem<Image>("Ship Image").Texture;
+            Texture2D shipTexture = UIManager.GetObject<Image>("Ship Image").Texture;
 
             PurchaseShipsScreen.GameplayScreen.Show();
 

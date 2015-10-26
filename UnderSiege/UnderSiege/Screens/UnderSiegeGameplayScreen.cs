@@ -102,7 +102,7 @@ namespace UnderSiege.Screens
         {
             PlayerShip playerShip = sender as PlayerShip;
 
-            FlashingInGameImage selectedShipUI = InGameUIManager.GetItem<FlashingInGameImage>("Selected Player Ship UI");
+            FlashingInGameImage selectedShipUI = InGameUIManager.GetObject<FlashingInGameImage>("Selected Player Ship UI");
             if (selectedShipUI == null)
             {
                 InGameUIManager.AddObject(new FlashingInGameImage(Vector2.Zero, playerShip.Size, "Sprites\\UI\\Markers\\SelectedShipMarker", playerShip), "Selected Player Ship UI", true);
@@ -114,7 +114,7 @@ namespace UnderSiege.Screens
                 selectedShipUI.Visible = true;
             }
 
-            InGameShipInfo inGameShipInfo = UIManager.GetItem<InGameShipInfo>("Selected Player Ship Info UI");
+            InGameShipInfo inGameShipInfo = UIManager.GetObject<InGameShipInfo>("Selected Player Ship Info UI");
             if (inGameShipInfo == null)
             {
                 InGameShipInfo shipInfo = new InGameShipInfo(playerShip, new Vector2(Viewport.Width - 150, ScreenCentre.Y), new Vector2(300, Viewport.Height), "Sprites\\UI\\Menus\\default", UnderSiegeGameplayScreen.SceneRoot);
@@ -130,7 +130,7 @@ namespace UnderSiege.Screens
         private void RemoveSelectedShipUI(object sender, EventArgs e)
         {
             PlayerShip playerShip = sender as PlayerShip;
-            FlashingInGameImage selectedShipUI = InGameUIManager.GetItem<FlashingInGameImage>("Selected Player Ship UI");
+            FlashingInGameImage selectedShipUI = InGameUIManager.GetObject<FlashingInGameImage>("Selected Player Ship UI");
 
             if (selectedShipUI != null && selectedShipUI.Parent == playerShip)
             {
@@ -138,7 +138,7 @@ namespace UnderSiege.Screens
                 selectedShipUI.Parent = null;
             }
 
-            InGameShipInfo inGameShipInfo = UIManager.GetItem<InGameShipInfo>("Selected Player Ship Info UI");
+            InGameShipInfo inGameShipInfo = UIManager.GetObject<InGameShipInfo>("Selected Player Ship Info UI");
             if (inGameShipInfo != null && inGameShipInfo.PlayerShip == playerShip)
             {
                 // This will automatically hide the UI - see the class
@@ -152,13 +152,14 @@ namespace UnderSiege.Screens
 
         public override void LoadContent(ContentManager content)
         {
+            // We have to do this first so that the ship is added straight away
+            // Otherwise it is not added until after the first update loop has run
+            GameplayScreenData = AssetManager.GetData<UnderSiegeGameplayScreenData>(DataAsset);
+            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, GameplayScreenData.CommandShipName, SceneRoot), "Command Ship");
+
             base.LoadContent(content);
 
-            GameplayScreenData = AssetManager.GetData<UnderSiegeGameplayScreenData>(DataAsset);
             WaveManager.LoadContent();
-
-
-            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, GameplayScreenData.CommandShipName, SceneRoot), "Command Ship", true);
         }
 
         public override void Initialize()

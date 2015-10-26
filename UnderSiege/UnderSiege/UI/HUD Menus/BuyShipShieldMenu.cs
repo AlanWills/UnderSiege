@@ -106,7 +106,7 @@ namespace UnderSiege.UI.HUD_Menus
 
         protected override void CheckForPlaceObjectEvent(object sender, EventArgs e)
         {
-            PurchaseItemUI shipObjectToPurchase = HUD.GameplayScreen.InGameUIManager.GetItem<PurchaseItemUI>("Purchase Object UI");
+            PurchaseItemUI shipObjectToPurchase = HUD.GameplayScreen.InGameUIManager.GetObject<PurchaseItemUI>("Purchase Object UI");
             if (shipObjectToPurchase != null)
             {
                 // This is going to need optimising

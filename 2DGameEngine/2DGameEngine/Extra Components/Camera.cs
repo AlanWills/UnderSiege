@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -60,6 +61,8 @@ namespace _2DGameEngine.Extra_Components
             set;
         }
 
+        public GameObject FocusedObject { get; set; }
+
         private const float zoomIncrement = 0.25f;
 
         #endregion
@@ -93,7 +96,12 @@ namespace _2DGameEngine.Extra_Components
             }
 
             if (CameraMode == CameraMode.Follow)
-                return;
+            {
+                if (FocusedObject != null)
+                {
+                    Position = FocusedObject.WorldPosition - new Vector2(ViewportRectangle.Width, ViewportRectangle.Height) * 0.5f;
+                }
+            }
 
             Vector2 diff = Vector2.Zero;
 

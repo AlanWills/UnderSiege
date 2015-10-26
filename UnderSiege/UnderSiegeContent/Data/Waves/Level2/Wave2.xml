@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DTowerDefenceLibraryData.Waves_Data.WaveData">
+    <DisplayName>Wave 2</DisplayName>
+    <TextureAsset></TextureAsset>
+    <EnemyNames>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+    </EnemyNames>
+    <SpawnPoints>
+      2850 -100
+    </SpawnPoints>
+    <TimeUntilWave>20</TimeUntilWave>
+    <TimeBetweenEnemySpawns>2</TimeBetweenEnemySpawns>
+  </Asset>
+</XnaContent>

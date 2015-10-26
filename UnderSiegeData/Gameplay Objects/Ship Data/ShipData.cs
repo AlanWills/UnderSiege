@@ -22,6 +22,12 @@ namespace UnderSiegeData.Gameplay_Objects
             set;
         }
 
+        public float Mass
+        {
+            get;
+            set;
+        }
+
         public int Price
         {
             get;

@@ -13,6 +13,6 @@
       <Item>Sell</Item>
     </Abilities>
     <EngineSoundAsset>LightThruster</EngineSoundAsset>
-    <Thrust>200</Thrust>
+    <Thrust>1000</Thrust>
   </Asset>
 </XnaContent>

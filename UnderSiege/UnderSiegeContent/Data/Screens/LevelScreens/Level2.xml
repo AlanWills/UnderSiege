@@ -6,6 +6,9 @@
     <BackgroundMusicNames></BackgroundMusicNames>
     <CommandShipName>Data\GameObjects\Ships\PlayerShips\HiiSaari</CommandShipName>
     <WaveNames>
+      <Item>Data\Waves\Level2\Wave1</Item>
+      <Item>Data\Waves\Level2\Wave2</Item>
+      <Item>Data\Waves\Level2\Wave3</Item>
     </WaveNames>
   </Asset>
 </XnaContent>

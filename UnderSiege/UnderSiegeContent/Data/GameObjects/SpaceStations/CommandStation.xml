@@ -24,6 +24,7 @@
       0 83
     </OtherHardPoints>
     <EngineHardPoints></EngineHardPoints>
+    <Mass>100000</Mass>
     <Price>0</Price>
   </Asset>
 </XnaContent>

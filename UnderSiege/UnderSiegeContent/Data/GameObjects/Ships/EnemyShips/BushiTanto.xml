@@ -14,6 +14,7 @@
     <EngineHardPoints>
       0 147
     </EngineHardPoints>
+    <Mass>30</Mass>
     <Price>650</Price>
     <ShipAddOns>
       <Item>Data\GameObjects\Turrets\SmallSingleLaser</Item>

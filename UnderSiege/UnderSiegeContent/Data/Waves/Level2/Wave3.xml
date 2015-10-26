@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DTowerDefenceLibraryData.Waves_Data.WaveData">
+    <DisplayName>Wave 3</DisplayName>
+    <TextureAsset></TextureAsset>
+    <EnemyNames>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+    </EnemyNames>
+    <SpawnPoints>
+      1000 -500
+      2500 -500
+    </SpawnPoints>
+    <TimeUntilWave>25</TimeUntilWave>
+    <TimeBetweenEnemySpawns>3</TimeBetweenEnemySpawns>
+  </Asset>
+</XnaContent>

@@ -108,8 +108,8 @@ namespace UnderSiege.Gameplay_Objects
                 angleDelta += TotalThrust * 0.01f;
             }
 
-            RigidBody.LinearAcceleration = delta;
-            RigidBody.AngularAcceleration = angleDelta;
+            RigidBody.LinearAcceleration = delta / ShipData.Mass;
+            RigidBody.AngularAcceleration = angleDelta / ShipData.Mass;
         }
 
         public override void DrawInGameUI(SpriteBatch spriteBatch)

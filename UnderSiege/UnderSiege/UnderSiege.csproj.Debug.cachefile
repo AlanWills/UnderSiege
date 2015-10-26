@@ -49,6 +49,8 @@ Content\Sprites\GameObjects\Ships\PlayerShips\hii_saari.xnb
 Content\Sprites\Abilities\ShipAddOnAbilities\sell.xnb
 Content\Sprites\UI\Mouse\LeftClickMouseIndicator.xnb
 Content\Sprites\Backgrounds\LevelBackgrounds\Level2Background.xnb
+Content\Sprites\UI\InGameUI\AttackMarker.xnb
+Content\Sprites\GameObjects\SpaceStations\hyperspace_gate.xnb
 Content\Data\Screens\MainMenuScreen.xnb
 Content\Data\GameObjects\SpaceStations\CommandStation.xnb
 Content\Data\GameObjects\Turrets\DualLaserTurret.xnb
@@ -78,6 +80,9 @@ Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb
 Content\Data\Abilities\ShipAddOnAbilities\Sell.xnb
 Content\Data\Screens\LevelScreens\Level1.xnb
 Content\Data\Screens\LevelScreens\Level2.xnb
+Content\Data\Waves\Level2\Wave1.xnb
+Content\Data\Waves\Level2\Wave2.xnb
+Content\Data\Waves\Level2\Wave3.xnb
 Content\Music\Dream Raid.xnb
 Content\Music\The Fall of Arcana.xnb
 Content\Music\Imminent Threat.xnb

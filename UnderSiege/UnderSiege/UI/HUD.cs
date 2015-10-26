@@ -70,7 +70,7 @@ namespace UnderSiege.UI
 
         public T GetUIObject<T>(string tag) where T : UIObject
         {
-            return UIManager.GetItem<T>(tag);
+            return UIManager.GetObject<T>(tag);
         }
 
         public void DisableAndHideUIObject(string tag)
@@ -128,7 +128,7 @@ namespace UnderSiege.UI
             base.Update(gameTime);
 
             UIManager.Update(gameTime);
-            UIManager.GetItem<Label>("Money UI").Text = "Money: " + Session.Money;
+            UIManager.GetObject<Label>("Money UI").Text = "Money: " + Session.Money;
         }
 
         public override void Draw(SpriteBatch spriteBatch)

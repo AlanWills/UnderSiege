@@ -17,26 +17,26 @@ namespace _2DGameEngine.Cutscenes.Scripts
         #region Properties and Fields
 
         protected DialogBox DialogBox { get; set; }
-        protected Image MouseClickImage { get; private set; }
+        protected Button NextDialogButton { get; private set; }
         
         private static Vector2 defaultPosition;
 
         #endregion
 
-        public AddDialogBoxScript(string text, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)
+        public AddDialogBoxScript(string text, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
             : base(shouldUpdateGame, canRun)
         {
             defaultPosition = new Vector2(ScreenManager.Viewport.Width * 0.75f, ScreenManager.Viewport.Height * 0.75f);
             DialogBox = new DialogBox(text, defaultPosition, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
         }
 
-        public AddDialogBoxScript(string text, Vector2 localPosition, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)
+        public AddDialogBoxScript(string text, Vector2 localPosition, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
             : base(shouldUpdateGame, canRun)
         {
             DialogBox = new DialogBox(text, localPosition, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
         }
 
-        public AddDialogBoxScript(string text, Vector2 localPosition, Vector2 size, bool canRun = true, BaseObject parent = null, float lifeTime = float.MaxValue, bool shouldUpdateGame = false)
+        public AddDialogBoxScript(string text, Vector2 localPosition, Vector2 size, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
             : base(shouldUpdateGame, canRun)
         {
             DialogBox = new DialogBox(text, localPosition, size, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
@@ -53,20 +53,25 @@ namespace _2DGameEngine.Cutscenes.Scripts
             DialogBox.LoadContent();
             DialogBox.Initialize();
 
-            MouseClickImage = new Image("Sprites\\UI\\Mouse\\LeftClickMouseIndicator", DialogBox);
-            MouseClickImage.LoadContent();
-            MouseClickImage.Initialize();
-            MouseClickImage.LocalPosition = new Vector2((DialogBox.Size.X + MouseClickImage.Size.X) * 0.5f + 10, 0);
+            NextDialogButton = new Button(new Vector2(0, DialogBox.Size.Y * 0.5f + 30), new Vector2(100, 30), "Next", DialogBox);
+            NextDialogButton.OnSelect += NextDialogButton_OnSelect;
+            NextDialogButton.LoadContent();
+            NextDialogButton.Initialize();
+        }
+
+        void NextDialogButton_OnSelect(object sender, EventArgs e)
+        {
+            DialogBox.Alive = false;
         }
 
         public override void Run(GameTime gameTime)
         {
             DialogBox.Update(gameTime);
-        }
 
-        public override void CheckShouldUpdateGame()
-        {
-            ShouldUpdateGame = false;
+            if (NextDialogButton != null)
+            {
+                NextDialogButton.Update(gameTime);
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -78,20 +83,25 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             DialogBox.Draw(spriteBatch);
 
-            if (MouseClickImage != null)
+            if (NextDialogButton != null)
             {
-                MouseClickImage.Draw(spriteBatch);
+                NextDialogButton.Draw(spriteBatch);
             }
         }
 
         public override void HandleInput()
         {
             DialogBox.HandleInput();
+
+            if (NextDialogButton != null)
+            {
+                NextDialogButton.HandleInput();
+            }
         }
 
         public override void CheckDone()
         {
-            Done = DialogBox.Alive == false || ScreenManager.GameMouse.IsLeftClicked;
+            Done = DialogBox.Alive == false;
         }
 
         public override void IfDone()
@@ -104,6 +114,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void PerformImmediately()
         {
+            DialogBox.Alive = false;
             Done = true;
         }
 

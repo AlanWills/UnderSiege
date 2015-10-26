@@ -17,6 +17,7 @@ namespace UnderSiege.Waves
         #region Properties and Fields
 
         public bool Paused { get; set; }
+        public bool Continuous { get; set; }
 
         public Queue<Wave<T>> Waves
         {
@@ -100,6 +101,18 @@ namespace UnderSiege.Waves
             else
             {
                 CurrentWave = null;
+            }
+
+            if (Continuous)
+            {
+                if (Waves.Count == 1)
+                {
+                    //Waves.Enqueue(Waves.Peek().Clone());
+                    Wave<T> wave = new Wave<T>(GameplayScreen.GameplayScreenData.WaveNames[GameplayScreen.GameplayScreenData.WaveNames.Count - 1]);
+                    wave.LoadContent();
+                    wave.Initialize();
+                    Waves.Enqueue(wave);
+                }
             }
         }
 

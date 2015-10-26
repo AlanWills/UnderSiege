@@ -145,6 +145,26 @@ namespace _2DGameEngine.Managers
             ObjectsToAdd.Add(tag, objectToAdd);
         }
 
+        public K GetObject<K>(string tag) where K : T
+        {
+            K item = GetItem<K>(tag);
+            if (item == null)
+            {
+                if (ObjectsToAdd.Keys.Contains(tag))
+                {
+                    return (K)ObjectsToAdd.GetItem(tag);
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return item;
+            }
+        }
+
         public virtual void RemoveObject(KeyValuePair<string, T> pair)
         {
             ObjectsToRemove.Add(pair);

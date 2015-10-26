@@ -26,7 +26,7 @@ namespace UnderSiege.Managers
 
         public List<ShipAddOn> ShipEngines
         {
-            get { return Values.Where(x => x.ShipAddOnData.AddOnType == "ShipEngines").ToList(); }
+            get { return Values.Where(x => x.ShipAddOnData.AddOnType == "ShipEngine").ToList(); }
         }
 
         private Ship ParentShip

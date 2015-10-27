@@ -44,7 +44,6 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
             ShipEngineData = AssetManager.GetData<ShipEngineData>(DataAsset);
             Ship parent = Parent as Ship;
-            parent.TotalThrust += ShipEngineData.Thrust;
 
             if (ShipEngineData.EngineSoundAsset != "")
             {
@@ -92,14 +91,6 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             EngineBlaze.Draw(spriteBatch);
 
             base.Draw(spriteBatch);
-        }
-
-        public override void Die()
-        {
-            base.Die();
-
-            Ship parent = Parent as Ship;
-            parent.TotalThrust -= ShipEngineData.Thrust;
         }
 
         #endregion

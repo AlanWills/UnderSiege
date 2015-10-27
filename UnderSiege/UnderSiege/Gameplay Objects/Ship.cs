@@ -39,8 +39,16 @@ namespace UnderSiege.Gameplay_Objects
 
         public float TotalThrust
         {
-            get;
-            set;
+            get
+            {
+                float totalThrust = 0;
+                foreach (ShipEngine engine in ShipAddOns.ShipEngines)
+                {
+                    totalThrust += engine.ShipEngineData.Thrust;
+                }
+
+                return totalThrust;
+            }
         }
 
         public List<Vector2> OtherHardPoints { get; set; }

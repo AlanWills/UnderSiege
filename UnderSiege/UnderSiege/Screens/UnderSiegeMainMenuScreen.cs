@@ -41,12 +41,12 @@ namespace UnderSiege.Screens
 
         private void PlayGame(object sender, EventArgs e)
         {
-            Transition(new UnderSiegeTrailer(ScreenManager));
+            Transition(new UnderSiegeGameplayScreenLevel2(ScreenManager));
         }
 
         private void PlayTutorial(object sender, EventArgs e)
         {
-            Transition(new UnderSiegeGameplayTutorialScreen(ScreenManager, "Data\\Screens\\GameplayTutorialScreen"));
+            Transition(new UnderSiegeGameplayTutorialScreen(ScreenManager));
         }
 
         #endregion

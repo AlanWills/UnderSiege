@@ -17,7 +17,7 @@ namespace UnderSiege.Screens
 
         #endregion
 
-        public UnderSiegeGameplayTutorialScreen(ScreenManager screenManager, string dataAsset)
+        public UnderSiegeGameplayTutorialScreen(ScreenManager screenManager, string dataAsset = "Data\\Screens\\GameplayTutorialScreen")
             : base(screenManager, dataAsset)
         {
             WaveManager.Paused = true;

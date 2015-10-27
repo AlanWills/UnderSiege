@@ -65,7 +65,7 @@ namespace UnderSiege.UI
 
         public UIObject GetUIObject(string tag)
         {
-            return UIManager.GetItem(tag);
+            return UIManager.GetObject<UIObject>(tag);
         }
 
         public T GetUIObject<T>(string tag) where T : UIObject
@@ -75,14 +75,14 @@ namespace UnderSiege.UI
 
         public void DisableAndHideUIObject(string tag)
         {
-            UIObject uiobject = UIManager.GetItem(tag);
+            UIObject uiobject = GetUIObject(tag);
             uiobject.Active = false;
             uiobject.Visible = false;
         }
 
         public void ActivateAndShowUIObject(string tag)
         {
-            UIObject uiobject = UIManager.GetItem(tag);
+            UIObject uiobject = GetUIObject(tag);
             uiobject.Active = true;
             uiobject.Visible = true;
         }

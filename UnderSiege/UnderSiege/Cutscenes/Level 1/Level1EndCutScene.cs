@@ -28,7 +28,7 @@ namespace UnderSiege.Cutscenes
 
         #region Virtual Methods
 
-        protected override void AddScripts()
+        public override void AddScripts()
         {
             AddScript(new WaitScript(5));
             AddScript(new AddDialogBoxScript("Sir, the energy readings have dissipated."));

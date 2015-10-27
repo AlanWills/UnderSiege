@@ -307,7 +307,13 @@ namespace _2DGameEngine.Screens
             UIManager.Initialize();
             InGameUIManager.Initialize();
 
+            AddScripts();
             ScriptManager.LoadAndAddScripts(Content);
+        }
+
+        public virtual void AddScripts()
+        {
+
         }
 
         public virtual void AddMusic(QueueType queueType = QueueType.PlayImmediately)

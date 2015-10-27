@@ -27,7 +27,7 @@ namespace UnderSiege.Cutscenes.Level_2
 
         #region Virtual Methods
 
-        protected override void AddScripts()
+        public override void AddScripts()
         {
             AddScript(new AddDialogBoxScript("Damn.", true, true));
             AddScript(new AddDialogBoxScript("The gate appears to be offline.", true, true));

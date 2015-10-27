@@ -26,7 +26,6 @@ namespace _2DGameEngine.Cutscenes
         {
             IsDone = false;
             GameplayScreen = gameplayScreen;
-            AddScripts();
         }
 
         #region Methods
@@ -35,7 +34,10 @@ namespace _2DGameEngine.Cutscenes
 
         #region Virtual Methods
 
-        protected abstract void AddScripts();
+        public override void AddScripts()
+        {
+
+        }
 
         public override void LoadContent(ContentManager content)
         {

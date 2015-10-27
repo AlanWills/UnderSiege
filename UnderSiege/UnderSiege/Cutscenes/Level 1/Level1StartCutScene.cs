@@ -29,7 +29,7 @@ namespace UnderSiege.Cutscenes
 
         #region Virtual Methods
 
-        protected override void AddScripts()
+        public override void AddScripts()
         {
             AddScript(new AddDialogBoxScript("Sir, this is Lieutenant Drake\nwith your daily report."));
             AddScript(new AddDialogBoxScript("We've had strange energy readings\nall around the sector,\nbut no activity out of the ordinary."));

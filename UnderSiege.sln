@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTowerDefenceLibraryData",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardpointCalculator", "HardpointCalculator\HardpointCalculator\HardpointCalculator.csproj", "{BA30ECD5-FA48-4762-A3C7-4677102D6F98}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "HardpointCalculatorContent", "HardpointCalculator\HardpointCalculatorContent\HardpointCalculatorContent.contentproj", "{499CCC79-B501-485D-9401-0158B617FF49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardpointCalculatorContent", "HardpointCalculator\HardpointCalculatorContent\HardpointCalculatorContent.contentproj", "{499CCC79-B501-485D-9401-0158B617FF49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,8 +62,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

@@ -10,18 +10,24 @@
       <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
       <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
       <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
-      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
     </EnemyNames>
     <SpawnPoints>
       -50 -50
-      150 -100
-      350 -100
-      600 -70
-      800 -150
-      1000 -125
-      1500 -110
+      400 -100
+      800 -100
+      1100 -150
+      1400 -150
+      1700 -110
+      300 1150
+      800 1150
+      0 400
+      0 800
     </SpawnPoints>
-    <TimeUntilWave>0</TimeUntilWave>
-    <TimeBetweenEnemySpawns>0</TimeBetweenEnemySpawns>
+    <TimeUntilWave>3</TimeUntilWave>
+    <TimeBetweenEnemySpawns>2.5</TimeBetweenEnemySpawns>
   </Asset>
 </XnaContent>

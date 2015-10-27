@@ -28,10 +28,8 @@ namespace UnderSiege.Screens.Level_Screens
             WaveManager.Paused = true;
             WaveManager.Continuous = true;
 
-            HUD.GetUIObject<BuyShipEngineMenu>("Buy Engines UI").Active = false;
-            HUD.GetUIObject<BuyShipEngineMenu>("Buy Engines UI").Visible = false;
-            HUD.GetUIObject<Button>("Buy Ships Button").Active = false;
-            HUD.GetUIObject<Button>("Buy Ships Button").Visible = false;
+            HUD.DisableAndHideUIObject("Buy Engines UI");
+            HUD.DisableAndHideUIObject("Buy Ships Button");
         }
 
         #region Methods

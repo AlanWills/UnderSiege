@@ -49,14 +49,6 @@ namespace _2DGameEngine.Abstract_Object_Classes
             CurrentHealth = DamageableGameObjectData.Health;
         }
 
-        public override void Update(GameTime gameTime)
-        {
-            base.Update(gameTime);
-
-            if (CurrentHealth <= 0)
-                Alive = false;
-        }
-
         public virtual void Damage(float damage)
         {
             CurrentHealth -= damage;

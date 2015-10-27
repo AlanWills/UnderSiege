@@ -5,6 +5,8 @@
     <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level2Background</TextureAsset>
     <BackgroundMusicNames></BackgroundMusicNames>
     <CommandShipName>Data\GameObjects\SpaceStations\CommandStation</CommandShipName>
-    <WaveNames></WaveNames>
+    <WaveNames>
+      <Item>Data\Waves\Trailer\Wave1</Item>
+    </WaveNames>
   </Asset>
 </XnaContent>

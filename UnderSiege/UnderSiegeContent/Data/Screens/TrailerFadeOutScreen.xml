@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DGameEngineData.Screen_Data.BaseScreenData">
+    <DisplayName>Fade Out Screen</DisplayName>
+    <TextureAsset>Sprites\Backgrounds\FadeOutScreen</TextureAsset>
+    <BackgroundMusicNames></BackgroundMusicNames>
+  </Asset>
+</XnaContent>

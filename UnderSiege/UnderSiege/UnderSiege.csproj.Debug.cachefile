@@ -99,6 +99,8 @@ Content\SFX\LaserFire.xnb
 Content\Music\Mechanolith.xnb
 Content\Data\Screens\Trailer.xnb
 Content\Data\Waves\Trailer\Wave1.xnb
+Content\Sprites\Backgrounds\FadeOutScreen.xnb
+Content\Data\Screens\TrailerFadeOutScreen.xnb
 Content\Music\Dream Raid.wma
 Content\Music\The Fall of Arcana.wma
 Content\Music\Imminent Threat.wma

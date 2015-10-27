@@ -629,7 +629,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiTanto.xnb</Output>
-      <Time>2015-10-26T21:46:54.2765939+00:00</Time>
+      <Time>2015-10-26T23:58:47.3117367+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\PlayerShips\HiiVanaar.xml</Source>
@@ -909,7 +909,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\Trailer.xnb</Output>
-      <Time>2015-10-26T23:22:51.4165217+00:00</Time>
+      <Time>2015-10-26T23:49:33.8821454+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Trailer\Wave1.xml</Source>
@@ -918,7 +918,25 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Trailer\Wave1.xnb</Output>
-      <Time>2015-10-26T23:33:43.6861509+00:00</Time>
+      <Time>2015-10-27T00:23:22.7301078+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Backgrounds\FadeOutScreen.png</Source>
+      <Name>Sprites\Backgrounds\FadeOutScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\FadeOutScreen.xnb</Output>
+      <Time>2015-10-27T00:07:00.8457537+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\TrailerFadeOutScreen.xml</Source>
+      <Name>Data\Screens\TrailerFadeOutScreen</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\TrailerFadeOutScreen.xnb</Output>
+      <Time>2015-10-27T00:03:13.6002106+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

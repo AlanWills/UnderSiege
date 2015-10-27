@@ -109,3 +109,5 @@ Content\Music\Mechanolith.xnb
 Content\Music\Mechanolith.wma
 Content\Data\Screens\Trailer.xnb
 Content\Data\Waves\Trailer\Wave1.xnb
+Content\Sprites\Backgrounds\FadeOutScreen.xnb
+Content\Data\Screens\TrailerFadeOutScreen.xnb

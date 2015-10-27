@@ -85,7 +85,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
             if (NextDialogButton != null)
             {
-                NextDialogButton.Draw(spriteBatch);
+                //NextDialogButton.Draw(spriteBatch);
             }
         }
 

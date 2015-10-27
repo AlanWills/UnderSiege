@@ -1,6 +1,9 @@
 ﻿using _2DGameEngine.Cutscenes;
 using _2DGameEngine.Cutscenes.Scripts;
 using _2DGameEngine.Managers;
+using _2DGameEngine.Screens;
+using _2DGameEngine.UI_Objects;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +21,7 @@ namespace UnderSiege.Screens
         public UnderSiegeTrailer(ScreenManager screenManager, string dataAsset = "Data\\Screens\\Trailer")
             : base(screenManager, dataAsset)
         {
-            
+            WaveManager.Paused = true;
         }
 
         #region Methods
@@ -32,14 +35,15 @@ namespace UnderSiege.Screens
             base.Initialize();
 
             AddScript(new RunEventScript(WaitUntilAllDefencesBuilt));
+            AddScript(new RunEventScript(ActivateWaveManager));
+            AddScript(new WaitScript(3));
+            AddScript(new AddDialogBoxScript("Multiple hostiles directly off our battle cluster.", true, false, null, 2.0f));
             AddScript(new WaitScript(1, false));
-            AddScript(new AddDialogBoxScript("Multiple hostiles dropping out of hyperspace."));
-            AddScript(new AddDialogBoxScript("There are enemies everywhere!"));
-            AddScript(new AddDialogBoxScript("What do we do sir?"));
+            AddScript(new AddDialogBoxScript("Powering up defence grid.", true, false, null, 2.0f));
             AddScript(new WaitScript(1, false));
-            AddScript(new AddDialogBoxScript("Soldier?"));
-            AddScript(new WaitScript(1, false));
-            AddScript(new AddDialogBoxScript("Shoot."));
+            AddScript(new AddDialogBoxScript("Fire.", true, false, null, 2.0f));
+            AddScript(new WaitScript(30));
+            AddScript(new RunEventScript(FadeOut));
         }
 
         #endregion
@@ -50,6 +54,49 @@ namespace UnderSiege.Screens
         {
             PlayerShip commandStation = Allies.GetItem<PlayerShip>("Command Ship");
             (sender as Script).Done = commandStation.ShipAddOns.Count == (commandStation.ShipData.OtherHardPoints.Count + commandStation.ShipData.EngineHardPoints.Count);
+        }
+
+        private void ActivateWaveManager(object sender, EventArgs e)
+        {
+            HUD.DisableAndHideAll();
+
+            WaveManager.Paused = false;
+            (sender as Script).Done = true;
+        }
+
+        private void FadeOut(object sender, EventArgs e)
+        {
+            Transition(new UnderSiegeTrailerFadeOutScreen(ScreenManager));
+            (sender as Script).Done = true;
+        }
+
+        #endregion
+    }
+
+    public class UnderSiegeTrailerFadeOutScreen : MenuScreen
+    {
+        #region Properties and Fields
+
+        #endregion
+
+        public UnderSiegeTrailerFadeOutScreen(ScreenManager screenManager, string dataAsset = "Data\\Screens\\TrailerFadeOutScreen")
+            : base(screenManager, dataAsset)
+        {
+            
+        }
+
+        #region Methods
+
+        #endregion
+
+        #region Virtual Methods
+
+        public override void Initialize()
+        {
+            base.Initialize();
+
+            AddScript(new AddUIObjectScript(new Label("Looks like we're just getting started...", ScreenCentre, Color.Cyan, null, 5.0f)));
+            AddScript(new AddUIObjectScript(new Label("Under Siege", ScreenCentre, Color.Cyan)));
         }
 
         #endregion

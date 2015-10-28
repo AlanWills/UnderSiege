@@ -3,7 +3,9 @@
   <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
     <DisplayName>Trailer</DisplayName>
     <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level2Background</TextureAsset>
-    <BackgroundMusicNames></BackgroundMusicNames>
+    <BackgroundMusicNames>
+      <Item>Mechanolith</Item>
+    </BackgroundMusicNames>
     <CommandShipName>Data\GameObjects\SpaceStations\CommandStation</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\Trailer\Wave1</Item>

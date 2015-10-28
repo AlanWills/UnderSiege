@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.EnemyShipData">
+    <DisplayName>Bushi Odachi</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Ships\EnemyShips\bushi_odachi</TextureAsset>
+    <Health>1500</Health>
+    <OtherHardPoints>
+      0 -195
+      0 -123
+      0 85
+      0 211
+      -59 -80
+      -57 -42
+      -65 -12
+      -78 13
+      -78 50
+      -65 73
+      -57 103
+      -50 139
+      59 -80
+      57 -42
+      65 -12
+      78 13
+      78 50
+      65 73
+      57 103
+      50 139
+    </OtherHardPoints>
+    <EngineHardPoints>
+      0 240
+      -75 139
+      -50 200
+      75 139
+      50 200
+    </EngineHardPoints>
+    <Mass>150</Mass>
+    <Price>3000</Price>
+    <ShipAddOns>
+      <Item>Data\GameObjects\Turrets\SmallSingleLaser</Item>
+      <Item>Data\GameObjects\Turrets\SmallSingleLaser</Item>
+      <Item>Data\GameObjects\Turrets\SmallSingleLaser</Item>
+      <Item>Data\GameObjects\Turrets\SmallSingleLaser</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Shields\EnergyShield</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Shields\EnergyShield</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Shields\EnergyShield</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Shields\EnergyShield</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Engines\LightThruster</Item>
+      <Item>Data\GameObjects\Engines\LightThruster</Item>
+      <Item>Data\GameObjects\Engines\LightThruster</Item>
+      <Item>Data\GameObjects\Engines\LightThruster</Item>
+      <Item>Data\GameObjects\Engines\LightThruster</Item>
+    </ShipAddOns>
+  </Asset>
+</XnaContent>

@@ -20,7 +20,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         #endregion
 
         public AddOptionsDialogBoxScript(string text, Vector2 localPosition, EventHandler leftButtonEvent, EventHandler rightButtonEvent, string leftButtonText = "Cancel", string rightButtonText = "Confirm", bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(text, localPosition, canRun, shouldUpdateGame, parent, lifeTime)
+            : base(text, localPosition, false, canRun, shouldUpdateGame, parent, lifeTime)
         {
             OptionsDialogBox = new OptionsDialogBox(text, localPosition, leftButtonEvent, rightButtonEvent, leftButtonText, rightButtonText, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
             DialogBox = OptionsDialogBox;
@@ -30,7 +30,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         }
 
         public AddOptionsDialogBoxScript(string text, Vector2 localPosition, Vector2 size, EventHandler leftButtonEvent, EventHandler rightButtonEvent, string leftButtonText = "Cancel", string rightButtonText = "Confirm", bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = float.MaxValue)
-            : base(text, localPosition, size, canRun, shouldUpdateGame, parent, lifeTime)
+            : base(text, localPosition, size, false, canRun, shouldUpdateGame, parent, lifeTime)
         {
             OptionsDialogBox = new OptionsDialogBox(text, localPosition, size, leftButtonEvent, rightButtonEvent, leftButtonText, rightButtonText, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
             DialogBox = OptionsDialogBox;
@@ -44,14 +44,6 @@ namespace _2DGameEngine.Cutscenes.Scripts
         #endregion
 
         #region Virtual Methods
-
-        public override void LoadAndInit(ContentManager content)
-        {
-            base.LoadAndInit(content);
-
-            // Options dialog boxes should not have instruction labels
-            NextDialogButton.Alive = false;
-        }
 
         public override void CheckDone()
         {

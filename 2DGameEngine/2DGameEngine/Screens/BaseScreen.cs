@@ -122,6 +122,8 @@ namespace _2DGameEngine.Screens
         protected TimeSpan transitionTimer;
         protected TimeSpan transitionInterval = TimeSpan.FromSeconds(0.5f);
 
+        private bool Begun = false;
+
         #endregion
 
         public BaseScreen(ScreenManager screenManager, string dataAsset)
@@ -318,16 +320,25 @@ namespace _2DGameEngine.Screens
 
         public virtual void AddMusic(QueueType queueType = QueueType.PlayImmediately)
         {
-            MusicManager.QueueSongs(BaseScreenData.BackgroundMusicNames, queueType);
+            if (BaseScreenData != null)
+            {
+                MusicManager.QueueSongs(BaseScreenData.BackgroundMusicNames, queueType);
+            }
         }
 
         public virtual void Begin()
         {
             AddMusic();
+            Begun = true;
         }
 
         public virtual void Update(GameTime gameTime)
         {
+            if (!Begun)
+            {
+                Begin();
+            }
+
             ScriptManager.LoadAndAddScripts(Content);
             ScriptManager.UpdateScripts(gameTime);
 

@@ -79,6 +79,8 @@
     <Compile Include="Cutscenes\Level 1\Level1EndCutScene.cs" />
     <Compile Include="Cutscenes\Level 2\Level2EndCutScene.cs" />
     <Compile Include="Cutscenes\Level 2\Level2StartCutScene.cs" />
+    <Compile Include="Cutscenes\Level3\Level3EndCutScene.cs" />
+    <Compile Include="Cutscenes\Level3\Level3StartCutScene.cs" />
     <Compile Include="Gameplay Objects\Ship Add Ons\ShipBeamTurret.cs" />
     <Compile Include="Gameplay Objects\Turret Bullets\Beam.cs" />
     <Compile Include="Gameplay Objects\Turret Bullets\Bullet.cs" />
@@ -100,6 +102,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel1.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel2.cs" />
+    <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel3.cs" />
     <Compile Include="Screens\UnderSiegeTrailer.cs" />
     <Compile Include="Screens\PurchaseShipsScreen.cs" />
     <Compile Include="Screens\UnderSiegeGameplayScreen.cs" />
@@ -179,9 +182,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Cutscenes\Scripts\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--

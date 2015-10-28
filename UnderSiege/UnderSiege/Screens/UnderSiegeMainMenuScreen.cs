@@ -41,7 +41,7 @@ namespace UnderSiege.Screens
 
         private void PlayGame(object sender, EventArgs e)
         {
-            Transition(new UnderSiegeGameplayScreenLevel2(ScreenManager));
+            Transition(new UnderSiegeGameplayScreenLevel3(ScreenManager));
         }
 
         private void PlayTutorial(object sender, EventArgs e)

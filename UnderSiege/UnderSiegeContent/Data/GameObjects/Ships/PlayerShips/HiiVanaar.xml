@@ -21,7 +21,7 @@
       -15 120
       15 120
     </EngineHardPoints>
-    <Mass>80</Mass>
+    <Mass>60</Mass>
     <Price>3100</Price>
   </Asset>
 </XnaContent>

@@ -139,7 +139,8 @@ namespace UnderSiege.Gameplay_Objects
             foreach (Ship ship in ships)
             {
                 float length = (ship.WorldPosition - WorldPosition).LengthSquared();
-                if (length <= currentLength)
+                // Add in a buffer amount to stop rapid changing of target
+                if (length + 50 <= currentLength)
                 {
                     target = ship;
                     currentLength = length;

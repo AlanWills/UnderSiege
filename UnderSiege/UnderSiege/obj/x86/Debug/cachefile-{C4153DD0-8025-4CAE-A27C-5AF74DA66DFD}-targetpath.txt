@@ -111,3 +111,11 @@ Content\Data\Screens\Trailer.xnb
 Content\Data\Waves\Trailer\Wave1.xnb
 Content\Sprites\Backgrounds\FadeOutScreen.xnb
 Content\Data\Screens\TrailerFadeOutScreen.xnb
+Content\Sprites\GameObjects\SpaceStations\shipyard.xnb
+Content\Sprites\Backgrounds\LevelBackgrounds\Level3Background.xnb
+Content\Data\Screens\LevelScreens\Level3.xnb
+Content\Data\GameObjects\SpaceStations\Shipyard.xnb
+Content\Sprites\GameObjects\Ships\EnemyShips\bushi_raiu.xnb
+Content\Sprites\GameObjects\Ships\EnemyShips\bushi_odachi.xnb
+Content\Data\GameObjects\Ships\EnemyShips\BushiOdachi.xnb
+Content\Data\Waves\Level3\Wave1.xnb

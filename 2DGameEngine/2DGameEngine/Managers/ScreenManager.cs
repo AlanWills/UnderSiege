@@ -217,14 +217,6 @@ namespace _2DGameEngine.Managers
             }
 
             ScreensToAdd.Clear();
-
-            foreach (BaseScreen screen in Screens)
-            {
-                if (screen.Active)
-                {
-                    screen.Begin();
-                }
-            }
         }
 
         #endregion

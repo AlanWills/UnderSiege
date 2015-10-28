@@ -43,7 +43,8 @@ namespace UnderSiege.Gameplay_Objects
                 if (Target != null)
                     return MathHelper.WrapAngle(Trigonometry.GetAngleOfLineBetweenPositionAndTarget(WorldPosition, Target.WorldPosition) - Parent.WorldRotation);
 
-                return LocalOrientation;
+                //return LocalOrientation;
+                return LocalRotation;
             }
         }
 
@@ -146,7 +147,8 @@ namespace UnderSiege.Gameplay_Objects
             foreach (Ship ship in useEnemies ? UnderSiegeGameplayScreen.Enemies.Values.AsEnumerable<Ship>() : UnderSiegeGameplayScreen.Allies.Values.AsEnumerable<Ship>())
             {
                 float distanceToTargetSquared = (WorldPosition - ship.WorldPosition).LengthSquared();
-                if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared <= currentRangeToTargetSquared)
+                // Add buffer amount of 50 to stop rapid target changing
+                if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared + 50 <= currentRangeToTargetSquared)
                 {
                     // We have a new target
                     target = ship;
@@ -165,7 +167,8 @@ namespace UnderSiege.Gameplay_Objects
                 foreach (ShipAddOn shipAddOn in target.ShipAddOns.Values)
                 {
                     float distanceToTargetSquared = (WorldPosition - shipAddOn.WorldPosition).LengthSquared();
-                    if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared <= currentRangeToTargetSquared)
+                    // Add buffer amount of 50 to stop rapid target changing
+                    if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared + 50 <= currentRangeToTargetSquared)
                     {
                         // We have a new target
                         targetAddOn = shipAddOn;

@@ -23,6 +23,8 @@ namespace UnderSiege.Screens
             WaveManager.Paused = true;
             ScreenManager.Camera.CameraMode = CameraMode.Fixed;
             Camera.Position = new Vector2(ScreenCentre.X * 0.5f, -1000);
+
+            HUD.DisableAndHideAll();
         }
 
         #region Methods
@@ -31,11 +33,9 @@ namespace UnderSiege.Screens
 
         #region Virtual Methods
 
-        public override void Initialize()
+        public override void AddScripts()
         {
- 	        base.Initialize();
-
-            HUD.DisableAndHideAll();
+            base.AddScripts();
 
             AddScript(new AddDialogBoxScript("Welcome, sir.", ScreenCentre));
             AddScript(new AddDialogBoxScript("I am Lieutenant Drake and am in charge of your briefing.", ScreenCentre));
@@ -52,7 +52,7 @@ namespace UnderSiege.Screens
             AddScript(new AddDialogBoxScript("Powering up your tactical overlay.", new Vector2(Viewport.Width * 0.25f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript("This will allow you to issue\ncertain instructions quickly and easily.", new Vector2(Viewport.Width * 0.25f, ScreenCentre.Y)));
             AddScript(new WaitScript(2f, false));
-            AddScript(new AddDialogBoxScript("Overlay command stack 90% complete.", new Vector2(Viewport.Width * 0.25f, ScreenCentre.Y), false, false, null, 3));
+            AddScript(new AddDialogBoxScript("Overlay command stack 90% complete.", new Vector2(Viewport.Width * 0.25f, ScreenCentre.Y), false, false, false, null, 3));
             AddScript(new WaitScript(2f, false));
             AddScript(new AddDialogBoxScript("Overlay fully operational.\nInitialising basic interface.", new Vector2(Viewport.Width * 0.25f, ScreenCentre.Y)));
             AddScript(new AddDialogBoxScript("Click the 'Turrets' button when ready.", new Vector2(Viewport.Width * 0.25f, ScreenCentre.Y)));

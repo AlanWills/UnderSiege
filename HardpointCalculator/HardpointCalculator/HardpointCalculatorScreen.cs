@@ -15,7 +15,7 @@ namespace HardpointCalculator
     {
         #region Properties and Fields
 
-        private string shipAssetName = "Sprites\\Ships\\hii_saari";
+        private string shipAssetName = "Sprites\\Ships\\bushi_odachi";
         private Label positionLabel;
 
         #endregion

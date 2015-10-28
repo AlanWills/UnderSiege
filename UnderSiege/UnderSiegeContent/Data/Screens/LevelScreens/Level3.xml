@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
+    <DisplayName>Level 3</DisplayName>
+    <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level3Background</TextureAsset>
+    <BackgroundMusicNames></BackgroundMusicNames>
+    <CommandShipName>Data\GameObjects\SpaceStations\Shipyard</CommandShipName>
+    <WaveNames>
+      <Item>Data\Waves\Level3\Wave1</Item>
+    </WaveNames>
+  </Asset>
+</XnaContent>

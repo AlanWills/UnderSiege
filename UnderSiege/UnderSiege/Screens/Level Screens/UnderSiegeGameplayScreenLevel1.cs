@@ -31,9 +31,9 @@ namespace UnderSiege.Screens.Level_Screens
 
         #region Virtual Methods
 
-        public override void Initialize()
+        public override void AddScripts()
         {
-            base.Initialize();
+            base.AddScripts();
 
             AddScript(new AddCutsceneScript(new Level1StartCutScene(ScreenManager, "Data\\Screens\\LevelScreens\\Level1", this), this));
 

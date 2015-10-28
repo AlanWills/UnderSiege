@@ -21,13 +21,13 @@ namespace UnderSiege.Cutscenes.Level_2
 
         #endregion
 
-        #region Methods
-
         public Level2StartCutScene(ScreenManager screenManager, string dataAsset, GameplayScreen gameplayScreen)
             : base(screenManager, dataAsset, gameplayScreen)
         {
             
         }
+
+        #region Methods
 
         #endregion
 
@@ -35,6 +35,8 @@ namespace UnderSiege.Cutscenes.Level_2
 
         public override void AddScripts()
         {
+            base.AddScripts();
+
             AddScript(new AddDialogBoxScript("WARNING!"));
             AddScript(new AddDialogBoxScript("Unexpected hyperdrive malfunction."));
             AddScript(new AddDialogBoxScript("Coolant leak detected.\nContainment protocols enacted."));

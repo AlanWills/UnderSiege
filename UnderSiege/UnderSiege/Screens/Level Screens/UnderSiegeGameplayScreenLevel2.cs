@@ -46,9 +46,9 @@ namespace UnderSiege.Screens.Level_Screens
             base.LoadContent(content);
         }
 
-        public override void Initialize()
+        public override void AddScripts()
         {
-            base.Initialize();
+            base.AddScripts();
 
             AddScript(new AddCutsceneScript(new Level2StartCutScene(ScreenManager, "Data\\Screens\\LevelScreens\\Level2", this), this));
 
@@ -62,7 +62,7 @@ namespace UnderSiege.Screens.Level_Screens
             endCutScene.CanRunEvent += endOfLevelCutscene;
             AddScript(endCutScene);
 
-            //AddScript(new TransitionToScreenScript(this, new UnderSiegeGameplayScreenLevel2(ScreenManager)));
+            AddScript(new TransitionToScreenScript(this, new UnderSiegeGameplayScreenLevel3(ScreenManager)));
         }
 
         #endregion

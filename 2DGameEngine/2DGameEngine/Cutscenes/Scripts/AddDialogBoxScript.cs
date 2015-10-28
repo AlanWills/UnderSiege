@@ -18,28 +18,32 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         protected DialogBox DialogBox { get; set; }
         protected Button NextDialogButton { get; private set; }
-        
+        protected Boolean Skippable { get; set; }
+
         private static Vector2 defaultPosition;
 
         #endregion
 
-        public AddDialogBoxScript(string text, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
+        public AddDialogBoxScript(string text, bool skippable = true, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
             : base(shouldUpdateGame, canRun)
         {
             defaultPosition = new Vector2(ScreenManager.Viewport.Width * 0.75f, ScreenManager.Viewport.Height * 0.75f);
             DialogBox = new DialogBox(text, defaultPosition, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
+            Skippable = skippable;
         }
 
-        public AddDialogBoxScript(string text, Vector2 localPosition, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
+        public AddDialogBoxScript(string text, Vector2 localPosition, bool skippable = true, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
             : base(shouldUpdateGame, canRun)
         {
             DialogBox = new DialogBox(text, localPosition, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
+            Skippable = skippable;
         }
 
-        public AddDialogBoxScript(string text, Vector2 localPosition, Vector2 size, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
+        public AddDialogBoxScript(string text, Vector2 localPosition, Vector2 size, bool skippable = true, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
             : base(shouldUpdateGame, canRun)
         {
             DialogBox = new DialogBox(text, localPosition, size, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
+            Skippable = skippable;
         }
 
         #region Methods
@@ -53,10 +57,13 @@ namespace _2DGameEngine.Cutscenes.Scripts
             DialogBox.LoadContent();
             DialogBox.Initialize();
 
-            NextDialogButton = new Button(new Vector2(0, DialogBox.Size.Y * 0.5f + 30), new Vector2(100, 30), "Next", DialogBox);
-            NextDialogButton.OnSelect += NextDialogButton_OnSelect;
-            NextDialogButton.LoadContent();
-            NextDialogButton.Initialize();
+            if (Skippable)
+            {
+                NextDialogButton = new Button(new Vector2(0, DialogBox.Size.Y * 0.5f + 30), new Vector2(100, 30), "Next", DialogBox);
+                NextDialogButton.OnSelect += NextDialogButton_OnSelect;
+                NextDialogButton.LoadContent();
+                NextDialogButton.Initialize();
+            }
         }
 
         void NextDialogButton_OnSelect(object sender, EventArgs e)
@@ -68,7 +75,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             DialogBox.Update(gameTime);
 
-            if (NextDialogButton != null)
+            if (Skippable)
             {
                 NextDialogButton.Update(gameTime);
             }
@@ -83,7 +90,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             DialogBox.Draw(spriteBatch);
 
-            if (NextDialogButton != null)
+            if (Skippable)
             {
                 NextDialogButton.Draw(spriteBatch);
             }
@@ -93,7 +100,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             DialogBox.HandleInput();
 
-            if (NextDialogButton != null)
+            if (Skippable)
             {
                 NextDialogButton.HandleInput();
             }

@@ -30,18 +30,18 @@ namespace UnderSiege.Screens
 
         #region Virtual Methods
 
-        public override void Initialize()
+        public override void AddScripts()
         {
-            base.Initialize();
+            base.AddScripts();
 
             AddScript(new RunEventScript(WaitUntilAllDefencesBuilt));
             AddScript(new RunEventScript(ActivateWaveManager));
             AddScript(new WaitScript(3));
-            AddScript(new AddDialogBoxScript("Multiple hostiles directly off our battle cluster.", true, false, null, 2.0f));
+            AddScript(new AddDialogBoxScript("Multiple hostiles directly off our battle cluster.", false, true, false, null, 2.0f));
             AddScript(new WaitScript(1, false));
-            AddScript(new AddDialogBoxScript("Powering up defence grid.", true, false, null, 2.0f));
+            AddScript(new AddDialogBoxScript("Powering up defence grid.", false, true, false, null, 2.0f));
             AddScript(new WaitScript(1, false));
-            AddScript(new AddDialogBoxScript("Fire.", true, false, null, 2.0f));
+            AddScript(new AddDialogBoxScript("Fire.", false, true, false, null, 2.0f));
             AddScript(new WaitScript(30));
             AddScript(new RunEventScript(FadeOut));
         }

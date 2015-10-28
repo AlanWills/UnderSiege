@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.ShipData">
+    <DisplayName>Shipyard</DisplayName>
+    <TextureAsset>Sprites\GameObjects\SpaceStations\shipyard</TextureAsset>
+    <Health>3000</Health>
+    <OtherHardPoints>
+      -143 -202
+      -37 -218
+      37 -218
+      145 -202
+      -143 167
+      144 166
+      0 191
+    </OtherHardPoints>
+    <EngineHardPoints></EngineHardPoints>
+    <Mass>100000</Mass>
+    <Price>0</Price>
+  </Asset>
+</XnaContent>

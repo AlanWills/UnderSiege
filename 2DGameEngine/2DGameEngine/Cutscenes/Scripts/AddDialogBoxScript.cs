@@ -20,14 +20,13 @@ namespace _2DGameEngine.Cutscenes.Scripts
         protected Button NextDialogButton { get; private set; }
         protected Boolean Skippable { get; set; }
 
-        private static Vector2 defaultPosition;
+        public static Vector2 defaultPosition;
 
         #endregion
 
         public AddDialogBoxScript(string text, bool skippable = true, bool canRun = true, bool shouldUpdateGame = false, BaseObject parent = null, float lifeTime = 7.0f)
             : base(shouldUpdateGame, canRun)
         {
-            defaultPosition = new Vector2(ScreenManager.Viewport.Width * 0.75f, ScreenManager.Viewport.Height * 0.75f);
             DialogBox = new DialogBox(text, defaultPosition, "Sprites\\UI\\Menus\\DialogBox", parent, lifeTime);
             Skippable = skippable;
         }

@@ -119,3 +119,5 @@ Content\Sprites\GameObjects\Ships\EnemyShips\bushi_raiu.xnb
 Content\Sprites\GameObjects\Ships\EnemyShips\bushi_odachi.xnb
 Content\Data\GameObjects\Ships\EnemyShips\BushiOdachi.xnb
 Content\Data\Waves\Level3\Wave1.xnb
+Content\Sprites\Backgrounds\LevelBackgrounds\Level4Background.xnb
+Content\Data\Screens\LevelScreens\Level4.xnb

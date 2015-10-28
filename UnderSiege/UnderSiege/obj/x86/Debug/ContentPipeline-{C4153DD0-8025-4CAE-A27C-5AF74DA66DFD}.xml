@@ -999,7 +999,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiOdachi.xnb</Output>
-      <Time>2015-10-28T00:17:31.6026806+00:00</Time>
+      <Time>2015-10-28T00:19:54.2222368+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level3\Wave1.xml</Source>
@@ -1009,6 +1009,24 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave1.xnb</Output>
       <Time>2015-10-27T23:59:12.0104618+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Backgrounds\LevelBackgrounds\Level4Background.jpg</Source>
+      <Name>Sprites\Backgrounds\LevelBackgrounds\Level4Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\LevelBackgrounds\Level4Background.xnb</Output>
+      <Time>2015-10-28T21:55:20.119433+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\LevelScreens\Level4.xml</Source>
+      <Name>Data\Screens\LevelScreens\Level4</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level4.xnb</Output>
+      <Time>2015-10-28T23:09:42.5003403+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

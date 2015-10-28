@@ -31,6 +31,10 @@ namespace UnderSiege.Cutscenes
 
         public override void AddScripts()
         {
+            base.AddScripts();
+
+            AddDialogBoxScript.defaultPosition = new Vector2(Viewport.Width * 0.75f, Viewport.Height * 0.75f);
+
             AddScript(new AddDialogBoxScript("Sir, this is Lieutenant Drake\nwith your daily report."));
             AddScript(new AddDialogBoxScript("We've had strange energy readings\nall around the sector,\nbut no activity out of the ordinary."));
             AddScript(new AddDialogBoxScript("They are probably just residual trails\nleft from a hyperspace jump."));

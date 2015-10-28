@@ -97,9 +97,9 @@ namespace _2DGameEngine.Screens
         }
 
         // Need this because we've changed the queue type we're passing in
-        public override void AddMusic(QueueType queueType = QueueType.WaitForCurrent)
+        public override void AddMusic(QueueType queueType)
         {
-            base.AddMusic(queueType);
+            base.AddMusic(QueueType.WaitForCurrent);
         }
 
         public override void HandleInput()

@@ -107,8 +107,7 @@ namespace _2DGameEngine.Screens
 
         private void cancelQuitGame(object sender, EventArgs e)
         {
-            Script script = sender as Script;
-            script.Done = true;
+            // The script handles it's Done flag
         }
 
         private void confirmQuitGame(object sender, EventArgs e)

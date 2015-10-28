@@ -81,6 +81,8 @@
     <Compile Include="Cutscenes\Level 2\Level2StartCutScene.cs" />
     <Compile Include="Cutscenes\Level3\Level3EndCutScene.cs" />
     <Compile Include="Cutscenes\Level3\Level3StartCutScene.cs" />
+    <Compile Include="Cutscenes\Level4\Level4EndCutScene.cs" />
+    <Compile Include="Cutscenes\Level4\Level4StartCutScene.cs" />
     <Compile Include="Gameplay Objects\Ship Add Ons\ShipBeamTurret.cs" />
     <Compile Include="Gameplay Objects\Turret Bullets\Beam.cs" />
     <Compile Include="Gameplay Objects\Turret Bullets\Bullet.cs" />
@@ -103,6 +105,7 @@
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel1.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel2.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel3.cs" />
+    <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel4.cs" />
     <Compile Include="Screens\UnderSiegeTrailer.cs" />
     <Compile Include="Screens\PurchaseShipsScreen.cs" />
     <Compile Include="Screens\UnderSiegeGameplayScreen.cs" />

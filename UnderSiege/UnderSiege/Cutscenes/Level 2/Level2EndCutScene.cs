@@ -2,6 +2,7 @@
 using _2DGameEngine.Cutscenes.Scripts;
 using _2DGameEngine.Managers;
 using _2DGameEngine.Screens;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,10 @@ namespace UnderSiege.Cutscenes.Level_2
 
         public override void AddScripts()
         {
+            base.AddScripts();
+
+            AddDialogBoxScript.defaultPosition = new Vector2(Viewport.Width * 0.75f, Viewport.Height * 0.75f);
+
             AddScript(new AddDialogBoxScript("Damn.", true, true));
             AddScript(new AddDialogBoxScript("The gate appears to be offline.", true, true));
             AddScript(new AddDialogBoxScript("Engineering, run a scan and see if we can activate it somehow.", true, true));

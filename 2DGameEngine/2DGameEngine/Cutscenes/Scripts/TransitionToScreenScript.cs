@@ -21,6 +21,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         public TransitionToScreenScript(BaseScreen currentScreen, BaseScreen screenToTransitionTo, bool shouldUpdateGame = false, bool canRun = true)
             : base(shouldUpdateGame, canRun)
         {
+            CurrentScreen = currentScreen;
             ScreenToTransitionTo = screenToTransitionTo;
         }
 

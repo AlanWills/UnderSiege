@@ -9,7 +9,7 @@ using System.Text;
 
 namespace _2DGameEngine.Managers
 {
-    public enum QueueType { PlayImmediately, WaitForCurrent }
+    public enum QueueType { WaitForCurrent, PlayImmediately}
 
     public static class MusicManager
     {

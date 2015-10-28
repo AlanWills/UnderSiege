@@ -69,6 +69,7 @@
     <Compile Include="Cutscenes\ScriptManager.cs" />
     <Compile Include="Cutscenes\Scripts\AddCutsceneScript.cs" />
     <Compile Include="Cutscenes\Scripts\AddDialogBoxScript.cs" />
+    <Compile Include="Cutscenes\Scripts\AddGameObjectToScreenScript.cs" />
     <Compile Include="Cutscenes\Scripts\AddMenuScript.cs" />
     <Compile Include="Cutscenes\Scripts\AddOptionsDialogBoxScript.cs" />
     <Compile Include="Cutscenes\Scripts\AddUIObjectScript.cs" />

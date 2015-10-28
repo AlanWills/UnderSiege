@@ -2,6 +2,7 @@
 using _2DGameEngine.Cutscenes.Scripts;
 using _2DGameEngine.Managers;
 using _2DGameEngine.Screens;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace UnderSiege.Cutscenes.Level3
         public Level3StartCutScene(ScreenManager screenManager, string dataAsset, GameplayScreen gameplayScreen)
             : base(screenManager, dataAsset, gameplayScreen)
         {
-
+            
         }
 
         #region Methods
@@ -32,6 +33,8 @@ namespace UnderSiege.Cutscenes.Level3
         public override void AddScripts()
         {
             base.AddScripts();
+
+            AddDialogBoxScript.defaultPosition = new Vector2(Viewport.Width * 0.75f, Viewport.Height * 0.75f);
 
             AddScript(new AddDialogBoxScript("Captain, we have successfully docked with UNI Shipyard Kantus."));
             AddScript(new AddDialogBoxScript("Excellent, let us commence repairs immediately."));

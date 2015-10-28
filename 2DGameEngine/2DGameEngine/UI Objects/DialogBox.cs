@@ -46,7 +46,7 @@ namespace _2DGameEngine.UI_Objects
             base.Initialize();
 
             Label.Initialize();
-            Opacity = 0.25f;
+            Opacity = 0.75f;
         }
 
         public override void Update(GameTime gameTime)

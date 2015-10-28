@@ -51,6 +51,12 @@ namespace UnderSiege.Screens
             private set;
         }
 
+        public static PlayerShip CommandShip
+        {
+            get;
+            private set;
+        }
+
         public WaveManager<EnemyShip> WaveManager
         {
             get;
@@ -155,7 +161,8 @@ namespace UnderSiege.Screens
             // We have to do this first so that the ship is added straight away
             // Otherwise it is not added until after the first update loop has run
             GameplayScreenData = AssetManager.GetData<UnderSiegeGameplayScreenData>(DataAsset);
-            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, GameplayScreenData.CommandShipName, SceneRoot), "Command Ship");
+            CommandShip = new PlayerShip(ScreenManager.ScreenCentre, GameplayScreenData.CommandShipName, SceneRoot);
+            AddAlliedShip(CommandShip, "Command Ship");
 
             base.LoadContent(content);
 

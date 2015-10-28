@@ -30,6 +30,10 @@ namespace UnderSiege.Cutscenes
 
         public override void AddScripts()
         {
+            base.AddScripts();
+
+            AddDialogBoxScript.defaultPosition = new Vector2(Viewport.Width * 0.75f, Viewport.Height * 0.75f);
+
             AddScript(new WaitScript(5));
             AddScript(new AddDialogBoxScript("Sir, the energy readings have dissipated."));
             AddScript(new AddDialogBoxScript("During the battle, our scientists were able to\ndeciper the information from the scans we performed."));

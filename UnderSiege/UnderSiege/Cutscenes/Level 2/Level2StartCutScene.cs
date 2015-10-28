@@ -37,6 +37,8 @@ namespace UnderSiege.Cutscenes.Level_2
         {
             base.AddScripts();
 
+            AddDialogBoxScript.defaultPosition = new Vector2(Viewport.Width * 0.75f, Viewport.Height * 0.75f);
+
             AddScript(new AddDialogBoxScript("WARNING!"));
             AddScript(new AddDialogBoxScript("Unexpected hyperdrive malfunction."));
             AddScript(new AddDialogBoxScript("Coolant leak detected.\nContainment protocols enacted."));

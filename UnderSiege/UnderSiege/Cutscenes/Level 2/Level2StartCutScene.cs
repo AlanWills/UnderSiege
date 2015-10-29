@@ -47,14 +47,14 @@ namespace UnderSiege.Cutscenes.Level_2
             AddScript(new WaitScript(1));
             AddScript(new AddDialogBoxScript("Attention crew, this is the captain speaking."));
             AddScript(new AddDialogBoxScript("We have experienced a severe problem with our hyperdrive."));
-            AddScript(new AddDialogBoxScript("I am bringing our status up to yellow alert."));
-            AddScript(new AddDialogBoxScript("I don't know what has caused this,\nbut I will attempt to find a solution."));
+            AddScript(new AddDialogBoxScript("I am bringing our status up to yellow alert.", true, true, true));
+            AddScript(new AddDialogBoxScript("I don't know what has caused this,\nbut I will attempt to find a solution.", true, true, true));
             AddScript(new RunEventScript(OnFirstWaveSpawned));
             AddScript(new AddDialogBoxScript("Hostiles!"));
             AddScript(new AddDialogBoxScript("What are they DOING here!"));
             AddScript(new AddDialogBoxScript("Bringing the ship up to red alert.\nEngineering, all power to defence systems."));
             AddScript(new AddDialogBoxScript("Looks like we've got a fight on our hands."));
-            AddScript(new WaitScript(50));
+            AddScript(new WaitScript(90));
             AddScript(new AddDialogBoxScript("Attention crew.", true, true));
             AddScript(new AddDialogBoxScript("Working with an engineering team,\nwe have devised an exit strategy.", true, true));
             AddScript(new AddDialogBoxScript("They are confident that the ship can\nbe outfitted with make-shift thrusters.", true, true));

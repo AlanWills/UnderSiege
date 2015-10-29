@@ -92,7 +92,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             // We don't care what our bullets are called as we will never refer to them by name
             nameCounter++;
             Missile clone = Missile.Clone();
-            clone.RigidBody.LinearVelocity = new Vector2(-30, clone.RigidBody.LinearVelocity.Y);
+            clone.RigidBody.LinearVelocity = new Vector2(-250, clone.RigidBody.LinearVelocity.Y);
             MissileManager.AddObject(clone, "Missile" + nameCounter);
 
             if (FiringSoundEffect != null)

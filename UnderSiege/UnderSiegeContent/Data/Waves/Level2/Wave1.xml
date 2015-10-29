@@ -6,13 +6,12 @@
     <EnemyNames>
       <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
       <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
-      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
     </EnemyNames>
     <SpawnPoints>
       800 2000
       3000 0
     </SpawnPoints>
-    <TimeUntilWave>3</TimeUntilWave>
+    <TimeUntilWave>15</TimeUntilWave>
     <TimeBetweenEnemySpawns>2</TimeBetweenEnemySpawns>
   </Asset>
 </XnaContent>

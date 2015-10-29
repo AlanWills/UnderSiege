@@ -46,6 +46,10 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
             size = new Vector2(Math.Max(size.X, thrust.TextDimensions.X), size.Y + SpriteFont.LineSpacing + padding);
             AddUIObject(thrust, "Engine Thrust");
 
+            ImageAndLabel price = new ImageAndLabel("Sprites\\UI\\Icons\\MoneyIcon", shipEngineData.Price.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), thrust);
+            size = new Vector2(Math.Max(size.X, price.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
+            AddUIObject(price, "Engine Price");
+
             Size = size + new Vector2(padding, padding) * 2;
             LocalPosition += new Vector2(0, -Size.Y * 0.5f);
 

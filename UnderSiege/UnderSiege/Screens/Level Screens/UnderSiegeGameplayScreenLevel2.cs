@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using UnderSiege.Cutscenes.Level_2;
 using UnderSiege.Gameplay_Objects;
+using UnderSiege.Player_Data;
 using UnderSiege.UI.HUD_Menus;
 
 namespace UnderSiege.Screens.Level_Screens
@@ -25,6 +26,7 @@ namespace UnderSiege.Screens.Level_Screens
         public UnderSiegeGameplayScreenLevel2(ScreenManager screenManager)
             : base(screenManager, "Data\\Screens\\LevelScreens\\Level2")
         {
+            Session.Money = 2000;
             WaveManager.Paused = true;
             WaveManager.Continuous = true;
 
@@ -49,6 +51,8 @@ namespace UnderSiege.Screens.Level_Screens
         public override void AddScripts()
         {
             base.AddScripts();
+
+            AddDialogBoxScript.defaultPosition = new Vector2(Viewport.Width * 0.75f, Viewport.Height * 0.75f);
 
             AddScript(new AddCutsceneScript(new Level2StartCutScene(ScreenManager, "Data\\Screens\\LevelScreens\\Level2", this), this));
 
@@ -92,7 +96,7 @@ namespace UnderSiege.Screens.Level_Screens
 
         private void endOfLevelCutscene(object sender, EventArgs e)
         {
-            (sender as Script).CanRun = (UnderSiegeGameplayScreen.Allies.GetItem<PlayerShip>("Command Ship").WorldPosition - destPosition).LengthSquared() <= 100 * 100;
+            (sender as Script).CanRun = (UnderSiegeGameplayScreen.CommandShip.WorldPosition - destPosition).LengthSquared() <= 100 * 100;
         }
 
         #endregion

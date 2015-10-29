@@ -40,7 +40,7 @@ namespace UnderSiege.Cutscenes
             AddScript(new AddDialogBoxScript("They are probably just residual trails\nleft from a hyperspace jump."));
             AddScript(new AddDialogBoxScript("I will make sure we keep monitoring them."));
             AddScript(new AddDialogBoxScript("In the mean time, it would be best to begin\nconstruction on new defences where we can."));
-            AddScript(new WaitScript(15));
+            AddScript(new WaitScript(10));
             AddScript(new AddDialogBoxScript("We have completed analysis on those readings sir."));
             AddScript(new AddDialogBoxScript("They do not appear to be residual energy,\n or any energy waveform that we now of."));
             AddScript(new AddDialogBoxScript("It appears that we are dealing with an unknown phenomena."));

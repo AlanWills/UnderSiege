@@ -7,9 +7,9 @@
       <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
     </EnemyNames>
     <SpawnPoints>
-      2850 -100
+      2150 -100
     </SpawnPoints>
-    <TimeUntilWave>15</TimeUntilWave>
+    <TimeUntilWave>25</TimeUntilWave>
     <TimeBetweenEnemySpawns>2</TimeBetweenEnemySpawns>
   </Asset>
 </XnaContent>

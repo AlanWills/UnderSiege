@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnderSiege.Cutscenes.Level4;
+using UnderSiege.Player_Data;
 
 namespace UnderSiege.Screens.Level_Screens
 {
@@ -17,6 +18,7 @@ namespace UnderSiege.Screens.Level_Screens
         public UnderSiegeGameplayScreenLevel4(ScreenManager screenManager)
             : base(screenManager, "Data\\Screens\\LevelScreens\\Level4")
         {
+            Session.Money = 3000;
             WaveManager.Paused = true;
             WaveManager.Continuous = true;
 
@@ -48,7 +50,7 @@ namespace UnderSiege.Screens.Level_Screens
 
         void endCutScene_CanRunEvent(object sender, EventArgs e)
         {
-            (sender as Script).CanRun = UnderSiegeGameplayScreen.Allies.GetItem("Command Ship").CurrentHealth <= 50;
+            (sender as Script).CanRun = CommandShip.CurrentHealth <= 50;
         }
 
         #endregion

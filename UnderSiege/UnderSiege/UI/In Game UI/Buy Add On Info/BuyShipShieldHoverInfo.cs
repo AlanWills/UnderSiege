@@ -62,6 +62,10 @@ namespace UnderSiege.UI.In_Game_UI.Buy_Add_On_Info
             AddUIObject(rechargePerSecond, "Recharge Per Second", true);
             size = new Vector2(Math.Max(size.X, rechargePerSecond.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
 
+            ImageAndLabel price = new ImageAndLabel("Sprites\\UI\\Icons\\MoneyIcon", shipShieldData.Price.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), rechargePerSecond);
+            size = new Vector2(Math.Max(size.X, price.Dimensions.X), size.Y + SpriteFont.LineSpacing + padding);
+            AddUIObject(price, "Shield Price");
+
             Size = size + new Vector2(padding, padding) * 2;
             LocalPosition += new Vector2(0, -Size.Y * 0.5f);
 

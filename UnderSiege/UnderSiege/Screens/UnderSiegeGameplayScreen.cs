@@ -32,11 +32,11 @@ namespace UnderSiege.Screens
             private set;
         }
 
-        public static Session Session
+        /*public static Session Session
         {
             get;
             private set;
-        }
+        }*/
 
         // Maybe use the Session list instead?  Want public set though
         public static DictionaryManager<PlayerShip> Allies
@@ -46,6 +46,12 @@ namespace UnderSiege.Screens
         }
 
         public static DictionaryManager<EnemyShip> Enemies
+        {
+            get;
+            private set;
+        }
+
+        public static PlayerShip CommandShip
         {
             get;
             private set;
@@ -68,7 +74,7 @@ namespace UnderSiege.Screens
         public UnderSiegeGameplayScreen(ScreenManager screenManager, string dataAsset)
             : base(screenManager, dataAsset)
         {
-            Session = new Session();
+            //Session = new Session();
 
             Allies = new DictionaryManager<PlayerShip>();
             Enemies = new DictionaryManager<EnemyShip>();
@@ -155,7 +161,8 @@ namespace UnderSiege.Screens
             // We have to do this first so that the ship is added straight away
             // Otherwise it is not added until after the first update loop has run
             GameplayScreenData = AssetManager.GetData<UnderSiegeGameplayScreenData>(DataAsset);
-            AddAlliedShip(new PlayerShip(ScreenManager.ScreenCentre, GameplayScreenData.CommandShipName, SceneRoot), "Command Ship");
+            CommandShip = new PlayerShip(ScreenManager.ScreenCentre, GameplayScreenData.CommandShipName, SceneRoot);
+            AddAlliedShip(CommandShip, "Command Ship");
 
             base.LoadContent(content);
 

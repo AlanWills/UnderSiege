@@ -18,6 +18,7 @@ namespace UnderSiege.Gameplay_Objects
 
         public MissileData MissileData { get; private set; }
         public ShipMissileTurret ParentTurret { get; set; }
+        private BaseObject Target { get; set; }
 
         private TimeSpan currentLifeTimer = TimeSpan.FromSeconds(0);
 
@@ -27,6 +28,7 @@ namespace UnderSiege.Gameplay_Objects
             : base(position, dataAsset, GameplayScreen.SceneRoot)
         {
             ParentTurret = parentTurret;
+            Target = ParentTurret.Target;
         }
 
         #region Methods
@@ -84,7 +86,7 @@ namespace UnderSiege.Gameplay_Objects
 
             if (RigidBody.LinearVelocity.X < 0)
             {
-                RigidBody.LinearAcceleration = new Vector2(100, RigidBody.LinearAcceleration.Y);
+                RigidBody.LinearAcceleration = new Vector2(500, RigidBody.LinearAcceleration.Y);
             }
             else
             {
@@ -92,17 +94,21 @@ namespace UnderSiege.Gameplay_Objects
                 RigidBody.LinearAcceleration = new Vector2(0, RigidBody.LinearAcceleration.Y);
             }
 
-            if (ParentTurret.Target != null)
+            if (Target != null && Target.Alive)
             {
-                float angle = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, ParentTurret.Target.WorldPosition);
-                if (Math.Abs(angle - WorldRotation) > 0.1f)
+                float angle = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, Target.WorldPosition);
+                if (Math.Abs(angle - WorldRotation) > 0.05f)
                 {
-                    RigidBody.AngularVelocity = 2; /* * Trigonometry.GetRotateDirectionForShortestRotation(this, TargetShip.WorldPosition);*/
+                    RigidBody.AngularVelocity = 10 * Trigonometry.GetRotateDirectionForShortestRotation(this, Target.WorldPosition);
                 }
                 else
                 {
                     RigidBody.FullAngularStop();
                 }
+            }
+            else
+            {
+                RigidBody.FullAngularStop();
             }
         }
 

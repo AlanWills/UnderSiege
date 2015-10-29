@@ -503,7 +503,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\DualLaserTurret.xnb</Output>
-      <Time>2015-10-21T22:30:24.9623133+01:00</Time>
+      <Time>2015-10-29T22:13:33.9340679+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\LaserBullet.xml</Source>
@@ -539,7 +539,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level1\Wave1.xnb</Output>
-      <Time>2015-10-15T00:25:51.1075163+01:00</Time>
+      <Time>2015-10-29T22:10:57.7579623+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level1\Wave2.xml</Source>
@@ -548,7 +548,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level1\Wave2.xnb</Output>
-      <Time>2015-10-15T00:25:51.1115142+01:00</Time>
+      <Time>2015-10-29T22:11:23.1815013+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level1\Wave3.xml</Source>
@@ -557,7 +557,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level1\Wave3.xnb</Output>
-      <Time>2015-10-17T11:54:54.2784728+01:00</Time>
+      <Time>2015-10-29T22:11:26.3888769+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\PurchaseShipsScreen.xml</Source>
@@ -602,7 +602,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Bullets\TviirMissile.xnb</Output>
-      <Time>2015-10-04T21:27:40.0348397+01:00</Time>
+      <Time>2015-10-29T22:57:45.5470873+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Turrets\SmallSingleLaser.xml</Source>
@@ -629,7 +629,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiTanto.xnb</Output>
-      <Time>2015-10-26T23:58:47.3117367+00:00</Time>
+      <Time>2015-10-29T22:48:33.9776956+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\PlayerShips\HiiVanaar.xml</Source>
@@ -710,7 +710,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb</Output>
-      <Time>2015-10-27T20:28:37.2387955+00:00</Time>
+      <Time>2015-10-29T22:48:40.4133576+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Abilities\ShipAddOnAbilities\Sell.xml</Source>
@@ -746,7 +746,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level2\Wave1.xnb</Output>
-      <Time>2015-10-26T21:47:40.5527818+00:00</Time>
+      <Time>2015-10-29T22:32:41.432971+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level2\Wave2.xml</Source>
@@ -755,7 +755,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level2\Wave2.xnb</Output>
-      <Time>2015-10-27T20:28:05.1887332+00:00</Time>
+      <Time>2015-10-29T22:42:23.1452251+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level2\Wave3.xml</Source>
@@ -764,7 +764,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level2\Wave3.xnb</Output>
-      <Time>2015-10-27T20:28:12.9666915+00:00</Time>
+      <Time>2015-10-29T22:32:56.6227815+00:00</Time>
     </Item>
     <Item>
       <Source>Music\Dream Raid.mp3</Source>

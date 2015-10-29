@@ -5,7 +5,7 @@
     <TextureAsset>Sprites\GameObjects\Turrets\dual_laser_medium</TextureAsset>
     <Health>40</Health>
     <AddOnType>ShipTurret</AddOnType>
-    <Price>400</Price>
+    <Price>350</Price>
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>true</Orientable>
     <Abilities>

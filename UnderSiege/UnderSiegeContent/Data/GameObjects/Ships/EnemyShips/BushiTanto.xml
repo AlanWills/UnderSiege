@@ -7,7 +7,6 @@
     <OtherHardPoints>
       -37 -8
       37 -8
-      0 5
       0 62
       0 105
     </OtherHardPoints>
@@ -17,11 +16,10 @@
     <Mass>19</Mass>
     <Price>650</Price>
     <ShipAddOns>
-      <Item>Data\GameObjects\Turrets\SmallSingleLaser</Item>
-      <Item>Data\GameObjects\Turrets\SmallSingleLaser</Item>
       <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
+      <Item>Data\GameObjects\Turrets\SmallSingleLaser</Item>
       <Item>Data\GameObjects\Shields\EnergyShield</Item>
-      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
       <Item>Data\GameObjects\Engines\LightThruster</Item>
     </ShipAddOns>
   </Asset>

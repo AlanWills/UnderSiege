@@ -4,7 +4,7 @@
     <DisplayName>Tviir Missile</DisplayName>
     <TextureAsset>Sprites\GameObjects\Bullets\TviirMissile</TextureAsset>
     <MaxSpeed>1000</MaxSpeed>
-    <LinearAcceleration>200</LinearAcceleration>
+    <LinearAcceleration>350</LinearAcceleration>
     <BulletLifeTime>3</BulletLifeTime>
   </Asset>
 </XnaContent>

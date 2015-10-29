@@ -47,6 +47,13 @@ namespace UnderSiege.UI
             Collider = new RectangleCollider(this, HardPointDimension, HardPointDimension);
         }
 
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+
+            LocalRotation = -Parent.WorldRotation;
+        }
+
         #endregion
     }
 }

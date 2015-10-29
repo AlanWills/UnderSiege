@@ -35,19 +35,6 @@ namespace UnderSiege.Gameplay_Objects
             }
         }
 
-        public float TargetRotation
-        {
-            get
-            {
-                // Maybe add a clamping thing here
-                if (Target != null)
-                    return MathHelper.WrapAngle(Trigonometry.GetAngleOfLineBetweenPositionAndTarget(WorldPosition, Target.WorldPosition) - Parent.WorldRotation);
-
-                //return LocalOrientation;
-                return LocalRotation;
-            }
-        }
-
         public UIObject TargetingLine { get; private set; }
         protected SoundEffect FiringSoundEffect { get; private set; }
         protected SoundEffectInstance firingSoundEffectInstance;
@@ -115,9 +102,18 @@ namespace UnderSiege.Gameplay_Objects
             if (Target != null)
             {
                 CheckIfDamagedTarget();
-            }
 
-            LocalRotation = MathHelper.Lerp(LocalRotation, TargetRotation, (float)gameTime.ElapsedGameTime.Milliseconds / 300f);
+                // Rotate to target
+                float angle = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, Target.WorldPosition);
+                if (Math.Abs(angle - WorldRotation) > 0.1f)
+                {
+                    RigidBody.AngularVelocity = 10 * Trigonometry.GetRotateDirectionForShortestRotation(this, Target.WorldPosition);
+                }
+                else
+                {
+                    RigidBody.FullAngularStop();
+                }
+            }
        
             FiringArc.Visible = MouseOver || IsSelected;
             FiringArc.Update(gameTime);

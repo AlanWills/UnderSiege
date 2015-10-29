@@ -9,7 +9,7 @@
     <SpawnPoints>
       0 -1000
     </SpawnPoints>
-    <TimeUntilWave>10</TimeUntilWave>
+    <TimeUntilWave>3</TimeUntilWave>
     <TimeBetweenEnemySpawns>2</TimeBetweenEnemySpawns>
   </Asset>
 </XnaContent>

@@ -26,7 +26,6 @@ namespace UnderSiege.Player_Data
 
         public Session()
         {
-            Money = 15000000;
             PlayerShips = new List<PlayerShip>();
         }
 

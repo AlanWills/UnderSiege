@@ -40,8 +40,6 @@ namespace _2DGameEngine.Cutscenes.Scripts
         {
             // Currently have to do this like this, because otherwise it loads EVERYTHING at the start of the first screen and fucks everything up
             ScreenToTransitionTo = (T)Activator.CreateInstance(typeof(T), CurrentScreen.ScreenManager);
-            ScreenToTransitionTo.LoadContent(ScreenManager.Content);
-            ScreenToTransitionTo.Initialize();
             CurrentScreen.Transition(ScreenToTransitionTo);
         }
 

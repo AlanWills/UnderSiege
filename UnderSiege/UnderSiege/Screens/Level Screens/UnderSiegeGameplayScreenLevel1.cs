@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnderSiege.Cutscenes;
+using UnderSiege.Player_Data;
 using UnderSiege.UI.HUD_Menus;
 
 namespace UnderSiege.Screens.Level_Screens
@@ -19,6 +20,7 @@ namespace UnderSiege.Screens.Level_Screens
         public UnderSiegeGameplayScreenLevel1(ScreenManager screenManager)
             : base(screenManager, "Data\\Screens\\LevelScreens\\Level1")
         {
+            Session.Money = 1200;
             WaveManager.Paused = true;
 
             HUD.DisableAndHideUIObject("Buy Engines UI");

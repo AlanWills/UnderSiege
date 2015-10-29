@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using UnderSiege.Cutscenes.Level3;
 using UnderSiege.Gameplay_Objects;
+using UnderSiege.Player_Data;
 
 namespace UnderSiege.Screens.Level_Screens
 {
@@ -22,6 +23,7 @@ namespace UnderSiege.Screens.Level_Screens
         public UnderSiegeGameplayScreenLevel3(ScreenManager screenManager)
             : base(screenManager, "Data\\Screens\\LevelScreens\\Level3")
         {
+            Session.Money = 3000;
             WaveManager.Paused = true;
 
             HUD.DisableAndHideUIObject("Buy Ships Button");
@@ -53,7 +55,7 @@ namespace UnderSiege.Screens.Level_Screens
         {
             base.Initialize();
 
-            Allies.GetItem("Command Ship").LocalPosition = basePosition;
+            CommandShip.LocalPosition = basePosition;
         }
 
         #endregion

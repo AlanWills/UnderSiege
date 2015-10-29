@@ -52,8 +52,7 @@ namespace UnderSiege.Screens
 
         private void WaitUntilAllDefencesBuilt(object sender, EventArgs e)
         {
-            PlayerShip commandStation = Allies.GetItem<PlayerShip>("Command Ship");
-            (sender as Script).Done = commandStation.ShipAddOns.Count == (commandStation.ShipData.OtherHardPoints.Count + commandStation.ShipData.EngineHardPoints.Count);
+            (sender as Script).Done = CommandShip.ShipAddOns.Count == (CommandShip.ShipData.OtherHardPoints.Count + CommandShip.ShipData.EngineHardPoints.Count);
         }
 
         private void ActivateWaveManager(object sender, EventArgs e)

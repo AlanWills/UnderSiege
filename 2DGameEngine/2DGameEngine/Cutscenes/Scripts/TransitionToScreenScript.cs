@@ -15,7 +15,6 @@ namespace _2DGameEngine.Cutscenes.Scripts
         #region Properties and Fields
 
         private BaseScreen CurrentScreen { get; set; }
-        private T ScreenToTransitionTo { get; set; }
 
         #endregion
 
@@ -39,8 +38,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         public override void Run(GameTime gameTime)
         {
             // Currently have to do this like this, because otherwise it loads EVERYTHING at the start of the first screen and fucks everything up
-            ScreenToTransitionTo = (T)Activator.CreateInstance(typeof(T), CurrentScreen.ScreenManager);
-            CurrentScreen.Transition(ScreenToTransitionTo);
+            CurrentScreen.Transition(new LoadingScreen<T>(CurrentScreen.ScreenManager));
         }
 
         public override void CheckShouldUpdateGame()
@@ -70,7 +68,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void PerformImmediately()
         {
-            CurrentScreen.Transition(ScreenToTransitionTo);
+            CurrentScreen.Transition(new LoadingScreen<T>(CurrentScreen.ScreenManager));
         }
 
         #endregion

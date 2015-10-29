@@ -134,3 +134,4 @@ Content\Data\Waves\Level3\Wave8.xnb
 Content\Data\Waves\Level4\Wave1.xnb
 Content\Data\Waves\Level4\Wave2.xnb
 Content\Data\Waves\Level4\Wave3.xnb
+Content\Data\Screens\LoadingScreen.xnb

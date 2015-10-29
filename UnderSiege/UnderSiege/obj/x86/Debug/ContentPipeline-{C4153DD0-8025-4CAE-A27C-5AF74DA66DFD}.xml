@@ -1145,6 +1145,15 @@
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave3.xnb</Output>
       <Time>2015-10-29T00:29:23.4456843+00:00</Time>
     </Item>
+    <Item>
+      <Source>Data\Screens\LoadingScreen.xml</Source>
+      <Name>Data\Screens\LoadingScreen</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LoadingScreen.xnb</Output>
+      <Time>2015-10-29T23:42:29.5705609+00:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>

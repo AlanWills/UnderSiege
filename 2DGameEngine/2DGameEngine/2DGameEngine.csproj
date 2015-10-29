@@ -121,6 +121,7 @@
     <Compile Include="Screens\BaseScreen.cs" />
     <Compile Include="Screens\GameplayScreen.cs" />
     <Compile Include="Screens\GameplayScreenPauseMenu.cs" />
+    <Compile Include="Screens\LoadingScreen.cs" />
     <Compile Include="Screens\MainMenuScreen.cs" />
     <Compile Include="Screens\MenuScreen.cs" />
     <Compile Include="Screens\OptionsScreen.cs" />

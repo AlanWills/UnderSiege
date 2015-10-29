@@ -7,6 +7,15 @@
     <CommandShipName>Data\GameObjects\SpaceStations\Shipyard</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\Level3\Wave1</Item>
+      <Item>Data\Waves\Level3\Wave2</Item>
+      <Item>Data\Waves\Level3\Wave3</Item>
+      <Item>Data\Waves\Level3\Wave4</Item>
+      <Item>Data\Waves\Level3\Wave5</Item>
+      <Item>Data\Waves\Level3\Wave6</Item>
+      <Item>Data\Waves\Level3\Wave7</Item>
+      <Item>Data\Waves\Level3\Wave8</Item>
+      <Item>Data\Waves\Level3\Wave9</Item>
+      <Item>Data\Waves\Level3\Wave10</Item>
     </WaveNames>
   </Asset>
 </XnaContent>

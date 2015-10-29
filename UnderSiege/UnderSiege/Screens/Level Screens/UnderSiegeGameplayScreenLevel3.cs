@@ -23,7 +23,6 @@ namespace UnderSiege.Screens.Level_Screens
             : base(screenManager, dataAsset)
         {
             WaveManager.Paused = true;
-            WaveManager.Continuous = true;
 
             HUD.DisableAndHideUIObject("Buy Ships Button");
 

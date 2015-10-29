@@ -35,6 +35,20 @@ namespace UnderSiege.Cutscenes.Level4
             AddDialogBoxScript.defaultPosition = new Vector2(Viewport.Width * 0.75f, Viewport.Height * 0.25f);
 
             AddScript(new AddDialogBoxScript("Captain, the command ship's hull is critical."));
+            AddScript(new AddDialogBoxScript("We cannot systain any more damage."));
+            AddScript(new AddDialogBoxScript("Shutting down all non-essential subsystems."));
+            AddScript(new WaitScript(2, false));
+            AddScript(new AddDialogBoxScript("Crew of the UNI vessel Saari, I am ordering a ship-wide evacuation."));
+            AddScript(new AddDialogBoxScript("You have just minutes before this vessel will be destroyed."));
+            AddScript(new AddDialogBoxScript("I suggest you make it quick."));
+            AddScript(new WaitScript(1, false));
+            AddScript(new AddDialogBoxScript("I will be staying behind in my duty as captain,\nand will assist you however I can."));
+            AddScript(new AddDialogBoxScript("Good luck."));
+            AddScript(new WaitScript(2, false));
+            AddScript(new AddDialogBoxScript("UNI command, this is the captain of the UNI Saari."));
+            AddScript(new WaitScript(2.5f, false));
+            AddScript(new AddDialogBoxScript("Redoubt has fallen."));
+            AddScript(new WaitScript(2, false));
         }
 
         protected override void CheckIsDone()

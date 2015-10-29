@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <Asset Type="_2DTowerDefenceLibraryData.Waves_Data.WaveData">
-    <DisplayName>Wave 1</DisplayName>
+    <DisplayName>Wave 4</DisplayName>
     <TextureAsset></TextureAsset>
     <EnemyNames>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
       <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
       <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
-      <Item>Data\GameObjects\Ships\EnemyShips\BushiHonyaki</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiOdachi</Item>
     </EnemyNames>
     <SpawnPoints>
-      800 1300
-      400 1300
-      1200 1300
+      -100 500
+      2100 500
     </SpawnPoints>
-    <TimeUntilWave>3</TimeUntilWave>
-    <TimeBetweenEnemySpawns>2</TimeBetweenEnemySpawns>
+    <TimeUntilWave>60</TimeUntilWave>
+    <TimeBetweenEnemySpawns>7</TimeBetweenEnemySpawns>
   </Asset>
 </XnaContent>

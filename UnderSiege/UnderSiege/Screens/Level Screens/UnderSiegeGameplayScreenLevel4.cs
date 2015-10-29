@@ -39,7 +39,7 @@ namespace UnderSiege.Screens.Level_Screens
             endCutScene.CanRunEvent += endCutScene_CanRunEvent;
             AddScript(endCutScene);
 
-            AddScript(new TransitionToScreenScript(this, new UnderSiegeMainMenuScreen(ScreenManager)));
+            AddScript(new TransitionToScreenScript(this, new UnderSiegeCreditsScreen(ScreenManager)));
         }
 
         #endregion

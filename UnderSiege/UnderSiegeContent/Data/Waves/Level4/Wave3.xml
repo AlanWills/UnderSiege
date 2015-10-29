@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DTowerDefenceLibraryData.Waves_Data.WaveData">
+    <DisplayName>Wave 3</DisplayName>
+    <TextureAsset></TextureAsset>
+    <EnemyNames>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiOdachi</Item>
+    </EnemyNames>
+    <SpawnPoints>
+      -100 500
+    </SpawnPoints>
+    <TimeUntilWave>50</TimeUntilWave>
+    <TimeBetweenEnemySpawns>2</TimeBetweenEnemySpawns>
+  </Asset>
+</XnaContent>

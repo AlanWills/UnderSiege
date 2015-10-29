@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DTowerDefenceLibraryData.Waves_Data.WaveData">
+    <DisplayName>Wave 6</DisplayName>
+    <TextureAsset></TextureAsset>
+    <EnemyNames>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiTanto</Item>
+    </EnemyNames>
+    <SpawnPoints>
+      400 1300
+      1300 1300
+      2100 500
+    </SpawnPoints>
+    <TimeUntilWave>60</TimeUntilWave>
+    <TimeBetweenEnemySpawns>9</TimeBetweenEnemySpawns>
+  </Asset>
+</XnaContent>

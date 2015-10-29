@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
-  <Asset Type="UnderSiegeData.Gameplay_Objects.ShipData">
+  <Asset Type="UnderSiegeData.Gameplay_Objects.PlayerShipData">
     <DisplayName>Command Station</DisplayName>
     <TextureAsset>Sprites\GameObjects\SpaceStations\station_small</TextureAsset>
     <Health>1000</Health>

@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Screens;
+﻿using _2DGameEngine.Managers;
+using _2DGameEngine.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,20 +10,19 @@ using System.Text;
 
 namespace _2DGameEngine.Cutscenes.Scripts
 {
-    public class TransitionToScreenScript : Script
+    public class TransitionToScreenScript<T> : Script where T : BaseScreen
     {
         #region Properties and Fields
 
         private BaseScreen CurrentScreen { get; set; }
-        private BaseScreen ScreenToTransitionTo { get; set; }
+        private T ScreenToTransitionTo { get; set; }
 
         #endregion
 
-        public TransitionToScreenScript(BaseScreen currentScreen, BaseScreen screenToTransitionTo, bool shouldUpdateGame = false, bool canRun = true)
+        public TransitionToScreenScript(BaseScreen currentScreen, bool shouldUpdateGame = false, bool canRun = true)
             : base(shouldUpdateGame, canRun)
         {
             CurrentScreen = currentScreen;
-            ScreenToTransitionTo = screenToTransitionTo;
         }
 
         #region Methods
@@ -33,12 +33,15 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void LoadAndInit(ContentManager content)
         {
-            ScreenToTransitionTo.LoadContent(content);
-            ScreenToTransitionTo.Initialize();
+            
         }
 
         public override void Run(GameTime gameTime)
         {
+            // Currently have to do this like this, because otherwise it loads EVERYTHING at the start of the first screen and fucks everything up
+            ScreenToTransitionTo = (T)Activator.CreateInstance(typeof(T), CurrentScreen.ScreenManager);
+            ScreenToTransitionTo.LoadContent(ScreenManager.Content);
+            ScreenToTransitionTo.Initialize();
             CurrentScreen.Transition(ScreenToTransitionTo);
         }
 

@@ -100,7 +100,7 @@ namespace UnderSiege.Gameplay_Objects
                     float angle = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, TargetShip.WorldPosition);
                     if (Math.Abs(angle - WorldRotation) > 0.1f)
                     {
-                        RigidBody.AngularVelocity = TotalThrust * 0.01f / ShipData.Mass; /* * Trigonometry.GetRotateDirectionForShortestRotation(this, TargetShip.WorldPosition);*/
+                        RigidBody.AngularVelocity = Trigonometry.GetRotateDirectionForShortestRotation(this, TargetShip.WorldPosition) * TotalThrust * 0.01f / ShipData.Mass;
                     }
                     else
                     {

@@ -16,8 +16,8 @@ namespace UnderSiege.Screens.Level_Screens
 
         #endregion
 
-        public UnderSiegeGameplayScreenLevel1(ScreenManager screenManager, string dataAsset = "Data\\Screens\\LevelScreens\\Level1")
-            : base(screenManager, dataAsset)
+        public UnderSiegeGameplayScreenLevel1(ScreenManager screenManager)
+            : base(screenManager, "Data\\Screens\\LevelScreens\\Level1")
         {
             WaveManager.Paused = true;
 
@@ -41,7 +41,7 @@ namespace UnderSiege.Screens.Level_Screens
             endCutScene.CanRunEvent += endOfLevelCutscene;
             AddScript(endCutScene);
 
-            AddScript(new TransitionToScreenScript(this, new UnderSiegeGameplayScreenLevel2(ScreenManager)));
+            AddScript(new TransitionToScreenScript<UnderSiegeGameplayScreenLevel2>(this));
         }
 
         #endregion

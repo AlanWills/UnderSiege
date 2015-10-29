@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
-  <Asset Type="UnderSiegeData.Gameplay_Objects.ShipData">
+  <Asset Type="UnderSiegeData.Gameplay_Objects.PlayerShipData">
     <DisplayName>Shipyard</DisplayName>
     <TextureAsset>Sprites\GameObjects\SpaceStations\shipyard</TextureAsset>
     <Health>3000</Health>

@@ -14,8 +14,8 @@ namespace UnderSiege.Screens.Level_Screens
 
         #endregion
 
-        public UnderSiegeGameplayScreenLevel4(ScreenManager screenManager, string dataAsset = "Data\\Screens\\LevelScreens\\Level4")
-            : base(screenManager, dataAsset)
+        public UnderSiegeGameplayScreenLevel4(ScreenManager screenManager)
+            : base(screenManager, "Data\\Screens\\LevelScreens\\Level4")
         {
             WaveManager.Paused = true;
             WaveManager.Continuous = true;
@@ -39,7 +39,7 @@ namespace UnderSiege.Screens.Level_Screens
             endCutScene.CanRunEvent += endCutScene_CanRunEvent;
             AddScript(endCutScene);
 
-            AddScript(new TransitionToScreenScript(this, new UnderSiegeCreditsScreen(ScreenManager)));
+            AddScript(new TransitionToScreenScript<UnderSiegeCreditsScreen>(this));
         }
 
         #endregion
@@ -48,7 +48,7 @@ namespace UnderSiege.Screens.Level_Screens
 
         void endCutScene_CanRunEvent(object sender, EventArgs e)
         {
-            (sender as Script).CanRun = UnderSiegeGameplayScreen.CommandShip.CurrentHealth <= 50;
+            (sender as Script).CanRun = UnderSiegeGameplayScreen.Allies.GetItem("Command Ship").CurrentHealth <= 50;
         }
 
         #endregion

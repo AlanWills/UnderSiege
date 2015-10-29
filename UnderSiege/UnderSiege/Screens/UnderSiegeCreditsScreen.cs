@@ -33,7 +33,7 @@ namespace UnderSiege.Screens
             base.Initialize();
 
             AddScript(new AddUIObjectScript(new Label("To be continued...", ScreenCentre, Color.Cyan, null, 5.0f)));
-            AddScript(new TransitionToScreenScript(this, new UnderSiegeMainMenuScreen(ScreenManager)));
+            AddScript(new TransitionToScreenScript<UnderSiegeMainMenuScreen>(this));
         }
 
         #endregion

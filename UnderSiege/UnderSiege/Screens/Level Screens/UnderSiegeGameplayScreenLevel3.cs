@@ -19,8 +19,8 @@ namespace UnderSiege.Screens.Level_Screens
 
         #endregion
 
-        public UnderSiegeGameplayScreenLevel3(ScreenManager screenManager, string dataAsset = "Data\\Screens\\LevelScreens\\Level3")
-            : base(screenManager, dataAsset)
+        public UnderSiegeGameplayScreenLevel3(ScreenManager screenManager)
+            : base(screenManager, "Data\\Screens\\LevelScreens\\Level3")
         {
             WaveManager.Paused = true;
 

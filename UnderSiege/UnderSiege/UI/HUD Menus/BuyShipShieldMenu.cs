@@ -122,8 +122,15 @@ namespace UnderSiege.UI.HUD_Menus
                                 if (ScreenManager.GameMouse.IsLeftClicked)
                                 {
                                     ShipAddOnData addOnData = shipObjectToPurchase.DataAssetOfObject as ShipAddOnData;
-                                    Session.Money -= addOnData.Price;
-                                    ally.AddShield(hardPoint.HardPoint, addOnData);
+                                    if (Session.Money >= addOnData.Price)
+                                    {
+                                        Session.Money -= addOnData.Price;
+                                        ally.AddShield(hardPoint.HardPoint, addOnData);
+                                    }
+                                    else
+                                    {
+                                        HUD.AddUIObject(new FlashingLabel("Insufficient Money!", new Vector2(0, -(ItemMenu.Size.Y + SpriteFont.LineSpacing) * 0.5f), Color.Red, ItemMenu, 1.5f), "Insufficient Money For Shield Label");
+                                    }
                                 }
 
                                 return;

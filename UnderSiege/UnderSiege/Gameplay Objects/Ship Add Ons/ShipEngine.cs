@@ -88,7 +88,10 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            EngineBlaze.Draw(spriteBatch);
+            if (Visible)
+            {
+                EngineBlaze.Draw(spriteBatch);
+            }
 
             base.Draw(spriteBatch);
         }

@@ -14,14 +14,14 @@ namespace UnderSiege.UI.In_Game_UI
     {
         #region Properties and Fields
 
-        private Ship ParentShip { get; set; }
+        private GameObject MovingObject { get; set; }
 
         #endregion
 
-        public EngineBlaze(Ship parentShip, Vector2 localPosition, Vector2 size, string dataAsset, int framesInX, int framesInY, float timePerFrame, bool isPlaying = false, bool continual = true, BaseObject parent = null)
+        public EngineBlaze(GameObject movingObject, Vector2 localPosition, Vector2 size, string dataAsset, int framesInX, int framesInY, float timePerFrame, bool isPlaying = false, bool continual = true, BaseObject parent = null)
             : base(localPosition, size, dataAsset, framesInX, framesInY, timePerFrame, isPlaying, continual, parent)
         {
-            ParentShip = parentShip;
+            MovingObject = movingObject;
             Object.Opacity = 0;
 
             Active = false;
@@ -37,7 +37,7 @@ namespace UnderSiege.UI.In_Game_UI
         {
             base.Update(gameTime);
 
-            bool valid = ParentShip.RigidBody.LinearVelocity.LengthSquared() > 1f;
+            bool valid = MovingObject.RigidBody.LinearVelocity.LengthSquared() > 1f;
             Active = valid;
 
             if (Active)

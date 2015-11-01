@@ -43,12 +43,6 @@ namespace UnderSiege.Screens
             int counter = 0;
             foreach (PlayerShipData shipData in AssetManager.GetAllData<PlayerShipData>())
             {
-                // If we do not have enough money, do not show the UI
-                if (Session.Money < shipData.Price)
-                {
-                    continue;
-                }
-
                 float currRow = 1 + (counter / columns);
                 float currColumn = 0.5f + counter % columns;
                 // Add these to a menu instead

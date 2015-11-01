@@ -103,6 +103,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Screens\DebugScreen.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel1.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel2.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel3.cs" />

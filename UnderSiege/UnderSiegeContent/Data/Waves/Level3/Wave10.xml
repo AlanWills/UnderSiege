@@ -5,11 +5,15 @@
     <TextureAsset></TextureAsset>
     <EnemyNames>
       <Item>Data\GameObjects\Ships\EnemyShips\BushiOdachi</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiOdachi</Item>
+      <Item>Data\GameObjects\Ships\EnemyShips\BushiOdachi</Item>
     </EnemyNames>
     <SpawnPoints>
       800 1250
+      2000 500
+      2000 1200
     </SpawnPoints>
-    <TimeUntilWave>10</TimeUntilWave>
+    <TimeUntilWave>60</TimeUntilWave>
     <TimeBetweenEnemySpawns>2</TimeBetweenEnemySpawns>
   </Asset>
 </XnaContent>

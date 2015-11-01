@@ -17,8 +17,8 @@
       0 128
       63 128
     </EngineHardPoints>
-    <Mass>50</Mass>
-    <Price>1500</Price>
+    <Mass>40</Mass>
+    <Price>1200</Price>
     <CanBuy>true</CanBuy>
   </Asset>
 </XnaContent>

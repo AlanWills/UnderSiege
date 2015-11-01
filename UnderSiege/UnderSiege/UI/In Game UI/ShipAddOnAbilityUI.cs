@@ -65,7 +65,11 @@ namespace UnderSiege.UI.In_Game_UI
             Image image = sender as Image;
             AddOnAbility ability = image.StoredObject as AddOnAbility;
 
+            ScreenManager.GameMouse.Flush();
             ability.Run();
+
+            Visible = false;
+            Active = false;
         }
 
         #endregion
@@ -83,7 +87,7 @@ namespace UnderSiege.UI.In_Game_UI
             }
             else
             {
-                LocalPosition = Camera.GameToScreenCoords(ParentShipAddOn.WorldPosition) - new Vector2(100, 0);
+                LocalPosition = Camera.GameToScreenCoords(ParentShipAddOn.WorldPosition - new Vector2(100, 0));
                 LocalPosition = new Vector2((float)Math.Max(LocalPosition.X, 100), (float)Math.Max(LocalPosition.Y, 100));
                 
                 foreach (UIObject uiObject in UIManager.Values)

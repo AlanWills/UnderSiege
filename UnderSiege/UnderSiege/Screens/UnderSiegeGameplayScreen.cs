@@ -88,8 +88,8 @@ namespace UnderSiege.Screens
 
         public void AddAlliedShip(PlayerShip ally, string tag, bool load = false, bool linkWithGameObjectManager = true)
         {
-            ally.OnSelect += AddSelectedShipUI;
-            ally.OnDeselect += RemoveSelectedShipUI;
+            //ally.OnSelect += AddSelectedShipUI;
+            //ally.OnDeselect += RemoveSelectedShipUI;
             AddGameObject(ally, tag, load, linkWithGameObjectManager);
             Allies.Add(tag, ally);
         }

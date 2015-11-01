@@ -184,7 +184,7 @@ namespace _2DGameEngine.Extra_Components
 
         public static Vector2 GameToScreenCoords(Vector2 gamePosition)
         {
-            return Position - (Zoom - 1) * ScreenManager.ScreenCentre + ScreenManager.ScreenCentre + (gamePosition - ScreenManager.ScreenCentre) * Zoom;
+            return -Position + (Zoom - 1) * ScreenManager.ScreenCentre + ScreenManager.ScreenCentre + (gamePosition - ScreenManager.ScreenCentre) * Zoom;
         }
 
         #endregion

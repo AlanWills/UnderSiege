@@ -52,7 +52,7 @@ namespace UnderSiege.Screens.Level_Screens
             endCutScene.CanRunEvent += endCutScene_CanRunEvent;
             AddScript(endCutScene);
 
-            //AddScript(new TransitionToScreenScript(this, new UnderSiegeGameplayScreenLevel3(ScreenManager)));
+            AddScript(new TransitionToScreenScript<UnderSiegeGameplayScreenLevel4>(this));
         }
 
         public override void Initialize()
@@ -73,7 +73,7 @@ namespace UnderSiege.Screens.Level_Screens
 
         void endCutScene_CanRunEvent(object sender, EventArgs e)
         {
-            (sender as Script).Done = WaveManager.Waves.Count == 0;
+            (sender as Script).CanRun = WaveManager.Waves.Count == 0;
         }
 
         #endregion

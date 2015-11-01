@@ -66,7 +66,7 @@ namespace UnderSiege.Screens.Level_Screens
             onCommandShipDeath.CanRunEvent += checkCommandShipDead;
             AddScript(onCommandShipDeath);
 
-            AddCutsceneScript endCutScene = new AddCutsceneScript(new Level2EndCutScene(ScreenManager, "Data\\Screens\\LevelScreens\\Level2End", this), this);
+            AddCutsceneScript endCutScene = new AddCutsceneScript(new Level2EndCutScene(ScreenManager, "Data\\Screens\\LevelScreens\\Level2", this), this);
             endCutScene.CanRunEvent += endOfLevelCutscene;
             AddScript(endCutScene);
 

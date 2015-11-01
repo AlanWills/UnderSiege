@@ -34,16 +34,19 @@ namespace UnderSiege.Cutscenes.Level3
 
             AddDialogBoxScript.defaultPosition = new Vector2(Viewport.Width * 0.75f, Viewport.Height * 0.75f);
 
-            AddScript(new AddDialogBoxScript("Bushi dreadnought-class ship detected."));
-            AddScript(new AddDialogBoxScript("We have neither the firepower, nor the craft to deal with such a ship."));
-            AddScript(new AddDialogBoxScript("Captain, we have only one logical choice."));
-            AddScript(new AddDialogBoxScript("We have finished all necessary repairs to your vessel."));
-            AddScript(new AddDialogBoxScript("You should travel to Redoubt, the nearest UNI colony world."));
-            AddScript(new AddDialogBoxScript("It is no doubt the Buthi's next target."));
-            AddScript(new AddDialogBoxScript("The warning you can give them will save the lives of countless innocents."));
-            AddScript(new AddDialogBoxScript("Admiral..."));
-            AddScript(new AddDialogBoxScript("Captain, there is no time to talk about this."));
-            AddScript(new AddDialogBoxScript("Now go!"));
+            AddScript(new WaitScript(5));
+            AddScript(new AddDialogBoxScript("We have analysed the latest Bushi craft.", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("They are extremely powerful dreadnought-class ships.", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("We have neither the firepower, nor the craft to deal with such these vessels.", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("Captain, we have only one logical choice.", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("We have finished all necessary repairs to your vessel.", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("You must travel to Redoubt, the nearest UNI colony world.", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("It is no doubt the Buthi's next target.", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("The warning you can give them will save the lives of countless innocents.", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("Admiral...", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("Captain, there is no time to talk about this.", true, true, true, null, 3.0f));
+            AddScript(new AddDialogBoxScript("Now go!", true, true, true, null, 3.0f));
+            AddScript(new WaitScript(2));
         }
 
         protected override void CheckIsDone()

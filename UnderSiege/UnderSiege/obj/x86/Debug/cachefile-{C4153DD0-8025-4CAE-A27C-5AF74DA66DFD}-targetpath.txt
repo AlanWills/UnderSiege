@@ -51,6 +51,12 @@ Content\Sprites\UI\Mouse\LeftClickMouseIndicator.xnb
 Content\Sprites\Backgrounds\LevelBackgrounds\Level2Background.xnb
 Content\Sprites\UI\InGameUI\AttackMarker.xnb
 Content\Sprites\GameObjects\SpaceStations\hyperspace_gate.xnb
+Content\Sprites\Backgrounds\FadeOutScreen.xnb
+Content\Sprites\Backgrounds\LevelBackgrounds\Level3Background.xnb
+Content\Sprites\GameObjects\SpaceStations\shipyard.xnb
+Content\Sprites\GameObjects\Ships\EnemyShips\bushi_raiu.xnb
+Content\Sprites\GameObjects\Ships\EnemyShips\bushi_odachi.xnb
+Content\Sprites\Backgrounds\LevelBackgrounds\Level4Background.xnb
 Content\Data\Screens\MainMenuScreen.xnb
 Content\Data\GameObjects\SpaceStations\CommandStation.xnb
 Content\Data\GameObjects\Turrets\DualLaserTurret.xnb
@@ -83,6 +89,30 @@ Content\Data\Screens\LevelScreens\Level2.xnb
 Content\Data\Waves\Level2\Wave1.xnb
 Content\Data\Waves\Level2\Wave2.xnb
 Content\Data\Waves\Level2\Wave3.xnb
+Content\Data\Screens\Trailer.xnb
+Content\Data\Waves\Trailer\Wave1.xnb
+Content\Data\Screens\TrailerFadeOutScreen.xnb
+Content\Data\Screens\LevelScreens\Level3.xnb
+Content\Data\GameObjects\SpaceStations\Shipyard.xnb
+Content\Data\GameObjects\Ships\EnemyShips\BushiOdachi.xnb
+Content\Data\Waves\Level3\Wave10.xnb
+Content\Data\Screens\LevelScreens\Level4.xnb
+Content\Data\Waves\Level4\Wave4.xnb
+Content\Data\Waves\Level3\Wave1.xnb
+Content\Data\Waves\Level3\Wave2.xnb
+Content\Data\Waves\Level3\Wave3.xnb
+Content\Data\Waves\Level3\Wave4.xnb
+Content\Data\Waves\Level3\Wave5.xnb
+Content\Data\Waves\Level3\Wave6.xnb
+Content\Data\Waves\Level3\Wave7.xnb
+Content\Data\Waves\Level3\Wave9.xnb
+Content\Data\Waves\Level3\Wave8.xnb
+Content\Data\Waves\Level4\Wave1.xnb
+Content\Data\Waves\Level4\Wave2.xnb
+Content\Data\Waves\Level4\Wave3.xnb
+Content\Data\Screens\LoadingScreen.xnb
+Content\Data\Screens\Debug.xnb
+Content\Data\Screens\GameOverScreen.xnb
 Content\Music\Dream Raid.xnb
 Content\Music\Dream Raid.wma
 Content\Music\The Fall of Arcana.xnb
@@ -101,38 +131,9 @@ Content\Music\Assimilator.xnb
 Content\Music\Assimilator.wma
 Content\Music\Orbital Colossus.xnb
 Content\Music\Orbital Colossus.wma
+Content\Music\Mechanolith.xnb
+Content\Music\Mechanolith.wma
 Content\SFX\ButtonHover.xnb
 Content\SFX\ButtonPressedSound.xnb
 Content\SFX\LightThruster.xnb
 Content\SFX\LaserFire.xnb
-Content\Music\Mechanolith.xnb
-Content\Music\Mechanolith.wma
-Content\Data\Screens\Trailer.xnb
-Content\Data\Waves\Trailer\Wave1.xnb
-Content\Sprites\Backgrounds\FadeOutScreen.xnb
-Content\Data\Screens\TrailerFadeOutScreen.xnb
-Content\Sprites\GameObjects\SpaceStations\shipyard.xnb
-Content\Sprites\Backgrounds\LevelBackgrounds\Level3Background.xnb
-Content\Data\Screens\LevelScreens\Level3.xnb
-Content\Data\GameObjects\SpaceStations\Shipyard.xnb
-Content\Sprites\GameObjects\Ships\EnemyShips\bushi_raiu.xnb
-Content\Sprites\GameObjects\Ships\EnemyShips\bushi_odachi.xnb
-Content\Data\GameObjects\Ships\EnemyShips\BushiOdachi.xnb
-Content\Data\Waves\Level3\Wave1.xnb
-Content\Sprites\Backgrounds\LevelBackgrounds\Level4Background.xnb
-Content\Data\Screens\LevelScreens\Level4.xnb
-Content\Data\Waves\Level3\Wave10.xnb
-Content\Data\Waves\Level4\Wave4.xnb
-Content\Data\Waves\Level3\Wave2.xnb
-Content\Data\Waves\Level3\Wave3.xnb
-Content\Data\Waves\Level3\Wave4.xnb
-Content\Data\Waves\Level3\Wave5.xnb
-Content\Data\Waves\Level3\Wave6.xnb
-Content\Data\Waves\Level3\Wave7.xnb
-Content\Data\Waves\Level3\Wave9.xnb
-Content\Data\Waves\Level3\Wave8.xnb
-Content\Data\Waves\Level4\Wave1.xnb
-Content\Data\Waves\Level4\Wave2.xnb
-Content\Data\Waves\Level4\Wave3.xnb
-Content\Data\Screens\LoadingScreen.xnb
-Content\Data\Screens\Debug.xnb

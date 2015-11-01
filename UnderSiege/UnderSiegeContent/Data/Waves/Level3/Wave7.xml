@@ -16,7 +16,7 @@
       2100 500
       2100 700
     </SpawnPoints>
-    <TimeUntilWave>40</TimeUntilWave>
+    <TimeUntilWave>50</TimeUntilWave>
     <TimeBetweenEnemySpawns>2</TimeBetweenEnemySpawns>
   </Asset>
 </XnaContent>

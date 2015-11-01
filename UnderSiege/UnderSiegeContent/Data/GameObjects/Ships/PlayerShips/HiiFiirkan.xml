@@ -9,6 +9,7 @@
     </OtherHardPoints>
     <EngineHardPoints>0 30</EngineHardPoints>
     <Mass>5</Mass>
-    <Price>1000</Price>
+    <Price>500</Price>
+    <CanBuy>true</CanBuy>
   </Asset>
 </XnaContent>

@@ -110,7 +110,7 @@ namespace UnderSiege.Gameplay_Objects
             {
                 SetUpAbilities();
 
-                AbilityUI = new ShipAddOnAbilityUI(new Vector2(100, ScreenManager.ScreenCentre.Y), this);
+                AbilityUI = new ShipAddOnAbilityUI(Vector2.Zero, this);
                 AbilityUI.Active = false;
                 AbilityUI.Visible = false;
                 AbilityUI.LoadContent();

@@ -5,7 +5,7 @@
     <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level1Background</TextureAsset>
     <BackgroundMusicNames>
     </BackgroundMusicNames>
-    <CommandShipName>Data\GameObjects\SpaceStations\CommandStation</CommandShipName>
+    <CommandShipName>Data\GameObjects\Ships\PlayerShips\HiiSaari</CommandShipName>
     <WaveNames></WaveNames>
   </Asset>
 </XnaContent>

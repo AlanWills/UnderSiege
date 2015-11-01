@@ -16,5 +16,6 @@
     <EngineHardPoints></EngineHardPoints>
     <Mass>100000</Mass>
     <Price>0</Price>
+    <CanBuy>false</CanBuy>
   </Asset>
 </XnaContent>

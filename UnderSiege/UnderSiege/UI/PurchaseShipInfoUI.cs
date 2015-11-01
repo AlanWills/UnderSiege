@@ -1,6 +1,7 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
 using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
+using _2DGameEngine.Maths;
 using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -59,9 +60,17 @@ namespace UnderSiege.UI
             ImageAndLabel money = new ImageAndLabel("Sprites\\UI\\Icons\\MoneyIcon", PlayerShipData.Price.ToString(), new Vector2(0, SpriteFont.LineSpacing + padding), shipHull);
             AddUIObject(money, "Ship Price", true);
 
-            Button buyButton = new Button(new Vector2(0, SpriteFont.LineSpacing + Button.defaultTexture.Height * 0.5f + padding), "Buy", money);
-            buyButton.OnSelect += BuyShipEvent;
-            AddUIObject(buyButton, "Buy Ship Button", true);
+            if (Session.Money >= PlayerShipData.Price)
+            {
+                Button buyButton = new Button(new Vector2(0, SpriteFont.LineSpacing + Button.defaultTexture.Height * 0.5f + padding), "Buy", money);
+                buyButton.OnSelect += BuyShipEvent;
+                AddUIObject(buyButton, "Buy Ship Button", true);
+            }
+            else
+            {
+                FlashingLabel insufficientMoney = new FlashingLabel("Insufficient Money", new Vector2(0, 2 * SpriteFont.LineSpacing + padding), Color.Red, money);
+                AddUIObject(insufficientMoney, "Insufficient Money Flashing Label");
+            }
         }
 
         public void UpdateUI(PlayerShipData playerShipData)
@@ -98,7 +107,7 @@ namespace UnderSiege.UI
             {
                 if (ScreenManager.GameMouse.IsLeftClicked)
                 {
-                    PurchaseShipsScreen.GameplayScreen.AddAlliedShip(new PlayerShip(ScreenManager.GameMouse.LastLeftClickedPosition, AssetManager.GetKeyFromData(purchaseShipUI.DataAssetOfObject), UnderSiegeGameplayScreen.SceneRoot), "Ally " + UnderSiegeGameplayScreen.Allies.Values.Count + 1, true);
+                    PurchaseShipsScreen.GameplayScreen.AddAlliedShip(new PlayerShip(ScreenManager.GameMouse.LastLeftClickedPosition, AssetManager.GetKeyFromData(purchaseShipUI.DataAssetOfObject), UnderSiegeGameplayScreen.SceneRoot), "Ally " + MathUtils.GetUniqueTagNumber(), true);
                     Session.Money -= (purchaseShipUI.DataAssetOfObject as PlayerShipData).Price;
                     ResetPurchaseObjectUI();
                 }

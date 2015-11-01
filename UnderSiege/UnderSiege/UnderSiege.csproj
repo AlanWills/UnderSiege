@@ -109,6 +109,7 @@
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel3.cs" />
     <Compile Include="Screens\Level Screens\UnderSiegeGameplayScreenLevel4.cs" />
     <Compile Include="Screens\UnderSiegeCreditsScreen.cs" />
+    <Compile Include="Screens\UnderSiegeGameOverScreen.cs" />
     <Compile Include="Screens\UnderSiegeTrailer.cs" />
     <Compile Include="Screens\PurchaseShipsScreen.cs" />
     <Compile Include="Screens\UnderSiegeGameplayScreen.cs" />

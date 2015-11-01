@@ -674,6 +674,7 @@
       <Name>Level1</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
+      <SubType>Designer</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -931,6 +932,13 @@
   <ItemGroup>
     <Compile Include="Data\Screens\Debug.xml">
       <Name>Debug</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Screens\GameOverScreen.xml">
+      <Name>GameOverScreen</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>

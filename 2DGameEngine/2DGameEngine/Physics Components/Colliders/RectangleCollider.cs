@@ -56,7 +56,7 @@ namespace _2DGameEngine.Physics_Components.Colliders
             float sinRot = (float)Math.Sin(-Bounds.Rotation);
 
             // Change the space so we imagine the bounds being upright and rotated the point accordingly
-            Vector2 newPoint = Bounds.Centre + new Vector2(diff.X * cosRot - diff.Y * sinRot, -diff.X * sinRot + diff.Y * cosRot);
+            Vector2 newPoint = Bounds.Centre + new Vector2(diff.X * cosRot - diff.Y * sinRot, diff.X * sinRot + diff.Y * cosRot);
 
             return _2DGeometry.RectangleContainsPoint(Bounds.Rectangle, newPoint);
         }

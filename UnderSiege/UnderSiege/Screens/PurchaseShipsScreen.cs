@@ -22,7 +22,7 @@ namespace UnderSiege.Screens
         public UnderSiegeGameplayScreen GameplayScreen { get; private set; }
 
         // This DOES determine the number of columns
-        private const int columns = 5;
+        private const int columns = 4;
         // This will not determine the max number of rows - the aim is to keep adding ships then move the camera to see the extra ones
         // This just merely determines the spacing
         private const int rows = 5;
@@ -43,16 +43,19 @@ namespace UnderSiege.Screens
             int counter = 0;
             foreach (PlayerShipData shipData in AssetManager.GetAllData<PlayerShipData>())
             {
-                float currRow = 1 + (counter / columns);
-                float currColumn = 0.5f + counter % columns;
-                // Add these to a menu instead
-                Image objectImage = new Image(new Vector2((Viewport.Width / columns) * currColumn, (Viewport.Height / rows) * currRow), shipData.TextureAsset);
-                objectImage.StoredObject = shipData;
-                objectImage.OnSelect += ShowShipInfo;
+                if (shipData.CanBuy)
+                {
+                    float currRow = 1 + (counter / columns);
+                    float currColumn = 0.5f + counter % columns;
+                    // Add these to a menu instead
+                    Image objectImage = new Image(new Vector2((Viewport.Width / columns) * currColumn, (Viewport.Height / rows) * currRow), shipData.TextureAsset);
+                    objectImage.StoredObject = shipData;
+                    objectImage.OnSelect += ShowShipInfo;
 
-                AddScreenUIObject(objectImage, "Buy " + shipData.DisplayName + " Image", false);
+                    AddScreenUIObject(objectImage, "Buy " + shipData.DisplayName + " Image", false);
 
-                counter++;
+                    counter++;
+                }
             }
         }
 

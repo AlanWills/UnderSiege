@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
 using _2DGameEngine.UI_Objects;
 using Microsoft.Xna.Framework;
@@ -79,6 +80,16 @@ namespace UnderSiege.UI.In_Game_UI
             if (!ParentShipAddOn.ParentShip.AddOnExists(ParentShipAddOn))
             {
                 Alive = false;
+            }
+            else
+            {
+                LocalPosition = Camera.GameToScreenCoords(ParentShipAddOn.WorldPosition) - new Vector2(100, 0);
+                LocalPosition = new Vector2((float)Math.Max(LocalPosition.X, 100), (float)Math.Max(LocalPosition.Y, 100));
+                
+                foreach (UIObject uiObject in UIManager.Values)
+                {
+                    uiObject.Collider.UpdateCollider();
+                }
             }
         }
 

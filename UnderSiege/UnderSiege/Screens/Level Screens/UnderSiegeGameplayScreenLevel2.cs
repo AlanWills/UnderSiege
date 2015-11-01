@@ -19,7 +19,7 @@ namespace UnderSiege.Screens.Level_Screens
     {
         #region Properties and Fields
 
-        public static Vector2 destPosition = new Vector2(5000, -1000);
+        public static Vector2 destPosition = new Vector2(4000, -800);
 
         #endregion
 
@@ -62,6 +62,10 @@ namespace UnderSiege.Screens.Level_Screens
             AddScript(new RunEventScript(AddDestinationMarker));
             AddScript(new AddDialogBoxScript("Direct control of the ship is achievable\nthrough use of the W, A, S, D\nkeys on the interface input.", true, true));
 
+            TransitionToScreenScript<UnderSiegeGameOverScreen<UnderSiegeGameplayScreenLevel1>> onCommandShipDeath = new TransitionToScreenScript<UnderSiegeGameOverScreen<UnderSiegeGameplayScreenLevel1>>(this);
+            onCommandShipDeath.CanRunEvent += checkCommandShipDead;
+            AddScript(onCommandShipDeath);
+
             AddCutsceneScript endCutScene = new AddCutsceneScript(new Level2EndCutScene(ScreenManager, "Data\\Screens\\LevelScreens\\Level2End", this), this);
             endCutScene.CanRunEvent += endOfLevelCutscene;
             AddScript(endCutScene);
@@ -92,6 +96,11 @@ namespace UnderSiege.Screens.Level_Screens
             // Set the camera to now follow the ship
             /*ScreenManager.Camera.FocusedObject = UnderSiegeGameplayScreen.Allies.GetItem<PlayerShip>("Command Ship");
             ScreenManager.Camera.ToggleCameraMode();*/
+        }
+
+        private void checkCommandShipDead(object sender, EventArgs e)
+        {
+            (sender as Script).CanRun = CommandShip.Alive == false;
         }
 
         private void endOfLevelCutscene(object sender, EventArgs e)

@@ -39,6 +39,10 @@ namespace UnderSiege.Screens.Level_Screens
 
             AddScript(new AddCutsceneScript(new Level1StartCutScene(ScreenManager, "Data\\Screens\\LevelScreens\\Level1", this), this));
 
+            TransitionToScreenScript<UnderSiegeGameOverScreen<UnderSiegeGameplayScreenLevel1>> onCommandShipDeath = new TransitionToScreenScript<UnderSiegeGameOverScreen<UnderSiegeGameplayScreenLevel1>>(this);
+            onCommandShipDeath.CanRunEvent += checkCommandShipDead;
+            AddScript(onCommandShipDeath);
+
             AddCutsceneScript endCutScene = new AddCutsceneScript(new Level1EndCutScene(ScreenManager, "Data\\Screens\\LevelScreens\\Level1End", this), this);
             endCutScene.CanRunEvent += endOfLevelCutscene;
             AddScript(endCutScene);
@@ -49,6 +53,11 @@ namespace UnderSiege.Screens.Level_Screens
         #endregion
 
         #region Events
+
+        private void checkCommandShipDead(object sender, EventArgs e)
+        {
+            (sender as Script).CanRun = CommandShip.Alive == false;
+        }
 
         private void endOfLevelCutscene(object sender, EventArgs e)
         {

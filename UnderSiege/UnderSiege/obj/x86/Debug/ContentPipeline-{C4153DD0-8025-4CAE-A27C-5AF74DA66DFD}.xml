@@ -479,6 +479,60 @@
       <Time>2015-10-26T19:51:45.6315004+00:00</Time>
     </Item>
     <Item>
+      <Source>Sprites\Backgrounds\FadeOutScreen.png</Source>
+      <Name>Sprites\Backgrounds\FadeOutScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\FadeOutScreen.xnb</Output>
+      <Time>2015-10-27T00:07:00.8457537+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Backgrounds\LevelBackgrounds\Level3Background.jpg</Source>
+      <Name>Sprites\Backgrounds\LevelBackgrounds\Level3Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\LevelBackgrounds\Level3Background.xnb</Output>
+      <Time>2015-10-27T21:57:40.35356+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\SpaceStations\shipyard.png</Source>
+      <Name>Sprites\GameObjects\SpaceStations\shipyard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\SpaceStations\shipyard.xnb</Output>
+      <Time>2015-10-27T23:34:59.8397871+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\Ships\EnemyShips\bushi_raiu.png</Source>
+      <Name>Sprites\GameObjects\Ships\EnemyShips\bushi_raiu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Ships\EnemyShips\bushi_raiu.xnb</Output>
+      <Time>2015-10-27T23:48:03.0941617+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\Ships\EnemyShips\bushi_odachi.png</Source>
+      <Name>Sprites\GameObjects\Ships\EnemyShips\bushi_odachi</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Ships\EnemyShips\bushi_odachi.xnb</Output>
+      <Time>2015-10-27T23:49:05.0386891+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Backgrounds\LevelBackgrounds\Level4Background.jpg</Source>
+      <Name>Sprites\Backgrounds\LevelBackgrounds\Level4Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\LevelBackgrounds\Level4Background.xnb</Output>
+      <Time>2015-10-28T21:55:20.119433+00:00</Time>
+    </Item>
+    <Item>
       <Source>Data\Screens\MainMenuScreen.xml</Source>
       <Name>Data\Screens\MainMenuScreen</Name>
       <Importer>XmlImporter</Importer>
@@ -494,7 +548,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\SpaceStations\CommandStation.xnb</Output>
-      <Time>2015-10-29T20:12:48.0998421+00:00</Time>
+      <Time>2015-11-01T16:54:25.0572638+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Turrets\DualLaserTurret.xml</Source>
@@ -575,7 +629,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiFiirkan.xnb</Output>
-      <Time>2015-10-26T21:37:16.1733562+00:00</Time>
+      <Time>2015-11-01T17:15:04.9886328+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Engines\LightThruster.xml</Source>
@@ -638,7 +692,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiVanaar.xnb</Output>
-      <Time>2015-10-27T20:28:52.7036406+00:00</Time>
+      <Time>2015-11-01T17:15:16.1422197+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\GameplayTutorialScreen.xml</Source>
@@ -710,7 +764,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb</Output>
-      <Time>2015-10-29T22:48:40.4133576+00:00</Time>
+      <Time>2015-11-01T17:15:10.9328856+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Abilities\ShipAddOnAbilities\Sell.xml</Source>
@@ -765,6 +819,222 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level2\Wave3.xnb</Output>
       <Time>2015-10-29T22:32:56.6227815+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\Trailer.xml</Source>
+      <Name>Data\Screens\Trailer</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\Trailer.xnb</Output>
+      <Time>2015-10-27T23:59:36.0570632+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Trailer\Wave1.xml</Source>
+      <Name>Data\Waves\Trailer\Wave1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Trailer\Wave1.xnb</Output>
+      <Time>2015-10-27T00:23:22.7301078+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\TrailerFadeOutScreen.xml</Source>
+      <Name>Data\Screens\TrailerFadeOutScreen</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\TrailerFadeOutScreen.xnb</Output>
+      <Time>2015-10-27T00:03:13.6002106+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\LevelScreens\Level3.xml</Source>
+      <Name>Data\Screens\LevelScreens\Level3</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level3.xnb</Output>
+      <Time>2015-10-29T00:26:13.0848415+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\GameObjects\SpaceStations\Shipyard.xml</Source>
+      <Name>Data\GameObjects\SpaceStations\Shipyard</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\SpaceStations\Shipyard.xnb</Output>
+      <Time>2015-11-01T16:54:30.507317+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\GameObjects\Ships\EnemyShips\BushiOdachi.xml</Source>
+      <Name>Data\GameObjects\Ships\EnemyShips\BushiOdachi</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiOdachi.xnb</Output>
+      <Time>2015-10-28T00:19:54.2222368+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave10.xml</Source>
+      <Name>Data\Waves\Level3\Wave10</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave10.xnb</Output>
+      <Time>2015-10-29T00:21:26.6248031+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\LevelScreens\Level4.xml</Source>
+      <Name>Data\Screens\LevelScreens\Level4</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level4.xnb</Output>
+      <Time>2015-10-29T00:29:52.5223364+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level4\Wave4.xml</Source>
+      <Name>Data\Waves\Level4\Wave4</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave4.xnb</Output>
+      <Time>2015-10-29T00:30:52.3804427+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave1.xml</Source>
+      <Name>Data\Waves\Level3\Wave1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave1.xnb</Output>
+      <Time>2015-10-29T00:21:17.4726355+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave2.xml</Source>
+      <Name>Data\Waves\Level3\Wave2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave2.xnb</Output>
+      <Time>2015-11-01T16:46:32.4235743+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave3.xml</Source>
+      <Name>Data\Waves\Level3\Wave3</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave3.xnb</Output>
+      <Time>2015-11-01T16:46:37.9588212+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave4.xml</Source>
+      <Name>Data\Waves\Level3\Wave4</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave4.xnb</Output>
+      <Time>2015-11-01T16:46:44.671446+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave5.xml</Source>
+      <Name>Data\Waves\Level3\Wave5</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave5.xnb</Output>
+      <Time>2015-10-29T00:23:03.7344844+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave6.xml</Source>
+      <Name>Data\Waves\Level3\Wave6</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave6.xnb</Output>
+      <Time>2015-11-01T16:46:53.0893971+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave7.xml</Source>
+      <Name>Data\Waves\Level3\Wave7</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave7.xnb</Output>
+      <Time>2015-11-01T16:47:13.0754426+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave9.xml</Source>
+      <Name>Data\Waves\Level3\Wave9</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave9.xnb</Output>
+      <Time>2015-10-29T00:25:13.2907054+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level3\Wave8.xml</Source>
+      <Name>Data\Waves\Level3\Wave8</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave8.xnb</Output>
+      <Time>2015-10-29T00:24:22.8910211+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level4\Wave1.xml</Source>
+      <Name>Data\Waves\Level4\Wave1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave1.xnb</Output>
+      <Time>2015-10-29T00:29:31.1454916+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level4\Wave2.xml</Source>
+      <Name>Data\Waves\Level4\Wave2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave2.xnb</Output>
+      <Time>2015-10-29T00:29:27.2187534+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Waves\Level4\Wave3.xml</Source>
+      <Name>Data\Waves\Level4\Wave3</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave3.xnb</Output>
+      <Time>2015-10-29T00:29:23.4456843+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\LoadingScreen.xml</Source>
+      <Name>Data\Screens\LoadingScreen</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LoadingScreen.xnb</Output>
+      <Time>2015-10-29T23:42:29.5705609+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\Debug.xml</Source>
+      <Name>Data\Screens\Debug</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\Debug.xnb</Output>
+      <Time>2015-11-01T17:18:06.2459826+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Screens\GameOverScreen.xml</Source>
+      <Name>Data\Screens\GameOverScreen</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\GameOverScreen.xnb</Output>
+      <Time>2015-11-01T16:23:18.0496404+00:00</Time>
     </Item>
     <Item>
       <Source>Music\Dream Raid.mp3</Source>
@@ -857,6 +1127,16 @@
       <Time>2015-10-19T22:01:13.2111814+01:00</Time>
     </Item>
     <Item>
+      <Source>Music\Mechanolith.mp3</Source>
+      <Name>Music\Mechanolith</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Mechanolith.xnb</Output>
+      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Mechanolith.wma</Extra>
+      <Time>2015-10-26T22:18:02.260721+00:00</Time>
+    </Item>
+    <Item>
       <Source>SFX\ButtonHover.wav</Source>
       <Name>SFX\ButtonHover</Name>
       <Importer>WavImporter</Importer>
@@ -892,277 +1172,6 @@
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\LaserFire.xnb</Output>
       <Time>2015-10-20T00:22:56.2021807+01:00</Time>
     </Item>
-    <Item>
-      <Source>Music\Mechanolith.mp3</Source>
-      <Name>Music\Mechanolith</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Mechanolith.xnb</Output>
-      <Extra>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Music\Mechanolith.wma</Extra>
-      <Time>2015-10-26T22:18:02.260721+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Screens\Trailer.xml</Source>
-      <Name>Data\Screens\Trailer</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\Trailer.xnb</Output>
-      <Time>2015-10-27T23:59:36.0570632+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Trailer\Wave1.xml</Source>
-      <Name>Data\Waves\Trailer\Wave1</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Trailer\Wave1.xnb</Output>
-      <Time>2015-10-27T00:23:22.7301078+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Backgrounds\FadeOutScreen.png</Source>
-      <Name>Sprites\Backgrounds\FadeOutScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\FadeOutScreen.xnb</Output>
-      <Time>2015-10-27T00:07:00.8457537+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Screens\TrailerFadeOutScreen.xml</Source>
-      <Name>Data\Screens\TrailerFadeOutScreen</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\TrailerFadeOutScreen.xnb</Output>
-      <Time>2015-10-27T00:03:13.6002106+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\GameObjects\SpaceStations\shipyard.png</Source>
-      <Name>Sprites\GameObjects\SpaceStations\shipyard</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\SpaceStations\shipyard.xnb</Output>
-      <Time>2015-10-27T23:34:59.8397871+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Backgrounds\LevelBackgrounds\Level3Background.jpg</Source>
-      <Name>Sprites\Backgrounds\LevelBackgrounds\Level3Background</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\LevelBackgrounds\Level3Background.xnb</Output>
-      <Time>2015-10-27T21:57:40.35356+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Screens\LevelScreens\Level3.xml</Source>
-      <Name>Data\Screens\LevelScreens\Level3</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level3.xnb</Output>
-      <Time>2015-10-29T00:26:13.0848415+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\GameObjects\SpaceStations\Shipyard.xml</Source>
-      <Name>Data\GameObjects\SpaceStations\Shipyard</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\SpaceStations\Shipyard.xnb</Output>
-      <Time>2015-10-29T20:12:58.3473238+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\GameObjects\Ships\EnemyShips\bushi_raiu.png</Source>
-      <Name>Sprites\GameObjects\Ships\EnemyShips\bushi_raiu</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Ships\EnemyShips\bushi_raiu.xnb</Output>
-      <Time>2015-10-27T23:48:03.0941617+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\GameObjects\Ships\EnemyShips\bushi_odachi.png</Source>
-      <Name>Sprites\GameObjects\Ships\EnemyShips\bushi_odachi</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Ships\EnemyShips\bushi_odachi.xnb</Output>
-      <Time>2015-10-27T23:49:05.0386891+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\GameObjects\Ships\EnemyShips\BushiOdachi.xml</Source>
-      <Name>Data\GameObjects\Ships\EnemyShips\BushiOdachi</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiOdachi.xnb</Output>
-      <Time>2015-10-28T00:19:54.2222368+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave1.xml</Source>
-      <Name>Data\Waves\Level3\Wave1</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave1.xnb</Output>
-      <Time>2015-10-29T00:21:17.4726355+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Backgrounds\LevelBackgrounds\Level4Background.jpg</Source>
-      <Name>Sprites\Backgrounds\LevelBackgrounds\Level4Background</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Backgrounds\LevelBackgrounds\Level4Background.xnb</Output>
-      <Time>2015-10-28T21:55:20.119433+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Screens\LevelScreens\Level4.xml</Source>
-      <Name>Data\Screens\LevelScreens\Level4</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level4.xnb</Output>
-      <Time>2015-10-29T00:29:52.5223364+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave10.xml</Source>
-      <Name>Data\Waves\Level3\Wave10</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave10.xnb</Output>
-      <Time>2015-10-29T00:21:26.6248031+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level4\Wave4.xml</Source>
-      <Name>Data\Waves\Level4\Wave4</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave4.xnb</Output>
-      <Time>2015-10-29T00:30:52.3804427+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave2.xml</Source>
-      <Name>Data\Waves\Level3\Wave2</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave2.xnb</Output>
-      <Time>2015-10-29T00:21:54.826037+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave3.xml</Source>
-      <Name>Data\Waves\Level3\Wave3</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave3.xnb</Output>
-      <Time>2015-10-29T00:21:50.0825823+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave4.xml</Source>
-      <Name>Data\Waves\Level3\Wave4</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave4.xnb</Output>
-      <Time>2015-10-29T00:21:46.977865+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave5.xml</Source>
-      <Name>Data\Waves\Level3\Wave5</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave5.xnb</Output>
-      <Time>2015-10-29T00:23:03.7344844+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave6.xml</Source>
-      <Name>Data\Waves\Level3\Wave6</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave6.xnb</Output>
-      <Time>2015-10-29T00:22:58.5696524+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave7.xml</Source>
-      <Name>Data\Waves\Level3\Wave7</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave7.xnb</Output>
-      <Time>2015-10-29T00:23:25.5988337+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave9.xml</Source>
-      <Name>Data\Waves\Level3\Wave9</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave9.xnb</Output>
-      <Time>2015-10-29T00:25:13.2907054+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level3\Wave8.xml</Source>
-      <Name>Data\Waves\Level3\Wave8</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave8.xnb</Output>
-      <Time>2015-10-29T00:24:22.8910211+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level4\Wave1.xml</Source>
-      <Name>Data\Waves\Level4\Wave1</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave1.xnb</Output>
-      <Time>2015-10-29T00:29:31.1454916+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level4\Wave2.xml</Source>
-      <Name>Data\Waves\Level4\Wave2</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave2.xnb</Output>
-      <Time>2015-10-29T00:29:27.2187534+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Waves\Level4\Wave3.xml</Source>
-      <Name>Data\Waves\Level4\Wave3</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave3.xnb</Output>
-      <Time>2015-10-29T00:29:23.4456843+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Screens\LoadingScreen.xml</Source>
-      <Name>Data\Screens\LoadingScreen</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LoadingScreen.xnb</Output>
-      <Time>2015-10-29T23:42:29.5705609+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Screens\Debug.xml</Source>
-      <Name>Data\Screens\Debug</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\Debug.xnb</Output>
-      <Time>2015-11-01T14:38:33.1512426+00:00</Time>
-    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>
@@ -1178,7 +1187,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiegeData\bin\x86\Debug\UnderSiegeData.dll</Key>
-        <Value>2015-10-26T21:41:14.611023+00:00</Value>
+        <Value>2015-11-01T17:04:53.1428599+00:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

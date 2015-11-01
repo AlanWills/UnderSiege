@@ -119,6 +119,7 @@
     <Compile Include="Physics Components\RigidBody.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screens\BaseScreen.cs" />
+    <Compile Include="Screens\GameOverScreen.cs" />
     <Compile Include="Screens\GameplayScreen.cs" />
     <Compile Include="Screens\GameplayScreenPauseMenu.cs" />
     <Compile Include="Screens\LoadingScreen.cs" />

@@ -46,10 +46,10 @@ namespace UnderSiege.Abilities.Object_Abilities
         {
             base.AbilityEvent(sender, e);
 
-            ParentAddOn.CurrentHealth += 0.05f;
+            ParentAddOn.CurrentHealth += 1f;
             ParentAddOn.CurrentHealth = MathHelper.Clamp(ParentAddOn.CurrentHealth, 0, ParentAddOn.ShipAddOnData.Health);
 
-            // This is going to take into account if the player goes into negative money - need to do a check for that
+            // This is not going to take into account if the player goes into negative money - need to do a check for that
             Session.Money -= 1;
         }
 

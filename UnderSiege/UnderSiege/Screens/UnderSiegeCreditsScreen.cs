@@ -16,8 +16,8 @@ namespace UnderSiege.Screens
 
         #endregion
 
-        public UnderSiegeCreditsScreen(ScreenManager screenManager, string dataAsset = "Data\\Screens\\TrailerFadeOutScreen")
-            : base(screenManager, dataAsset)
+        public UnderSiegeCreditsScreen(ScreenManager screenManager)
+            : base(screenManager, "Data\\Screens\\TrailerFadeOutScreen")
         {
             
         }

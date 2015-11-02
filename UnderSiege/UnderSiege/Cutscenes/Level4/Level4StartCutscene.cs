@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnderSiege.Cutscenes.Scripts;
 using UnderSiege.Gameplay_Objects;
 using UnderSiege.Screens;
 
@@ -50,19 +51,21 @@ namespace UnderSiege.Cutscenes.Level4
             AddScript(new WaitScript(0.75f));
             AddScript(new AddDialogBoxScript("Captain, we have been instructed by Redoubt UNI command to be\nplaced under your direct control in the event of an attack."));
             AddScript(new WaitScript(0.5f));
-            AddScript(new AddGameObjectToScreenScript(new PlayerShip(new Vector2(500, 300), "Data\\GameObjects\\Ships\\PlayerShips\\HiiFiirkan"), "Fiirkan1", GameplayScreen, false));
+            AddScript(new AddAlliedShipScript(new PlayerShip(new Vector2(500, 300), "Data\\GameObjects\\Ships\\PlayerShips\\HiiFiirkan"), "Fiirkan1", (GameplayScreen as UnderSiegeGameplayScreen), false));
             AddScript(new WaitScript(0.5f));
-            AddScript(new AddGameObjectToScreenScript(new PlayerShip(new Vector2(400, 500), "Data\\GameObjects\\Ships\\PlayerShips\\HiiFiirkan"), "Fiirkan2", GameplayScreen, false));
+            AddScript(new AddAlliedShipScript(new PlayerShip(new Vector2(400, 500), "Data\\GameObjects\\Ships\\PlayerShips\\HiiFiirkan"), "Fiirkan2", (GameplayScreen as UnderSiegeGameplayScreen), false));
             AddScript(new WaitScript(0.5f));
-            AddScript(new AddGameObjectToScreenScript(new PlayerShip(new Vector2(400, 700), "Data\\GameObjects\\Ships\\PlayerShips\\HiiFiirkan"), "Fiirkan3", GameplayScreen, false));
+            AddScript(new AddAlliedShipScript(new PlayerShip(new Vector2(400, 700), "Data\\GameObjects\\Ships\\PlayerShips\\HiiFiirkan"), "Fiirkan3", (GameplayScreen as UnderSiegeGameplayScreen), false));
             AddScript(new WaitScript(0.5f));
-            AddScript(new AddGameObjectToScreenScript(new PlayerShip(new Vector2(500, 900), "Data\\GameObjects\\Ships\\PlayerShips\\HiiFiirkan"), "Fiirkan4", GameplayScreen, false));
+            AddScript(new AddAlliedShipScript(new PlayerShip(new Vector2(500, 900), "Data\\GameObjects\\Ships\\PlayerShips\\HiiFiirkan"), "Fiirkan4", (GameplayScreen as UnderSiegeGameplayScreen), false));
             AddScript(new WaitScript(0.5f));
-            AddScript(new AddGameObjectToScreenScript(new PlayerShip(new Vector2(1400, 400), "Data\\GameObjects\\Ships\\PlayerShips\\HiiVanaar"), "Vanaar1", GameplayScreen, false));
+            AddScript(new AddAlliedShipScript(new PlayerShip(new Vector2(1400, 400), "Data\\GameObjects\\Ships\\PlayerShips\\HiiVanaar"), "Vanaar1", (GameplayScreen as UnderSiegeGameplayScreen), false));
             AddScript(new WaitScript(0.5f));
-            AddScript(new AddGameObjectToScreenScript(new PlayerShip(new Vector2(1400, 800), "Data\\GameObjects\\Ships\\PlayerShips\\HiiVanaar"), "Vanaar2", GameplayScreen, false));
+            AddScript(new AddAlliedShipScript(new PlayerShip(new Vector2(1400, 800), "Data\\GameObjects\\Ships\\PlayerShips\\HiiVanaar"), "Vanaar2", (GameplayScreen as UnderSiegeGameplayScreen), false));
             AddScript(new WaitScript(0.5f));
             AddScript(new RunEventScript(ActivateWaveManager));
+            AddScript(new WaitScript(20f));
+            AddScript(new AddDialogBoxScript("Here they come!", false, true, true, null, 4.0f));
         }
 
         protected override void CheckIsDone()

@@ -15,6 +15,7 @@ namespace _2DGameEngine.Cutscenes.Scripts
         #region Properties and Fields
 
         private BaseScreen CurrentScreen { get; set; }
+        private bool IsGameplayScreen { get { return typeof(T).IsSubclassOf(typeof(GameplayScreen)); } }
 
         #endregion
 
@@ -38,7 +39,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
         public override void Run(GameTime gameTime)
         {
             // Currently have to do this like this, because otherwise it loads EVERYTHING at the start of the first screen and fucks everything up
-            CurrentScreen.Transition(new LoadingScreen<T>(CurrentScreen.ScreenManager));
+            if (IsGameplayScreen)
+            {
+                CurrentScreen.Transition(new LoadingScreen<T>(CurrentScreen.ScreenManager));
+            }
+            else
+            {
+                CurrentScreen.Transition((T)Activator.CreateInstance(typeof(T), CurrentScreen.ScreenManager));
+            }
         }
 
         public override void CheckShouldUpdateGame()
@@ -68,7 +76,14 @@ namespace _2DGameEngine.Cutscenes.Scripts
 
         public override void PerformImmediately()
         {
-            CurrentScreen.Transition(new LoadingScreen<T>(CurrentScreen.ScreenManager));
+            if (IsGameplayScreen)
+            {
+                CurrentScreen.Transition(new LoadingScreen<T>(CurrentScreen.ScreenManager));
+            }
+            else
+            {
+                CurrentScreen.Transition((T)Activator.CreateInstance(typeof(T), CurrentScreen.ScreenManager));
+            }
         }
 
         #endregion

@@ -16,8 +16,8 @@ namespace UnderSiege.Screens
 
         #endregion
 
-        public UnderSiegeMainMenuScreen(ScreenManager screenManager, bool addDefaultUI = true)
-            : base(screenManager, addDefaultUI)
+        public UnderSiegeMainMenuScreen(ScreenManager screenManager)
+            : base(screenManager, true)
         {
             
         }
@@ -41,7 +41,7 @@ namespace UnderSiege.Screens
 
         private void PlayGame(object sender, EventArgs e)
         {
-            Transition(new LoadingScreen<DebugScreen>(ScreenManager));
+            Transition(new LoadingScreen<UnderSiegeGameplayScreenLevel3>(ScreenManager));
         }
 
         private void PlayTutorial(object sender, EventArgs e)

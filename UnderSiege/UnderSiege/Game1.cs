@@ -47,7 +47,7 @@ namespace UnderSiege
 
             base.Initialize();
 
-            screenManager.AddScreen(new UnderSiegeMainMenuScreen(screenManager, true));
+            screenManager.AddScreen(new UnderSiegeMainMenuScreen(screenManager));
         }
 
         protected override void LoadContent()

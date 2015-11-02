@@ -28,6 +28,11 @@ namespace _2DGameEngine.Screens
 
         #region Virtual Methods
 
+        public override void AddMusic(QueueType queueType = QueueType.WaitForCurrent)
+        {
+            base.AddMusic(QueueType.WaitForCurrent);
+        }
+
         public override void Begin()
         {
             base.Begin();

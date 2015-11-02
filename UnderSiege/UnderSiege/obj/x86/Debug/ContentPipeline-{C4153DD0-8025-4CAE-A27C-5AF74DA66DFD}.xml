@@ -818,7 +818,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level2\Wave3.xnb</Output>
-      <Time>2015-10-29T22:32:56.6227815+00:00</Time>
+      <Time>2015-11-01T22:11:40.7970157+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\Trailer.xml</Source>
@@ -890,7 +890,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\LevelScreens\Level4.xnb</Output>
-      <Time>2015-10-29T00:29:52.5223364+00:00</Time>
+      <Time>2015-11-01T20:44:27.5701737+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level4\Wave4.xml</Source>
@@ -899,7 +899,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave4.xnb</Output>
-      <Time>2015-10-29T00:30:52.3804427+00:00</Time>
+      <Time>2015-11-01T21:18:48.935291+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level3\Wave1.xml</Source>
@@ -989,7 +989,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave1.xnb</Output>
-      <Time>2015-10-29T00:29:31.1454916+00:00</Time>
+      <Time>2015-11-01T20:47:36.6206273+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level4\Wave2.xml</Source>
@@ -998,7 +998,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave2.xnb</Output>
-      <Time>2015-10-29T00:29:27.2187534+00:00</Time>
+      <Time>2015-11-01T21:08:39.9751568+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level4\Wave3.xml</Source>
@@ -1007,7 +1007,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level4\Wave3.xnb</Output>
-      <Time>2015-10-29T00:29:23.4456843+00:00</Time>
+      <Time>2015-11-01T21:18:40.3032315+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\LoadingScreen.xml</Source>

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects;
+using UnderSiege.Player_Data;
 
 namespace UnderSiege.Screens
 {
@@ -18,9 +19,10 @@ namespace UnderSiege.Screens
 
         #endregion
 
-        public UnderSiegeTrailer(ScreenManager screenManager, string dataAsset = "Data\\Screens\\Trailer")
-            : base(screenManager, dataAsset)
+        public UnderSiegeTrailer(ScreenManager screenManager)
+            : base(screenManager, "Data\\Screens\\Trailer")
         {
+            Session.Money = 150000;
             WaveManager.Paused = true;
         }
 
@@ -33,6 +35,8 @@ namespace UnderSiege.Screens
         public override void AddScripts()
         {
             base.AddScripts();
+
+            AddDialogBoxScript.defaultPosition = new Vector2(Viewport.Width * 0.25f, Viewport.Height * 0.25f);
 
             AddScript(new RunEventScript(WaitUntilAllDefencesBuilt));
             AddScript(new RunEventScript(ActivateWaveManager));

@@ -18,7 +18,7 @@ namespace UnderSiege.Screens.Level_Screens
         public UnderSiegeGameplayScreenLevel4(ScreenManager screenManager)
             : base(screenManager, "Data\\Screens\\LevelScreens\\Level4")
         {
-            Session.Money = 3000;
+            Session.Money = 10000;
             WaveManager.Paused = true;
             WaveManager.Continuous = true;
 

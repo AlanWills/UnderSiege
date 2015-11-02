@@ -28,7 +28,7 @@ namespace UnderSiege.UI
         protected override void exitToMainMenu_OnSelect(object sender, EventArgs e)
         {
             Alive = false;
-            currentScreen.Transition(new UnderSiegeMainMenuScreen(currentScreen.ScreenManager, true));
+            currentScreen.Transition(new UnderSiegeMainMenuScreen(currentScreen.ScreenManager));
         }
 
         #endregion

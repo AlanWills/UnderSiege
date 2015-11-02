@@ -116,7 +116,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                         {
                             shipShield.Damage(ShipTurretData.Damage);
 
-                            missile.Alive = false;
+                            missile.Explode();
                             break;
                         }
                     }
@@ -125,7 +125,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                     {
                         Target.Damage(ShipTurretData.Damage);
 
-                        missile.Alive = false;
+                        missile.Explode();
                     }
                 }
                 // Continue normally
@@ -135,7 +135,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                     {
                         Target.Damage(ShipTurretData.Damage);
 
-                        missile.Alive = false;
+                        missile.Explode();
                     }
                 }
             }

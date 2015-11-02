@@ -125,6 +125,7 @@
     <Compile Include="UI\In Game UI\Buy Add On Info\BuyShipEngineHoverInfo.cs" />
     <Compile Include="UI\In Game UI\Buy Add On Info\BuyShipShieldHoverInfo.cs" />
     <Compile Include="UI\In Game UI\Buy Add On Info\BuyShipTurretHoverInfo.cs" />
+    <Compile Include="UI\In Game UI\Explosion.cs" />
     <Compile Include="UI\In Game UI\ShipAddOnAbilityUI.cs" />
     <Compile Include="UI\In Game UI\EngineBlaze.cs" />
     <Compile Include="UI\In Game UI\HardPointUI.cs" />

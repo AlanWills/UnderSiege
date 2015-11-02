@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Game_Objects;
 using _2DGameEngine.Managers;
 using _2DGameEngine.Maths;
 using _2DGameEngine.Screens;
@@ -9,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
+using UnderSiege.Screens;
 using UnderSiege.UI.In_Game_UI;
 using UnderSiegeData.Gameplay_Objects;
 
@@ -21,6 +23,7 @@ namespace UnderSiege.Gameplay_Objects
         public MissileData MissileData { get; private set; }
         public ShipMissileTurret ParentTurret { get; set; }
         private EngineBlaze EngineBlaze { get; set; }
+        private Explosion Explosion { get; set; }
         private BaseObject Target { get; set; }
 
         private TimeSpan currentLifeTimer = TimeSpan.FromSeconds(0);
@@ -76,6 +79,10 @@ namespace UnderSiege.Gameplay_Objects
             EngineBlaze = new EngineBlaze(this, new Vector2(0, 1.5f * Size.Y), new Vector2(Size.X, 2 * Size.Y), "Sprites\\GameObjects\\FX\\EngineBlaze", 8, 1, 0.1f, false, true, this);
             EngineBlaze.LoadContent();
             EngineBlaze.Initialize();
+
+            Explosion = new Explosion(Vector2.Zero, new Vector2(20, 20), "Sprites\\GameObjects\\FX\\Explosion", 4, 4, 0.025f);
+            Explosion.LoadContent();
+            Explosion.Initialize();
         }
 
         public override void AddCollider()
@@ -121,6 +128,16 @@ namespace UnderSiege.Gameplay_Objects
             }
 
             EngineBlaze.Update(gameTime);
+
+            if (Explosion.Animation.IsPlaying)
+            {
+                Explosion.Update(gameTime);
+            }
+
+            if (Explosion.Animation.Finished)
+            {
+                Alive = false;
+            }
         }
 
         public override void HandleInput()
@@ -135,7 +152,21 @@ namespace UnderSiege.Gameplay_Objects
                 EngineBlaze.Draw(spriteBatch);
             }
 
+            if (Explosion.Animation.IsPlaying)
+            {
+                Explosion.Draw(spriteBatch);
+            }
+
             base.Draw(spriteBatch);
+        }
+
+        public void Explode()
+        {
+            Active = false;
+            Visible = false;
+
+            Explosion.LocalPosition = WorldPosition;
+            Explosion.Animation.IsPlaying = true;
         }
 
         #endregion

@@ -74,6 +74,10 @@ namespace UnderSiege.Gameplay_Objects
                     case "Sell":
                         ability = new SellAbility("Data\\Abilities\\ShipAddOnAbilities\\Sell", this);
                         break;
+
+                    case "Recharge":
+                        ability = new RepairAbility("Data\\Abilities\\ShipAddOnAbilities\\Recharge", this);
+                        break;
                 }
 
                 ability.LoadContent();

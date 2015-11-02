@@ -20,8 +20,7 @@ namespace UnderSiege.Screens.Level_Screens
         public UnderSiegeGameplayScreenLevel1(ScreenManager screenManager)
             : base(screenManager, "Data\\Screens\\LevelScreens\\Level1")
         {
-            //Session.Money = 1200;
-            Session.Money = 3500;
+            Session.Money = 1200;
             WaveManager.Paused = true;
 
             HUD.DisableAndHideUIObject("Buy Engines UI");

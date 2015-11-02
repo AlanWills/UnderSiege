@@ -127,6 +127,9 @@ Content\SFX\ButtonHover.xnb
 Content\SFX\ButtonPressedSound.xnb
 Content\SFX\LightThruster.xnb
 Content\SFX\LaserFire.xnb
+Content\Sprites\GameObjects\FX\Explosion.xnb
+Content\Sprites\Abilities\ShipAddOnAbilities\recharge_shields.xnb
+Content\Data\Abilities\ShipAddOnAbilities\Recharge.xnb
 Content\Music\Dream Raid.wma
 Content\Music\The Fall of Arcana.wma
 Content\Music\Imminent Threat.wma

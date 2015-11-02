@@ -9,6 +9,7 @@
     <HardPointDimensions>1 1</HardPointDimensions>
     <Orientable>false</Orientable>
     <Abilities>
+      <Item>Recharge</Item>
       <Item>Repair</Item>
       <Item>Sell</Item>
     </Abilities>

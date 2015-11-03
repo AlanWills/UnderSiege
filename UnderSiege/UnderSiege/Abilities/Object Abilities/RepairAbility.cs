@@ -37,11 +37,7 @@ namespace UnderSiege.Abilities.Object_Abilities
 
         protected override void CheckIsDone()
         {
-            bool done = ParentAddOn.CurrentHealth == ParentAddOn.ShipAddOnData.Health;
-            if (done)
-            {
-                ParentAddOn.AbilityEventQueue -= AbilityEvent;
-            }
+            Done = ParentAddOn.CurrentHealth == ParentAddOn.ShipAddOnData.Health;
         }
 
         protected override void AbilityEvent(object sender, EventArgs e)

@@ -19,7 +19,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         public BaseObjectManager<Missile> MissileManager { get; private set; }
         private Missile Missile { get; set; }
 
-        private float currentFireTimer = 0;
+        public float currentFireTimer = 0;
         private long nameCounter = 0;
 
         #endregion
@@ -105,7 +105,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
         public override void CheckIfDamagedTarget()
         {
-            foreach (Missile missile in MissileManager.Values)
+            // Only check the missiles which are active - this is how we tell whether a missile is exploding
+            foreach (Missile missile in MissileManager.Values.Where(x => x.Active == true))
             {
                 // We have a target a ship addon that isn't a shield - so we need to check for shield interactions
                 if (!(Target is ShipShield) && !(Target is Ship))

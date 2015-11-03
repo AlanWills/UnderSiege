@@ -73,7 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abilities\Object Abilities\AddOnAbility.cs" />
+    <Compile Include="Abilities\Object Abilities\AfterburnAbility.cs" />
     <Compile Include="Abilities\Object Abilities\AutoReloaderAbility.cs" />
+    <Compile Include="Abilities\Object Abilities\MissileBarrageAbility.cs" />
     <Compile Include="Abilities\Object Abilities\RechargeAbility.cs" />
     <Compile Include="Abilities\Object Abilities\RepairAbility.cs" />
     <Compile Include="Abilities\Object Abilities\SellAbility.cs" />

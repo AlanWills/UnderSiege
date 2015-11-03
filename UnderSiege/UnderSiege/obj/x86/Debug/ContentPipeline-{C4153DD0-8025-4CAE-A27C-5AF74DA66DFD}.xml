@@ -674,7 +674,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Engines\LightThruster.xnb</Output>
-      <Time>2015-11-02T19:59:27.7445436+00:00</Time>
+      <Time>2015-11-03T01:02:12.8259065+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Turrets\MissilePod.xml</Source>
@@ -683,7 +683,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\MissilePod.xnb</Output>
-      <Time>2015-10-21T22:30:31.2544898+01:00</Time>
+      <Time>2015-11-03T00:17:59.0077104+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\TviirMissile.xml</Source>
@@ -701,7 +701,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\SmallSingleLaser.xnb</Output>
-      <Time>2015-10-21T22:30:35.8395343+01:00</Time>
+      <Time>2015-11-03T00:38:17.4301098+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\SmallSingleBeam.xml</Source>
@@ -1225,6 +1225,42 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\LaserFire.xnb</Output>
       <Time>2015-10-20T00:22:56.2021807+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Abilities\ShipAddOnAbilities\missile_barrage.png</Source>
+      <Name>Sprites\Abilities\ShipAddOnAbilities\missile_barrage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\missile_barrage.xnb</Output>
+      <Time>2015-11-03T00:16:05.5622107+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Abilities\ShipAddOnAbilities\MissileBarrage.xml</Source>
+      <Name>Data\Abilities\ShipAddOnAbilities\MissileBarrage</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\MissileBarrage.xnb</Output>
+      <Time>2015-11-03T00:17:45.5377757+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Abilities\ShipAddOnAbilities\afterburn.png</Source>
+      <Name>Sprites\Abilities\ShipAddOnAbilities\afterburn</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\afterburn.xnb</Output>
+      <Time>2015-11-03T00:37:23.5023402+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Abilities\ShipAddOnAbilities\Afterburn.xml</Source>
+      <Name>Data\Abilities\ShipAddOnAbilities\Afterburn</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Afterburn.xnb</Output>
+      <Time>2015-11-03T00:38:52.4663492+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

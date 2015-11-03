@@ -37,11 +37,7 @@ namespace UnderSiege.Abilities.Object_Abilities
 
         protected override void CheckIsDone()
         {
-            bool done = ShipShield.CurrentShieldStrength == ShipShield.ShipShieldData.ShieldStrength;
-            if (done)
-            {
-                ParentAddOn.AbilityEventQueue -= AbilityEvent;
-            }
+            Done = ShipShield.CurrentShieldStrength == ShipShield.ShipShieldData.ShieldStrength;
         }
 
         protected override void AbilityEvent(object sender, EventArgs e)

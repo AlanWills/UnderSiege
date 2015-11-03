@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Abilities.Object_Abilities.AddOnAbilityData">
+    <DisplayName>Missile Barrage</DisplayName>
+    <TextureAsset>Sprites\Abilities\ShipAddOnAbilities\missile_barrage</TextureAsset>
+    <Cooldown>30</Cooldown>
+  </Asset>
+</XnaContent>

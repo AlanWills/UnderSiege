@@ -23,6 +23,22 @@ namespace UnderSiege.Abilities.Object_Abilities
         public bool OffCooldown { get { return Cooldown == 0; } }
         public bool CanRun { get; protected set; }
 
+        protected bool Begun { get; set; }
+
+        private bool done = false;
+        protected bool Done 
+        { 
+            get { return done; } 
+            set
+            {
+                done = value;
+                if (done)
+                {
+                    End();
+                }
+            }
+        }
+
         #endregion
 
         public AddOnAbility(string dataAsset, ShipAddOn shipAddOn)
@@ -62,7 +78,22 @@ namespace UnderSiege.Abilities.Object_Abilities
         // The functionality of the ability will be contained in this - it MUST be specified
         protected virtual void AbilityEvent(object sender, EventArgs e)
         {
+            if (!Begun)
+            {
+                Begin();
+            }
+
             CheckIsDone();
+        }
+
+        protected virtual void Begin()
+        {
+            Begun = true;
+        }
+
+        protected virtual void End()
+        {
+            ParentAddOn.AbilityEventQueue -= AbilityEvent;
         }
 
         public virtual void Update(GameTime gameTime)

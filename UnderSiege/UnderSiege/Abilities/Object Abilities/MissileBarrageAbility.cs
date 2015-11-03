@@ -7,21 +7,24 @@ using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
 
 namespace UnderSiege.Abilities.Object_Abilities
 {
-    public class AutoReloaderAbility : AddOnAbility
+    public class MissileBarrageAbility : AddOnAbility
     {
         #region Properties and Fields
 
-        private ShipKineticTurret ShipTurret { get; set; }
+        private ShipMissileTurret ShipMissileTurret { get; set; }
+
+        private bool IsFiringIncreased { get { return abilityTimer <= 10; } }
 
         private float abilityTimer;
         private float fireTimer;
+        private float noFireTimer;
 
         #endregion
 
-        public AutoReloaderAbility(string dataAsset, ShipKineticTurret shipTurret)
-            : base(dataAsset, shipTurret)
+        public MissileBarrageAbility(string dataAsset, ShipMissileTurret shipMissileTurret)
+            : base(dataAsset, shipMissileTurret)
         {
-            ShipTurret = shipTurret;
+            ShipMissileTurret = shipMissileTurret;
         }
 
         #region Methods
@@ -34,12 +37,12 @@ namespace UnderSiege.Abilities.Object_Abilities
         {
             base.CheckCanRun();
 
-            CanRun = CanRun && (ShipTurret.Target != null);
+            CanRun = CanRun && (ShipMissileTurret.Target != null);
         }
 
         protected override void CheckIsDone()
         {
-            Done = abilityTimer > 10;
+            Done = noFireTimer > 10;
         }
 
         protected override void AbilityEvent(object sender, EventArgs e)
@@ -47,12 +50,20 @@ namespace UnderSiege.Abilities.Object_Abilities
             base.AbilityEvent(sender, e);
 
             abilityTimer += 0.1f;
-            fireTimer += 0.1f;
 
-            if (fireTimer >= ShipTurret.ShipKineticTurretData.FireTimer)
+            if (IsFiringIncreased)
             {
-                ShipTurret.Fire();
-                fireTimer = 0;
+                fireTimer += 0.1f;
+                if (fireTimer >= ShipMissileTurret.ShipMissileTurretData.FireTimer)
+                {
+                    ShipMissileTurret.Fire();
+                    fireTimer = 0;
+                }
+            }
+            else
+            {
+                ShipMissileTurret.currentFireTimer = 0;
+                noFireTimer += 0.1f;
             }
         }
 
@@ -62,6 +73,7 @@ namespace UnderSiege.Abilities.Object_Abilities
 
             abilityTimer = 0;
             fireTimer = 0;
+            noFireTimer = 0;
         }
 
         #endregion

@@ -73,6 +73,8 @@ namespace UnderSiege.UI.In_Game_UI
                 Menu parent = Parent as Menu;
                 parent.AddUIObject(new FlashingLabel("Ability Unavailable", new Vector2(0, -parent.Size.Y * 0.5f - SpriteFont.LineSpacing * 0.5f - 10), Color.Red, parent, 2), Ability.AddOnAbilityData.DisplayName + " On Cooldown Label");
             }
+
+            (Parent as ShipAddOnAbilityMenu).ParentShipAddOn.ParentShip.IsSelected = true;
         }
 
         #endregion

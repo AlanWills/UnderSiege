@@ -83,6 +83,14 @@ namespace UnderSiege.Gameplay_Objects
                     case "Auto Reloader":
                         ability = new AutoReloaderAbility("Data\\Abilities\\ShipAddOnAbilities\\AutoReloader", (this as ShipKineticTurret));
                         break;
+
+                    case "Missile Barrage":
+                        ability = new MissileBarrageAbility("Data\\Abilities\\ShipAddOnAbilities\\MissileBarrage", (this as ShipMissileTurret));
+                        break;
+
+                    case "Afterburn":
+                        ability = new AfterburnAbility("Data\\Abilities\\ShipAddOnAbilities\\Afterburn", (this as ShipEngine));
+                        break;
                 }
 
                 ability.LoadContent();

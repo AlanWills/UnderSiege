@@ -17,6 +17,6 @@
     <TurretFiringAsset></TurretFiringAsset>
     <Range>850</Range>
     <ArcWidth>2</ArcWidth>
-    <Damage>0.1</Damage>
+    <Damage>0.15</Damage>
   </Asset>
 </XnaContent>

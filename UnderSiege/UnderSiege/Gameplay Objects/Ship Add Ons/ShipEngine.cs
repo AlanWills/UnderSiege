@@ -22,6 +22,9 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         private EngineBlaze EngineBlaze { get; set; }
         private SoundEffect EngineSoundEffect { get; set; }
 
+        public float Thrust { get { return ShipEngineData.Thrust * ThrustModifier; } }
+        public float ThrustModifier { get; set; }
+
         private SoundEffectInstance soundEffectInstance;
 
         #endregion
@@ -30,6 +33,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             : base(hardPointOffset, dataAsset, parent, addRigidBody)
         {
             ParentShip = parent;
+            ThrustModifier = 1;
         }
 
         #region Methods

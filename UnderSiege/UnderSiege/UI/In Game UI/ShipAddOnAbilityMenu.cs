@@ -18,7 +18,7 @@ namespace UnderSiege.UI.In_Game_UI
     {
         #region Properties and Fields
 
-        private ShipAddOn ParentShipAddOn { get; set; }
+        public ShipAddOn ParentShipAddOn { get; private set; }
 
         public const float abilityImageSize = 50;
         private const int padding = 10;

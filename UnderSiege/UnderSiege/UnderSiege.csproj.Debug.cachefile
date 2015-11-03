@@ -133,6 +133,10 @@ Content\SFX\ButtonHover.xnb
 Content\SFX\ButtonPressedSound.xnb
 Content\SFX\LightThruster.xnb
 Content\SFX\LaserFire.xnb
+Content\Sprites\Abilities\ShipAddOnAbilities\missile_barrage.xnb
+Content\Data\Abilities\ShipAddOnAbilities\MissileBarrage.xnb
+Content\Sprites\Abilities\ShipAddOnAbilities\afterburn.xnb
+Content\Data\Abilities\ShipAddOnAbilities\Afterburn.xnb
 Content\Music\Dream Raid.wma
 Content\Music\The Fall of Arcana.wma
 Content\Music\Imminent Threat.wma

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Abilities.Object_Abilities.AddOnAbilityData">
+    <DisplayName>Afterburn</DisplayName>
+    <TextureAsset>Sprites\Abilities\ShipAddOnAbilities\afterburn</TextureAsset>
+    <Cooldown>25</Cooldown>
+  </Asset>
+</XnaContent>

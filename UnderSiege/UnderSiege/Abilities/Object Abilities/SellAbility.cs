@@ -34,11 +34,7 @@ namespace UnderSiege.Abilities.Object_Abilities
 
         protected override void CheckIsDone()
         {
-            bool done = true;
-            if (done)
-            {
-                ParentAddOn.AbilityEventQueue -= AbilityEvent;
-            }
+            Done = true;
         }
 
         protected override void AbilityEvent(object sender, EventArgs e)

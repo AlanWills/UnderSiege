@@ -44,7 +44,7 @@ namespace UnderSiege.Gameplay_Objects
                 float totalThrust = 0;
                 foreach (ShipEngine engine in ShipAddOns.ShipEngines)
                 {
-                    totalThrust += engine.ShipEngineData.Thrust;
+                    totalThrust += engine.Thrust;
                 }
 
                 return totalThrust;

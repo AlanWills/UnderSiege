@@ -1,4 +1,5 @@
 ﻿using _2DGameEngine.Cutscenes.Scripts;
+using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
 using _2DGameEngine.Screens;
 using Microsoft.Xna.Framework;
@@ -34,6 +35,25 @@ namespace UnderSiege.Screens
             NextButtonPosition += new Vector2(0, Viewport.Height / 6);
         }
 
+        protected override void LoadGame(object sender, EventArgs e)
+        {
+            switch (Options.Level)
+            {
+                case 1:
+                    Transition(new LoadingScreen<UnderSiegeGameplayScreenLevel1>(ScreenManager));
+                    break;
+                case 2:
+                    Transition(new LoadingScreen<UnderSiegeGameplayScreenLevel2>(ScreenManager));
+                    break;
+                case 3:
+                    Transition(new LoadingScreen<UnderSiegeGameplayScreenLevel3>(ScreenManager));
+                    break;
+                case 4:
+                    Transition(new LoadingScreen<UnderSiegeGameplayScreenLevel4>(ScreenManager));
+                    break;
+            }
+        }
+
         private void AddPlayTutorialDialogBox(object sender, EventArgs e)
         {
             ScriptManager.AddScript(new AddOptionsDialogBoxScript("Play Tutorial?", ScreenCentre, PlayGame, PlayTutorial, "No", "Yes"));
@@ -41,7 +61,7 @@ namespace UnderSiege.Screens
 
         private void PlayGame(object sender, EventArgs e)
         {
-            Transition(new LoadingScreen<DebugScreen>(ScreenManager));
+            Transition(new LoadingScreen<UnderSiegeGameplayScreenLevel1>(ScreenManager));
         }
 
         private void PlayTutorial(object sender, EventArgs e)

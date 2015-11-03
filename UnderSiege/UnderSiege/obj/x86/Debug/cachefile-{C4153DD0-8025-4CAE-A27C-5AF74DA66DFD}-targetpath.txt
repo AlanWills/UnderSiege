@@ -61,6 +61,8 @@ Content\Sprites\GameObjects\FX\Explosion.xnb
 Content\Sprites\Abilities\ShipAddOnAbilities\recharge_shields.xnb
 Content\Sprites\Abilities\ShipAddOnAbilities\auto_reloader.xnb
 Content\Sprites\UI\InGameUI\CooldownUI.xnb
+Content\Sprites\Abilities\ShipAddOnAbilities\missile_barrage.xnb
+Content\Sprites\Abilities\ShipAddOnAbilities\afterburn.xnb
 Content\Data\Screens\MainMenuScreen.xnb
 Content\Data\GameObjects\SpaceStations\CommandStation.xnb
 Content\Data\GameObjects\Turrets\DualLaserTurret.xnb
@@ -119,6 +121,8 @@ Content\Data\Screens\Debug.xnb
 Content\Data\Screens\GameOverScreen.xnb
 Content\Data\Abilities\ShipAddOnAbilities\Recharge.xnb
 Content\Data\Abilities\ShipAddOnAbilities\AutoReloader.xnb
+Content\Data\Abilities\ShipAddOnAbilities\MissileBarrage.xnb
+Content\Data\Abilities\ShipAddOnAbilities\Afterburn.xnb
 Content\Music\Dream Raid.xnb
 Content\Music\Dream Raid.wma
 Content\Music\The Fall of Arcana.xnb
@@ -143,7 +147,5 @@ Content\SFX\ButtonHover.xnb
 Content\SFX\ButtonPressedSound.xnb
 Content\SFX\LightThruster.xnb
 Content\SFX\LaserFire.xnb
-Content\Sprites\Abilities\ShipAddOnAbilities\missile_barrage.xnb
-Content\Data\Abilities\ShipAddOnAbilities\MissileBarrage.xnb
-Content\Sprites\Abilities\ShipAddOnAbilities\afterburn.xnb
-Content\Data\Abilities\ShipAddOnAbilities\Afterburn.xnb
+Content\SFX\MissileLaunch.xnb
+Content\SFX\BeamLaser.xnb

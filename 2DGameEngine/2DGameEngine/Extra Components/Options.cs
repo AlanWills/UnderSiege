@@ -29,6 +29,12 @@ namespace _2DGameEngine.Extra_Components
             get;
             set;
         }
+
+        public int Level
+        {
+            get;
+            set;
+        }
     }
 
     public static class Options
@@ -53,7 +59,13 @@ namespace _2DGameEngine.Extra_Components
             set;
         }
 
-        public static string fileName = "C:\\Users\\Alan\\Documents\\Visual Studio 2013\\Projects\\UnderSiege\\UnderSiege\\UnderSiegeContent\\Options.xml";
+        public static int Level
+        {
+            get;
+            set;
+        }
+
+        public static string fileName = ScreenManager.Content.RootDirectory + "\\Options.xml";
 
         #endregion
 
@@ -75,12 +87,14 @@ namespace _2DGameEngine.Extra_Components
                 IsFullScreen = optionsData.IsFullScreen;
                 MusicVolume = optionsData.MusicVolume;
                 SFXVolume = optionsData.SFXVolume;
+                Level = optionsData.Level;
             }
             catch
             {
                 IsFullScreen = !GlobalVariables.DEBUG;
                 MusicVolume = 0;
                 SFXVolume = 0;
+                Level = 1;
             }
 
             ScreenManager.GraphicsDeviceManager.IsFullScreen = IsFullScreen;
@@ -94,6 +108,7 @@ namespace _2DGameEngine.Extra_Components
             optionsData.IsFullScreen = IsFullScreen;
             optionsData.MusicVolume = MusicVolume;
             optionsData.SFXVolume = SFXVolume;
+            optionsData.Level = Level;
 
             XmlSerializer mySerializer = new XmlSerializer(typeof(OptionsData));
             // To write to a file, create a StreamWriter object and overriding current file

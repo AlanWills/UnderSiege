@@ -1,5 +1,6 @@
 ﻿using _2DGameEngine.Abstract_Object_Classes;
 using _2DGameEngine.Cutscenes.Scripts;
+using _2DGameEngine.Extra_Components;
 using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
 using System;
@@ -23,6 +24,7 @@ namespace UnderSiege.Screens.Level_Screens
         public UnderSiegeGameplayScreenLevel3(ScreenManager screenManager)
             : base(screenManager, "Data\\Screens\\LevelScreens\\Level3")
         {
+            Options.Level = 3;
             Session.Money = 3000;
             WaveManager.Paused = true;
 

@@ -34,6 +34,7 @@ namespace _2DTowerDefenceEngine.Waves
         public void LoadContent()
         {
             WaveData = AssetManager.GetData<WaveData>(DataAsset);
+            WaveData = ScreenManager.Content.Load<WaveData>(DataAsset);
             SetUpEnemies();
         }
 

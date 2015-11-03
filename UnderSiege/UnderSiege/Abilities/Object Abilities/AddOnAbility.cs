@@ -10,16 +10,6 @@ using UnderSiegeData.Abilities.Object_Abilities;
 
 namespace UnderSiege.Abilities.Object_Abilities
 {
-    /*public class AbilityEventArgs : EventArgs
-    {
-        public GameTime GameTime { get; set; }
-
-        public AbilityEventArgs(GameTime gameTime)
-        {
-            GameTime = gameTime;
-        }
-    }*/
-
     public abstract class AddOnAbility
     {
         #region Properties and Fields
@@ -28,6 +18,10 @@ namespace UnderSiege.Abilities.Object_Abilities
         public AddOnAbilityData AddOnAbilityData { get; set; }
 
         protected ShipAddOn ParentAddOn { get; private set; }
+
+        public float Cooldown { get; protected set; }
+        public bool OffCooldown { get { return Cooldown == 0; } }
+        public bool CanRun { get; protected set; }
 
         #endregion
 
@@ -49,13 +43,18 @@ namespace UnderSiege.Abilities.Object_Abilities
         #region Virtual Methods
 
         // A condition for which we are able to run this ability - either money, cooldown or health not 100% for repair
-        protected abstract bool CanRun();
+        public virtual void CheckCanRun()
+        {
+            CanRun = OffCooldown;
+        }
+
         protected abstract void CheckIsDone();
 
         public virtual void Run()
         {
-            if (CanRun())
+            if (CanRun)
             {
+                Cooldown = AddOnAbilityData.Cooldown;
                 ParentAddOn.AbilityEventQueue += AbilityEvent;
             }
         }
@@ -64,6 +63,12 @@ namespace UnderSiege.Abilities.Object_Abilities
         protected virtual void AbilityEvent(object sender, EventArgs e)
         {
             CheckIsDone();
+        }
+
+        public virtual void Update(GameTime gameTime)
+        {
+            Cooldown = Math.Max(Cooldown - (float)gameTime.ElapsedGameTime.Milliseconds / 1000f, 0);
+            CheckCanRun();
         }
 
         #endregion

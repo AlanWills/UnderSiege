@@ -3,5 +3,6 @@
   <Asset Type="UnderSiegeData.Abilities.Object_Abilities.AddOnAbilityData">
     <DisplayName>Recharge</DisplayName>
     <TextureAsset>Sprites\Abilities\ShipAddOnAbilities\recharge_shields</TextureAsset>
+    <Cooldown>30</Cooldown>
   </Asset>
 </XnaContent>

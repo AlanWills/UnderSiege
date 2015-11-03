@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Abilities.Object_Abilities.AddOnAbilityData">
+    <DisplayName>Auto Reloader</DisplayName>
+    <TextureAsset>Sprites\Abilities\ShipAddOnAbilities\auto_reloader</TextureAsset>
+    <Cooldown>15</Cooldown>
+  </Asset>
+</XnaContent>

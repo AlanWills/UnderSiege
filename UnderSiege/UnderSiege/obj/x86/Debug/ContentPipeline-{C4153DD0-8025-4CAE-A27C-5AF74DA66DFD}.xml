@@ -533,6 +533,42 @@
       <Time>2015-11-02T19:59:29.0529142+00:00</Time>
     </Item>
     <Item>
+      <Source>Sprites\GameObjects\FX\Explosion.png</Source>
+      <Name>Sprites\GameObjects\FX\Explosion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\FX\Explosion.xnb</Output>
+      <Time>2015-11-02T21:31:09.4352925+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Abilities\ShipAddOnAbilities\recharge_shields.png</Source>
+      <Name>Sprites\Abilities\ShipAddOnAbilities\recharge_shields</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\recharge_shields.xnb</Output>
+      <Time>2015-11-02T21:59:53.5872437+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Abilities\ShipAddOnAbilities\auto_reloader.png</Source>
+      <Name>Sprites\Abilities\ShipAddOnAbilities\auto_reloader</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\auto_reloader.xnb</Output>
+      <Time>2015-11-02T22:33:50.4629745+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UI\InGameUI\CooldownUI.png</Source>
+      <Name>Sprites\UI\InGameUI\CooldownUI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\UI\InGameUI\CooldownUI.xnb</Output>
+      <Time>2015-11-02T23:24:27.9089082+00:00</Time>
+    </Item>
+    <Item>
       <Source>Data\Screens\MainMenuScreen.xml</Source>
       <Name>Data\Screens\MainMenuScreen</Name>
       <Importer>XmlImporter</Importer>
@@ -557,7 +593,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\DualLaserTurret.xnb</Output>
-      <Time>2015-11-02T19:59:27.8190943+00:00</Time>
+      <Time>2015-11-02T22:35:21.4854146+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\LaserBullet.xml</Source>
@@ -737,7 +773,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Repair.xnb</Output>
-      <Time>2015-10-15T00:25:50.9984439+01:00</Time>
+      <Time>2015-11-02T23:01:22.7511001+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\GameplayTutorial\TutorialFinalWave.xml</Source>
@@ -773,7 +809,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Sell.xnb</Output>
-      <Time>2015-10-21T22:31:55.7274321+01:00</Time>
+      <Time>2015-11-02T23:01:33.3108924+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\LevelScreens\Level1.xml</Source>
@@ -1037,6 +1073,24 @@
       <Time>2015-11-02T19:59:27.8301008+00:00</Time>
     </Item>
     <Item>
+      <Source>Data\Abilities\ShipAddOnAbilities\Recharge.xml</Source>
+      <Name>Data\Abilities\ShipAddOnAbilities\Recharge</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Recharge.xnb</Output>
+      <Time>2015-11-02T23:01:11.2433266+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Abilities\ShipAddOnAbilities\AutoReloader.xml</Source>
+      <Name>Data\Abilities\ShipAddOnAbilities\AutoReloader</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\AutoReloader.xnb</Output>
+      <Time>2015-11-02T23:01:01.9681753+00:00</Time>
+    </Item>
+    <Item>
       <Source>Music\Dream Raid.mp3</Source>
       <Name>Music\Dream Raid</Name>
       <Importer>Mp3Importer</Importer>
@@ -1172,33 +1226,6 @@
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\LaserFire.xnb</Output>
       <Time>2015-10-20T00:22:56.2021807+01:00</Time>
     </Item>
-    <Item>
-      <Source>Sprites\GameObjects\FX\Explosion.png</Source>
-      <Name>Sprites\GameObjects\FX\Explosion</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\FX\Explosion.xnb</Output>
-      <Time>2015-11-02T21:31:09.4352925+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Abilities\ShipAddOnAbilities\recharge_shields.png</Source>
-      <Name>Sprites\Abilities\ShipAddOnAbilities\recharge_shields</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\Abilities\ShipAddOnAbilities\recharge_shields.xnb</Output>
-      <Time>2015-11-02T21:59:53.5872437+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\Abilities\ShipAddOnAbilities\Recharge.xml</Source>
-      <Name>Data\Abilities\ShipAddOnAbilities\Recharge</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Recharge.xnb</Output>
-      <Time>2015-11-02T22:01:09.133509+00:00</Time>
-    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>
@@ -1214,7 +1241,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiegeData\bin\x86\Debug\UnderSiegeData.dll</Key>
-        <Value>2015-11-02T21:24:10.1960407+00:00</Value>
+        <Value>2015-11-02T23:33:31.5438054+00:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

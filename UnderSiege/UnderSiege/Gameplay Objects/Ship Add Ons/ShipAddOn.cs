@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnderSiege.Abilities.Object_Abilities;
+using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
 using UnderSiege.Player_Data;
 using UnderSiege.Screens;
 using UnderSiege.UI;
@@ -44,7 +45,7 @@ namespace UnderSiege.Gameplay_Objects
             private set;
         }
 
-        private ShipAddOnAbilityUI AbilityUI { get; set; }
+        private ShipAddOnAbilityMenu AbilityUI { get; set; }
         private static int abilityUITagID = 0;
 
         #endregion
@@ -76,7 +77,11 @@ namespace UnderSiege.Gameplay_Objects
                         break;
 
                     case "Recharge":
-                        ability = new RepairAbility("Data\\Abilities\\ShipAddOnAbilities\\Recharge", this);
+                        ability = new RechargeAbility("Data\\Abilities\\ShipAddOnAbilities\\Recharge", (this as ShipShield));
+                        break;
+
+                    case "Auto Reloader":
+                        ability = new AutoReloaderAbility("Data\\Abilities\\ShipAddOnAbilities\\AutoReloader", (this as ShipKineticTurret));
                         break;
                 }
 
@@ -114,7 +119,7 @@ namespace UnderSiege.Gameplay_Objects
             {
                 SetUpAbilities();
 
-                AbilityUI = new ShipAddOnAbilityUI(Vector2.Zero, this);
+                AbilityUI = new ShipAddOnAbilityMenu(Vector2.Zero, this);
                 AbilityUI.Active = false;
                 AbilityUI.Visible = false;
                 AbilityUI.LoadContent();
@@ -151,6 +156,11 @@ namespace UnderSiege.Gameplay_Objects
                 HealthBar.Update(gameTime);
                 HealthBar.UpdateValue(CurrentHealth);
                 HealthBar.Visible = MouseOver || IsSelected;
+
+                foreach (AddOnAbility ability in Abilities)
+                {
+                    ability.Update(gameTime);
+                }
             }
         }
 

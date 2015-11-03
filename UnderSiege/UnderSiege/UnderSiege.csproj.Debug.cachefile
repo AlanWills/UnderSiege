@@ -57,6 +57,10 @@ Content\Sprites\GameObjects\SpaceStations\shipyard.xnb
 Content\Sprites\GameObjects\Ships\EnemyShips\bushi_raiu.xnb
 Content\Sprites\GameObjects\Ships\EnemyShips\bushi_odachi.xnb
 Content\Sprites\Backgrounds\LevelBackgrounds\Level4Background.xnb
+Content\Sprites\GameObjects\FX\Explosion.xnb
+Content\Sprites\Abilities\ShipAddOnAbilities\recharge_shields.xnb
+Content\Sprites\Abilities\ShipAddOnAbilities\auto_reloader.xnb
+Content\Sprites\UI\InGameUI\CooldownUI.xnb
 Content\Data\Screens\MainMenuScreen.xnb
 Content\Data\GameObjects\SpaceStations\CommandStation.xnb
 Content\Data\GameObjects\Turrets\DualLaserTurret.xnb
@@ -113,6 +117,8 @@ Content\Data\Waves\Level4\Wave3.xnb
 Content\Data\Screens\LoadingScreen.xnb
 Content\Data\Screens\Debug.xnb
 Content\Data\Screens\GameOverScreen.xnb
+Content\Data\Abilities\ShipAddOnAbilities\Recharge.xnb
+Content\Data\Abilities\ShipAddOnAbilities\AutoReloader.xnb
 Content\Music\Dream Raid.xnb
 Content\Music\The Fall of Arcana.xnb
 Content\Music\Imminent Threat.xnb
@@ -127,9 +133,6 @@ Content\SFX\ButtonHover.xnb
 Content\SFX\ButtonPressedSound.xnb
 Content\SFX\LightThruster.xnb
 Content\SFX\LaserFire.xnb
-Content\Sprites\GameObjects\FX\Explosion.xnb
-Content\Sprites\Abilities\ShipAddOnAbilities\recharge_shields.xnb
-Content\Data\Abilities\ShipAddOnAbilities\Recharge.xnb
 Content\Music\Dream Raid.wma
 Content\Music\The Fall of Arcana.wma
 Content\Music\Imminent Threat.wma

@@ -27,10 +27,12 @@ namespace UnderSiege.Abilities.Object_Abilities
 
         #region Virtual Methods
 
-        protected override bool CanRun()
+        public override void CheckCanRun()
         {
+            base.CheckCanRun();
+
             float diff = ParentAddOn.ShipAddOnData.Health - ParentAddOn.CurrentHealth;
-            return (diff != 0 && Session.Money >= diff);
+            CanRun = CanRun && diff != 0 && Session.Money >= diff;
         }
 
         protected override void CheckIsDone()

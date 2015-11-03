@@ -73,6 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abilities\Object Abilities\AddOnAbility.cs" />
+    <Compile Include="Abilities\Object Abilities\AutoReloaderAbility.cs" />
+    <Compile Include="Abilities\Object Abilities\RechargeAbility.cs" />
     <Compile Include="Abilities\Object Abilities\RepairAbility.cs" />
     <Compile Include="Abilities\Object Abilities\SellAbility.cs" />
     <Compile Include="Cutscenes\Level 1\Level1StartCutScene.cs" />
@@ -121,12 +123,14 @@
     <Compile Include="UI\HardPointUIManager.cs" />
     <Compile Include="UI\HUD Menus\BuyShipShieldMenu.cs" />
     <Compile Include="UI\HUD Menus\BuyShipTurretMenu.cs" />
+    <Compile Include="UI\In Game UI\AddOnAbilityUI.cs" />
     <Compile Include="UI\In Game UI\Buy Add On Info\BuyShipAddOnHoverInfo.cs" />
     <Compile Include="UI\In Game UI\Buy Add On Info\BuyShipEngineHoverInfo.cs" />
     <Compile Include="UI\In Game UI\Buy Add On Info\BuyShipShieldHoverInfo.cs" />
     <Compile Include="UI\In Game UI\Buy Add On Info\BuyShipTurretHoverInfo.cs" />
     <Compile Include="UI\In Game UI\Explosion.cs" />
-    <Compile Include="UI\In Game UI\ShipAddOnAbilityUI.cs" />
+    <Compile Include="UI\In Game UI\CooldownUI.cs" />
+    <Compile Include="UI\In Game UI\ShipAddOnAbilityMenu.cs" />
     <Compile Include="UI\In Game UI\EngineBlaze.cs" />
     <Compile Include="UI\In Game UI\HardPointUI.cs" />
     <Compile Include="UI\HUD.cs" />

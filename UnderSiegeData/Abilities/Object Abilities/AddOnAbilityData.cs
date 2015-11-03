@@ -8,5 +8,10 @@ namespace UnderSiegeData.Abilities.Object_Abilities
 {
     public class AddOnAbilityData : BaseData
     {
+        public float Cooldown
+        {
+            get;
+            set;
+        }
     }
 }

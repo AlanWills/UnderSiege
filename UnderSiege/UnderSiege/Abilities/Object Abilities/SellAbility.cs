@@ -25,9 +25,11 @@ namespace UnderSiege.Abilities.Object_Abilities
 
         #region Virtual Methods
 
-        protected override bool CanRun()
+        public override void CheckCanRun()
         {
-            return ParentAddOn.CurrentHealth > 0;
+            base.CheckCanRun();
+
+            CanRun = CanRun && ParentAddOn.CurrentHealth > 0;
         }
 
         protected override void CheckIsDone()

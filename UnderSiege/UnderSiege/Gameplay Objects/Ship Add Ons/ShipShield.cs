@@ -17,7 +17,7 @@ namespace UnderSiege.Gameplay_Objects
     {
         #region Properties and Fields
 
-        private ShipShieldData ShipShieldData { get; set; }
+        public ShipShieldData ShipShieldData { get; private set; }
         public float CurrentShieldStrength { get; set; }
         private Bar ShieldStrengthBar { get; set; }
 

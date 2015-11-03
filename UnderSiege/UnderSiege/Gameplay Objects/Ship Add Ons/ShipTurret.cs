@@ -107,10 +107,11 @@ namespace UnderSiege.Gameplay_Objects
                 float angle = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, Target.WorldPosition);
                 if (Math.Abs(angle - WorldRotation) > 0.1f)
                 {
-                    RigidBody.AngularVelocity = 10 * Trigonometry.GetRotateDirectionForShortestRotation(this, Target.WorldPosition);
+                    RigidBody.AngularVelocity = 3.5f * Trigonometry.GetRotateDirectionForShortestRotation(this, Target.WorldPosition);
                 }
                 else
                 {
+                    LocalRotation = angle - Parent.WorldRotation;
                     RigidBody.FullAngularStop();
                 }
             }

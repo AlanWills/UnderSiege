@@ -188,7 +188,14 @@ namespace UnderSiege.Screens
 
         public override void AddPauseMenu()
         {
-            AddScript(new AddMenuScript(new UnderSiegeGameplayScreenPauseMenu(this)));
+            AddMenuScript addPauseMenuScript = new AddMenuScript(new UnderSiegeGameplayScreenPauseMenu(this));
+            addPauseMenuScript.CanRunEvent += addPauseMenuScript_CanRunEvent;
+            AddScript(addPauseMenuScript);
+        }
+
+        void addPauseMenuScript_CanRunEvent(object sender, EventArgs e)
+        {
+            (sender as Script).CanRun = true;
         }
 
         #endregion

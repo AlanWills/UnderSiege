@@ -19,6 +19,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         public ShipBeamTurretData ShipBeamTurretData { get; private set; }
         private Beam Beam { get; set; }
 
+        private bool BeamCharged { get { return Beam.Opacity == 1; } }
+
         private bool firing = false;
 
         #endregion
@@ -60,41 +62,47 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             firing = true;
             Beam.Size = new Vector2(Size.X, (WorldPosition - Target.WorldPosition).Length());
 
-            if (firingSoundEffectInstance == null || firingSoundEffectInstance.State == SoundState.Stopped)
+            if (BeamCharged)
             {
-                if (FiringSoundEffect != null)
+                if (firingSoundEffectInstance == null)
                 {
                     firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+                    firingSoundEffectInstance.IsLooped = true;
                     firingSoundEffectInstance.Volume = Options.SFXVolume;
+                    firingSoundEffectInstance.Play();
                 }
             }
         }
 
         public override void CheckIfDamagedTarget()
         {
-            // We have a target a ship addon that isn't a shield - so we need to check for shield interactions
-            if (!(Target is ShipShield) && !(Target is Ship))
+            // Only do the damaging if the beam has reached full intensity
+            if (BeamCharged)
             {
-                foreach (ShipShield shipShield in (Target as ShipAddOn).ParentShip.ShipAddOns.ShipShields)
+                // We have a target a ship addon that isn't a shield - so we need to check for shield interactions
+                if (!(Target is ShipShield) && !(Target is Ship))
                 {
-                    if (shipShield.Collider.CheckCollisionWith(Beam.BeamLine))
+                    foreach (ShipShield shipShield in (Target as ShipAddOn).ParentShip.ShipAddOns.ShipShields)
                     {
-                        shipShield.Damage(ShipTurretData.Damage);
-                        break;
+                        if (shipShield.Collider.CheckCollisionWith(Beam.BeamLine))
+                        {
+                            shipShield.Damage(ShipTurretData.Damage);
+                            break;
+                        }
+                    }
+
+                    if (Target.Collider.CheckCollisionWith(Beam.BeamLine))
+                    {
+                        Target.Damage(ShipTurretData.Damage);
                     }
                 }
-
-                if (Target.Collider.CheckCollisionWith(Beam.BeamLine))
+                // Continue normally
+                else
                 {
-                    Target.Damage(ShipTurretData.Damage);
-                }
-            }
-            // Continue normally
-            else
-            {
-                if (Target.Collider.CheckCollisionWith(Beam.BeamLine))
-                {
-                    Target.Damage(ShipTurretData.Damage);
+                    if (Target.Collider.CheckCollisionWith(Beam.BeamLine))
+                    {
+                        Target.Damage(ShipTurretData.Damage);
+                    }
                 }
             }
         }
@@ -108,7 +116,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             if (Target != null)
             {
                 float angleToTarget = Trigonometry.GetAngleOfLineBetweenObjectAndTarget(this, Target.WorldPosition);
-                if (Math.Abs(angleToTarget - WorldRotation) < 0.05f)
+                if (Math.Abs(angleToTarget - WorldRotation) <= 0.1f)
                 {
                     Fire();
                 }
@@ -126,12 +134,18 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             else
             {
                 firing = false;
+
+                if (firingSoundEffectInstance != null)
+                {
+                    firingSoundEffectInstance.Stop();
+                    firingSoundEffectInstance = null;
+                }
             }
 
             if (firing)
-                Beam.Opacity = (float)Math.Min(Beam.Opacity + 0.01f, 1);
+                Beam.Opacity = (float)Math.Min(Beam.Opacity + 0.02f, 1);
             else
-                Beam.Opacity = (float)Math.Max(Beam.Opacity - 0.01f, 0);
+                Beam.Opacity = (float)Math.Max(Beam.Opacity - 0.05f, 0);
 
             TargetingLine.Visible = Opacity == 0 ? true : false;
         }

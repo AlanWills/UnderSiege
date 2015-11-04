@@ -3,6 +3,8 @@
   <Asset Type="_2DGameEngineData.Screen_Data.BaseScreenData">
     <DisplayName>Game Over</DisplayName>
     <TextureAsset>Sprites\Backgrounds\FadeOutScreen</TextureAsset>
-    <BackgroundMusicNames></BackgroundMusicNames>
+    <BackgroundMusicNames>
+      <Item>Space and Sorrow</Item>
+    </BackgroundMusicNames>
   </Asset>
 </XnaContent>

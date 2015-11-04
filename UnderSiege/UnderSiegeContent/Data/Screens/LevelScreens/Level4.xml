@@ -3,7 +3,10 @@
   <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
     <DisplayName>Level 4</DisplayName>
     <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level4Background</TextureAsset>
-    <BackgroundMusicNames></BackgroundMusicNames>
+    <BackgroundMusicNames>
+      <Item>The Fall of Arcana</Item>
+      <Item>Wasteland Overdrive</Item>
+    </BackgroundMusicNames>
     <CommandShipName>Data\GameObjects\Ships\PlayerShips\HiiSaari</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\Level4\Wave1</Item>

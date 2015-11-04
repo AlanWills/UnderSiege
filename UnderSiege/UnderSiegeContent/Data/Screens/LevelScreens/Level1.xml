@@ -3,7 +3,9 @@
   <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
     <DisplayName>Level 1</DisplayName>
     <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level1Background</TextureAsset>
-    <BackgroundMusicNames></BackgroundMusicNames>
+    <BackgroundMusicNames>
+      <Item>Imminent Threat</Item>
+    </BackgroundMusicNames>
     <CommandShipName>Data\GameObjects\SpaceStations\CommandStation</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\Level1\Wave1</Item>

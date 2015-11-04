@@ -3,7 +3,10 @@
   <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
     <DisplayName>Level 3</DisplayName>
     <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level3Background</TextureAsset>
-    <BackgroundMusicNames></BackgroundMusicNames>
+    <BackgroundMusicNames>
+      <Item>doodle_0</Item>
+      <Item>Dream Raid</Item>
+    </BackgroundMusicNames>
     <CommandShipName>Data\GameObjects\SpaceStations\Shipyard</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\Level3\Wave1</Item>

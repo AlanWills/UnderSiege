@@ -3,7 +3,10 @@
   <Asset Type="UnderSiegeData.Screens.UnderSiegeGameplayScreenData">
     <DisplayName>Level 2</DisplayName>
     <TextureAsset>Sprites\Backgrounds\LevelBackgrounds\Level2Background</TextureAsset>
-    <BackgroundMusicNames></BackgroundMusicNames>
+    <BackgroundMusicNames>
+      <Item>Assimilator</Item>
+      <Item>Orbital Colossus</Item>
+    </BackgroundMusicNames>
     <CommandShipName>Data\GameObjects\Ships\PlayerShips\HiiSaari</CommandShipName>
     <WaveNames>
       <Item>Data\Waves\Level2\Wave1</Item>

@@ -13,6 +13,8 @@ namespace UnderSiege.Abilities.Object_Abilities
 
         private ShipShield ShipShield { get; set; }
 
+        private float totalRecharged = 0;
+
         #endregion
 
         public RechargeAbility(string dataAsset, ShipShield parentShield)
@@ -37,7 +39,14 @@ namespace UnderSiege.Abilities.Object_Abilities
 
         protected override void CheckIsDone()
         {
-            Done = ShipShield.CurrentShieldStrength == ShipShield.ShipShieldData.ShieldStrength;
+            Done = ShipShield.CurrentShieldStrength == ShipShield.ShipShieldData.ShieldStrength && totalRecharged > 75;
+        }
+
+        protected override void End()
+        {
+            base.End();
+
+            totalRecharged = 0;
         }
 
         protected override void AbilityEvent(object sender, EventArgs e)
@@ -45,6 +54,7 @@ namespace UnderSiege.Abilities.Object_Abilities
             base.AbilityEvent(sender, e);
 
             ShipShield.CurrentShieldStrength += 1f;
+            totalRecharged += 1f;
             ShipShield.CurrentShieldStrength = MathHelper.Clamp(ShipShield.CurrentShieldStrength, 0, ShipShield.ShipShieldData.ShieldStrength);
         }
 

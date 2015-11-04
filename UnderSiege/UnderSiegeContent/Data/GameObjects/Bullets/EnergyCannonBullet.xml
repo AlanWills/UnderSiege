@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="_2DTowerDefenceLibraryData.Bullet_Data.BulletData">
+    <DisplayName>Energy Cannon Bullet</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Bullets\BlueEnergyShot</TextureAsset>
+    <MaxSpeed>1000</MaxSpeed>
+    <LinearAcceleration>0</LinearAcceleration>
+    <BulletLifeTime>1.5</BulletLifeTime>
+  </Asset>
+</XnaContent>

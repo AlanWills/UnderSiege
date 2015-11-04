@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.ShipKineticTurretData">
+    <DisplayName>Laser Chaingun</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Turrets\hii_chaingun</TextureAsset>
+    <Health>100</Health>
+    <AddOnType>ShipTurret</AddOnType>
+    <Price>1000</Price>
+    <HardPointDimensions>1 1</HardPointDimensions>
+    <Orientable>true</Orientable>
+    <Abilities>
+      <Item>Auto Reloader</Item>
+      <Item>Repair</Item>
+      <Item>Sell</Item>
+    </Abilities>
+    <TurretType>Kinetic</TurretType>
+    <BulletAsset>Data\GameObjects\Bullets\ChaingunLaserBullet</BulletAsset>
+    <TurretFiringAsset>LaserFire</TurretFiringAsset>
+    <Range>500</Range>
+    <ArcWidth>2</ArcWidth>
+    <Damage>1</Damage>
+    <Spread>0.1</Spread>
+    <FireTimer>0.1</FireTimer>
+  </Asset>
+</XnaContent>

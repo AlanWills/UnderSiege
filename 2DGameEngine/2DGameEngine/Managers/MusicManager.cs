@@ -78,6 +78,10 @@ namespace _2DGameEngine.Managers
 
         public static void QueueSongs(List<string> songs, QueueType queueType = QueueType.WaitForCurrent)
         {
+            // If we are not adding any songs, don't bother doing the rest of this function
+            if (songs.Count == 0)
+                return;
+
             foreach (string song in songs)
             {
                 QueueSongNames.Enqueue(song);

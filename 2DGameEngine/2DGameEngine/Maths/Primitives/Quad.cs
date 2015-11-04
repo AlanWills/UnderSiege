@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -12,11 +13,11 @@ namespace _2DGameEngine.Maths.Primitives
     {
         #region Properties and Fields
 
-        public virtual float Width { get; set; }
-        public virtual float Height { get; set; }
-        public virtual float Rotation { get; set; }
+        public float Width { get; set; }
+        public float Height { get; set; }
+        public float Rotation { get; set; }
 
-        public virtual Vector2 Centre { get; set; }
+        public Vector2 Centre { get; set; }
         public Rectangle Rectangle
         {
             get
@@ -25,12 +26,14 @@ namespace _2DGameEngine.Maths.Primitives
             }
         }
 
+        private BaseObject BaseObject { get; set; }
+
         #endregion
 
-        public Quad(Vector2 centre, float width, float height, float rotation)
+        public Quad(BaseObject baseObject, float width, float height, float rotation)
             : base()
         {
-            Centre = centre;
+            BaseObject = baseObject;
             Width = width;
             Height = height;
             Rotation = rotation;

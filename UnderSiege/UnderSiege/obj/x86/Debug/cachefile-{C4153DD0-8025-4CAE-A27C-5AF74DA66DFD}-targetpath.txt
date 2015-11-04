@@ -63,6 +63,9 @@ Content\Sprites\Abilities\ShipAddOnAbilities\auto_reloader.xnb
 Content\Sprites\UI\InGameUI\CooldownUI.xnb
 Content\Sprites\Abilities\ShipAddOnAbilities\missile_barrage.xnb
 Content\Sprites\Abilities\ShipAddOnAbilities\afterburn.xnb
+Content\Sprites\GameObjects\Turrets\hii_chaingun.xnb
+Content\Sprites\GameObjects\Bullets\BlueEnergyShot.xnb
+Content\Sprites\GameObjects\Turrets\hii_energy_cannon.xnb
 Content\Data\Screens\MainMenuScreen.xnb
 Content\Data\GameObjects\SpaceStations\CommandStation.xnb
 Content\Data\GameObjects\Turrets\DualLaserTurret.xnb
@@ -123,6 +126,8 @@ Content\Data\Abilities\ShipAddOnAbilities\Recharge.xnb
 Content\Data\Abilities\ShipAddOnAbilities\AutoReloader.xnb
 Content\Data\Abilities\ShipAddOnAbilities\MissileBarrage.xnb
 Content\Data\Abilities\ShipAddOnAbilities\Afterburn.xnb
+Content\Data\GameObjects\Turrets\LaserChaingun.xnb
+Content\Data\GameObjects\Turrets\EnergyCannon.xnb
 Content\Music\Dream Raid.xnb
 Content\Music\Dream Raid.wma
 Content\Music\The Fall of Arcana.xnb
@@ -149,3 +154,5 @@ Content\SFX\LightThruster.xnb
 Content\SFX\LaserFire.xnb
 Content\SFX\MissileLaunch.xnb
 Content\SFX\BeamLaser.xnb
+Content\Data\GameObjects\Bullets\EnergyCannonBullet.xnb
+Content\Data\GameObjects\Bullets\ChaingunLaserBullet.xnb

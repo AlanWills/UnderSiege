@@ -587,6 +587,33 @@
       <Time>2015-11-04T00:02:29.595831+00:00</Time>
     </Item>
     <Item>
+      <Source>Sprites\GameObjects\Turrets\hii_chaingun.png</Source>
+      <Name>Sprites\GameObjects\Turrets\hii_chaingun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Turrets\hii_chaingun.xnb</Output>
+      <Time>2015-11-04T22:38:52.3393496+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\Bullets\BlueEnergyShot.png</Source>
+      <Name>Sprites\GameObjects\Bullets\BlueEnergyShot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Bullets\BlueEnergyShot.xnb</Output>
+      <Time>2015-11-04T22:40:57.8853815+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GameObjects\Turrets\hii_energy_cannon.png</Source>
+      <Name>Sprites\GameObjects\Turrets\hii_energy_cannon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Turrets\hii_energy_cannon.xnb</Output>
+      <Time>2015-11-04T22:42:08.0172591+00:00</Time>
+    </Item>
+    <Item>
       <Source>Data\Screens\MainMenuScreen.xml</Source>
       <Name>Data\Screens\MainMenuScreen</Name>
       <Importer>XmlImporter</Importer>
@@ -818,7 +845,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb</Output>
-      <Time>2015-11-04T00:02:29.3876917+00:00</Time>
+      <Time>2015-11-04T21:49:43.9591796+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Abilities\ShipAddOnAbilities\Sell.xml</Source>
@@ -1025,7 +1052,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave9.xnb</Output>
-      <Time>2015-11-04T00:02:29.5468122+00:00</Time>
+      <Time>2015-11-04T22:08:03.2111476+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level3\Wave8.xml</Source>
@@ -1125,6 +1152,24 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Abilities\ShipAddOnAbilities\Afterburn.xnb</Output>
       <Time>2015-11-04T00:02:29.3406622+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\GameObjects\Turrets\LaserChaingun.xml</Source>
+      <Name>Data\GameObjects\Turrets\LaserChaingun</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\LaserChaingun.xnb</Output>
+      <Time>2015-11-04T23:16:58.2862135+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\GameObjects\Turrets\EnergyCannon.xml</Source>
+      <Name>Data\GameObjects\Turrets\EnergyCannon</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\EnergyCannon.xnb</Output>
+      <Time>2015-11-04T23:17:10.5097631+00:00</Time>
     </Item>
     <Item>
       <Source>Music\Dream Raid.mp3</Source>
@@ -1280,6 +1325,24 @@
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\BeamLaser.xnb</Output>
       <Time>2015-11-04T00:02:29.5918279+00:00</Time>
     </Item>
+    <Item>
+      <Source>Data\GameObjects\Bullets\EnergyCannonBullet.xml</Source>
+      <Name>Data\GameObjects\Bullets\EnergyCannonBullet</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Bullets\EnergyCannonBullet.xnb</Output>
+      <Time>2015-11-04T23:17:33.875876+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\GameObjects\Bullets\ChaingunLaserBullet.xml</Source>
+      <Name>Data\GameObjects\Bullets\ChaingunLaserBullet</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Bullets\ChaingunLaserBullet.xnb</Output>
+      <Time>2015-11-04T23:17:54.1746626+00:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C4153DD0-8025-4CAE-A27C-5AF74DA66DFD}</ContentProjectGUID>
@@ -1295,7 +1358,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiegeData\bin\x86\Debug\UnderSiegeData.dll</Key>
-        <Value>2015-11-04T20:23:52.949005+00:00</Value>
+        <Value>2015-11-04T22:53:22.9140624+00:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
@@ -1323,11 +1386,11 @@
       </Assembly>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DTowerDefenceLibraryData\bin\x86\Debug\2DTowerDefenceLibraryData.dll</Key>
-        <Value>2015-10-26T00:33:40.3149267+00:00</Value>
+        <Value>2015-11-04T22:53:19.6088707+00:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngineData\bin\x86\Debug\2DGameEngineData.dll</Key>
-        <Value>2015-10-26T00:22:24.4055314+00:00</Value>
+        <Value>2015-11-04T22:53:11.7443742+00:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>

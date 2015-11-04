@@ -29,8 +29,6 @@ namespace _2DGameEngine.Physics_Components
 
         #region Virtual Methods
 
-        public abstract void UpdateCollider();
-
         public abstract bool CheckCollisionWith(Vector2 point);
         public abstract bool CheckCollisionWith(Line line);
         public abstract bool CheckCollisionWith(Arc arc);

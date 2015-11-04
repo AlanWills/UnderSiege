@@ -21,7 +21,7 @@ namespace _2DGameEngine.Physics_Components.Colliders
         public CircleCollider(BaseObject parent, float radius)
             : base(parent)
         {
-            Circle = new Circle(parent.WorldPosition + (parent.Size * 0.5f - parent.Centre * parent.Scale), radius, Color.Red, 0.5f);
+            Circle = new Circle(parent, radius, Color.Red, 0.5f);
         }
 
         #region Methods
@@ -29,11 +29,6 @@ namespace _2DGameEngine.Physics_Components.Colliders
         #endregion
 
         #region Virtual Methods
-
-        public override void UpdateCollider()
-        {
-            Circle.Centre = Parent.WorldPosition;
-        }
 
         public override bool CheckCollisionWith(Vector2 point)
         {

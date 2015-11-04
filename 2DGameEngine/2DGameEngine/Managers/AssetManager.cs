@@ -118,7 +118,14 @@ namespace _2DGameEngine.Managers
                 return data;
             }
 
-            return null;
+            try
+            {
+                return ScreenManager.Content.Load<T>(name);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public static List<T> GetAllData<T>() where T : BaseData

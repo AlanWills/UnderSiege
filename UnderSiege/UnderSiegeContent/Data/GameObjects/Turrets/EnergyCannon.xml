@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="UnderSiegeData.Gameplay_Objects.ShipKineticTurretData">
+    <DisplayName>Energy Cannon</DisplayName>
+    <TextureAsset>Sprites\GameObjects\Turrets\hii_energy_cannon</TextureAsset>
+    <Health>65</Health>
+    <AddOnType>ShipTurret</AddOnType>
+    <Price>650</Price>
+    <HardPointDimensions>1 1</HardPointDimensions>
+    <Orientable>true</Orientable>
+    <Abilities>
+      <Item>Auto Reloader</Item>
+      <Item>Repair</Item>
+      <Item>Sell</Item>
+    </Abilities>
+    <TurretType>Kinetic</TurretType>
+    <BulletAsset>Data\GameObjects\Bullets\EnergyCannonBullet</BulletAsset>
+    <TurretFiringAsset>LaserFire</TurretFiringAsset>
+    <Range>700</Range>
+    <ArcWidth>2</ArcWidth>
+    <Damage>13</Damage>
+    <Spread>0</Spread>
+    <FireTimer>1.25</FireTimer>
+  </Asset>
+</XnaContent>

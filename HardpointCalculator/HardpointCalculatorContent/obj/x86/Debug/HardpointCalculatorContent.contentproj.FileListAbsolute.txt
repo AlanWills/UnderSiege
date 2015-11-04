@@ -1,1 +1,0 @@
-C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculatorContent\obj\x86\Debug\HardpointCalculatorContent.contentprojResolveAssemblyReference.cache

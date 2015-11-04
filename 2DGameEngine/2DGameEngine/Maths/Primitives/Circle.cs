@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -12,24 +13,25 @@ namespace _2DGameEngine.Maths.Primitives
     {
         #region Properties and Fields
 
-        public Vector2 Centre { get; set; }
+        public Vector2 Centre { get { return BaseObject.WorldPosition; } }
         public float Radius { get; set; }
+        private BaseObject BaseObject { get; set; }
 
         public int triangles = 20;
 
         #endregion
 
-        public Circle(Vector2 centre, float radius)
+        public Circle(BaseObject baseObject, float radius)
             : base()
         {
-            Centre = centre;
+            BaseObject = baseObject;
             Radius = radius;
         }
 
-        public Circle(Vector2 centre, float radius, Color colour, float opacity)
+        public Circle(BaseObject baseObject, float radius, Color colour, float opacity)
             : base(colour, opacity)
         {
-            Centre = centre;
+            BaseObject = baseObject;
             Radius = radius;
         }
 

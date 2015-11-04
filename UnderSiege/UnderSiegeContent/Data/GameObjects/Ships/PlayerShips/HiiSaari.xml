@@ -5,7 +5,7 @@
     <TextureAsset>Sprites\GameObjects\Ships\PlayerShips\hii_saari</TextureAsset>
     <Health>800</Health>
     <OtherHardPoints>
-      0 110
+      0 95
       -66 74
       66 74
       0 -12

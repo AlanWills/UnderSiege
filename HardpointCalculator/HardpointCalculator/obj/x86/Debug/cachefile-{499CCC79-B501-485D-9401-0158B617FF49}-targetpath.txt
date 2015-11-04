@@ -1,5 +1,5 @@
-Content\SpriteFonts\UISpriteFont.xnb
-Content\Sprites\UI\Mouse\default.xnb
 Content\Sprites\Ships\hii_saari.xnb
+Content\Sprites\UI\Mouse\default.xnb
 Content\Sprites\Ships\shipyard.xnb
 Content\Sprites\Ships\bushi_odachi.xnb
+Content\SpriteFonts\UISpriteFont.xnb

@@ -42,12 +42,6 @@ namespace _2DGameEngine.Physics_Components.Colliders
 
         #region Virtual Methods
 
-        public override void UpdateCollider()
-        {
-            Bounds.Centre = Parent.WorldPosition;
-            Bounds.Rotation = Parent.WorldRotation;
-        }
-
         public override bool CheckCollisionWith(Vector2 point)
         {
             // Adjust for rotation here

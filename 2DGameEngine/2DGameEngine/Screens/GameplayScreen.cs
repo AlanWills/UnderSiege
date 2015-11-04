@@ -24,7 +24,6 @@ namespace _2DGameEngine.Screens
             : base(screenManager, dataAsset)
         {
             Camera.Position = Vector2.Zero;
-            ScreenManager.Camera.CameraMode = CameraMode.Free;
             SceneRoot = new GameObject("", null, false);
         }
 
@@ -39,6 +38,13 @@ namespace _2DGameEngine.Screens
             base.Show();
 
             ScreenManager.Camera.CameraMode = CameraMode.Free;
+        }
+
+        public override void AddMusic(QueueType queueType = QueueType.PlayImmediately)
+        {
+            MusicManager.ClearQueue();
+
+            base.AddMusic(QueueType.PlayImmediately);
         }
 
         public override void HandleInput()

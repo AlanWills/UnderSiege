@@ -40,6 +40,7 @@ namespace UnderSiege.Cutscenes.Level_2
             AddScript(new WaitScript(5));
             AddScript(new AddDialogBoxScript("Captain, this is Chief Engineer Troth.", true, true));
             AddScript(new AddDialogBoxScript("We can override the gate's systems,\nbut we are going to need TIME.", true, true));
+            AddScript(new AddDialogBoxScript("Make sure you stay close to the gate,\nthis will only work over a short distance.", true, true));
             AddScript(new AddDialogBoxScript("How long do you need Troth?", true, true));
             AddScript(new AddDialogBoxScript("As much as you can give me captain.", true, true));
             AddScript(new WaitScript(20));

@@ -111,8 +111,7 @@ namespace _2DGameEngine.Screens
                 if (InputHandler.KeyPressed(Keys.Escape))
                 {
                     ScreenManager.RemoveScreen(this);
-                    previousScreen.Active = true;
-                    previousScreen.Visible = true;
+                    previousScreen.Show();
                 }
             }
         }

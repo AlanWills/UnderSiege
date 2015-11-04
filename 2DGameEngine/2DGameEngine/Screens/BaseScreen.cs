@@ -131,13 +131,13 @@ namespace _2DGameEngine.Screens
             ScreenManager = screenManager;
             DataAsset = dataAsset;
             Tag = this;
-            Visible = true;
-            Active = true;
 
             ScriptManager = new ScriptManager(this);
             GameObjectManager = new BaseObjectManager<GameObject>();
             UIManager = new BaseObjectManager<ScreenUIObject>();
             InGameUIManager = new BaseObjectManager<InGameUIObject>();
+
+            Show();
         }
 
         #region Methods

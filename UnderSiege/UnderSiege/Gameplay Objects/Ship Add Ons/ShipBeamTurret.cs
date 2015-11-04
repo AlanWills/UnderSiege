@@ -53,6 +53,13 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             Beam.Initialize();
             Beam.Opacity = 0;
 
+            // Create the firing sound effect instance - we will just pause and unpause this
+            // Bit of a hack, we play, but with 0 volume so that we can just pause and resume later, rather than having to check in Fire() whether it has been played yet
+            firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+            firingSoundEffectInstance.IsLooped = true;
+            firingSoundEffectInstance.Volume = 0;
+            firingSoundEffectInstance.Play();
+
             firing = false;
         }
 
@@ -64,13 +71,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
             if (BeamCharged)
             {
-                if (firingSoundEffectInstance == null)
-                {
-                    firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
-                    firingSoundEffectInstance.IsLooped = true;
-                    firingSoundEffectInstance.Volume = Options.SFXVolume;
-                    firingSoundEffectInstance.Play();
-                }
+                firingSoundEffectInstance.Volume = Options.SFXVolume;
+                firingSoundEffectInstance.Resume();
             }
         }
 
@@ -124,22 +126,14 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                 {
                     firing = false;
 
-                    if (firingSoundEffectInstance != null)
-                    {
-                        firingSoundEffectInstance.Stop();
-                        firingSoundEffectInstance = null;
-                    }
+                    firingSoundEffectInstance.Pause();
                 }
             }
             else
             {
                 firing = false;
 
-                if (firingSoundEffectInstance != null)
-                {
-                    firingSoundEffectInstance.Stop();
-                    firingSoundEffectInstance = null;
-                }
+                firingSoundEffectInstance.Pause();
             }
 
             if (firing)

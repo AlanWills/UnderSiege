@@ -89,6 +89,13 @@ namespace _2DGameEngine.Managers
             }
         }
 
+        public static void ClearQueue()
+        {
+            CurrentSong = null;
+            MediaPlayer.Stop();
+            QueueSongNames.Clear();
+        }
+
         public static void PlaySongImmediately(string songName)
         {
             CurrentSong = Songs[songName];
@@ -107,11 +114,13 @@ namespace _2DGameEngine.Managers
         {
             if (MediaPlayer.State == MediaState.Stopped)
             {
+                // If we have songs still queued then dequeue the next song name
                 if (QueueSongNames.Count > 0)
                 {
                     CurrentSong = Songs[QueueSongNames.Dequeue()];
                     MediaPlayer.Play(CurrentSong);
                 }
+                // Else just keep playing the song last played
                 else if (CurrentSong != null)
                 {
                     MediaPlayer.Play(CurrentSong);

@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\Content\Sprites\Ships\shipyard.xnb</Output>
-      <Time>2015-11-02T19:59:18.0688718+00:00</Time>
+      <Time>2015-11-04T00:02:26.8399891+00:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Ships\bushi_odachi.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\Content\Sprites\Ships\bushi_odachi.xnb</Output>
-      <Time>2015-11-02T19:59:18.0638672+00:00</Time>
+      <Time>2015-11-04T00:02:26.8369858+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

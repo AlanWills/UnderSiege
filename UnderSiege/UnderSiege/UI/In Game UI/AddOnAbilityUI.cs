@@ -56,11 +56,16 @@ namespace UnderSiege.UI.In_Game_UI
             CooldownUI.Draw(spriteBatch);
         }
 
+        public override void Show()
+        {
+            base.Show();
+
+            ScreenManager.GameMouse.Flush();
+        }
+
         protected override void Select()
         {
             base.Select();
-
-            ScreenManager.GameMouse.Flush();
 
             if (Ability.CanRun)
             {

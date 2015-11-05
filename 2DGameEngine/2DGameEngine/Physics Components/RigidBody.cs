@@ -128,12 +128,9 @@ namespace _2DGameEngine.Physics_Components
             // For optimisation purposes
             LinearVelocity = Vector2.Add(LinearVelocity, Vector2.Multiply(LinearAcceleration, elapsedMilliseconds));
 
-            float sinRot = (float)Math.Sin(ParentObject.LocalRotation);
-            float cosRot = (float)Math.Cos(ParentObject.LocalRotation);
-
-            // For optimisation purposes
-            Vector2 diff = new Vector2(cosRot * LinearVelocity.X + sinRot * LinearVelocity.Y, -cosRot * LinearVelocity.Y + sinRot * LinearVelocity.X);
-            ParentObject.LocalPosition = Vector2.Add(ParentObject.LocalPosition, Vector2.Multiply(diff, elapsedMilliseconds));
+            // Good performance
+            Vector2 diff = Vector2.Multiply(Vector2.Transform(LinearVelocity, Matrix.CreateRotationZ(ParentObject.LocalRotation)), elapsedMilliseconds);
+            ParentObject.LocalPosition = Vector2.Add(ParentObject.LocalPosition, -diff);
         }
 
         #endregion

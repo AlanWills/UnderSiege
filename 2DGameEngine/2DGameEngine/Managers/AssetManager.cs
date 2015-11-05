@@ -96,36 +96,38 @@ namespace _2DGameEngine.Managers
 
         public static SpriteFont GetSpriteFont(string name)
         {
-            if (SpriteFonts.ContainsKey(name))
-                return SpriteFonts[name];
+            SpriteFont spriteFont = null;
+            SpriteFonts.TryGetValue(name, out spriteFont);
 
-            return null;
+            return spriteFont;
         }
 
         public static Texture2D GetTexture(string name)
         {
-            if (Textures.ContainsKey(name))
-                return Textures[name];
+            Texture2D texture = null;
+            Textures.TryGetValue(name, out texture);
 
-            return null;
+            return texture;
         }
 
         public static T GetData<T>(string name) where T : BaseData
         {
-            if (Data.ContainsKey(name))
+            BaseData data = null;
+            Data.TryGetValue(name, out data);
+
+            if (data == null)
             {
-                T data = Data[name] as T;
-                return data;
+                try
+                {
+                    return ScreenManager.Content.Load<T>(name);
+                }
+                catch
+                {
+                    return null;
+                }
             }
 
-            try
-            {
-                return ScreenManager.Content.Load<T>(name);
-            }
-            catch
-            {
-                return null;
-            }
+            return data as T;
         }
 
         public static List<T> GetAllData<T>() where T : BaseData

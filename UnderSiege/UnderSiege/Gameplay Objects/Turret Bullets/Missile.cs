@@ -72,9 +72,9 @@ namespace UnderSiege.Gameplay_Objects
 
             // If the acceleration is non-zero, we change the acceleration of the bullet.  Otherwise, we set the bullet's T velocity Y component to be it's max value
             if (MissileData.LinearAcceleration != 0)
-                RigidBody.LinearAcceleration = new Vector2(RigidBody.LinearAcceleration.X, MissileData.LinearAcceleration);
+                RigidBody.LinearAcceleration = Vector2.Add(Vector2.Zero, new Vector2(0, MissileData.LinearAcceleration));
             else
-                RigidBody.LinearVelocity = new Vector2(RigidBody.LinearVelocity.X, MissileData.MaxSpeed);
+                RigidBody.LinearVelocity = Vector2.Add(Vector2.Zero, new Vector2(0, MissileData.MaxSpeed));
 
             EngineBlaze = new EngineBlaze(this, new Vector2(0, 1.5f * Size.Y), new Vector2(Size.X, 2 * Size.Y), "Sprites\\GameObjects\\FX\\EngineBlaze", 8, 1, 0.1f, false, true, this);
             EngineBlaze.LoadContent();

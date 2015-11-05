@@ -126,12 +126,16 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             get
             {
-                if (Parent != null)
+                if (Parent != null || )
                 {
-                    float sinRot = (float)Math.Sin(Parent.WorldRotation);
+                    /*float sinRot = (float)Math.Sin(Parent.WorldRotation);
                     float cosRot = (float)Math.Cos(Parent.WorldRotation);
 
-                    return Parent.WorldPosition + new Vector2(cosRot * LocalPosition.X - sinRot * LocalPosition.Y, cosRot * LocalPosition.Y + sinRot * LocalPosition.X);
+                    return Vector2.Add(Parent.WorldPosition, new Vector2(cosRot * LocalPosition.X - sinRot * LocalPosition.Y, cosRot * LocalPosition.Y + sinRot * LocalPosition.X));*/
+
+                    Vector2 vec = Vector2.Transform(LocalPosition, Matrix.CreateRotationZ(LocalRotation));
+
+                    return Vector2.Add(Parent.WorldPosition, vec);
                 }
 
                 return LocalPosition;
@@ -147,8 +151,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
             }
             set
             {
-                value = MathHelper.WrapAngle(value);
-                localRotation = value;
+                localRotation = MathHelper.WrapAngle(value);
             }
         }
 

@@ -143,7 +143,7 @@ namespace UnderSiege.Gameplay_Objects
             bool useEnemies = ParentShip.ShipType == ShipType.AlliedShip;
             foreach (Ship ship in useEnemies ? UnderSiegeGameplayScreen.Enemies.Values.AsEnumerable<Ship>() : UnderSiegeGameplayScreen.Allies.Values.AsEnumerable<Ship>())
             {
-                float distanceToTargetSquared = (WorldPosition - ship.WorldPosition).LengthSquared();
+                float distanceToTargetSquared = Vector2.Subtract(WorldPosition, ship.WorldPosition).LengthSquared();
                 // Add buffer amount of 50 to stop rapid target changing
                 if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared + 50 <= currentRangeToTargetSquared)
                 {
@@ -163,7 +163,7 @@ namespace UnderSiege.Gameplay_Objects
 
                 foreach (ShipAddOn shipAddOn in target.ShipAddOns.Values)
                 {
-                    float distanceToTargetSquared = (WorldPosition - shipAddOn.WorldPosition).LengthSquared();
+                    float distanceToTargetSquared = Vector2.Subtract(WorldPosition, shipAddOn.WorldPosition).LengthSquared();
                     // Add buffer amount of 50 to stop rapid target changing
                     if (distanceToTargetSquared <= ShipTurretData.Range * ShipTurretData.Range && distanceToTargetSquared + 50 <= currentRangeToTargetSquared)
                     {

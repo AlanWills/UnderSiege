@@ -728,7 +728,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\MissilePod.xnb</Output>
-      <Time>2015-11-05T00:09:15.717473+00:00</Time>
+      <Time>2015-11-05T00:10:02.7649934+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\TviirMissile.xml</Source>
@@ -1154,24 +1154,6 @@
       <Time>2015-11-04T00:02:29.3406622+00:00</Time>
     </Item>
     <Item>
-      <Source>Data\GameObjects\Turrets\LaserChaingun.xml</Source>
-      <Name>Data\GameObjects\Turrets\LaserChaingun</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\LaserChaingun.xnb</Output>
-      <Time>2015-11-04T23:16:58.2862135+00:00</Time>
-    </Item>
-    <Item>
-      <Source>Data\GameObjects\Turrets\EnergyCannon.xml</Source>
-      <Name>Data\GameObjects\Turrets\EnergyCannon</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\EnergyCannon.xnb</Output>
-      <Time>2015-11-04T23:17:10.5097631+00:00</Time>
-    </Item>
-    <Item>
       <Source>Data\GameObjects\Bullets\EnergyCannonBullet.xml</Source>
       <Name>Data\GameObjects\Bullets\EnergyCannonBullet</Name>
       <Importer>XmlImporter</Importer>
@@ -1351,6 +1333,24 @@
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\SFX\BeamLaser.xnb</Output>
       <Time>2015-11-04T00:02:29.5918279+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Unused\Turrets\LaserChaingun.xml</Source>
+      <Name>Data\Unused\Turrets\LaserChaingun</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Unused\Turrets\LaserChaingun.xnb</Output>
+      <Time>2015-11-04T23:16:58.2862135+00:00</Time>
+    </Item>
+    <Item>
+      <Source>Data\Unused\Turrets\EnergyCannon.xml</Source>
+      <Name>Data\Unused\Turrets\EnergyCannon</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Unused\Turrets\EnergyCannon.xnb</Output>
+      <Time>2015-11-04T23:17:10.5097631+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

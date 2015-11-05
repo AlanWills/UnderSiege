@@ -11,7 +11,7 @@ namespace _2DGameEngine.Maths
     {
         public static float GetAngleOfLineBetweenPositionAndTarget(Vector2 position, Vector2 target, bool wrap = true)
         {
-            Vector2 diff = target - position;
+            Vector2 diff = Vector2.Subtract(target, position);
             float angle = (float)Math.Atan2(diff.X, -diff.Y);
 
             if (wrap)
@@ -43,7 +43,7 @@ namespace _2DGameEngine.Maths
 
             return distance < Math.Abs(targetAngle - objectToRotate.WorldRotation + targetSign * objectRotationSign * MathHelper.TwoPi) ? 1 : -1;*/
 
-            Vector2 diff = target - objectToRotate.WorldPosition;
+            Vector2 diff = Vector2.Subtract(target, objectToRotate.WorldPosition);
 
             float currAngle = objectToRotate.WorldRotation;
             int currAngleSign = Math.Sign(currAngle);

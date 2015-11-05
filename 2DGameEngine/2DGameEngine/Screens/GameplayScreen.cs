@@ -15,16 +15,12 @@ namespace _2DGameEngine.Screens
     {
         #region Properties and Fields
 
-        // Root which all game objects will be childs of
-        public static GameObject SceneRoot { get; set; }
-
         #endregion
 
         public GameplayScreen(ScreenManager screenManager, string dataAsset)
             : base(screenManager, dataAsset)
         {
             Camera.Position = Vector2.Zero;
-            SceneRoot = new GameObject("", null, false);
         }
 
         #region Methods

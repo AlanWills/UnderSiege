@@ -116,6 +116,9 @@ namespace _2DGameEngine.Screens
             protected set;
         }
 
+        // Root which all game objects will be childs of
+        public static GameObject SceneRoot { get; set; }
+
         protected bool Transitioning;
         protected ChangeType ChangeType;
 
@@ -138,6 +141,8 @@ namespace _2DGameEngine.Screens
             InGameUIManager = new BaseObjectManager<InGameUIObject>();
 
             Show();
+
+            SceneRoot = new GameObject("", null, false);
         }
 
         #region Methods

@@ -4,6 +4,7 @@ using _2DGameEngine.Object_Attributes;
 using _2DGameEngine.Object_Properties;
 using _2DGameEngine.Physics_Components;
 using _2DGameEngine.Physics_Components.Colliders;
+using _2DGameEngine.Screens;
 using _2DGameEngineData;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
@@ -126,16 +127,10 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             get
             {
-                if (Parent != null || )
+                if (Parent != null && Parent != BaseScreen.SceneRoot)
                 {
-                    /*float sinRot = (float)Math.Sin(Parent.WorldRotation);
-                    float cosRot = (float)Math.Cos(Parent.WorldRotation);
-
-                    return Vector2.Add(Parent.WorldPosition, new Vector2(cosRot * LocalPosition.X - sinRot * LocalPosition.Y, cosRot * LocalPosition.Y + sinRot * LocalPosition.X));*/
-
-                    Vector2 vec = Vector2.Transform(LocalPosition, Matrix.CreateRotationZ(LocalRotation));
-
-                    return Vector2.Add(Parent.WorldPosition, vec);
+                    // Good performance here
+                    return Vector2.Add(Parent.WorldPosition, Vector2.Transform(LocalPosition, Matrix.CreateRotationZ(Parent.WorldRotation)));
                 }
 
                 return LocalPosition;

@@ -15,9 +15,9 @@ namespace _2DGameEngine.Maths.Primitives
 
         public float Width { get; set; }
         public float Height { get; set; }
-        public float Rotation { get; set; }
+        public float Rotation { get { return BaseObject.WorldRotation; } }
 
-        public Vector2 Centre { get; set; }
+        public Vector2 Centre { get { return BaseObject.WorldPosition; } }
         public Rectangle Rectangle
         {
             get
@@ -26,26 +26,24 @@ namespace _2DGameEngine.Maths.Primitives
             }
         }
 
-        private BaseObject BaseObject { get; set; }
+        public BaseObject BaseObject { get; private set; }
 
         #endregion
 
-        public Quad(BaseObject baseObject, float width, float height, float rotation)
+        public Quad(BaseObject baseObject, float width, float height)
             : base()
         {
             BaseObject = baseObject;
             Width = width;
             Height = height;
-            Rotation = rotation;
         }
 
-        public Quad(Vector2 centre, float width, float height, float rotation, Color colour, float opacity)
+        public Quad(BaseObject baseObject, float width, float height, Color colour, float opacity)
             : base(colour, opacity)
         {
-            Centre = centre;
+            BaseObject = baseObject;
             Width = width;
             Height = height;
-            Rotation = rotation;
         }
 
         #region Methods

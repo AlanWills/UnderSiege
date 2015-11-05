@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -34,8 +35,8 @@ namespace _2DGameEngine.Maths.Primitives
             } 
         }
 
-        public virtual Vector2 StartPoint { get; set; }
-        public virtual Vector2 EndPoint { get; set; }
+        public Vector2 StartPoint { get; set; }
+        public Vector2 EndPoint { get; set; }
 
         #endregion
 

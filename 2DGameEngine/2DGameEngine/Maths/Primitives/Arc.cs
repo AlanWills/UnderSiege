@@ -1,4 +1,5 @@
-﻿using _2DGameEngine.Managers;
+﻿using _2DGameEngine.Abstract_Object_Classes;
+using _2DGameEngine.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -12,28 +13,30 @@ namespace _2DGameEngine.Maths.Primitives
     {
         #region Properties and Fields
 
-        public virtual Vector2 Centre { get; set; }
-        public virtual float Radius { get; set; }
-        public virtual float StartingAngle { get; set; }
-        public virtual float ArcWidth { get; set; }
+        public Vector2 Centre { get { return BaseObject.WorldPosition; } }
+        public float Radius { get; set; }
+        public float StartingAngle { get; set; }
+        public float ArcWidth { get; set; }
+
+        public BaseObject BaseObject { get; set; }
 
         public int triangles = 20;
 
         #endregion
 
-        public Arc(Vector2 centre, float radius, float startingAngle, float arcWidth)
+        public Arc(BaseObject baseObject, float radius, float startingAngle, float arcWidth)
             : base()
         {
-            Centre = centre;
+            BaseObject = baseObject;
             Radius = radius;
             StartingAngle = startingAngle;
             ArcWidth = arcWidth;
         }
 
-        public Arc(Vector2 centre, float radius, float startingAngle, float arcWidth, Color colour, float opacity)
+        public Arc(BaseObject baseObject, float radius, float startingAngle, float arcWidth, Color colour, float opacity)
             : base(colour, opacity)
         {
-            Centre = centre;
+            BaseObject = baseObject;
             Radius = radius;
             StartingAngle = startingAngle;
             ArcWidth = arcWidth;

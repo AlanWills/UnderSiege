@@ -32,7 +32,8 @@ namespace _2DGameEngine.Maths
         // Finds the intersection point of the line with the circle and then checks to see if the intersection points are in the arc
         public static bool LineIntersectsArc(Arc arc, Line line)
         {
-            Circle circle = new Circle(arc.Centre, arc.Radius, Color.White, 0);
+            // Doesn't work
+            Circle circle = new Circle(null, arc.Radius, Color.White, 0);
             bool intersect = LineIntersectsCircle(circle, line);
             if (!intersect)
                 return false;
@@ -63,7 +64,7 @@ namespace _2DGameEngine.Maths
 
         public static bool RectangleIntersectsArc(Rectangle rectangle, Arc arc)
         {
-            bool intersects = RectangleIntersectsCircle(rectangle, new Circle(arc.Centre, arc.Radius));
+            bool intersects = RectangleIntersectsCircle(rectangle, new Circle(arc.BaseObject, arc.Radius));
             if (!intersects)
                 return false;
 
@@ -198,7 +199,8 @@ namespace _2DGameEngine.Maths
 
         public static bool CircleIntersectsArc(Circle circle, Arc arc)
         {
-            Circle arcCircle = new Circle(arc.Centre, arc.Radius);
+            // Doesn't work
+            Circle arcCircle = new Circle(null, arc.Radius);
 
             bool intersects = CircleIntersectsCircle(circle, arcCircle);
             if (!intersects)

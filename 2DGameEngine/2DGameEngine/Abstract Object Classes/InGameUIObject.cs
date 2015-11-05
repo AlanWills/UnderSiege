@@ -39,14 +39,6 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
         #region Virtual Methods
 
-        public override void Update(GameTime gameTime)
-        {
-            base.Update(gameTime);
-
-            if (Collider != null)
-                Collider.UpdateCollider();
-        }
-
         public override void HandleInput()
         {
             if (Active)

@@ -13,5 +13,3 @@ C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculat
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\Content\Sprites\Ships\hii_saari.xnb
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\Content\Sprites\Ships\shipyard.xnb
 C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\Content\Sprites\Ships\bushi_odachi.xnb
-C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\HardpointCalculator.exe.CodeAnalysisLog.xml
-C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\HardpointCalculator\HardpointCalculator\bin\x86\Debug\HardpointCalculator.exe.lastcodeanalysissucceeded

@@ -27,7 +27,7 @@ namespace _2DGameEngine.Physics_Components.Colliders
         public RectangleCollider(BaseObject parent, float width, float height)
             : base(parent)
         {
-            Bounds = new Quad(parent.WorldPosition + (parent.Size * 0.5f - parent.Centre * parent.Scale), width, height, parent.WorldRotation, Color.Red, 0.5f);
+            Bounds = new Quad(parent, width, height, Color.Red, 0.5f);
         }
 
         public RectangleCollider(BaseObject parent, Vector2 dimensions)

@@ -15,7 +15,7 @@ namespace _2DGameEngine.Maths.Primitives
 
         public Vector2 Centre { get { return BaseObject.WorldPosition; } }
         public float Radius { get; set; }
-        private BaseObject BaseObject { get; set; }
+        public BaseObject BaseObject { get; private set; }
 
         public int triangles = 20;
 

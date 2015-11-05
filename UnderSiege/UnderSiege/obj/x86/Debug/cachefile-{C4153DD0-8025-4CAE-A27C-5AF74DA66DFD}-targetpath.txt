@@ -128,6 +128,9 @@ Content\Data\Abilities\ShipAddOnAbilities\MissileBarrage.xnb
 Content\Data\Abilities\ShipAddOnAbilities\Afterburn.xnb
 Content\Data\GameObjects\Turrets\LaserChaingun.xnb
 Content\Data\GameObjects\Turrets\EnergyCannon.xnb
+Content\Data\GameObjects\Bullets\EnergyCannonBullet.xnb
+Content\Data\GameObjects\Bullets\ChaingunLaserBullet.xnb
+Content\Data\Waves\Debug\Wave1.xnb
 Content\Music\Dream Raid.xnb
 Content\Music\Dream Raid.wma
 Content\Music\The Fall of Arcana.xnb
@@ -154,5 +157,3 @@ Content\SFX\LightThruster.xnb
 Content\SFX\LaserFire.xnb
 Content\SFX\MissileLaunch.xnb
 Content\SFX\BeamLaser.xnb
-Content\Data\GameObjects\Bullets\EnergyCannonBullet.xnb
-Content\Data\GameObjects\Bullets\ChaingunLaserBullet.xnb

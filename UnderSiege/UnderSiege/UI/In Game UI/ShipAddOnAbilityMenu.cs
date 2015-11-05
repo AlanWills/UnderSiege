@@ -74,14 +74,6 @@ namespace UnderSiege.UI.In_Game_UI
             {
                 LocalPosition = Camera.GameToScreenCoords(ParentShipAddOn.WorldPosition - new Vector2(100, 0));
                 LocalPosition = new Vector2((float)Math.Max(LocalPosition.X, 100), (float)Math.Max(LocalPosition.Y, 100));
-                
-                foreach (UIObject uiObject in UIManager.Values)
-                {
-                    if (uiObject.Collider != null)
-                    {
-                        uiObject.Collider.UpdateCollider();
-                    }
-                }
             }
         }
 

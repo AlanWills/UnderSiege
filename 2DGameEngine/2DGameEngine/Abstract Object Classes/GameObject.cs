@@ -85,9 +85,6 @@ namespace _2DGameEngine.Abstract_Object_Classes
                     RigidBody.Update(gameTime);
                 }
 
-                if (Collider != null)
-                    Collider.UpdateCollider();
-
                 if (AbilityEventQueue != null)
                 {
                     AbilityEventQueue(this, EventArgs.Empty);

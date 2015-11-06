@@ -245,10 +245,12 @@ namespace _2DGameEngine.UI_Objects
         {
             base.Hide();
 
-            Debug.Assert(UIManager != null);
-            foreach (UIObject uiObject in UIManager.Values)
+            if (UIManager != null)
             {
-                uiObject.Visible = false;
+                foreach (UIObject uiObject in UIManager.Values)
+                {
+                    uiObject.Visible = false;
+                }
             }
         }
 
@@ -256,10 +258,12 @@ namespace _2DGameEngine.UI_Objects
         {
             base.Hide();
 
-            Debug.Assert(UIManager != null);
-            foreach (UIObject uiObject in UIManager.Values)
+            if (UIManager != null)
             {
-                uiObject.Visible = true;
+                foreach (UIObject uiObject in UIManager.Values)
+                {
+                    uiObject.Visible = true;
+                }
             }
         }
 
@@ -267,10 +271,12 @@ namespace _2DGameEngine.UI_Objects
         {
             base.Hide();
 
-            Debug.Assert(UIManager != null);
-            foreach (UIObject uiObject in UIManager.Values)
+            if (UIManager != null)
             {
-                uiObject.Active = false;
+                foreach (UIObject uiObject in UIManager.Values)
+                {
+                    uiObject.Active = false;
+                }
             }
         }
 
@@ -278,10 +284,12 @@ namespace _2DGameEngine.UI_Objects
         {
             base.Hide();
 
-            Debug.Assert(UIManager != null);
-            foreach (UIObject uiObject in UIManager.Values)
+            if (UIManager != null)
             {
-                uiObject.Active = true;
+                foreach (UIObject uiObject in UIManager.Values)
+                {
+                    uiObject.Active = true;
+                }
             }
         }
 

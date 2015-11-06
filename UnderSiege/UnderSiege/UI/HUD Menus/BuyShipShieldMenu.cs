@@ -20,7 +20,7 @@ namespace UnderSiege.UI.HUD_Menus
 
         #endregion
 
-        public BuyShipShieldMenu(Vector2 position, HUD hud, string dataAsset = "")
+        public BuyShipShieldMenu(Vector2 position, HUD hud, string dataAsset = "Sprites\\UI\\Menus\\default")
             : base(position, hud, dataAsset)
         {
             
@@ -47,7 +47,7 @@ namespace UnderSiege.UI.HUD_Menus
             int totalRows = (int)Math.Ceiling((float)totalObjects / (float)columns);
             Vector2 itemMenuSize = new Vector2(columns * (HardPointUI.HardPointDimension + padding) + padding, totalRows * (HardPointUI.HardPointDimension + padding) + padding);
 
-            ItemMenu = new Menu(new Vector2(0, -itemMenuSize.Y * 0.5f), itemMenuSize, 0, 0, 0, 0, "", this);
+            ItemMenu = new Menu(new Vector2(0, -itemMenuSize.Y * 0.5f), itemMenuSize, 0, 0, 0, 0, DataAsset, this);
             ItemMenu.Opacity = 1;
 
             int counter = 0;
@@ -90,7 +90,7 @@ namespace UnderSiege.UI.HUD_Menus
                     // This is going to need to be generalised - how are we going to store/get the ShipAddOn type name?
                     PurchaseItemUI purchaseShipObjectUI = new PurchaseItemUI(objectImage.Texture, shieldData, shieldData.AddOnType, ScreenManager.GameMouse.InGameMouse);
                     purchaseShipObjectUI.OnSelect += CheckForPlaceObjectEvent;
-                    HUD.GameplayScreen.AddInGameUIObject(purchaseShipObjectUI, "Purchase Object UI");
+                    HUD.GameplayScreen.AddInGameUIObject(purchaseShipObjectUI, "Purchase Object UI", false);
                     purchaseShipObjectUI.Initialize();
 
                     purchaseShipObjectUI.Colour = new Color(shieldData.Colour);

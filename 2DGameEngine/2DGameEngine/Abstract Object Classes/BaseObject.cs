@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -79,10 +80,8 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
                 if (Size == Vector2.Zero)
                 {
-                    if (Texture != null)
-                    {
-                        Size = new Vector2(Texture.Width, Texture.Height);
-                    }
+                    Debug.Assert(Texture != null);
+                    Size = new Vector2(Texture.Width, Texture.Height);
                 }
             }
         }
@@ -97,12 +96,8 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             get
             {
-                if (Texture != null)
-                {
-                    return new Vector2(Size.X / (float)Texture.Width, Size.Y / (float)Texture.Height);
-                }
-
-                return Vector2.Zero;
+                Debug.Assert(Texture != null);
+                return Vector2.Divide(Size, new Vector2(Texture.Width, Texture.Height));
             }
         }
 
@@ -110,10 +105,8 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             get
             {
-                if (Texture != null)
-                    return new Vector2((float)Texture.Height / (float)Texture.Width);
-                else
-                    return Vector2.Zero;
+                Debug.Assert(Texture != null);
+                return new Vector2((float)Texture.Height / (float)Texture.Width);
             }
         }
 
@@ -164,11 +157,9 @@ namespace _2DGameEngine.Abstract_Object_Classes
         public virtual Vector2 Centre
         {
             get 
-            { 
-                if (Texture != null)
-                    return new Vector2(Texture.Width, Texture.Height) * 0.5f;
-
-                return Vector2.Zero;
+            {
+                Debug.Assert(Texture != null);
+                return Vector2.Multiply(new Vector2(Texture.Width, Texture.Height), 0.5f);
             }
         }
 
@@ -374,15 +365,16 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             BaseData = AssetManager.GetData<BaseData>(DataAsset);
 
-            try { Texture = AssetManager.GetTexture(BaseData.TextureAsset); }
-            catch 
+            if (BaseData != null)
             {
-                if (Texture == null)
-                {
-                    try { Texture = AssetManager.GetTexture(DataAsset); }
-                    catch { }
-                }
+                Texture = AssetManager.GetTexture(BaseData.TextureAsset);
             }
+            else
+            {
+                Texture = AssetManager.GetTexture(DataAsset);
+            }
+
+            Debug.Assert(Texture != null);
         }
 
         public virtual void Initialize()
@@ -425,10 +417,8 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             if (Visible)
             {
-                if (Texture != null)
-                {
-                    spriteBatch.Draw(Texture, DestinationRectangle, SourceRectangle, Colour * Opacity, (float)WorldRotation, Centre, SpriteEffects.None, 0);
-                }
+                Debug.Assert(Texture != null);
+                spriteBatch.Draw(Texture, DestinationRectangle, SourceRectangle, Colour * Opacity, (float)WorldRotation, Centre, SpriteEffects.None, 0);
 
                 IfVisible();
             }

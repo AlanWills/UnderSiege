@@ -85,7 +85,6 @@ namespace UnderSiege.Gameplay_Objects
             base.Initialize();
 
             FiringArc = new FiringArc(this);
-            FiringArc.LoadContent();
             FiringArc.Initialize();
 
             TargetingLine.Initialize();
@@ -128,7 +127,6 @@ namespace UnderSiege.Gameplay_Objects
             if (ParentShip.ShipType == ShipType.AlliedShip)
             {
                 TargetingLine.Draw(spriteBatch);
-                FiringArc.Draw(spriteBatch);
             }
         }
 

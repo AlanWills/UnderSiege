@@ -208,8 +208,6 @@ namespace _2DGameEngine.UI_Objects
             ButtonHoverSound = ScreenManager.SFX.SoundEffects[defaultHoverSoundAsset];
             ButtonPressedSound = ScreenManager.SFX.SoundEffects[defaultClickedSoundAsset];
             Colour = defaultColour;
-
-            base.LoadContent();
         }
 
         public override void Initialize()

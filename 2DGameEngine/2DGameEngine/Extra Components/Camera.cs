@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -15,11 +16,10 @@ namespace _2DGameEngine.Extra_Components
     {
         #region Properties and Fields
 
-        private static Vector2 position;
         public static Vector2 Position
         {
-            get { return position; }
-            set { position = value; }
+            get;
+            set;
         }
 
         private float speed;
@@ -39,7 +39,7 @@ namespace _2DGameEngine.Extra_Components
             set
             {
                 float diffInZoom = value - zoom;
-                Position += diffInZoom * ScreenManager.ScreenCentre;
+                Position = Vector2.Add(Position, diffInZoom * ScreenManager.ScreenCentre);
                 zoom = value;
             }
         }
@@ -47,12 +47,17 @@ namespace _2DGameEngine.Extra_Components
         // Change this to use the position
         public Rectangle ViewportRectangle
         {
-            get { return new Rectangle((int)Position.X, (int)Position.Y, (int)(ScreenManager.Viewport.Width / Zoom), (int)(ScreenManager.Viewport.Height / Zoom)); }
+            get 
+            {
+                Vector2 tmp = new Vector2(ScreenManager.Viewport.Width, ScreenManager.Viewport.Height);
+                tmp = Vector2.Divide(tmp, Zoom);
+                return new Rectangle((int)Position.X, (int)Position.Y, (int)tmp.X, (int)tmp.Y);
+            }
         }
 
         public Matrix Transformation
         {
-            get { return Matrix.CreateScale(Zoom) * Matrix.CreateTranslation(new Vector3(-position, 0)); }
+            get { return Matrix.CreateScale(Zoom) * Matrix.CreateTranslation(new Vector3(-Position, 0)); }
         }
 
         public CameraMode CameraMode
@@ -97,10 +102,8 @@ namespace _2DGameEngine.Extra_Components
 
             if (CameraMode == CameraMode.Follow)
             {
-                if (FocusedObject != null)
-                {
-                    Position = FocusedObject.WorldPosition - new Vector2(ViewportRectangle.Width, ViewportRectangle.Height) * 0.5f;
-                }
+                Debug.Assert(FocusedObject != null);
+                Position = FocusedObject.WorldPosition - new Vector2(ViewportRectangle.Width, ViewportRectangle.Height) * 0.5f;
             }
 
             Vector2 diff = Vector2.Zero;
@@ -118,7 +121,7 @@ namespace _2DGameEngine.Extra_Components
             if (diff != Vector2.Zero)
             {
                 diff.Normalize();
-                position += diff * speed * (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
+                Position = Vector2.Add(Position, Vector2.Multiply(diff, speed * (float)gameTime.ElapsedGameTime.Milliseconds / 1000f));
 
                 // LockCamera();
             }
@@ -149,8 +152,7 @@ namespace _2DGameEngine.Extra_Components
         // This function prevents a camera bug when zooming out after being zoomed in.
         private void SnapToPosition(Vector2 newPosition)
         {
-            position.X = newPosition.X - ViewportRectangle.Width * 0.5f;
-            position.Y = newPosition.Y - ViewportRectangle.Height * 0.5f;
+            Position = Vector2.Subtract(newPosition, Vector2.Multiply(new Vector2(ViewportRectangle.Width, ViewportRectangle.Height), 0.5f));
 
             // LockCamera();
         }
@@ -179,11 +181,13 @@ namespace _2DGameEngine.Extra_Components
 
         public static Vector2 ScreenToGameCoords(Vector2 screenPosition)
         {
+            // This could definitely be optimised with Vector2 methods
             return Position - (Zoom - 1) * ScreenManager.ScreenCentre + ScreenManager.ScreenCentre + (screenPosition - ScreenManager.ScreenCentre) / Zoom;
         }
 
         public static Vector2 GameToScreenCoords(Vector2 gamePosition)
         {
+            // This could definitely be optimised with Vector2 methods
             return -Position + (Zoom - 1) * ScreenManager.ScreenCentre + ScreenManager.ScreenCentre + (gamePosition - ScreenManager.ScreenCentre) * Zoom;
         }
 

@@ -34,7 +34,7 @@ namespace UnderSiege.UI.HUD_Menus
 
         #endregion
 
-        public BuyShipAddOnMenu(Vector2 position, HUD hud, string dataAsset = "")
+        public BuyShipAddOnMenu(Vector2 position, HUD hud, string dataAsset = "Sprites\\UI\\Menus\\default")
             : base(position, dataAsset, hud)
         {
             HUD = hud;
@@ -73,8 +73,6 @@ namespace UnderSiege.UI.HUD_Menus
 
         public override void LoadContent()
         {
-            base.LoadContent();
-
             ToggleButton.LoadContent();
             ItemMenu.LoadContent();
         }
@@ -100,8 +98,6 @@ namespace UnderSiege.UI.HUD_Menus
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            base.Draw(spriteBatch);
-
             if (Visible)
             {
                 ToggleButton.Draw(spriteBatch);

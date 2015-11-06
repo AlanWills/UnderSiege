@@ -34,13 +34,6 @@ namespace _2DGameEngine.UI_Objects
 
         #region Virtual Methods
 
-        public override void LoadContent()
-        {
-            base.LoadContent();
-
-            Label.LoadContent();
-        }
-
         public override void Initialize()
         {
             base.Initialize();

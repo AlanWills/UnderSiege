@@ -50,10 +50,7 @@ namespace UnderSiege.UI
 
         public override void LoadContent()
         {
-            base.LoadContent();
-
             Image.LoadContent();
-            Label.LoadContent();
         }
 
         public override void Initialize()
@@ -73,8 +70,6 @@ namespace UnderSiege.UI
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            base.Draw(spriteBatch);
-
             Image.Draw(spriteBatch);
             Label.Draw(spriteBatch);
         }

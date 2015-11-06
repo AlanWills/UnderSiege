@@ -3,6 +3,7 @@ using _2DGameEngineData.GameObject_Data;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -46,6 +47,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
             base.LoadContent();
 
             DamageableGameObjectData = AssetManager.GetData<DamageableGameObjectData>(DataAsset);
+            Debug.Assert(DamageableGameObjectData != null);
             CurrentHealth = DamageableGameObjectData.Health;
         }
 

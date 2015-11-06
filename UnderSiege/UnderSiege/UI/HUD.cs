@@ -111,8 +111,6 @@ namespace UnderSiege.UI
 
         public override void LoadContent()
         {
-            base.LoadContent();
-
             UIManager.LoadContent();
         }
 
@@ -133,8 +131,6 @@ namespace UnderSiege.UI
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            base.Draw(spriteBatch);
-
             UIManager.Draw(spriteBatch);
         }
 

@@ -18,7 +18,7 @@ namespace UnderSiege.UI.In_Game_UI
         #endregion
 
         public BuyShipAddOnHoverInfo(ShipAddOnData shipAddOnData, Vector2 localPosition, BaseObject parent, float lifeTime = float.MaxValue)
-            : base(localPosition, 0, 0, 0, 0, "Sprites\\UI\\Panels\\default", parent, lifeTime)
+            : base(localPosition, 0, 0, 0, 0, "Sprites\\UI\\Menus\\default", parent, lifeTime)
         {
             
         }

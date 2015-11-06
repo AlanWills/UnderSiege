@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -41,6 +42,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             if (Active)
             {
+                Debug.Assert(Collider != null);
                 MouseOver = Collider.CheckCollisionWith(ScreenManager.GameMouse.WorldPosition);
 
                 // Check hotkey click

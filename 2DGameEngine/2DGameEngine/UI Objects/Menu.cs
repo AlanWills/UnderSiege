@@ -49,7 +49,7 @@ namespace _2DGameEngine.UI_Objects
         public static string defaultBackgroundAsset = "Sprites\\UI\\Menus\\default";
         private static Texture2D defaultBackground;
 
-        public Menu(Vector2 position, int xLeftScissorRectanglePadding = 0, int xRightScissorRectanglePadding = 0, int yTopScissorRectanglePadding = 0, int yBottomScissorRectanglePadding = 0, string dataAsset = "Sprites\\UI\\Panels\\default", BaseObject parent = null, float lifeTime = float.MaxValue)
+        public Menu(Vector2 position, int xLeftScissorRectanglePadding = 0, int xRightScissorRectanglePadding = 0, int yTopScissorRectanglePadding = 0, int yBottomScissorRectanglePadding = 0, string dataAsset = "Sprites\\UI\\Menus\\default", BaseObject parent = null, float lifeTime = float.MaxValue)
             : base(position, dataAsset, parent, lifeTime)
         {
             UIManager = new BaseObjectManager<UIObject>();
@@ -57,7 +57,7 @@ namespace _2DGameEngine.UI_Objects
             yPaddingVector = new Vector2(yTopScissorRectanglePadding, yBottomScissorRectanglePadding);
         }
 
-        public Menu(Vector2 position, Vector2 size, int xLeftScissorRectanglePadding = 0, int xRightScissorRectanglePadding = 0, int yTopScissorRectanglePadding = 0, int yBottomScissorRectanglePadding = 0, string dataAsset = "Sprites\\UI\\Panels\\default", BaseObject parent = null)
+        public Menu(Vector2 position, Vector2 size, int xLeftScissorRectanglePadding = 0, int xRightScissorRectanglePadding = 0, int yTopScissorRectanglePadding = 0, int yBottomScissorRectanglePadding = 0, string dataAsset = "Sprites\\UI\\Menus\\default", BaseObject parent = null)
             : base(position, size, dataAsset, parent)
         {
             UIManager = new BaseObjectManager<UIObject>();

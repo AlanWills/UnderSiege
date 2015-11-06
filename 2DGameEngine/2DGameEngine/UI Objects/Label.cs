@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -40,6 +41,11 @@ namespace _2DGameEngine.UI_Objects
         #endregion
 
         #region Virtual Methods
+
+        public override void LoadContent()
+        {
+            
+        }
 
         public override void Draw(SpriteBatch spriteBatch)
         {

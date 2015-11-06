@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -80,10 +81,8 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
             if (Active)
             {
-                if (RigidBody != null)
-                {
-                    RigidBody.Update(gameTime);
-                }
+                Debug.Assert(RigidBody != null);
+                RigidBody.Update(gameTime);
 
                 if (AbilityEventQueue != null)
                 {
@@ -97,6 +96,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
             if (Active)
             {
                 bool mouseClicked = ScreenManager.GameMouse.IsLeftClicked;
+                Debug.Assert(Collider != null);
                 MouseOver = Collider.CheckCollisionWith(ScreenManager.GameMouse.InGamePosition);
 
                 // If mouse isn't clicked we don't need to change the selection state, as we haven't selected anything!
@@ -122,10 +122,8 @@ namespace _2DGameEngine.Abstract_Object_Classes
         {
             if (Visible)
             {
-                if (Texture != null)
-                {
-                    spriteBatch.Draw(Texture, WorldPosition, SourceRectangle, Colour * Opacity, (float)WorldRotation, Centre, Scale, SpriteEffects.None, 0);
-                }
+                Debug.Assert(Texture != null);
+                spriteBatch.Draw(Texture, WorldPosition, SourceRectangle, Colour * Opacity, (float)WorldRotation, Centre, Scale, SpriteEffects.None, 0);
 
                 IfVisible();
             }

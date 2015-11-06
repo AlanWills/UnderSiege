@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.UI;
@@ -49,6 +50,11 @@ namespace UnderSiege.Gameplay_Objects
         #endregion
 
         #region Virtual Methods
+
+        public override void LoadContent()
+        {
+            Debug.Fail("Shouldn't be calling LoadContent on Firing Arc.");
+        }
 
         public override void Initialize()
         {

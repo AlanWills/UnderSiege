@@ -95,7 +95,8 @@ namespace UnderSiege.UI
 
             PurchaseItemUI purchaseShipUI = new PurchaseItemUI(shipTexture, PlayerShipData, "Ship", ScreenManager.GameMouse.InGameMouse);
             purchaseShipUI.MouseOverObject += CheckForShipPlacementEvent;
-            PurchaseShipsScreen.GameplayScreen.AddInGameUIObject(purchaseShipUI, "Purchase Ship UI", true);
+            PurchaseShipsScreen.GameplayScreen.AddInGameUIObject(purchaseShipUI, "Purchase Ship UI", false);
+            purchaseShipUI.Initialize();
 
             PurchaseShipsScreen.GameplayScreen.ScreenManager.RemoveScreen(PurchaseShipsScreen);
         }

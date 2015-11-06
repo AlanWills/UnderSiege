@@ -44,19 +44,16 @@ namespace _2DGameEngine.Physics_Components.Colliders
 
         public override bool CheckCollisionWith(Vector2 point)
         {
-            // Adjust for rotation here
-            Vector2 diff = point - Bounds.Centre;
-            float cosRot = (float)Math.Cos(-Bounds.Rotation);
-            float sinRot = (float)Math.Sin(-Bounds.Rotation);
-
-            // Change the space so we imagine the bounds being upright and rotated the point accordingly
-            Vector2 newPoint = Bounds.Centre + new Vector2(diff.X * cosRot - diff.Y * sinRot, diff.X * sinRot + diff.Y * cosRot);
+            // Adjust for rotation here - this horrible syntax is for optimisation purposes
+            Vector2 newPoint = Vector2.Add(Bounds.Centre, Vector2.Transform(Vector2.Subtract(point, Bounds.Centre), Matrix.CreateRotationZ(-Bounds.Rotation)));
 
             return _2DGeometry.RectangleContainsPoint(Bounds.Rectangle, newPoint);
         }
 
         public override bool CheckCollisionWith(Line line)
         {
+            line.StartPoint = Vector2.Add(Bounds.Centre, Vector2.Transform(Vector2.Subtract(line.StartPoint, Bounds.Centre), Matrix.CreateRotationZ(-Bounds.Rotation)));
+            line.EndPoint = Vector2.Add(Bounds.Centre, Vector2.Transform(Vector2.Subtract(line.EndPoint, Bounds.Centre), Matrix.CreateRotationZ(-Bounds.Rotation)));
             return _2DGeometry.LineIntersectsRect(line, Bounds.Rectangle);
         }
 

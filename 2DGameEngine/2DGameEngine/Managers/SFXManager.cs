@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Content;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -56,6 +57,7 @@ namespace _2DGameEngine.Managers
 
         public SoundEffect GetSoundEffect(string sfxName)
         {
+            Debug.Assert(SoundEffects.ContainsKey(sfxName));
             return SoundEffects[sfxName];
         }
 

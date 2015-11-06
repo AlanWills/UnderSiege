@@ -99,7 +99,7 @@ namespace _2DGameEngine.Managers
 
         public static Vector2 ScreenCentre
         {
-            get { return new Vector2(Viewport.Width, Viewport.Height) / 2; }
+            get { return Vector2.Multiply(new Vector2(Viewport.Width, Viewport.Height), 0.5f); }
         }
 
         public BaseScreen CurrentScreen

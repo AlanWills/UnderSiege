@@ -1049,14 +1049,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Unused\Turrets\LaserChaingun.xml">
+    <Compile Include="Unused\Turrets\LaserChaingun.xml">
       <Name>LaserChaingun</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Unused\Turrets\EnergyCannon.xml">
+    <Compile Include="Unused\Turrets\EnergyCannon.xml">
       <Name>EnergyCannon</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>

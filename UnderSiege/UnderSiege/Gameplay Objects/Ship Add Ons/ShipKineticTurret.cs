@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiegeData.Gameplay_Objects;
@@ -41,6 +42,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             base.LoadContent();
 
             ShipKineticTurretData = AssetManager.GetData<ShipKineticTurretData>(DataAsset);
+            Debug.Assert(ShipKineticTurretData != null);
         }
 
         public override void Initialize()
@@ -51,6 +53,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
             // Can't parent bullet to turret because re-orienting makes it change bullets too so have to parent to scene root and set position manually
             Bullet = new Bullet(WorldPosition, this, ShipTurretData.BulletAsset);
+            Bullet.LoadContent();
+            Bullet.Initialize();
             Bullet.LocalRotation = WorldRotation;
 
             // Make sure we do not draw or update the bullet template which we will clone from

@@ -1,0 +1,8 @@
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\bin\x86\Release\2DGameEngine.dll
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\bin\x86\Release\2DGameEngine.pdb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\bin\x86\Release\2DGameEngineData.dll
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\bin\x86\Release\2DGameEngineData.pdb
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\obj\x86\Release\2DGameEngine.csprojResolveAssemblyReference.cache
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\obj\x86\Release\2DGameEngine.dll
+C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\2DGameEngine\2DGameEngine\obj\x86\Release\2DGameEngine.pdb

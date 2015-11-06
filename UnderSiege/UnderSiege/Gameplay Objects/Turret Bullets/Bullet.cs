@@ -6,6 +6,7 @@ using _2DTowerDefenceLibraryData.Bullet_Data;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
@@ -23,7 +24,7 @@ namespace UnderSiege.Gameplay_Objects
 
         #endregion
 
-        public Bullet(Vector2 position, ShipKineticTurret parentTurret, string dataAsset = "")
+        public Bullet(Vector2 position, ShipKineticTurret parentTurret, string dataAsset)
             : base(position, dataAsset, GameplayScreen.SceneRoot)
         {
             ParentTurret = parentTurret;
@@ -56,6 +57,7 @@ namespace UnderSiege.Gameplay_Objects
             base.LoadContent();
 
             BulletData = AssetManager.GetData<BulletData>(DataAsset);
+            Debug.Assert(BulletData != null);
         }
 
         public override void Initialize()

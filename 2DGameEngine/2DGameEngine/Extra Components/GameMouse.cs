@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -102,37 +103,35 @@ namespace _2DGameEngine.Extra_Components
         // A function to change the position of the MANUAL camera if the mouse is towards the edge of the screen.
         private void UpdateCamera(GameTime gameTime)
         {
-            if (Texture != null)
+            Debug.Assert(Texture != null);
+            int threshold = 5;
+            Vector2 deltaPos = Vector2.Zero;
+
+            // Mouse is within thresold of the right hand side of the screen so we need to move the camera left
+            if (ScreenManager.Viewport.Width - LocalPosition.X < threshold)
             {
-                int threshold = 5;
-                Vector2 deltaPos = Vector2.Zero;
-
-                // Mouse is within thresold of the right hand side of the screen so we need to move the camera left
-                if (ScreenManager.Viewport.Width - LocalPosition.X < threshold)
-                {
-                    deltaPos.X += ScreenManager.Camera.Speed;
-                }
-
-                // Mouse is within threshold of the left hand side of the screen so we need to move the camera right
-                if (LocalPosition.X - ScreenManager.Viewport.X < threshold)
-                {
-                    deltaPos.X -= ScreenManager.Camera.Speed;
-                }
-
-                // Mouse is within threshold of the top of the screen so we need to move the camera down
-                if (LocalPosition.Y - ScreenManager.Viewport.Y < threshold)
-                {
-                    deltaPos.Y -= ScreenManager.Camera.Speed;
-                }
-
-                // Mouse is within threshold of the bottom of the screen so we need to move the camera up
-                if (ScreenManager.Viewport.Height - LocalPosition.Y < threshold + Texture.Height / 2)
-                {
-                    deltaPos.Y += ScreenManager.Camera.Speed;
-                }
-
-                Camera.Position += (deltaPos * (float)gameTime.ElapsedGameTime.Milliseconds / 1000f);
+                deltaPos.X += ScreenManager.Camera.Speed;
             }
+
+            // Mouse is within threshold of the left hand side of the screen so we need to move the camera right
+            if (LocalPosition.X - ScreenManager.Viewport.X < threshold)
+            {
+                deltaPos.X -= ScreenManager.Camera.Speed;
+            }
+
+            // Mouse is within threshold of the top of the screen so we need to move the camera down
+            if (LocalPosition.Y - ScreenManager.Viewport.Y < threshold)
+            {
+                deltaPos.Y -= ScreenManager.Camera.Speed;
+            }
+
+            // Mouse is within threshold of the bottom of the screen so we need to move the camera up
+            if (ScreenManager.Viewport.Height - LocalPosition.Y < threshold + Texture.Height / 2)
+            {
+                deltaPos.Y += ScreenManager.Camera.Speed;
+            }
+
+            Camera.Position = Vector2.Add(Camera.Position, Vector2.Multiply(deltaPos, (float)gameTime.ElapsedGameTime.Milliseconds / 1000f));
         }
 
         #endregion
@@ -202,10 +201,8 @@ namespace _2DGameEngine.Extra_Components
             // Changed the origin so the mouse is drawn so it's position is at the top left
             if (Visible)
             {
-                if (Texture != null)
-                {
-                    spriteBatch.Draw(Texture, DestinationRectangle, SourceRectangle, Colour * Opacity, (float)WorldRotation, Vector2.Zero, SpriteEffects.None, 0);
-                }
+                Debug.Assert(Texture != null);
+                spriteBatch.Draw(Texture, DestinationRectangle, SourceRectangle, Colour * Opacity, (float)WorldRotation, Vector2.Zero, SpriteEffects.None, 0);
 
                 IfVisible();
             }

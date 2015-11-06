@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -171,7 +172,7 @@ namespace _2DGameEngine.Screens
 
         protected void AddBackground()
         {
-            Background = new PictureBox(new Vector2(Viewport.Width, Viewport.Height) * 0.5f, BaseScreenData.TextureAsset);
+            Background = new PictureBox(Vector2.Multiply(new Vector2(Viewport.Width, Viewport.Height), 0.5f), BaseScreenData.TextureAsset);
         }
 
         #region UI Addition Methods
@@ -288,14 +289,14 @@ namespace _2DGameEngine.Screens
         public virtual void LoadContent(ContentManager content)
         {
             BaseScreenData = AssetManager.GetData<BaseScreenData>(DataAsset);
+            Debug.Assert(BaseScreenData != null);
 
-            if (BaseScreenData != null)
+            if (!string.IsNullOrEmpty(BaseScreenData.TextureAsset))
             {
-                if (!string.IsNullOrEmpty(BaseScreenData.TextureAsset))
-                    AddBackground();
+                AddBackground();
 
-                if (Background != null)
-                    Background.LoadContent();
+                Debug.Assert(Background != null);
+                Background.LoadContent();
             }
 
             GameObjectManager.LoadContent();

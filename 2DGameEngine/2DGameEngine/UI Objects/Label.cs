@@ -51,11 +51,8 @@ namespace _2DGameEngine.UI_Objects
         {
             if (Visible)
             {
-                if (!string.IsNullOrEmpty(Text))
-                {
-                    // Always have text opacity as 1?
-                    spriteBatch.DrawString(SpriteFont, Text, WorldPosition, (Texture != null ? Color.White : Colour) * Opacity, (float)WorldRotation, SpriteFont.MeasureString(Text) * 0.5f, Scale, SpriteEffects.None, 0);
-                }
+                Debug.Assert(!string.IsNullOrEmpty(Text));
+                spriteBatch.DrawString(SpriteFont, Text, WorldPosition, (Texture != null ? Color.White : Colour) * Opacity, (float)WorldRotation, Vector2.Multiply(SpriteFont.MeasureString(Text), 0.5f), Scale, SpriteEffects.None, 0);
             }
         }
 

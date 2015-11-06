@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -60,7 +61,7 @@ namespace _2DGameEngine.UI_Objects
         public void UpdateValue(float currentValue)
         {
             CurrentValue = currentValue;
-            currentFrontSize = new Vector2(Size.X * CurrentValue / MaxValue, Size.Y);
+            currentFrontSize = Vector2.Multiply(Size, new Vector2(CurrentValue / MaxValue, 1));
             frontBarScale = new Vector2(currentFrontSize.X / FrontBarTexture.Width, Scale.Y);
         }
 
@@ -82,10 +83,8 @@ namespace _2DGameEngine.UI_Objects
 
             if (Visible)
             {
-                if (FrontBarTexture != null)
-                {
-                    spriteBatch.Draw(FrontBarTexture, WorldPosition, null, Colour * FrontOpacity, (float)WorldRotation, Centre, frontBarScale, SpriteEffects.None, 0);
-                }
+                Debug.Assert(FrontBarTexture != null);
+                spriteBatch.Draw(FrontBarTexture, WorldPosition, null, Colour * FrontOpacity, (float)WorldRotation, Centre, frontBarScale, SpriteEffects.None, 0);
             }
         }
 

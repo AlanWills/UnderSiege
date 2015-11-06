@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -244,12 +245,10 @@ namespace _2DGameEngine.UI_Objects
         {
             base.Hide();
 
-            if (UIManager != null)
+            Debug.Assert(UIManager != null);
+            foreach (UIObject uiObject in UIManager.Values)
             {
-                foreach (UIObject uiObject in UIManager.Values)
-                {
-                    uiObject.Visible = false;
-                }
+                uiObject.Visible = false;
             }
         }
 
@@ -257,12 +256,10 @@ namespace _2DGameEngine.UI_Objects
         {
             base.Hide();
 
-            if (UIManager != null)
+            Debug.Assert(UIManager != null);
+            foreach (UIObject uiObject in UIManager.Values)
             {
-                foreach (UIObject uiObject in UIManager.Values)
-                {
-                    uiObject.Visible = true;
-                }
+                uiObject.Visible = true;
             }
         }
 
@@ -270,12 +267,10 @@ namespace _2DGameEngine.UI_Objects
         {
             base.Hide();
 
-            if (UIManager != null)
+            Debug.Assert(UIManager != null);
+            foreach (UIObject uiObject in UIManager.Values)
             {
-                foreach (UIObject uiObject in UIManager.Values)
-                {
-                    uiObject.Active = false;
-                }
+                uiObject.Active = false;
             }
         }
 
@@ -283,12 +278,10 @@ namespace _2DGameEngine.UI_Objects
         {
             base.Hide();
 
-            if (UIManager != null)
+            Debug.Assert(UIManager != null);
+            foreach (UIObject uiObject in UIManager.Values)
             {
-                foreach (UIObject uiObject in UIManager.Values)
-                {
-                    uiObject.Active = true;
-                }
+                uiObject.Active = true;
             }
         }
 

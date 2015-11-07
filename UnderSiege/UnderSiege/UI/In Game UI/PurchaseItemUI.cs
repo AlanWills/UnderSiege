@@ -53,11 +53,6 @@ namespace UnderSiege.UI
 
         #region Virtual Methods
 
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            base.Draw(spriteBatch);
-        }
-
         #endregion
     }
 }

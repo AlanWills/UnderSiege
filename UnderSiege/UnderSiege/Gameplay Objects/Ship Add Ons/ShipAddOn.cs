@@ -176,7 +176,7 @@ namespace UnderSiege.Gameplay_Objects
 
         public override void HandleInput()
         {
-            if (Active)
+            if (Active && ParentShip.ShipType == ShipType.AlliedShip)
             {
                 // This rectangle is used so that with something like the shield we do not select it if we select the shield collider
                 // Rather we have to select the hardpoint region

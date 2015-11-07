@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.Screens;
@@ -66,8 +67,10 @@ namespace UnderSiege.Gameplay_Objects
         public override void LoadContent()
         {
             base.LoadContent();
+            Debug.Assert(BaseData != null);
 
-            PlayerShipData = AssetManager.GetData<PlayerShipData>(DataAsset);
+            PlayerShipData = BaseData as PlayerShipData;
+            Debug.Assert(PlayerShipData != null);
         }
 
         public override void Initialize()

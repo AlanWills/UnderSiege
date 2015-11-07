@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.Abilities.Object_Abilities;
@@ -93,6 +94,7 @@ namespace UnderSiege.Gameplay_Objects
                         break;
                 }
 
+                Debug.Assert(ability != null, "Ability not handled in switch menu.");
                 ability.LoadContent();
                 Abilities.Add(ability);
             }
@@ -211,19 +213,15 @@ namespace UnderSiege.Gameplay_Objects
                 {
                     if (MouseOver)
                     {
-                        if (AbilityUI != null)
-                        {
-                            AbilityUI.Active = true;
-                            AbilityUI.Visible = true;
-                        }
+                        Debug.Assert(AbilityUI != null);
+                        AbilityUI.Active = true;
+                        AbilityUI.Visible = true;
                     }
                     else
                     {
-                        if (AbilityUI != null)
-                        {
-                            AbilityUI.Active = false;
-                            AbilityUI.Visible = false;
-                        }
+                        Debug.Assert(AbilityUI != null);
+                        AbilityUI.Active = false;
+                        AbilityUI.Visible = false;
                     }
                 }
             }

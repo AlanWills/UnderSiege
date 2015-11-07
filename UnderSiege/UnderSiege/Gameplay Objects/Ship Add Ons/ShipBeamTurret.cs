@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiegeData.Gameplay_Objects;
@@ -41,7 +42,10 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         {
             base.LoadContent();
 
-            ShipBeamTurretData = AssetManager.GetData<ShipBeamTurretData>(DataAsset);
+            Debug.Assert(BaseData != null);
+            ShipBeamTurretData = BaseData as ShipBeamTurretData;
+
+            Debug.Assert(ShipBeamTurretData != null);
         }
 
         public override void Initialize()

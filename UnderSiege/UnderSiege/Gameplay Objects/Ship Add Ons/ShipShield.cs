@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiegeData.Gameplay_Objects;
@@ -61,7 +62,11 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.LoadContent();
 
-            ShipShieldData = AssetManager.GetData<ShipShieldData>(DataAsset);
+            Debug.Assert(BaseData != null);
+            ShipShieldData = BaseData as ShipShieldData;
+
+            Debug.Assert(ShipShieldData != null);
+
             CurrentShieldStrength = ShipShieldData.ShieldStrength;
             Size = new Vector2(ShipShieldData.ShieldRange, ShipShieldData.ShieldRange);
             Colour = new Color(ShipShieldData.Colour);

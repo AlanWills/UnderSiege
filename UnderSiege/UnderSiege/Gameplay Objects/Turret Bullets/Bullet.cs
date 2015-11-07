@@ -55,8 +55,9 @@ namespace UnderSiege.Gameplay_Objects
         public override void LoadContent()
         {
             base.LoadContent();
+            Debug.Assert(BaseData != null);
 
-            BulletData = AssetManager.GetData<BulletData>(DataAsset);
+            BulletData = BaseData as BulletData;
             Debug.Assert(BulletData != null);
         }
 

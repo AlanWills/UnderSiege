@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
@@ -165,8 +166,10 @@ namespace UnderSiege.Gameplay_Objects
         public override void LoadContent()
         {
             base.LoadContent();
+            Debug.Assert(BaseData != null);
 
-            ShipData = AssetManager.GetData<ShipData>(DataAsset);
+            ShipData = BaseData as ShipData;
+            Debug.Assert(ShipData != null);
 
             OtherHardPoints = new List<Vector2>();
             foreach (Vector2 hardPoint in ShipData.OtherHardPoints)

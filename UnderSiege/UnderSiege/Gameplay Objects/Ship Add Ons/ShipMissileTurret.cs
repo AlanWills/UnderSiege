@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiegeData.Gameplay_Objects;
@@ -40,7 +41,10 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         {
             base.LoadContent();
 
-            ShipMissileTurretData = AssetManager.GetData<ShipMissileTurretData>(DataAsset);
+            Debug.Assert(BaseData != null);
+            ShipMissileTurretData = BaseData as ShipMissileTurretData;
+
+            Debug.Assert(ShipMissileTurretData != null);
         }
 
         public override void Initialize()
@@ -95,48 +99,49 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             clone.RigidBody.LinearVelocity = new Vector2(-250, clone.RigidBody.LinearVelocity.Y);
             MissileManager.AddObject(clone, "Missile" + nameCounter);
 
-            if (FiringSoundEffect != null)
-            {
-                firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
-                firingSoundEffectInstance.Volume = Options.SFXVolume;
-                firingSoundEffectInstance.Play();
-            }
+            Debug.Assert(FiringSoundEffect != null);
+            firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+            firingSoundEffectInstance.Volume = Options.SFXVolume;
+            firingSoundEffectInstance.Play();
         }
 
         public override void CheckIfDamagedTarget()
         {
-            // Only check the missiles which are active - this is how we tell whether a missile is exploding
-            foreach (Missile missile in MissileManager.Values.Where(x => x.Active == true))
+            foreach (Missile missile in MissileManager.Values)
             {
-                // We have a target a ship addon that isn't a shield - so we need to check for shield interactions
-                if (!(Target is ShipShield) && !(Target is Ship))
+                // Only do this if the missile isn't exploding
+                if (missile.Active)
                 {
-                    foreach (ShipShield shipShield in (Target as ShipAddOn).ParentShip.ShipAddOns.ShipShields)
+                    // We have a target a ship addon that isn't a shield - so we need to check for shield interactions
+                    if (!(Target is ShipShield) && !(Target is Ship))
                     {
-                        if (shipShield.Collider.CheckCollisionWith(missile.WorldPosition))
+                        foreach (ShipShield shipShield in (Target as ShipAddOn).ParentShip.ShipAddOns.ShipShields)
                         {
-                            shipShield.Damage(ShipTurretData.Damage);
+                            if (shipShield.Collider.CheckCollisionWith(missile.WorldPosition))
+                            {
+                                shipShield.Damage(ShipTurretData.Damage);
+
+                                missile.Explode();
+                                break;
+                            }
+                        }
+
+                        if (Target.Collider.CheckCollisionWith(missile.WorldPosition))
+                        {
+                            Target.Damage(ShipTurretData.Damage);
 
                             missile.Explode();
-                            break;
                         }
                     }
-
-                    if (Target.Collider.CheckCollisionWith(missile.WorldPosition))
+                    // Continue normally
+                    else
                     {
-                        Target.Damage(ShipTurretData.Damage);
+                        if (Target.Collider.CheckCollisionWith(missile.WorldPosition))
+                        {
+                            Target.Damage(ShipTurretData.Damage);
 
-                        missile.Explode();
-                    }
-                }
-                // Continue normally
-                else
-                {
-                    if (Target.Collider.CheckCollisionWith(missile.WorldPosition))
-                    {
-                        Target.Damage(ShipTurretData.Damage);
-
-                        missile.Explode();
+                            missile.Explode();
+                        }
                     }
                 }
             }

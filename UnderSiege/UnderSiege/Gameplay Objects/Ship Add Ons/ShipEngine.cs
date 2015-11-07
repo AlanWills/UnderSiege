@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.UI.In_Game_UI;
@@ -49,10 +50,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             ShipEngineData = AssetManager.GetData<ShipEngineData>(DataAsset);
             Ship parent = Parent as Ship;
 
-            if (ShipEngineData.EngineSoundAsset != "")
-            {
-                EngineSoundEffect = ScreenManager.SFX.SoundEffects[ShipEngineData.EngineSoundAsset];
-            }
+            Debug.Assert(ShipEngineData.EngineSoundAsset != string.Empty);
+            EngineSoundEffect = ScreenManager.SFX.SoundEffects[ShipEngineData.EngineSoundAsset];
         }
 
         public override void Initialize()

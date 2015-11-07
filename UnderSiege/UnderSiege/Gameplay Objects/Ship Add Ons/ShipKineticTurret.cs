@@ -41,7 +41,9 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         {
             base.LoadContent();
 
-            ShipKineticTurretData = AssetManager.GetData<ShipKineticTurretData>(DataAsset);
+            Debug.Assert(BaseData != null);
+            ShipKineticTurretData = BaseData as ShipKineticTurretData;
+
             Debug.Assert(ShipKineticTurretData != null);
         }
 
@@ -97,12 +99,10 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             nameCounter++;
             BulletManager.AddObject(Bullet.Clone(), "Bullet" + nameCounter);
 
-            if (FiringSoundEffect != null)
-            {
-                firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
-                firingSoundEffectInstance.Volume = Options.SFXVolume;
-                firingSoundEffectInstance.Play();
-            }
+            Debug.Assert(FiringSoundEffect != null);
+            firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
+            firingSoundEffectInstance.Volume = Options.SFXVolume;
+            firingSoundEffectInstance.Play();
         }
 
         public override void CheckIfDamagedTarget()

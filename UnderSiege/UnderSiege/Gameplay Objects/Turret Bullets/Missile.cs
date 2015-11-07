@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
@@ -60,8 +61,10 @@ namespace UnderSiege.Gameplay_Objects
         public override void LoadContent()
         {
             base.LoadContent();
+            Debug.Assert(BaseData != null);
 
-            MissileData = AssetManager.GetData<MissileData>(DataAsset);
+            MissileData = BaseData as MissileData;
+            Debug.Assert(MissileData != null);
         }
 
         public override void Initialize()

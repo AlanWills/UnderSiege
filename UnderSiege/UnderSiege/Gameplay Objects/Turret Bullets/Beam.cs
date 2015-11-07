@@ -5,6 +5,7 @@ using _2DGameEngine.Maths.Primitives;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
@@ -38,7 +39,10 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.LoadContent();
 
-            BeamData = AssetManager.GetData<BeamData>(DataAsset);
+            Debug.Assert(BaseData != null);
+            BeamData = BaseData as BeamData;
+
+            Debug.Assert(BeamData != null);
             Colour = new Color(BeamData.BeamColour);
         }
 

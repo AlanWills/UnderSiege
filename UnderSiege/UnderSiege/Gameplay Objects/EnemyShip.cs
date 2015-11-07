@@ -4,6 +4,7 @@ using _2DGameEngine.Maths;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
@@ -67,8 +68,11 @@ namespace UnderSiege.Gameplay_Objects
         public override void LoadContent()
         {
             base.LoadContent();
+            Debug.Assert(BaseData != null);
 
-            EnemyShipData = ScreenManager.Content.Load<EnemyShipData>(DataAsset);
+            EnemyShipData = BaseData as EnemyShipData;
+            Debug.Assert(EnemyShipData != null);
+
             LoadShipAddOns();
         }
 

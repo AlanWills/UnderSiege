@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using UnderSiege.Screens;
@@ -66,15 +67,13 @@ namespace UnderSiege.Gameplay_Objects
         {
             base.LoadContent();
 
-            if (BaseData != null)
-            {
-                ShipTurretData = AssetManager.GetData<ShipTurretData>(DataAsset);
-            }
+            Debug.Assert(BaseData != null);
+            ShipTurretData = BaseData as ShipTurretData;
 
-            if (ShipTurretData.TurretFiringAsset != "")
-            {
-                FiringSoundEffect = ScreenManager.SFX.SoundEffects[ShipTurretData.TurretFiringAsset];
-            }
+            Debug.Assert(ShipTurretData != null);
+
+            Debug.Assert(ShipTurretData.TurretFiringAsset != null);
+            FiringSoundEffect = ScreenManager.SFX.SoundEffects[ShipTurretData.TurretFiringAsset];
 
             TargetingLine = new InGameUIObject(new Vector2(0, -ShipTurretData.Range * 0.5f), "Sprites\\UI\\InGameUI\\FiringLineUI", this);
             TargetingLine.LoadContent();

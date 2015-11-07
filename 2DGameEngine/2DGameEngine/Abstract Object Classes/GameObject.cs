@@ -120,7 +120,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (Visible)
+            if (Visible && Camera.CheckObjectVisible(this))
             {
                 Debug.Assert(Texture != null);
                 spriteBatch.Draw(Texture, WorldPosition, SourceRectangle, Colour * Opacity, (float)WorldRotation, Centre, Scale, SpriteEffects.None, 0);

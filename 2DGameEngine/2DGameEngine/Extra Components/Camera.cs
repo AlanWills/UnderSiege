@@ -45,7 +45,7 @@ namespace _2DGameEngine.Extra_Components
         }
 
         // Change this to use the position
-        public Rectangle ViewportRectangle
+        public static Rectangle ViewportRectangle
         {
             get 
             {
@@ -177,6 +177,17 @@ namespace _2DGameEngine.Extra_Components
                 CameraMode = CameraMode.Free;
             else if (CameraMode == CameraMode.Free)
                 CameraMode = CameraMode.Follow;
+        }
+
+        public static bool CheckObjectVisible(BaseObject baseObject)
+        {
+            // Could optimise this further
+            if (baseObject.Collider != null)
+            {
+                return baseObject.Collider.CheckCollisionWith(ViewportRectangle);
+            }
+
+            return true;
         }
 
         public static Vector2 ScreenToGameCoords(Vector2 screenPosition)

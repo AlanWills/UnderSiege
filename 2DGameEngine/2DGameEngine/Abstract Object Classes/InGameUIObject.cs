@@ -40,6 +40,14 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
         #region Virtual Methods
 
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            if (Visible && Camera.CheckObjectVisible(this))
+            {
+                base.Draw(spriteBatch);
+            }
+        }
+
         public override void HandleInput()
         {
             if (Active)

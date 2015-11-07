@@ -34,6 +34,7 @@ namespace _2DGameEngine.Physics_Components
         public abstract bool CheckCollisionWith(Arc arc);
         public abstract bool CheckCollisionWith(CircleCollider circle);
         public abstract bool CheckCollisionWith(RectangleCollider rectangle);
+        public abstract bool CheckCollisionWith(Rectangle rectangle);
 
         public virtual bool CheckCollisionWith(Collider collider)
         {

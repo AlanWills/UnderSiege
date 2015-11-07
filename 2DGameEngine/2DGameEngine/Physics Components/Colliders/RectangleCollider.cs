@@ -72,6 +72,11 @@ namespace _2DGameEngine.Physics_Components.Colliders
             return _2DGeometry.RectangleIntersectsRectangle(Bounds.Rectangle, rectangleCollider.Bounds.Rectangle);
         }
 
+        public override bool CheckCollisionWith(Rectangle rectangle)
+        {
+            return _2DGeometry.RectangleIntersectsRectangle(rectangle, Bounds.Rectangle);
+        }
+
         #endregion
     }
 }

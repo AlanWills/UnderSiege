@@ -57,7 +57,7 @@ namespace _2DGameEngine.UI_Objects
             currentFrontSize = Vector2.Multiply(Size, new Vector2(CurrentValue / MaxValue, 1));
             frontBarScale = new Vector2(currentFrontSize.X / FrontBarTexture.Width, Scale.Y);
             // This horrible expression moves the bar so it stays in the same place when change the value
-            frontBarLocalPosition = Vector2.Multiply(new Vector2(Size.X, 0), (currentValue * 0.01f - 1) * 0.5f);
+            frontBarLocalPosition = Vector2.Multiply(new Vector2(Size.X, 0), ((currentValue / MaxValue) - 1) * 0.5f);
         }
 
         #endregion

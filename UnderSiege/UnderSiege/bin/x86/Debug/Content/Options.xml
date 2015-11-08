@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <OptionsData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <IsFullScreen>false</IsFullScreen>
-  <MusicVolume>0.005</MusicVolume>
+  <MusicVolume>0.271666676</MusicVolume>
   <SFXVolume>0.008333334</SFXVolume>
   <Level>1</Level>
 </OptionsData>

@@ -32,7 +32,7 @@ namespace _2DGameEngine.UI_Objects
 
         protected Vector2 currentFrontSize;
         private Vector2 frontBarScale;
-        private Vector2 frontBarLocalPosition;
+        private Vector2 frontBarWorldOffset;
 
         #endregion
 
@@ -57,7 +57,8 @@ namespace _2DGameEngine.UI_Objects
             currentFrontSize = Vector2.Multiply(Size, new Vector2(CurrentValue / MaxValue, 1));
             frontBarScale = new Vector2(currentFrontSize.X / FrontBarTexture.Width, Scale.Y);
             // This horrible expression moves the bar so it stays in the same place when change the value
-            frontBarLocalPosition = Vector2.Multiply(new Vector2(Size.X, 0), ((currentValue / MaxValue) - 1) * 0.5f);
+            // This is wrong - this local space value won't work using our world space value in the draw function
+            frontBarWorldOffset = Vector2.Transform(new Vector2(Size.X * ((currentValue / MaxValue) - 1) * 0.5f, 0), Matrix.CreateRotationZ(Parent.WorldRotation));
         }
 
         #endregion
@@ -79,7 +80,7 @@ namespace _2DGameEngine.UI_Objects
             if (Visible)
             {
                 Debug.Assert(FrontBarTexture != null);
-                spriteBatch.Draw(FrontBarTexture, Vector2.Add(WorldPosition, frontBarLocalPosition), null, Colour * FrontOpacity, (float)WorldRotation, Centre, frontBarScale, SpriteEffects.None, 0);
+                spriteBatch.Draw(FrontBarTexture, Vector2.Add(WorldPosition, frontBarWorldOffset), null, Colour * FrontOpacity, (float)WorldRotation, Centre, frontBarScale, SpriteEffects.None, 0);
             }
         }
 

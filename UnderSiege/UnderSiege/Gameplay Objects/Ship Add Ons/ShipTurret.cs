@@ -42,8 +42,8 @@ namespace UnderSiege.Gameplay_Objects
 
         #endregion
 
-        public ShipTurret(Vector2 hardPointOffset, string dataAsset, Ship parent, bool addRigidBody = true)
-            : base(hardPointOffset, dataAsset, parent, addRigidBody)
+        public ShipTurret(Vector2 hardPointOffset, string dataAsset, Ship parent)
+            : base(hardPointOffset, dataAsset, parent)
         {
             ParentShip = parent;
         }

@@ -23,8 +23,8 @@ namespace UnderSiege.Gameplay_Objects
 
         #endregion
 
-        public Beam(ShipBeamTurret parentTurret, string dataAsset = "", bool addRigidBody = true)
-            : base(dataAsset, parentTurret, addRigidBody)
+        public Beam(ShipBeamTurret parentTurret, string dataAsset = "")
+            : base(dataAsset, parentTurret)
         {
             ParentTurret = parentTurret;
         }

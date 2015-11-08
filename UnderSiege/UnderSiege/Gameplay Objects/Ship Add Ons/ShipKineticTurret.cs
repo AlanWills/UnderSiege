@@ -25,8 +25,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
         #endregion
 
-        public ShipKineticTurret(Vector2 hardPointOffset, string dataAsset, Ship parent, bool addRigidBody = true)
-            : base(hardPointOffset, dataAsset, parent, addRigidBody)
+        public ShipKineticTurret(Vector2 hardPointOffset, string dataAsset, Ship parent)
+            : base(hardPointOffset, dataAsset, parent)
         {
             BulletManager = new BaseObjectManager<Bullet>();
         }

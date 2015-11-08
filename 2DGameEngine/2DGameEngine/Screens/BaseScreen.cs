@@ -143,7 +143,7 @@ namespace _2DGameEngine.Screens
 
             Show();
 
-            SceneRoot = new GameObject("", null, false);
+            SceneRoot = new GameObject("", null);
         }
 
         #region Methods

@@ -18,20 +18,20 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
         #endregion
 
-        public DamageableGameObject(string dataAsset = "", BaseObject parent = null, bool addRigidBody = true)
-            : base(dataAsset, parent, addRigidBody)
+        public DamageableGameObject(string dataAsset = "", BaseObject parent = null)
+            : base(dataAsset, parent)
         {
 
         }
 
-        public DamageableGameObject(Vector2 position, string dataAsset = "", BaseObject parent = null, bool addRigidBody = true)
-            : base(position, dataAsset, parent, addRigidBody)
+        public DamageableGameObject(Vector2 position, string dataAsset = "", BaseObject parent = null)
+            : base(position, dataAsset, parent)
         {
 
         }
 
-        public DamageableGameObject(Vector2 position, Vector2 size, string dataAsset = "", BaseObject parent = null, bool addRigidBody = true)
-            : base(position, size, dataAsset, parent, addRigidBody)
+        public DamageableGameObject(Vector2 position, Vector2 size, string dataAsset = "", BaseObject parent = null)
+            : base(position, size, dataAsset, parent)
         {
 
         }

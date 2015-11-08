@@ -34,37 +34,25 @@ namespace _2DGameEngine.Abstract_Object_Classes
 
         #endregion
 
-        public GameObject(string dataAsset = "", BaseObject parent = null, bool addRigidBody = true)
+        public GameObject(string dataAsset = "", BaseObject parent = null)
             : base(dataAsset, parent)
         {
             MovementBehaviours = new MovementBehaviourManager();
-
-            if (addRigidBody)
-            {
-                RigidBody = new RigidBody(this);
-            }
+            RigidBody = new RigidBody(this);
         }
 
-        public GameObject(Vector2 position, string dataAsset = "", BaseObject parent = null, bool addRigidBody = true)
+        public GameObject(Vector2 position, string dataAsset = "", BaseObject parent = null)
             : base(position, dataAsset, parent)
         {
             MovementBehaviours = new MovementBehaviourManager();
-
-            if (addRigidBody)
-            {
-                RigidBody = new RigidBody(this);
-            }
+            RigidBody = new RigidBody(this);
         }
 
-        public GameObject(Vector2 position, Vector2 size, string dataAsset = "", BaseObject parent = null, bool addRigidBody = true)
+        public GameObject(Vector2 position, Vector2 size, string dataAsset = "", BaseObject parent = null)
             : base(position, size, dataAsset, parent)
         {
             MovementBehaviours = new MovementBehaviourManager();
-
-            if (addRigidBody)
-            {
-                RigidBody = new RigidBody(this);
-            }
+            RigidBody = new RigidBody(this);
         }
 
         #region Methods

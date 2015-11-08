@@ -26,8 +26,8 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
 
         #endregion
 
-        public ShipBeamTurret(Vector2 hardPointOffset, string dataAsset, Ship parent, bool addRigidBody = true)
-            : base(hardPointOffset, dataAsset, parent, addRigidBody)
+        public ShipBeamTurret(Vector2 hardPointOffset, string dataAsset, Ship parent)
+            : base(hardPointOffset, dataAsset, parent)
         {
             
         }
@@ -52,7 +52,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
         {
             base.Initialize();
 
-            Beam = new Beam(this, ShipBeamTurretData.BulletAsset, true);
+            Beam = new Beam(this, ShipBeamTurretData.BulletAsset);
             Beam.LoadContent();
             Beam.Initialize();
             Beam.Opacity = 0;

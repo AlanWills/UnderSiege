@@ -44,7 +44,7 @@ namespace UnderSiege.Screens.Level_Screens
 
         public override void LoadContent(ContentManager content)
         {
-            GameObject hyperspaceGate = new GameObject(destPosition, "Sprites\\GameObjects\\SpaceStations\\hyperspace_gate", null, false);
+            GameObject hyperspaceGate = new GameObject(destPosition, "Sprites\\GameObjects\\SpaceStations\\hyperspace_gate", null);
             AddGameObject(hyperspaceGate, "Hyperspace Gate");
 
             base.LoadContent(content);

@@ -70,8 +70,8 @@ namespace _2DTowerDefenceEngine.Turrets
 
         #endregion
 
-        public Turret(Vector2 position, float orientation, string dataAsset, bool addRigidBody = true)
-            : base(position, dataAsset, null, addRigidBody)
+        public Turret(Vector2 position, float orientation, string dataAsset)
+            : base(position, dataAsset, null)
         {
             LocalPosition = position;
             Parent = null;
@@ -80,8 +80,8 @@ namespace _2DTowerDefenceEngine.Turrets
             BulletManager = new BaseObjectManager<Bullet>();
         }
 
-        public Turret(Vector2 hardPointOffset, float orientation, string dataAsset, GameObject parent, bool addRigidBody = true)
-            : base(dataAsset, parent, addRigidBody)
+        public Turret(Vector2 hardPointOffset, float orientation, string dataAsset, GameObject parent)
+            : base(dataAsset, parent)
         {
             HardPointOffset = hardPointOffset;
             Orientation = orientation;

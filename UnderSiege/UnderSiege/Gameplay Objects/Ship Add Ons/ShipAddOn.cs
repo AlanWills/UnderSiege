@@ -51,8 +51,8 @@ namespace UnderSiege.Gameplay_Objects
 
         #endregion
 
-        public ShipAddOn(Vector2 hardPointOffset, string dataAsset, Ship parent, bool addRigidBody = true)
-            : base(hardPointOffset, dataAsset, parent, addRigidBody)
+        public ShipAddOn(Vector2 hardPointOffset, string dataAsset, Ship parent)
+            : base(hardPointOffset, dataAsset, parent)
         {
             ParentShip = parent;
             HardPointOffset = hardPointOffset;

@@ -62,7 +62,7 @@ namespace UnderSiege.Gameplay_Objects
         #endregion
 
         public Ship(Vector2 position, string dataAsset, BaseObject parent = null)
-            : base(position, dataAsset, parent, true)
+            : base(position, dataAsset, parent)
         {
             ShipAddOns = new ShipAddOnManager(this);
         }
@@ -79,13 +79,13 @@ namespace UnderSiege.Gameplay_Objects
             switch (turretData.TurretType)
             {
                 case "Kinetic" :
-                    turret = new ShipKineticTurret(hardPoint, dataAsset, this, true);
+                    turret = new ShipKineticTurret(hardPoint, dataAsset, this);
                     break;
                 case "Missile" :
-                    turret = new ShipMissileTurret(hardPoint, dataAsset, this, true);
+                    turret = new ShipMissileTurret(hardPoint, dataAsset, this);
                     break;
                 case "Beam" :
-                    turret = new ShipBeamTurret(hardPoint, dataAsset, this, true);
+                    turret = new ShipBeamTurret(hardPoint, dataAsset, this);
                     break;
             }
 
@@ -96,7 +96,7 @@ namespace UnderSiege.Gameplay_Objects
 
         public void AddShield(Vector2 hardPoint, ShipAddOnData addOnData)
         {
-            ShipShield shield = new ShipShield(hardPoint, AssetManager.GetKeyFromData(addOnData), this, true);
+            ShipShield shield = new ShipShield(hardPoint, AssetManager.GetKeyFromData(addOnData), this);
             ShipAddOns.AddObject(shield);
 
             DealWithHardPoint(hardPoint, false);
@@ -104,7 +104,7 @@ namespace UnderSiege.Gameplay_Objects
 
         public void AddEngine(Vector2 hardPoint, ShipAddOnData addOnData)
         {
-            ShipEngine engine = new ShipEngine(hardPoint, AssetManager.GetKeyFromData(addOnData), this, true);
+            ShipEngine engine = new ShipEngine(hardPoint, AssetManager.GetKeyFromData(addOnData), this);
             ShipAddOns.AddObject(engine);
 
             DealWithHardPoint(hardPoint, true);

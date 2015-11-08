@@ -154,7 +154,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
             }
         }
 
-        public virtual Vector2 Centre
+        public Vector2 Centre
         {
             get 
             {

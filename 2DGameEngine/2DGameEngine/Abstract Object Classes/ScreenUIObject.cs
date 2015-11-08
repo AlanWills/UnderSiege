@@ -71,7 +71,7 @@ namespace _2DGameEngine.Abstract_Object_Classes
                     if (MouseOver)
                     {
                         // The object wasn't selected, so select it
-                        if (clickResetTime >= TimeSpan.FromSeconds(0.2f))
+                        if (clickResetTime >= TimeSpan.FromSeconds(0.1f))
                             IsSelected = true;
                     }
                     // We have clicked elsewhere so should clear selection

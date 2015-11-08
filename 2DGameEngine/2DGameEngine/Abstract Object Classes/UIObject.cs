@@ -27,19 +27,6 @@ namespace _2DGameEngine.Abstract_Object_Classes
             set;
         }
 
-        public override Vector2 Centre
-        {
-            get
-            {
-                if (Texture != null)
-                    return base.Centre;
-                else if (!string.IsNullOrEmpty(Text))
-                    return SpriteFont.MeasureString(Text) * 0.5f;
-                else
-                    return Vector2.Zero;
-            }
-        }
-
         public override Vector2 Scale
         {
             get

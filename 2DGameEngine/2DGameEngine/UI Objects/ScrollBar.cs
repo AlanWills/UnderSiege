@@ -32,10 +32,11 @@ namespace _2DGameEngine.UI_Objects
             base.HandleInput();
 
             // We have clicked on the bar
-            if (ScreenManager.GameMouse.IsLeftClicked && MouseOver)
+            if (IsSelected)
             {
+                // This is to account the WorldPosition actually being halfway along the bar
                 Vector2 mouseClickedPosition = ScreenManager.GameMouse.LastLeftClickedPosition;
-                float percentage = (mouseClickedPosition.X - WorldPosition.X) / Size.X;
+                float percentage = (mouseClickedPosition.X - WorldPosition.X + Size.X * 0.5f) / Size.X;
                 UpdateValue(percentage * MaxValue);
             }
         }

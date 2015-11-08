@@ -593,7 +593,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Turrets\hii_chaingun.xnb</Output>
-      <Time>2015-11-04T22:38:52.3393496+00:00</Time>
+      <Time>2015-11-07T14:02:34.5657556+00:00</Time>
     </Item>
     <Item>
       <Source>Sprites\GameObjects\Bullets\BlueEnergyShot.png</Source>
@@ -602,7 +602,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Bullets\BlueEnergyShot.xnb</Output>
-      <Time>2015-11-04T22:40:57.8853815+00:00</Time>
+      <Time>2015-11-07T14:02:34.5647545+00:00</Time>
     </Item>
     <Item>
       <Source>Sprites\GameObjects\Turrets\hii_energy_cannon.png</Source>
@@ -611,7 +611,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Sprites\GameObjects\Turrets\hii_energy_cannon.xnb</Output>
-      <Time>2015-11-04T22:42:08.0172591+00:00</Time>
+      <Time>2015-11-07T14:02:34.5667575+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\MainMenuScreen.xml</Source>
@@ -845,7 +845,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\PlayerShips\HiiSaari.xnb</Output>
-      <Time>2015-11-04T21:49:43.9591796+00:00</Time>
+      <Time>2015-11-07T14:00:20.9419863+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Abilities\ShipAddOnAbilities\Sell.xml</Source>
@@ -1052,7 +1052,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Level3\Wave9.xnb</Output>
-      <Time>2015-11-04T23:50:19.1954225+00:00</Time>
+      <Time>2015-11-07T14:00:20.9489909+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level3\Wave8.xml</Source>
@@ -1106,7 +1106,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Screens\Debug.xnb</Output>
-      <Time>2015-11-04T23:52:20.8357125+00:00</Time>
+      <Time>2015-11-07T14:00:20.945989+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Screens\GameOverScreen.xml</Source>
@@ -1160,7 +1160,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Bullets\EnergyCannonBullet.xnb</Output>
-      <Time>2015-11-04T23:17:33.875876+00:00</Time>
+      <Time>2015-11-07T14:02:34.5607531+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\ChaingunLaserBullet.xml</Source>
@@ -1169,7 +1169,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Bullets\ChaingunLaserBullet.xnb</Output>
-      <Time>2015-11-04T23:17:54.1746626+00:00</Time>
+      <Time>2015-11-07T14:02:34.5577507+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Debug\Wave1.xml</Source>
@@ -1178,7 +1178,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\Waves\Debug\Wave1.xnb</Output>
-      <Time>2015-11-04T23:50:04.6452362+00:00</Time>
+      <Time>2015-11-07T14:02:34.5637555+00:00</Time>
     </Item>
     <Item>
       <Source>Music\Dream Raid.mp3</Source>
@@ -1341,7 +1341,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Unused\Turrets\LaserChaingun.xnb</Output>
-      <Time>2015-11-06T01:06:14.8918349+00:00</Time>
+      <Time>2015-11-07T14:02:34.5747624+00:00</Time>
     </Item>
     <Item>
       <Source>Unused\Turrets\EnergyCannon.xml</Source>
@@ -1350,7 +1350,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Unused\Turrets\EnergyCannon.xnb</Output>
-      <Time>2015-11-06T01:06:14.8918349+00:00</Time>
+      <Time>2015-11-07T14:02:34.5707597+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

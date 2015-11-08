@@ -46,6 +46,11 @@ namespace _2DGameEngine.Cutscenes
             ScriptManager.LoadAndAddScripts(content);
         }
 
+        public override void AddMusic(QueueType queueType = QueueType.PlayImmediately)
+        {
+            
+        }
+
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);

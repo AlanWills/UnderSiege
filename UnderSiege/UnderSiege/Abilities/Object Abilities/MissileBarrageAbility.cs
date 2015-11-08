@@ -13,7 +13,7 @@ namespace UnderSiege.Abilities.Object_Abilities
 
         private ShipMissileTurret ShipMissileTurret { get; set; }
 
-        private bool IsFiringIncreased { get { return abilityTimer <= 10; } }
+        private bool IsFiringIncreased { get { return abilityTimer <= 20; } }
 
         private float abilityTimer;
         private float fireTimer;

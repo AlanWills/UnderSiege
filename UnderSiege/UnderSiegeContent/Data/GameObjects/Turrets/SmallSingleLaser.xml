@@ -17,6 +17,6 @@
     <TurretFiringAsset>BeamLaser</TurretFiringAsset>
     <Range>850</Range>
     <ArcWidth>2</ArcWidth>
-    <Damage>0.15</Damage>
+    <Damage>0.2</Damage>
   </Asset>
 </XnaContent>

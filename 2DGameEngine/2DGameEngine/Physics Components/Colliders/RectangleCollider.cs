@@ -52,8 +52,8 @@ namespace _2DGameEngine.Physics_Components.Colliders
 
         public override bool CheckCollisionWith(Line line)
         {
-            line.StartPoint = Vector2.Add(Bounds.Centre, Vector2.Transform(Vector2.Subtract(line.StartPoint, Bounds.Centre), Matrix.CreateRotationZ(-Bounds.Rotation)));
-            line.EndPoint = Vector2.Add(Bounds.Centre, Vector2.Transform(Vector2.Subtract(line.EndPoint, Bounds.Centre), Matrix.CreateRotationZ(-Bounds.Rotation)));
+            /*line.StartPoint = Vector2.Add(Bounds.Centre, Vector2.Transform(Vector2.Subtract(line.StartPoint, Bounds.Centre), Matrix.CreateRotationZ(-Bounds.Rotation)));
+            line.EndPoint = Vector2.Add(Bounds.Centre, Vector2.Transform(Vector2.Subtract(line.EndPoint, Bounds.Centre), Matrix.CreateRotationZ(-Bounds.Rotation)));*/
             return _2DGeometry.LineIntersectsRect(line, Bounds.Rectangle);
         }
 

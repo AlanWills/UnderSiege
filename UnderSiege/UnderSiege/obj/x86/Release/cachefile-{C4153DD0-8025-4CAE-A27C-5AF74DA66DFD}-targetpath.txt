@@ -126,8 +126,8 @@ Content\Data\Abilities\ShipAddOnAbilities\Recharge.xnb
 Content\Data\Abilities\ShipAddOnAbilities\AutoReloader.xnb
 Content\Data\Abilities\ShipAddOnAbilities\MissileBarrage.xnb
 Content\Data\Abilities\ShipAddOnAbilities\Afterburn.xnb
-Content\Data\Unused\Turrets\LaserChaingun.xnb
-Content\Data\Unused\Turrets\EnergyCannon.xnb
+Content\Unused\Turrets\LaserChaingun.xnb
+Content\Unused\Turrets\EnergyCannon.xnb
 Content\Data\GameObjects\Bullets\EnergyCannonBullet.xnb
 Content\Data\GameObjects\Bullets\ChaingunLaserBullet.xnb
 Content\Data\Waves\Debug\Wave1.xnb

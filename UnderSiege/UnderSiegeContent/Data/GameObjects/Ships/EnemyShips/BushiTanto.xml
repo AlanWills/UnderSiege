@@ -14,11 +14,11 @@
       0 147
     </EngineHardPoints>
     <Mass>19</Mass>
-    <Price>800</Price>
+    <Price>700</Price>
     <ShipAddOns>
-      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
-      <Item>Data\GameObjects\Turrets\DualLaserTurret</Item>
       <Item>Data\GameObjects\Turrets\MissilePod</Item>
+      <Item>Data\GameObjects\Turrets\MissilePod</Item>
+      <Item>Data\GameObjects\Turrets\SmallSingleLaser</Item>
       <Item>Data\GameObjects\Shields\EnergyShield</Item>
       <Item>Data\GameObjects\Engines\LightThruster</Item>
     </ShipAddOns>

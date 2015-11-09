@@ -328,6 +328,7 @@ namespace _2DGameEngine.Screens
         {
             if (BaseScreenData != null)
             {
+                MusicManager.ClearQueue();
                 MusicManager.QueueSongs(BaseScreenData.BackgroundMusicNames, queueType);
             }
         }

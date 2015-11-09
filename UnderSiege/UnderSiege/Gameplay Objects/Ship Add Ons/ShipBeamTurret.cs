@@ -62,7 +62,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             firingSoundEffectInstance = FiringSoundEffect.CreateInstance();
             firingSoundEffectInstance.IsLooped = true;
             firingSoundEffectInstance.Volume = 0;
-            firingSoundEffectInstance.Play();
+            //firingSoundEffectInstance.Play();
 
             firing = false;
         }
@@ -76,7 +76,7 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
             if (BeamCharged)
             {
                 firingSoundEffectInstance.Volume = Options.SFXVolume;
-                firingSoundEffectInstance.Resume();
+                //firingSoundEffectInstance.Resume();
             }
         }
 
@@ -130,14 +130,14 @@ namespace UnderSiege.Gameplay_Objects.Ship_Add_Ons
                 {
                     firing = false;
 
-                    firingSoundEffectInstance.Pause();
+                    //firingSoundEffectInstance.Pause();
                 }
             }
             else
             {
                 firing = false;
 
-                firingSoundEffectInstance.Pause();
+                //firingSoundEffectInstance.Pause();
             }
 
             if (firing)

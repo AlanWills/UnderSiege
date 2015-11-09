@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnderSiege.Gameplay_Objects;
+using UnderSiege.Gameplay_Objects.Ship_Add_Ons;
 using UnderSiege.Player_Data;
 using UnderSiege.UI;
 using UnderSiege.Waves;

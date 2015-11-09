@@ -92,8 +92,8 @@ namespace _2DGameEngine.Extra_Components
             catch
             {
                 IsFullScreen = !GlobalVariables.DEBUG;
-                MusicVolume = 0;
-                SFXVolume = 0;
+                MusicVolume = 0.5f;
+                SFXVolume = 0.25f;
                 Level = 1;
             }
 

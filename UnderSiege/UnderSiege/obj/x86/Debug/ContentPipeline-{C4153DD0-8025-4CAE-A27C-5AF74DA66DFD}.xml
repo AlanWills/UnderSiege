@@ -665,7 +665,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiHonyaki.xnb</Output>
-      <Time>2015-11-04T00:02:29.3716832+00:00</Time>
+      <Time>2015-11-09T21:05:51.9761622+00:00</Time>
     </Item>
     <Item>
       <Source>Data\Waves\Level1\Wave1.xml</Source>
@@ -746,7 +746,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Turrets\SmallSingleLaser.xnb</Output>
-      <Time>2015-11-08T22:38:56.9542799+00:00</Time>
+      <Time>2015-11-09T21:06:06.8015828+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Bullets\SmallSingleBeam.xml</Source>
@@ -764,7 +764,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alan\Documents\Visual Studio 2013\Projects\UnderSiege\UnderSiege\UnderSiege\bin\x86\Debug\Content\Data\GameObjects\Ships\EnemyShips\BushiTanto.xnb</Output>
-      <Time>2015-11-08T22:38:56.9532792+00:00</Time>
+      <Time>2015-11-09T21:06:21.2510766+00:00</Time>
     </Item>
     <Item>
       <Source>Data\GameObjects\Ships\PlayerShips\HiiVanaar.xml</Source>
